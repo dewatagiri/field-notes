@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bantuan Kita Sebenarnya Membantu Siapa? | Field Notes</title>
+<meta name="description" content="Lima dekad bantuan usahawan Bumiputera: siapa sebenarnya yang dibantu, perangkap yang mengekalkan usahawan kecil, dan tujuh cadangan kepada kerajaan.">
+<meta name="author" content="Azman Taufik">
+<meta property="og:title" content="Bantuan Kita Sebenarnya Membantu Siapa? | Who Is Our Help Really Helping?">
+<meta property="og:description" content="Lima dekad bantuan usahawan Bumiputera, lapan perangkap, soalan yang perlu kita tanya, dan tujuh cadangan kepada kerajaan. BM dan EN.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://dewatagiri.github.io/field-notes/bantuan-siapa/cover.png">
+<meta property="og:url" content="https://dewatagiri.github.io/field-notes/bantuan-siapa/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+/* ===== FIELD NOTES FORMAT v1 — design tokens ===== */
+:root{
+--bg:#ffffff; --ink:#13263a; --body:#2b3a4a; --muted:#5d6d7e; --line:#e2e8ef; --panel:#f6f8fb;
+--accent:#0b5cad; --accent-soft:#e9f2fc;
+--data:#0b5cad;  --data-soft:#e9f2fc;
+--trap:#b42318;  --trap-soft:#fdeeec;
+--lesson:#16794a;--lesson-soft:#e8f5ee;
+--watch:#b54708; --watch-soft:#fef4e6;
+--grey:#9aa7b4;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--body);font:400 18px/1.7 "Source Serif 4",Georgia,serif}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+h1,h2,h3,.sans,.kicker,.byline,.toggle,figcaption,table,.tile,.card,.box-label,footer{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--accent)}
+/* top bar */
+.topbar{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);z-index:10}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:52px}
+.brand{font:700 13px/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.brand span{color:var(--accent)}
+.toggle{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.toggle button{border:0;background:#fff;color:var(--muted);font:600 13px Inter,sans-serif;padding:7px 14px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:#fff}
+/* masthead */
+.mast{padding:44px 0 8px;border-bottom:4px solid var(--ink)}
+.kicker{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font-size:clamp(32px,6vw,46px);line-height:1.12;font-weight:800;color:var(--ink);margin:0 0 16px;letter-spacing:-.02em}
+.standfirst{font-size:20px;line-height:1.55;color:var(--muted);margin:0 0 22px}
+.byline{font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 16px;padding-bottom:20px}
+.byline b{color:var(--ink);font-weight:600}
+/* blocks */
+.box{border-radius:10px;padding:20px 22px;margin:28px 0;border-left:6px solid}
+.box p{margin:.4em 0}
+.box ul{margin:.4em 0;padding-left:1.2em}
+.box li{margin:.35em 0}
+.box-label{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.box.key{background:var(--panel);border-color:var(--ink)} .box.key .box-label{color:var(--ink)}
+.box.data{background:var(--data-soft);border-color:var(--data)} .box.data .box-label{color:var(--data)}
+.box.trap{background:var(--trap-soft);border-color:var(--trap)} .box.trap .box-label{color:var(--trap)}
+.box.lesson{background:var(--lesson-soft);border-color:var(--lesson)} .box.lesson .box-label{color:var(--lesson)}
+.box.watch{background:var(--watch-soft);border-color:var(--watch)} .box.watch .box-label{color:var(--watch)}
+.box.take{background:var(--ink);border-color:var(--accent);color:#e9eef4} .box.take .box-label{color:#8fc1f5} .box.take b{color:#fff}
+blockquote{margin:28px 0;padding:4px 0 4px 22px;border-left:4px solid var(--accent);font-size:22px;line-height:1.45;color:var(--ink);font-style:italic}
+blockquote cite{display:block;font:500 13px Inter,sans-serif;font-style:normal;color:var(--muted);margin-top:8px}
+/* sections */
+section{margin:44px 0}
+h2{font-size:26px;line-height:1.25;font-weight:750;color:var(--ink);margin:0 0 14px;letter-spacing:-.01em;display:flex;gap:12px;align-items:baseline}
+h2 .num{font-size:14px;font-weight:700;color:#fff;background:var(--accent);border-radius:6px;padding:3px 8px;flex:none;position:relative;top:-3px}
+h3{font-size:17px;font-weight:700;color:var(--ink);margin:22px 0 6px}
+p{margin:0 0 1em}
+/* stat tiles */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px 0}
+.tile{border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:8px;padding:14px 12px}
+.tile .v{font-size:26px;font-weight:800;color:var(--ink);line-height:1.1}
+.tile .l{font-size:12.5px;color:var(--muted);line-height:1.35;margin-top:6px}
+/* figures */
+figure{margin:30px 0;border:1px solid var(--line);border-radius:10px;padding:18px 18px 12px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:12.5px;color:var(--muted);margin-top:8px;border-top:1px solid var(--line);padding-top:8px}
+.fig-title{font:700 16px/1.35 Inter,sans-serif;color:var(--ink);margin:0 0 2px}
+.fig-sub{font:400 13px/1.4 Inter,sans-serif;color:var(--muted);margin:0 0 10px}
+/* tables */
+.tbl{overflow-x:auto;margin:20px 0}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.45}
+th{text-align:left;background:var(--panel);color:var(--ink);font-weight:700;padding:10px;border-bottom:2px solid var(--ink)}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+/* cards */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px;font-size:14.5px;line-height:1.5;background:#fff}
+.card h4{margin:0 0 6px;font-size:15.5px;color:var(--ink)}
+.card p{margin:4px 0}
+.card .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;margin-bottom:8px}
+.card.t{border-top:4px solid var(--trap)}
+.card .k{font-weight:700;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.tag.ok{background:var(--lesson-soft);color:var(--lesson)} .tag.mix{background:var(--watch-soft);color:var(--watch)} .tag.bad{background:var(--trap-soft);color:var(--trap)}
+.card.c-ok{border-top:4px solid var(--lesson)} .card.c-mix{border-top:4px solid var(--watch)} .card.c-bad{border-top:4px solid var(--trap)}
+ol.steps{padding-left:1.3em} ol.steps li{margin:.45em 0}
+/* footer */
+.ask{border:2px dashed var(--accent);border-radius:10px;padding:18px 22px;margin:32px 0;font-family:Inter,sans-serif;font-size:16px;color:var(--ink)}
+.sources{font-family:Inter,sans-serif;font-size:13px;line-height:1.55}
+.sources li{margin:4px 0}
+details summary{cursor:pointer;font:700 15px Inter,sans-serif;color:var(--ink);padding:10px 0}
+.bio{display:flex;gap:14px;align-items:flex-start;border-top:1px solid var(--line);padding-top:22px;margin-top:28px;font-family:Inter,sans-serif;font-size:14px;line-height:1.55}
+.avatar{flex:none;width:52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:800;font-size:18px}
+footer{background:var(--panel);border-top:1px solid var(--line);margin-top:40px;padding:24px 0 40px;font-size:12.5px;line-height:1.6;color:var(--muted)}
+footer b{color:var(--ink)}
+[data-lang]{display:none} body.en [data-lang="en"], body.bm [data-lang="bm"]{display:block}
+@media (max-width:620px){
+body{font-size:17px}
+.tiles{grid-template-columns:1fr 1fr}
+.cards{grid-template-columns:1fr}
+h2{font-size:22px}
+.standfirst{font-size:18px}
+blockquote{font-size:19px}
+}
+@media print{.topbar{display:none} details{display:block} details:not([open]) > *:not(summary){display:block}}
+.q-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}
+.q{background:var(--accent-soft);border-left:5px solid var(--accent);border-radius:8px;padding:16px 18px;font:600 15.5px/1.5 Inter,sans-serif;color:var(--ink)}
+.q small{display:block;font-weight:500;color:var(--muted);margin-top:8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.plan{margin:20px 0}
+.plan-item{display:grid;grid-template-columns:52px 1fr;gap:4px 14px;border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0;font-size:16px;line-height:1.6}
+.plan-item h4{margin:2px 0 6px;font:700 17px/1.35 Inter,sans-serif;color:var(--ink)}
+.plan-item p{margin:0 0 6px}
+.plan-n{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font:800 18px Inter,sans-serif}
+.plan-item .meta{font:500 13px/1.45 Inter,sans-serif;color:var(--lesson);background:var(--lesson-soft);display:inline-block;padding:4px 10px;border-radius:6px;margin-top:4px}
+.box.call{background:#fff;border:2px solid var(--accent);border-left:8px solid var(--accent)} .box.call .box-label{color:var(--accent);font-size:13px}
+@media (max-width:620px){.q-grid{grid-template-columns:1fr}.plan-item{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="bm">
+<div class="topbar"><div class="wrap">
+<div class="brand">Field <span>Notes</span></div>
+<div class="toggle" role="group" aria-label="Language">
+<button id="b-en" aria-pressed="false" onclick="setLang('en')">EN</button>
+<button id="b-bm" aria-pressed="true" onclick="setLang('bm')">BM</button>
+</div>
+</div></div>
+<!-- ======================= ENGLISH ======================= -->
+<div data-lang="en"><div class="wrap">
+<header class="mast">
+<p class="kicker">Field Notes · MSMEs &amp; Development Finance</p>
+<h1>Who Is Our Help Really Helping?</h1>
+<p class="standfirst">Five decades of Bumiputera enterprise support have built real champions, and a far larger number of businesses that never stood on their own. Before the PuTERA35 review closes, we should ask a harder question than "how much did we give?"</p>
+<div class="byline"><span><b>Azman Taufik</b></span><span>22 October 2026</span><span>18 min read</span></div>
+</header>
+<div class="box key">
+<span class="box-label">The short version</span>
+<ul>
+<li>MSMEs produce <b>39.5% of GDP</b> and <b>48.7% of jobs</b>, but only <b>14.3% of exports</b>. For every medium-sized firm there are almost <b>39 micro firms</b>.</li>
+<li>Bumiputera are <b>63.6% of the population</b> but own <b>29.8% of enterprises</b>, after fifty years of targeted support.</li>
+<li>The problem is not too little help. It is <b>help with no market attached</b>, and a system that rewards giving more than it rewards graduating.</li>
+<li>Nobody in the system is paid to make a business stop needing support. Until that changes, we will keep producing participants, not entrepreneurs.</li>
+<li>The government is reviewing PuTERA35 now. This article closes with <b>seven practical changes</b> and a direct ask: <b>measure graduation, publish it, and tie every ringgit to it.</b></li>
+</ul>
+</div>
+<section>
+<p>There is a question I have rarely heard asked in a meeting about Bumiputera entrepreneurs: <i>if we stopped every programme tomorrow, how many of these businesses would still be standing in three years?</i></p>
+<p>We ask how much was approved, how many people were trained, how many contracts were awarded. These are easy to count and easy to announce. The harder question is whether the help worked: whether it left behind a business that no longer needs it.</p>
+<p>This is not an argument against helping. Every successful economy supports young firms, and Malaysia's support for Bumiputera enterprise has achieved a great deal. It is an argument about <b>what kind of help</b> we give, <b>what we expect in return</b>, and <b>how we know it worked</b>. Those three questions decide whether help builds people up or holds them in place.</p>
+</section>
+<section>
+<h2><span class="num">01</span>The upper hand: what help is for</h2>
+<p>Malay and Islamic tradition already holds the principle we keep forgetting in policy. The Prophet (peace be upon him) said: <i>"The upper hand is better than the lower hand"</i>, meaning the hand that gives is better than the hand that receives (Sahih al-Bukhari, Sahih Muslim). The aim was never to keep people receiving. It was to bring them to a position where they could give.</p>
+<p>A well-known narration makes the method clear. A man came asking for charity. Instead of giving him money, the Prophet asked what he owned, sold the man's few belongings, and used the proceeds to buy an axe. He told him to cut firewood and sell it, and to come back in fifteen days. The man returned having earned more than he would have received as charity (reported by Abu Dawud).</p>
+<p>That is development finance in one story. Not a handout. Not a lecture. <b>A tool, a market, a deadline, and a check-back.</b></p>
+<div class="box lesson">
+<span class="box-label">Three principles worth holding on to</span>
+<ol class="steps">
+<li><b>Good help ends the need for help.</b> A programme that has the same people returning after ten years has not succeeded; it has become a subsidy.</li>
+<li><b>Expecting something back is a form of respect.</b> When we set conditions, ask for repayment and hold people to milestones, we treat them as capable adults. When we give with no expectation, we quietly tell them we do not believe they can do it.</li>
+<li><b>Help given out of pity keeps people small. Help given out of belief helps them grow.</b> The difference is in the expectations, not the amount.</li>
+</ol>
+</div>
+<p>The New Economic Policy was built on two aims: eradicating poverty, and restructuring society so that race would no longer be identified with economic function. Ownership targets were a means to that end, not the end itself. Somewhere along the way, the means became the measure.</p>
+</section>
+<section>
+<h2><span class="num">02</span>What the numbers say</h2>
+<div class="tiles">
+<div class="tile"><div class="v">39.5%</div><div class="l">MSME share of GDP, 2024 (RM652.4b)</div></div>
+<div class="tile"><div class="v">48.7%</div><div class="l">MSME share of jobs, 2024 (8.1m people)</div></div>
+<div class="tile"><div class="v">1.10m</div><div class="l">MSMEs in Malaysia, 2023</div></div>
+<div class="tile"><div class="v">29.8%</div><div class="l">Owned by Bumiputera, Jan 2024</div></div>
+</div>
+<figure>
+<p class="fig-title">Big in jobs and GDP, small in exports</p>
+<p class="fig-sub">MSME share of the national total, 2024</p>
+<svg viewBox="0 0 700 170" role="img" aria-label="MSMEs are 48.7% of jobs, 39.5% of GDP but only 14.3% of exports">
+<g font-family="Inter,sans-serif" font-size="14">
+<text x="0" y="36" fill="#13263a">Employment</text><rect x="130" y="18" width="456" height="28" rx="4" fill="#9aa7b4"/><text x="594" y="37" fill="#13263a" font-weight="700">48.7%</text>
+<text x="0" y="86" fill="#13263a">GDP</text><rect x="130" y="68" width="370" height="28" rx="4" fill="#9aa7b4"/><text x="508" y="87" fill="#13263a" font-weight="700">39.5%</text>
+<text x="0" y="136" fill="#13263a" font-weight="700">Exports</text><rect x="130" y="118" width="134" height="28" rx="4" fill="#0b5cad"/><text x="272" y="137" fill="#0b5cad" font-weight="700">14.3%</text>
+</g>
+</svg>
+<figcaption>Source: DOSM, MSME Performance 2024.</figcaption>
+</figure>
+<p><b>Most businesses never leave the bottom rung.</b> Seven in ten MSMEs are micro. The climb from micro to small to medium is where most stall, and it is where support is thinnest.</p>
+<figure>
+<p class="fig-title">Many start, few climb: 767,421 micro firms, 19,839 medium</p>
+<p class="fig-sub">Number of MSMEs by size, 2023</p>
+<svg viewBox="0 0 700 170" role="img" aria-label="767,421 micro, 314,465 small and 19,839 medium firms">
+<g font-family="Inter,sans-serif" font-size="14">
+<text x="0" y="36" fill="#13263a">Micro</text><rect x="100" y="18" width="480" height="28" rx="4" fill="#9aa7b4"/><text x="588" y="37" fill="#13263a" font-weight="700">767,421</text>
+<text x="0" y="86" fill="#13263a">Small</text><rect x="100" y="68" width="197" height="28" rx="4" fill="#9aa7b4"/><text x="305" y="87" fill="#13263a" font-weight="700">314,465</text>
+<text x="0" y="136" fill="#13263a" font-weight="700">Medium</text><rect x="100" y="118" width="12" height="28" rx="3" fill="#0b5cad"/><text x="120" y="137" fill="#0b5cad" font-weight="700">19,839  (1.8%)</text>
+</g>
+</svg>
+<figcaption>Source: SME Corp Malaysia, Profile of MSMEs (DOSM data, 2023).</figcaption>
+</figure>
+<p><b>The ownership gap remains.</b> Bumiputera are almost two-thirds of the population but own fewer than one in three enterprises. PuTERA35 targets Bumiputera-owned companies contributing 31% of GDP by 2035. In September 2026 the Economy Minister said the target will be reviewed, with a progress report expected around the end of this year.</p>
+<p><b>And the market is mostly local.</b> Most MSMEs never export, and many Bumiputera firms remain inside the government and GLC market. A business that only knows one buyer has not yet been tested.</p>
+</section>
+<section>
+<h2><span class="num">03</span>A system rich in support, poor in measurement</h2>
+<p>Few countries have built as many support channels for one group of entrepreneurs. The issue is not the amount of support. It is how the pieces fit together and what each one is held accountable for.</p>
+<div class="tbl"><table>
+<tr><th>Institution</th><th>Role</th><th>Latest public figure</th></tr>
+<tr><td><b>SME Corp</b></td><td>National SME coordinator; BEEP grants</td><td>RM34.44m to 222 Bumiputera MSMEs to Dec 2024</td></tr>
