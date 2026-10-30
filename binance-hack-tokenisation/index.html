@@ -221,3 +221,94 @@ h1{font-size:32px}h2{font-size:23px}.tiles{grid-template-columns:repeat(2,1fr)}.
 <p><span class="en">The order of work changes. Settle the legal point of finality first. Keep keys inside bank-grade custody. Never ask an MSME to hold a key. When a receivable is tokenised, any guarantee or risk-sharing scheme must say which legal claim it covers.</span><span class="bm">Urutan kerja yang berubah. Tetapkan titik kemuktamadan sah dahulu. Pastikan kunci berada dalam jagaan bertaraf bank. Jangan minta PMKS memegang kunci. Apabila sesuatu akaun belum terima ditokenkan, mana-mana jaminan atau skim perkongsian risiko mesti menyatakan tuntutan sah yang dilindunginya.</span></p>
 
 <h2><span class="num">08</span><span><span class="en">A practical plan for banks and fintechs</span><span class="bm">Pelan praktikal untuk bank dan fintech</span></span></h2>
+<div class="prop"><div class="c">1</div><div><h4><span class="en">Treat signing as tier-0</span><span class="bm">Anggap tandatangan sebagai aset paling kritikal</span></h4><span class="en">Keep signing keys in HSMs. No laptop or service container should reach the signing path alone.</span><span class="bm">Simpan kunci tandatangan dalam HSM. Tiada komputer riba atau kontena perkhidmatan yang boleh sampai ke laluan tandatangan secara bersendirian.</span><span class="meas"><span class="en">Measure: people and systems that can start a withdrawal alone (target: zero).</span><span class="bm">Ukuran: orang dan sistem yang boleh memulakan pengeluaran seorang diri (sasaran: sifar).</span></span></div></div>
+<div class="prop"><div class="c">2</div><div><h4><span class="en">Cap the speed of outflows</span><span class="bm">Hadkan kelajuan aliran keluar</span></h4><span class="en">Set hourly and daily limits, with a delay and out-of-band approval above them. Most of this loss left in about 20 minutes.</span><span class="bm">Tetapkan had sejam dan sehari, dengan kelewatan dan kelulusan di luar jalur melebihi had itu. Kebanyakan kerugian ini keluar dalam lebih kurang 20 minit.</span><span class="meas"><span class="en">Measure: maximum value that can leave in 30 minutes, as % of balances.</span><span class="bm">Ukuran: nilai maksimum yang boleh keluar dalam 30 minit, sebagai % daripada baki.</span></span></div></div>
+<div class="prop"><div class="c">3</div><div><h4><span class="en">Build a token-level pause and freeze, and govern it</span><span class="bm">Bina jeda dan bekuan pada token, dan tadbir urusnya</span></h4><span class="en">Use multi-party approval, published rules and regular drills for whoever holds the freeze key.</span><span class="bm">Gunakan kelulusan berbilang pihak, peraturan yang diterbitkan dan latihan berkala bagi pemegang kunci bekuan.</span><span class="meas"><span class="en">Measure: minutes from detection to freeze request.</span><span class="bm">Ukuran: minit dari pengesanan hingga permintaan bekuan.</span></span></div></div>
+<div class="prop"><div class="c">4</div><div><h4><span class="en">Keep client assets apart from operating funds</span><span class="bm">Asingkan aset pelanggan daripada dana operasi</span></h4><span class="en">Use independent custodians or trust structures, with third-party attestation of reserves.</span><span class="bm">Gunakan penjaga bebas atau struktur amanah, dengan pengesahan pihak ketiga ke atas rizab.</span><span class="meas"><span class="en">Measure: attestation frequency, and any gap between client liabilities and segregated assets.</span><span class="bm">Ukuran: kekerapan pengesahan, dan sebarang jurang antara liabiliti pelanggan dengan aset terasing.</span></span></div></div>
+<div class="prop"><div class="c">5</div><div><h4><span class="en">Write the incident playbook before the incident</span><span class="bm">Tulis buku panduan insiden sebelum insiden berlaku</span></h4><span class="en">List contacts at issuers, exchanges and analytics firms. Fix decision rights and customer messaging.</span><span class="bm">Senaraikan hubungan di penerbit, bursa dan firma analitik. Tetapkan hak membuat keputusan dan mesej kepada pelanggan.</span><span class="meas"><span class="en">Measure: one full drill every six months, with minutes-to-freeze recorded.</span><span class="bm">Ukuran: satu latihan penuh setiap enam bulan, dengan minit-ke-bekuan direkodkan.</span></span></div></div>
+<div class="prop"><div class="c">6</div><div><h4><span class="en">Red-team the pilots</span><span class="bm">Uji serangan ke atas projek perintis</span></h4><span class="en">Ask DAIH participants to run a live attack simulation before any go-live.</span><span class="bm">Minta peserta DAIH menjalankan simulasi serangan langsung sebelum sebarang pelancaran.</span><span class="meas"><span class="en">Measure: critical findings closed before go-live.</span><span class="bm">Ukuran: penemuan kritikal yang ditutup sebelum pelancaran.</span></span></div></div>
+
+<h2><span class="num">&#9632;</span><span><span class="en">Six hard questions</span><span class="bm">Enam soalan yang sukar</span></span></h2>
+<div class="qs">
+<div class="q"><small><span class="en">For Bank Negara</span><span class="bm">Untuk Bank Negara</span></small><span class="en">Will the end-2026 guidance set minimum standards for key management and privileged access, or leave them to each bank’s own policy?</span><span class="bm">Adakah garis panduan akhir 2026 akan menetapkan standard minimum untuk pengurusan kunci dan akses istimewa, atau menyerahkannya kepada dasar setiap bank?</span></div>
+<div class="q"><small><span class="en">For banks in DAIH</span><span class="bm">Untuk bank dalam DAIH</span></small><span class="en">Which single person, laptop or system could start a withdrawal in your pilot today? Can you prove it?</span><span class="bm">Siapa, komputer riba atau sistem mana yang boleh memulakan pengeluaran dalam projek perintis anda hari ini? Bolehkah anda buktikannya?</span></div>
+<div class="q"><small><span class="en">For token issuers</span><span class="bm">Untuk penerbit token</span></small><span class="en">Who holds the freeze key, and what happens if that key is stolen?</span><span class="bm">Siapa memegang kunci bekuan, dan apa berlaku jika kunci itu dicuri?</span></div>
+<div class="q"><small><span class="en">For boards and audit committees</span><span class="bm">Untuk lembaga dan jawatankuasa audit</span></small><span class="en">When did you last see the result of a key-compromise drill, with minutes recorded?</span><span class="bm">Bilakah kali terakhir anda melihat keputusan latihan pencerobohan kunci, dengan minit direkodkan?</span></div>
+<div class="q"><small><span class="en">For BNM and the SC</span><span class="bm">Untuk BNM dan SC</span></small><span class="en">Where does tokenised money end and tokenised securities begin when one platform settles both?</span><span class="bm">Di mana wang bertoken berakhir dan sekuriti bertoken bermula apabila satu platform menyelesaikan kedua-duanya?</span></div>
+<div class="q"><small><span class="en">For MSMEs and their lenders</span><span class="bm">Untuk PMKS dan pemberi pinjaman</span></small><span class="en">If a receivable is tokenised and the platform is hacked, which document proves who owns the claim?</span><span class="bm">Jika akaun belum terima ditokenkan dan platform digodam, dokumen mana yang membuktikan siapa pemilik tuntutan itu?</span></div>
+</div>
+
+<div class="box call"><span class="lab"><span class="en">Call to action: Bank Negara Malaysia and the Securities Commission</span><span class="bm">Seruan bertindak: Bank Negara Malaysia dan Suruhanjaya Sekuriti</span></span>
+<ul>
+<li><span class="en"><b>By December 2026:</b> state in the end-2026 guidance how key management, privileged access and freeze controls will be assessed for tokenised deposits and ringgit stablecoins.</span><span class="bm"><b>Menjelang Disember 2026:</b> nyatakan dalam garis panduan akhir 2026 bagaimana pengurusan kunci, akses istimewa dan kawalan bekuan akan dinilai untuk deposit bertoken dan stablecoin ringgit.</span></li>
+<li><span class="en"><b>By Q1 2027:</b> run an incident drill with DAIH participants and record minutes-to-freeze.</span><span class="bm"><b>Menjelang suku pertama 2027:</b> jalankan latihan insiden bersama peserta DAIH dan rekodkan minit-ke-bekuan.</span></li>
+<li><span class="en"><b>By Q2 2027:</b> publish a short lessons note from the exercise.</span><span class="bm"><b>Menjelang suku kedua 2027:</b> terbitkan nota pengajaran ringkas daripada latihan itu.</span></li>
+</ul></div>
+<div class="tblw"><table>
+<tr><th><span class="en">Group</span><span class="bm">Kumpulan</span></th><th><span class="en">Ask</span><span class="bm">Permintaan</span></th></tr>
+<tr><td><span class="en">Banks and fintechs</span><span class="bm">Bank dan fintech</span></td><td><span class="en">Give your board an owner and a test date for every signing-path control.</span><span class="bm">Berikan lembaga anda seorang pemilik dan tarikh ujian bagi setiap kawalan laluan tandatangan.</span></td></tr>
+<tr><td><span class="en">Boards</span><span class="bm">Lembaga pengarah</span></td><td><span class="en">Ask for the result of a key-compromise drill this quarter.</span><span class="bm">Minta keputusan latihan pencerobohan kunci pada suku ini.</span></td></tr>
+<tr><td><span class="en">MSMEs</span><span class="bm">PMKS</span></td><td><span class="en">Ask your lender who holds the keys and who owns the legal claim.</span><span class="bm">Tanya pemberi pinjaman anda siapa memegang kunci dan siapa pemilik tuntutan sah.</span></td></tr>
+<tr><td><span class="en">Analysts and media</span><span class="bm">Penganalisis dan media</span></td><td><span class="en">Report ranges and sources, not single figures, while the investigation runs.</span><span class="bm">Laporkan julat dan sumber, bukan satu angka, selagi siasatan berjalan.</span></td></tr>
+</table></div>
+
+<div class="box watch"><span class="lab"><span class="en">Self-check</span><span class="bm">Semak diri</span></span>
+<ul class="chk">
+<li><span class="en">Can I name who can start a withdrawal in our system, by role?</span><span class="bm">Bolehkah saya namakan siapa yang boleh memulakan pengeluaran dalam sistem kami, mengikut peranan?</span></li>
+<li><span class="en">Is there a limit on how much can leave in 30 minutes?</span><span class="bm">Adakah had ke atas jumlah yang boleh keluar dalam 30 minit?</span></li>
+<li><span class="en">Do we have a tested way to freeze or pause tokens?</span><span class="bm">Adakah kami mempunyai cara yang telah diuji untuk membekukan atau menjeda token?</span></li>
+<li><span class="en">Are client assets held apart from our operating funds?</span><span class="bm">Adakah aset pelanggan diasingkan daripada dana operasi kami?</span></li>
+<li><span class="en">Do we depend on one custodian or cloud vendor?</span><span class="bm">Adakah kami bergantung pada satu penjaga aset atau vendor awan?</span></li>
+</ul></div>
+
+<div class="box take"><span class="lab"><span class="en">My take</span><span class="bm">Pandangan saya</span></span>
+<p><span class="en">Do not read this hack as a verdict on blockchains. Read it as a verdict on key management. Tokenisation will carry on, and banks will keep moving to public ledgers because that is where the liquidity is.</span><span class="bm">Jangan baca penggodaman ini sebagai penghakiman ke atas blockchain. Bacalah ia sebagai penghakiman ke atas pengurusan kunci. Tokenisasi akan diteruskan, dan bank akan terus bergerak ke lejar awam kerana di situlah kecairan berada.</span></p>
+<p><span class="en">The ones allowed to do it will answer one question fast: who can move the money, and how quickly can we stop a bad transaction?</span><span class="bm">Yang diberi kebenaran akan menjawab satu soalan dengan pantas: siapa boleh memindahkan wang, dan secepat mana kita boleh menghentikan transaksi yang salah?</span></p></div>
+
+<div class="box over"><span class="lab"><span class="en">Over to you</span><span class="bm">Giliran anda</span></span>
+<p><span class="en">If a bad transaction left your signing system tonight, how many minutes would pass before anyone could stop it?</span><span class="bm">Jika satu transaksi yang salah keluar daripada sistem tandatangan anda malam ini, berapa minit berlalu sebelum sesiapa boleh menghentikannya?</span></p>
+<a class="cbtn" href="LINKEDIN_POST_URL"><span class="en">Comment on LinkedIn</span><span class="bm">Komen di LinkedIn</span></a></div>
+
+<details><summary><span class="en">Sources (all public)</span><span class="bm">Sumber (semuanya awam)</span></summary>
+<ol>
+<li>CoinDesk, “$6 billion Binance hack sends bitcoin, ether tumbling; Standard Chartered expects more pain”, 30 Oct 2026. coindesk.com/markets/2026/10/30/usd6-billion-binance-hack-sends-bitcoin-ether-tumbling-standard-chartered-sees-more-losses-ahead</li>
+<li>CoinDesk, “Binance loses over $6 billion in ‘biggest crypto hack in history’”, 29 Oct 2026. coindesk.com/business/2026/10/29/potential-multi-billion-binance-hack-hitting-crypto-markets</li>
+<li>CNN, “Binance: North Korea suspected in record $6 billion theft from world’s largest crypto exchange”, 30 Oct 2026. cnn.com/2026/10/30/tech/binance-crypto-heist-hnk-intl</li>
+<li>TRM Labs, “North Korea Steals USD 6.36 Billion From Binance in the Largest Hack in History”. trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history</li>
+<li>FXStreet, “Binance likely hacked for an estimated $6B, on-chain data shows”, 29 Oct 2026 (per-chain figures).</li>
+<li>Scoop.my, “Binance freezes US$3b in crypto assets amid suspected hack” (SC Investor Alert List, site blocked).</li>
+<li>Bank Negara Malaysia, “Digital Asset Innovation Hub Charts 2026 Strategy with Focus on Ringgit Stablecoins and Tokenised Deposits”. bnm.gov.my/-/daih-upd</li>
+<li>Central Banking, “BNM selects firms for tokenisation and stablecoin pilots”, 11 Feb 2026; CoinGeek, “Malaysia to launch tests for stablecoins, tokenized deposits”.</li>
+<li>The Asian Banker, “Malaysia’s tokenisation pilots target cross-border wholesale frictions” (SC position, end-2026 policy).</li>
+<li>FintechNews.my, “BNM Is Exploring Stablecoins and Tokenised Assets” (“singleness of money”, working group); Cryptopolitan on roadmap use cases.</li>
+<li>CoinGeek, “US regulator flags tokenization risk as Asia pushes digital money”, Oct 2026 (BLOOM, SEC priority).</li>
+<li>The Block, “JPMorgan expands ‘JPM Coin’ deposit token to Ethereum for institutional clients”, 19 Oct 2026.</li>
+<li>Forbes, Nina Bambysheva, “Why Tokenization, Otherwise Known As Wall Street’s Great Rewiring, Finally Looks Real”, 10 Aug 2026 (RWA.xyz data, stablecoin market).</li>
+<li>Cryptonomist, “Tokenized US Treasuries Reach $15.42B”, 18 Oct 2026 (citing Chainalysis); Analytics Insight (RWA.xyz, 7 Oct 2026).</li>
+</ol>
+<p><span class="en">Figures are as of 30 October 2026. The investigation is ongoing and numbers will change.</span><span class="bm">Angka setakat 30 Oktober 2026. Siasatan masih berjalan dan angka akan berubah.</span></p>
+</details>
+
+<div class="bio"><div class="av">AT</div><div><span class="en"><b>Azman Taufik</b> writes Field Notes on financing, risk and how money moves.</span><span class="bm"><b>Azman Taufik</b> menulis Field Notes tentang pembiayaan, risiko dan pergerakan wang.</span></div></div>
+
+<footer>
+<p><span class="en">The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from publicly available sources listed above, and any errors are mine. Nothing here is financial, investment or legal advice.</span><span class="bm">Pandangan dalam artikel ini ialah pandangan peribadi saya. Ia tidak mewakili majikan saya atau mana-mana organisasi yang pernah atau sedang saya sertai. Artikel ini tidak berkaitan dengan, tidak disokong oleh dan tidak ditulis bagi pihak mana-mana institusi yang disebut. Semua angka diambil daripada sumber awam yang disenaraikan, dan sebarang kesilapan adalah tanggungjawab saya sendiri. Artikel ini bukan nasihat kewangan, pelaburan atau undang-undang.</span></p>
+<p><span class="en">Research and drafting were assisted by AI tools. All facts were checked against the sources listed.</span><span class="bm">Kajian dan penulisan artikel ini dibantu oleh alat AI. Semua fakta telah disemak dengan sumber asal.</span></p>
+<p>© 2026 Azman Taufik · Field Notes</p>
+</footer>
+</div>
+
+<script>
+function setLang(l){
+  document.body.setAttribute('data-lang',l);
+  document.documentElement.lang=(l==='bm'?'ms':'en');
+  document.getElementById('b-en').className=(l==='en'?'on':'');
+  document.getElementById('b-bm').className=(l==='bm'?'on':'');
+  try{history.replaceState(null,'','#'+l);}catch(e){}
+}
+function fromHash(){var h=location.hash.replace('#','');setLang(h==='en'?'en':'bm');}
+window.addEventListener('hashchange',fromHash);
+fromHash();
+</script>
+</body>
+</html>
