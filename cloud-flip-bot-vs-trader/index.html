@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strategi 5 minit yang popular, diuji pada Bitcoin dan Ethereum | Field Notes</title>
+<meta name="description" content="Satu strategi tular di X, dikodkan dan diuji pada carta 5 minit dan 4 jam untuk Bitcoin dan Ethereum.">
+<meta property="og:title" content="Strategi 5 minit yang popular, diuji pada Bitcoin dan Ethereum">
+<meta property="og:description" content="Awan EMA dan zon bekalan/permintaan, diuji pada 5 minit dan 4 jam.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dewatagiri.github.io/field-notes/cloud-flip-bot-vs-trader/">
+<meta property="og:image" content="https://dewatagiri.github.io/field-notes/cloud-flip-bot-vs-trader/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#13263a;--blue:#0b5cad;--red:#b42318;--green:#16794a;--amber:#b54708;--grey:#9aa7b4;--line:#dfe5ec;--soft:#eef4fb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:18px;line-height:1.65}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:5}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:52px;gap:8px}
+.brand{font-family:Inter,sans-serif;font-weight:800;letter-spacing:.12em;font-size:13px;color:var(--ink)}
+.tools{display:flex;gap:8px;align-items:center}
+.tg{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;font-family:Inter,sans-serif;font-size:13px}
+.tg button{border:0;background:#fff;padding:6px 12px;cursor:pointer;color:var(--ink);font:inherit}
+.tg button.on{background:var(--blue);color:#fff;font-weight:700}
+.cbtn{font-family:Inter,sans-serif;font-size:13px;font-weight:600;color:var(--blue);border:1.5px solid var(--blue);border-radius:8px;padding:6px 12px;text-decoration:none;white-space:nowrap}
+.cbtn:hover{background:var(--soft)}
+.en,.bm{display:none}
+body.l-en .en,body.l-bm .bm{display:revert}
+body.l-en .bm,body.l-bm .en{display:none!important}
+body.l-en svg .en,body.l-bm svg .bm{display:inline}
+.kicker{font-family:Inter,sans-serif;color:var(--blue);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin:38px 0 8px}
+h1{font-family:Inter,sans-serif;font-weight:800;font-size:46px;line-height:1.12;margin:0 0 14px;letter-spacing:-.02em}
+.stand{font-family:Inter,sans-serif;color:#5b6b7b;font-size:19px;line-height:1.5;margin:0 0 18px}
+.byline{font-family:Inter,sans-serif;font-size:14px;color:#5b6b7b;padding-bottom:14px;border-bottom:4px solid var(--ink);margin-bottom:26px}
+h2{font-family:Inter,sans-serif;font-size:26px;font-weight:800;margin:44px 0 12px;display:flex;gap:12px;align-items:center;line-height:1.25}
+.num{background:var(--blue);color:#fff;border-radius:8px;font-size:14px;min-width:38px;height:30px;display:inline-flex;align-items:center;justify-content:center}
+p{margin:0 0 16px}
+.box{border-left:6px solid var(--ink);background:#f6f8fa;padding:16px 18px;border-radius:0 8px 8px 0;margin:22px 0}
+.box .lab{font-family:Inter,sans-serif;font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.box ul{margin:0;padding-left:20px}.box li{margin-bottom:6px}.box p:last-child{margin-bottom:0}
+.b-key{border-color:var(--ink)} .b-data{border-color:var(--blue);background:var(--soft)} .b-data .lab{color:var(--blue)}
+.b-trap{border-color:var(--red);background:#fdf1ef}.b-trap .lab{color:var(--red)}
+.b-lesson{border-color:var(--green);background:#eef8f2}.b-lesson .lab{color:var(--green)}
+.b-watch{border-color:var(--amber);background:#fdf5ec}.b-watch .lab{color:var(--amber)}
+.b-call{border:3px solid var(--blue);background:#fff;border-radius:8px}.b-call .lab{color:var(--blue)}
+.b-take{background:var(--ink);color:#fff;border-color:var(--blue);border-left-width:6px}.b-take .lab{color:#9cc7f5}
+.b-over{border:2px dashed var(--blue);background:#fff;border-radius:8px}.b-over .lab{color:var(--blue)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}
+.tile{border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:8px;padding:12px 10px;font-family:Inter,sans-serif;background:#fff}
+.tile b{display:block;font-size:24px;font-weight:800;color:var(--ink);line-height:1.15}
+.tile span{font-size:12.5px;color:#5b6b7b;line-height:1.35;display:block;margin-top:4px}
+.fig{margin:24px 0;font-family:Inter,sans-serif}
+.fig svg{width:100%;height:auto;display:block}
+.fig .ft{font-weight:700;font-size:15px;margin-bottom:6px}
+.fig .src{font-size:12.5px;color:#5b6b7b;margin-top:6px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.card{border:1px solid var(--line);border-top:5px solid var(--grey);border-radius:8px;padding:14px 16px;font-family:Inter,sans-serif;font-size:15px;line-height:1.5;background:#fff}
+.card h3{margin:0 0 8px;font-size:16px}
+.card ul{margin:0;padding-left:18px}
+.c-blue{border-top-color:var(--blue)}.c-green{border-top-color:var(--green)}
+.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:99px;background:var(--soft);color:var(--blue);margin-bottom:8px}
+.qs{display:grid;gap:10px;margin:18px 0}
+.q{background:var(--soft);border-left:5px solid var(--blue);border-radius:0 8px 8px 0;padding:12px 16px;font-family:Inter,sans-serif;font-size:16px;line-height:1.5}
+.q small{display:block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:3px}
+.plan{display:grid;gap:12px;margin:18px 0}
+.pc{display:flex;gap:14px;border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-family:Inter,sans-serif;font-size:15.5px;line-height:1.5}
+.pc .n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.pc b{display:block;font-size:16px;margin-bottom:2px}
+.pc .m{color:var(--green);font-weight:600;margin-top:4px;display:block}
+table{border-collapse:collapse;width:100%;font-family:Inter,sans-serif;font-size:15px;margin:16px 0}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+.sc{font-family:Inter,sans-serif}.sc ol{margin:0;padding-left:22px}.sc li{margin-bottom:6px}
+details{border:1px solid var(--line);border-radius:8px;padding:10px 16px;margin:22px 0;font-family:Inter,sans-serif;font-size:14.5px}
+summary{cursor:pointer;font-weight:700}
+details ol{padding-left:20px}
+.bio{display:flex;gap:14px;align-items:center;border-top:1px solid var(--line);padding-top:20px;margin-top:34px;font-family:Inter,sans-serif;font-size:14.5px;color:#5b6b7b}
+.av{flex:none;width:52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.cbot{text-align:center;margin:30px 0 8px}
+footer{font-family:Inter,sans-serif;font-size:12.5px;color:#5b6b7b;line-height:1.55;border-top:1px solid var(--line);margin-top:26px;padding:18px 0 40px}
+@media(max-width:640px){h1{font-size:32px}h2{font-size:22px}.tiles{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.cbtn{padding:6px 9px}.brand{font-size:12px}}
+.tw{overflow-x:auto}
+</style>
+</head>
+<body class="l-bm">
+<div class="top"><div class="wrap">
+ <div class="brand">FIELD NOTES</div>
+ <div class="tools">
+  <a class="cbtn li-link" href="#" target="_blank" rel="noopener"><span class="bm">Komen di LinkedIn</span><span class="en">Comment on LinkedIn</span></a>
+  <div class="tg"><button id="b-en" type="button">EN</button><button id="b-bm" type="button">BM</button></div>
+ </div>
+</div></div>
+
+<div class="wrap">
+<article>
+<div class="kicker"><span class="bm">Nota Lapangan · Kajian Dagangan</span><span class="en">Field Notes · Trading Research</span></div>
+<h1><span class="bm">Strategi 5 minit yang popular, diuji pada Bitcoin dan Ethereum</span><span class="en">A popular 5-minute setup, tested on Bitcoin and Ethereum</span></h1>
+<p class="stand"><span class="bm">Saya kodkan satu strategi yang sedang tular di X dan jalankan pada data bertahun-tahun. Inilah hasilnya.</span><span class="en">I coded a setup that has been going around on X and ran it on years of data. This is what came out.</span></p>
+<div class="byline">Azman Taufik · <span class="bm">2 November 2026 · 5 minit bacaan</span><span class="en">2 November 2026 · 5 min read</span></div>
+
+<div class="box b-key"><div class="lab"><span class="bm">Ringkasan pantas</span><span class="en">The short version</span></div>
+<ul class="bm">
+<li>Strategi: awan EMA terbalik, diambil hanya apabila harga berada dalam zon bekalan atau permintaan. Kredit kepada @Tradewrite.</li>
+<li>Carta 5 minit Bitcoin (<b>694,855</b> bar): tiada kelebihan selepas kos. Kos satu pusingan ialah <b>16 bps</b>, henti rugi biasa hanya <b>22 hingga 25 bps</b>.</li>
+<li>Carta 4 jam Bitcoin dan Ethereum, di mana kos kecil: sebelum kos pun, hasilnya sekitar sifar. Sampel hanya kira-kira <b>250</b> dagangan.</li>
+<li>Saya tidak jumpa apa-apa untuk diteruskan. Itu bukan bukti strategi ini mati.</li></ul>
+<ul class="en">
+<li>The setup: an EMA cloud flip, taken only when price is inside a supply or demand zone. Credit to @Tradewrite.</li>
+<li>Bitcoin 5-minute charts (<b>694,855</b> bars): no edge after costs. A round trip costs <b>16 bps</b> and the usual stop was only <b>22 to 25 bps</b>.</li>
+<li>Bitcoin and Ethereum 4-hour charts, where costs are small: before costs, the results still sat around zero. The sample is only about <b>250</b> trades.</li>
+<li>I found nothing to build on. That is not proof the setup is dead.</li></ul></div>
+
+<div class="bm">
+<p>Seorang peniaga di X berkongsi satu strategi 5 minit yang nampak mudah. Peraturannya cukup jelas untuk dikodkan, jadi saya kodkan dan jalankan pada Bitcoin.</p>
+<p>Hasil pertama mengecewakan. Saya tertanya-tanya sama ada kos sahaja puncanya, lalu saya ulang ujian pada carta 4 jam. Dua ujian itu dicatat di bawah.</p></div>
+<div class="en">
+<p>A trader on X shared a 5-minute setup that looks simple. The rules were clear enough to code, so I coded them and ran them on Bitcoin.</p>
+<p>The first result was disappointing. I wondered if costs were the whole reason, so I repeated the test on 4-hour charts. Both tests are written up below.</p></div>
+
+<h2><span class="num">01</span><span class="bm">Strategi itu</span><span class="en">The setup</span></h2>
+<div class="bm"><p>Awan ialah ruang antara dua purata bergerak eksponen (EMA), 20 dan 50. Apabila garisan bersilang, awan "terbalik". Isyarat masuk hanya diambil jika harga berada dalam zon bekalan atau permintaan.</p>
+<p>Strategi ini milik @Tradewrite. Saya tidak membaca panduan penuh yang dipautkannya. Saya hanya mengodkan apa yang ada dalam utas.</p></div>
+<div class="en"><p>The cloud is the gap between two exponential moving averages (EMAs), 20 and 50. When the lines cross, the cloud "flips". The entry is only taken if price is inside a supply or demand zone.</p>
+<p>The setup belongs to @Tradewrite. I did not read the full guide he links. I only coded what was in the thread.</p></div>
+<div class="fig"><div class="ft"><span class="bm">Peraturan dalam satu rajah</span><span class="en">The rules in one diagram</span></div>
+<svg viewBox="0 0 700 340" role="img" aria-label="Rules flow">
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5b6b7b"/></marker></defs>
+<g font-family="Inter,sans-serif" font-size="15" fill="#13263a" text-anchor="middle">
+<rect x="130" y="6" width="440" height="46" rx="8" fill="#eef1f5" stroke="#9aa7b4"/><text x="350" y="35"><tspan class="bm">Awan: EMA 20 lawan EMA 50</tspan><tspan class="en">Cloud: EMA 20 vs EMA 50</tspan></text>
+<line x1="350" y1="52" x2="350" y2="72" stroke="#5b6b7b" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="130" y="74" width="440" height="46" rx="8" fill="#d9e8fb" stroke="#0b5cad"/><text x="350" y="103"><tspan class="bm">Langkah 1: harga dalam zon bekalan/permintaan</tspan><tspan class="en">Step 1: price inside a supply/demand zone</tspan></text>
+<line x1="350" y1="120" x2="350" y2="140" stroke="#5b6b7b" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="130" y="142" width="440" height="46" rx="8" fill="#d4efe0" stroke="#16794a"/><text x="350" y="171"><tspan class="bm">Langkah 2: awan terbalik (garisan bersilang)</tspan><tspan class="en">Step 2: the cloud flips (lines cross)</tspan></text>
+<line x1="350" y1="188" x2="350" y2="208" stroke="#5b6b7b" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="130" y="210" width="440" height="46" rx="8" fill="#eef1f5" stroke="#9aa7b4"/><text x="350" y="239"><tspan class="bm">Masuk bila harga separuh ke dalam zon</tspan><tspan class="en">Enter once price is halfway into the zone</tspan></text>
+<line x1="350" y1="256" x2="350" y2="276" stroke="#5b6b7b" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="60" y="278" width="270" height="52" rx="8" fill="#fbe0dd" stroke="#b42318"/><text x="195" y="309"><tspan class="bm">Henti rugi di luar awan</tspan><tspan class="en">Stop beyond the cloud</tspan></text>
+<rect x="370" y="278" width="270" height="52" rx="8" fill="#d4efe0" stroke="#16794a"/><text x="505" y="309"><tspan class="bm">Sasaran: zon seterusnya</tspan><tspan class="en">Target: the next zone</tspan></text>
+</g></svg>
+<div class="src"><span class="bm">Sumber: utas @Tradewrite di X; dilukis semula oleh penulis.</span><span class="en">Source: @Tradewrite thread on X; redrawn by the author.</span></div></div>
+
+
+<div class="bm"><p>Utas itu tidak menetapkan cara zon dilukis, penapis tambahan, jarak henti rugi dan titik sasaran. Saya isi dengan pilihan sendiri: pivot dengan lonjakan volum, tinggi zon 0.8 ATR, penampan henti rugi 0.2 ATR, dan sasaran di tepi zon seterusnya.</p></div>
+<div class="en"><p>The thread does not say how zones are drawn, what extra filter to use, how far the stop goes or where the target sits. I filled those in myself: pivots with a volume spike, zone height of 0.8 ATR, a stop buffer of 0.2 ATR, and a target at the near edge of the next zone.</p></div>
+<div class="box b-watch"><div class="lab"><span class="bm">Perhatian</span><span class="en">Watch</span></div>
+<p class="bm">Pilihan itu milik saya. Ujian ini hanya memberitahu kita tentang versi saya, bukan semestinya versi penulis asal.</p>
+<p class="en">Those choices are mine. This test only tells us about my version, not necessarily the author's.</p></div>
+
+<h2><span class="num">02</span><span class="bm">Ujian 5 minit</span><span class="en">The 5-minute test</span></h2>
+<div class="bm"><p>Data ialah <b>694,855</b> bar Bitcoin 5 minit dari Bybit, Mac 2020 hingga November 2026, dibahagi 70/30 untuk ujian dalam sampel dan luar sampel. Kos: yuran 0.06% dan gelinciran 0.02% setiap hala, iaitu <b>16 bps</b> satu pusingan.</p>
+<p>Selepas kos, kelima-lima versi negatif. Zon mengurangkan dagangan sebanyak 46% tetapi tidak memperbaik hasil. Sebelum kos, kelebihan awan sahaja ialah +0.041R dan dengan zon −0.004R, iaitu hampir sifar. (R ialah satu unit risiko.)</p></div>
+<div class="en"><p>The data is <b>694,855</b> Bitcoin 5-minute bars from Bybit, March 2020 to November 2026, split 70/30 for in-sample and out-of-sample testing. Costs: a 0.06% fee and 0.02% slippage each way, so <b>16 bps</b> a round trip.</p>
+<p>After costs, all five versions were negative. The zone cut the number of trades by 46% but did not improve the result. Before costs, the flip alone had +0.041R and with the zone −0.004R, which is about zero. (R is one unit of risk.)</p></div>
+<div class="tiles">
+<div class="tile"><b>694,855</b><span><span class="bm">bar Bitcoin 5 minit</span><span class="en">Bitcoin 5-minute bars</span></span></div>
+<div class="tile"><b>16 bps</b><span><span class="bm">kos satu pusingan</span><span class="en">cost of one round trip</span></span></div>
+<div class="tile"><b>22–25 bps</b><span><span class="bm">henti rugi biasa</span><span class="en">typical stop</span></span></div>
+<div class="tile"><b>31.7%</b><span><span class="bm">sasaran lebih kecil daripada kos</span><span class="en">of targets smaller than the cost</span></span></div>
+</div>
+<div class="fig"><div class="ft"><span class="bm">Kos satu pusingan (16 bps) hampir sama besar dengan henti rugi biasa</span><span class="en">A round trip (16 bps) is close to the size of the typical stop</span></div>
+<svg viewBox="0 0 700 190" role="img" aria-label="Bar chart: costs versus stop and target in bps">
+<g font-family="Inter,sans-serif" font-size="14" fill="#13263a">
+<text x="0" y="40"><tspan class="bm">Sasaran median</tspan><tspan class="en">Median target</tspan></text>
+<rect x="190" y="22" width="366" height="26" rx="4" fill="#9aa7b4"/><text x="564" y="41" font-weight="700">27.5</text>
+<text x="0" y="92"><tspan class="bm">Henti rugi median</tspan><tspan class="en">Median stop</tspan></text>
+<rect x="190" y="74" width="313" height="26" rx="4" fill="#9aa7b4"/><text x="511" y="93" font-weight="700">22–25</text>
+<text x="0" y="144" font-weight="700" fill="#0b5cad"><tspan class="bm">Kos satu pusingan</tspan><tspan class="en">Round-trip cost</tspan></text>
+<rect x="190" y="126" width="213" height="26" rx="4" fill="#0b5cad"/><text x="411" y="145" font-weight="700" fill="#0b5cad">16</text>
+<text x="190" y="178" font-size="12" fill="#5b6b7b">bps</text>
+</g></svg>
+<div class="src"><span class="bm">Sumber: ujian penulis, BTCUSDT 5 minit, data Bybit 2020 hingga 2026. Bar henti rugi dilukis pada titik tengah julat 22 hingga 25.</span><span class="en">Source: author's backtest, BTCUSDT 5-minute, Bybit data 2020 to 2026. Stop bar drawn at the midpoint of the 22 to 25 range.</span></div></div>
+
+
+<h2><span class="num">03</span><span class="bm">Ujian 4 jam</span><span class="en">The 4-hour test</span></h2>
+<div class="bm"><p>Pada carta 4 jam, kos hampir tidak penting. Henti rugi purata kira-kira 363 bps, jadi 16 bps hanya sekitar 0.04R. Saya guna peraturan yang sama, dengan skala diubah sebelum ujian: pivot 6 bar dan tetingkap 6 bar. Data ialah Bitcoin (14,477 bar) dan Ethereum (12,349 bar).</p>
+<p>Keputusannya sama. Julat keyakinan 95% untuk kelebihan sebelum kos merangkumi sifar bagi kedua-dua versi.</p></div>
+<div class="en"><p>On 4-hour charts, costs hardly matter. The average stop is about 363 bps, so 16 bps is only around 0.04R. I used the same rules, rescaled before the test: 6-bar pivots and a 6-bar window. The data is Bitcoin (14,477 bars) and Ethereum (12,349 bars).</p>
+<p>The answer was the same. The 95% range for the edge before costs includes zero for both versions.</p></div>
+<div class="tw"><table>
+<tr><th><span class="bm">Versi</span><span class="en">Version</span></th><th><span class="bm">Tempoh</span><span class="en">Window</span></th><th><span class="bm">Dagangan</span><span class="en">Trades</span></th><th><span class="bm">Purata R sebelum kos (julat 95%)</span><span class="en">Average R before costs (95% range)</span></th><th><span class="bm">Purata R selepas kos</span><span class="en">Average R after costs</span></th></tr>
+<tr><td><span class="bm">Awan sahaja</span><span class="en">Flip only</span></td><td><span class="bm">Dalam sampel</span><span class="en">In-sample</span></td><td>281</td><td>+0.014 (−0.149 to +0.185)</td><td>−0.065</td></tr>
+<tr><td><span class="bm">Awan sahaja</span><span class="en">Flip only</span></td><td><span class="bm">Luar sampel</span><span class="en">Out-of-sample</span></td><td>122</td><td>−0.164 (−0.384 to +0.074)</td><td>−0.264</td></tr>
+<tr><td><span class="bm">Peraturan asas</span><span class="en">Base rules</span></td><td><span class="bm">Dalam sampel</span><span class="en">In-sample</span></td><td>174</td><td>+0.051 (−0.108 to +0.242)</td><td>−0.037</td></tr>
+<tr><td><span class="bm">Peraturan asas</span><span class="en">Base rules</span></td><td><span class="bm">Luar sampel</span><span class="en">Out-of-sample</span></td><td>78</td><td>+0.030 (−0.214 to +0.284)</td><td>−0.106</td></tr>
+</table></div>
+<div class="bm"><p>Bitcoin dan Ethereum pula bertentangan arah. Pada peraturan asas, Bitcoin sebelum kos ialah +0.216R dalam sampel dan −0.143R luar sampel. Ethereum ialah −0.089R dan +0.202R. Apabila tanda berbalik begini, ia biasanya bunyi rawak.</p></div>
+<div class="en"><p>Bitcoin and Ethereum also pointed in opposite directions. On the base rules, Bitcoin before costs was +0.216R in-sample and −0.143R out-of-sample. Ethereum was −0.089R and +0.202R. When the sign flips like this, it usually looks like noise.</p></div>
+<div class="box b-data"><div class="lab"><span class="bm">Apa kata data</span><span class="en">What the data says</span></div>
+<p class="bm">Pada 5 minit, kos menjadi masalah. Pada 4 jam, kos bukan lagi masalah, namun kelebihan sebelum kos masih tidak kelihatan. Jadi kos bukan satu-satunya sebab.</p>
+<p class="en">On 5 minutes, costs were a problem. On 4 hours, costs are no longer the problem, yet the edge before costs still does not show up. So costs were not the only reason.</p></div>
+
+<h2><span class="num">04</span><span class="bm">Apa yang kod saya tidak tanya</span><span class="en">What my code never asked</span></h2>
+<div class="bm"><p>Pada ujian 5 minit, kod saya mengambil beberapa dagangan dengan sasaran hanya 2.5, 4.0 dan 7.5 bps. Sasaran tercapai, tetapi ketiga-tiganya rugi kerana kos ialah 16 bps.</p>
+<p>Sesiapa yang melihat carta akan terus melepaskan dagangan sebegitu. Kod saya tidak pernah ditanya sama ada ia berbaloi. Saya tidak menulis semakan itu.</p></div>
+<div class="en"><p>In the 5-minute test, my code took a few trades with targets of only 2.5, 4.0 and 7.5 bps. The targets were hit, but all three lost money because the cost is 16 bps.</p>
+<p>Anyone looking at the chart would skip a trade like that. My code was never asked whether it was worth taking. I never wrote that check.</p></div>
+<div class="fig"><div class="ft"><span class="bm">Siapa membaca apa</span><span class="en">Who reads what</span> <small style="font-weight:400;color:#5b6b7b"><span class="bm">(ilustrasi, bukan data)</span><span class="en">(illustration, not data)</span></small></div>
+<div class="cards">
+<div class="card c-blue"><span class="tag"><span class="bm">Bot membaca peraturan</span><span class="en">The bot reads rules</span></span>
+<ul class="bm"><li>EMA 20 bersilang dengan EMA 50</li><li>Zon: pivot dan lonjakan volum</li><li>Masuk separuh ke dalam zon</li><li>Henti rugi di luar awan</li><li>Jawapan sama setiap kali</li></ul>
+<ul class="en"><li>EMA 20 crosses EMA 50</li><li>Zone: pivot plus volume spike</li><li>Enter halfway into the zone</li><li>Stop beyond the cloud</li><li>Same answer every time</li></ul></div>
+<div class="card c-green"><span class="tag" style="background:#eef8f2;color:#16794a"><span class="bm">Peniaga membaca konteks</span><span class="en">The trader reads context</span></span>
+<ul class="bm"><li>Mengapa zon ini, mengapa sekarang</li><li>Adakah pergerakan sudah selesai</li><li>Adakah sasaran melebihi kos</li><li>Sesi dagangan dan berita</li><li>Boleh melepaskan isyarat yang sah</li></ul>
+<ul class="en"><li>Why this zone, why now</li><li>Whether the move is already done</li><li>Whether the target beats costs</li><li>Session and news</li><li>Can skip a valid signal</li></ul></div></div></div>
+
+
+<h2><span class="num">05</span><span class="bm">Apa yang saya belum tahu</span><span class="en">What I don't know</span></h2>
+<div class="bm"><p>Saya belum menguji dagangan budi bicara, jadi saya tidak boleh kata ia lebih baik daripada bot. Sampel 4 jam juga kecil, kira-kira 250 dagangan. Ini bermakna saya gagal menunjukkan kelebihan, bukan bahawa kelebihan itu pasti sifar.</p>
+<p>Utas itu juga menyebut pendapatan harian USD 1,000 hingga 3,000 dan USD 30,000 sebulan. Itu tuntutan penulisnya sendiri dan saya tidak dapat mengesahkannya.</p></div>
+<div class="en"><p>I have not tested discretionary trading, so I cannot say it beats a bot. The 4-hour sample is also small, about 250 trades. That means I failed to show an edge, not that the edge is certainly zero.</p>
+<p>The thread also mentions $1,000 to $3,000 days and $30,000 a month. Those are the author's own claims and I could not verify them.</p></div>
+<div class="box b-trap"><div class="lab"><span class="bm">Perangkap</span><span class="en">Trap</span></div>
+<p class="bm">Jangan baca ini sebagai "bot kalah, manusia menang". Data ini tidak menunjukkan begitu.</p>
+<p class="en">Do not read this as "bots lose, humans win". The data does not show that.</p></div>
+
+<h2><span class="num">06</span><span class="bm">Soalan untuk difikirkan</span><span class="en">Questions to think about</span></h2>
+<div class="qs">
+<div class="q"><small><span class="bm">Untuk setiap peniaga</span><span class="en">For every trader</span></small><span class="bm">Adakah sasaran anda sekurang-kurangnya menampung kos sebelum anda masuk?</span><span class="en">Does your target at least cover the cost before you enter?</span></div>
+<div class="q"><small><span class="bm">Untuk penulis strategi</span><span class="en">For setup authors</span></small><span class="bm">Adakah penapis zon membuang dagangan yang buruk, atau hanya mengurangkan bilangan dagangan?</span><span class="en">Did the zone filter remove bad trades, or just fewer trades?</span></div>
+<div class="q"><small><span class="bm">Untuk pembaca media sosial</span><span class="en">For social media readers</span></small><span class="bm">Berapa banyak carta yang menang datang bersama carta yang rugi?</span><span class="en">How many winning charts came with a losing chart beside them?</span></div>
+<div class="q"><small><span class="bm">Untuk peniaga budi bicara</span><span class="en">For discretionary traders</span></small><span class="bm">Jika kelebihan anda ada pada pertimbangan, bolehkah anda menulis apa pertimbangan itu?</span><span class="en">If your edge is in judgement, can you write down what that judgement is?</span></div>
+</div>
+
+<div class="box b-call"><div class="lab"><span class="bm">Satu permintaan</span><span class="en">One ask</span></div>
+<p class="bm">Jika anda berkongsi strategi dagangan, sertakan bilangan sampel, kos dan dagangan yang rugi. Pembaca boleh menilai sendiri selepas itu.</p>
+<p class="en">If you share a trading setup, include the sample size, the costs and the losing trades. Readers can then judge for themselves.</p></div>
+
+<div class="box b-take"><div class="lab"><span class="bm">Pandangan saya</span><span class="en">My view</span></div>
+<p class="bm">Ujian seperti ini berguna kerana ia menjawab dengan angka, bukan tangkapan skrin. Dalam kes ini, jawapannya ialah saya tidak jumpa apa-apa untuk diteruskan. Jika kelebihan wujud, mungkin ia berada pada bahagian yang tidak dapat saya tulis sebagai peraturan. Itu hanya dugaan dan saya belum mengujinya.</p>
+<p class="en">A test like this is useful because it answers with numbers, not screenshots. In this case the answer is that I found nothing to build on. If there is an edge, it may sit in the part I cannot write as a rule. That is only a guess and I have not tested it.</p></div>
+
+<div class="box b-over"><div class="lab"><span class="bm">Giliran anda</span><span class="en">Over to you</span></div>
+<p class="bm">Bahagian mana dalam dagangan anda sendiri yang tidak boleh anda tulis sebagai peraturan?</p>
+<p class="en">Which part of your own trading can you not write as a rule?</p></div>
+
+<div class="cbot"><a class="cbtn li-link" href="#" target="_blank" rel="noopener"><span class="bm">Komen di LinkedIn</span><span class="en">Comment on LinkedIn</span></a></div>
+
+<details><summary><span class="bm">Sumber</span><span class="en">Sources</span></summary>
+<ol>
+<li>@Tradewrite, utas "Cloud Flip" di X (teks dan tujuh imej carta yang dikongsi dengan saya). <span class="bm">Panduan penuh dipautkan penulis di thetradewriter.com/supply-demand-trader; saya tidak membacanya.</span><span class="en">The author links a full guide at thetradewriter.com/supply-demand-trader; I did not read it.</span></li>
+<li><span class="bm">Lilin Bybit BTCUSDT dan ETHUSDT (kontrak berterusan linear): 5 minit untuk Bitcoin dan 4 jam untuk kedua-duanya, sehingga 2 November 2026, melalui proksi data Nyrobrain.</span><span class="en">Bybit BTCUSDT and ETHUSDT linear perpetual candles: 5-minute for Bitcoin and 4-hour for both, to 2 November 2026, via the Nyrobrain data proxy.</span></li>
+<li><span class="bm">Ujian sendiri penulis (Nyrobrain). Parameter 5 minit dan 4 jam ditetapkan sebelum ujian dan tidak ditala selepas melihat keputusan.</span><span class="en">The author's own backtests (Nyrobrain). The 5-minute and 4-hour parameters were set before the tests and not tuned after seeing results.</span></li>
+</ol></details>
+
+<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b><br><span class="bm">Menulis Nota Lapangan tentang pembiayaan PKS dan dagangan sistematik. Berpangkalan di Kuala Lumpur.</span><span class="en">Writes Field Notes on small business finance and systematic trading. Based in Kuala Lumpur.</span></div></div>
+</article>
+
+<footer>
+<p class="bm">Pandangan dalam artikel ini ialah pandangan peribadi saya. Ia tidak mewakili majikan saya atau mana-mana organisasi yang pernah atau sedang saya sertai. Artikel ini tidak berkaitan dengan, tidak disokong oleh dan tidak ditulis bagi pihak mana-mana institusi yang disebut. Semua angka diambil daripada sumber awam yang disenaraikan serta ujian saya sendiri, dan sebarang kesilapan adalah tanggungjawab saya sendiri. Artikel ini bukan nasihat kewangan, pelaburan atau undang-undang.</p>
+<p class="bm">Kajian dan penulisan artikel ini dibantu oleh alat AI. Semua fakta telah disemak dengan sumber asal.</p>
+<p class="en">The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from the public sources listed above and my own backtests, and any errors are mine. Nothing here is financial, investment or legal advice.</p>
+<p class="en">Research and drafting were assisted by AI tools. All facts were checked against the sources listed.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  // Replace with the real LinkedIn post URL once the post is live
+  var LINKEDIN_POST_URL = "https://www.linkedin.com/feed/";
+  document.querySelectorAll('.li-link').forEach(function(a){a.href=LINKEDIN_POST_URL;});
+  var titles={bm:"Strategi 5 minit yang popular, diuji pada Bitcoin dan Ethereum | Field Notes",en:"A popular 5-minute setup, tested on Bitcoin and Ethereum | Field Notes"};
+  function set(l,push){
+    document.body.className='l-'+l;
+    document.documentElement.lang=(l==='bm')?'ms':'en';
+    document.title=titles[l];
+    document.getElementById('b-en').className=(l==='en')?'on':'';
+    document.getElementById('b-bm').className=(l==='bm')?'on':'';
+    if(push){history.replaceState(null,'','#'+l);}
+  }
+  document.getElementById('b-en').onclick=function(){set('en',true)};
+  document.getElementById('b-bm').onclick=function(){set('bm',true)};
+  var h=location.hash.replace('#','');
+  set(h==='en'?'en':'bm',false);
+  window.addEventListener('hashchange',function(){var x=location.hash.replace('#','');if(x==='en'||x==='bm')set(x,false);});
+})();
+</script>
+</body>
+</html>
