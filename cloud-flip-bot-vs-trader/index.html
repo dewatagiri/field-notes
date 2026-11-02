@@ -85,6 +85,7 @@ details ol{padding-left:20px}
 footer{font-family:Inter,sans-serif;font-size:12.5px;color:#5b6b7b;line-height:1.55;border-top:1px solid var(--line);margin-top:26px;padding:18px 0 40px}
 @media(max-width:640px){h1{font-size:32px}h2{font-size:22px}.tiles{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.cbtn{padding:6px 9px}.brand{font-size:12px}}
 .tw{overflow-x:auto}
+.fig img{width:100%;height:auto}
 </style>
 </head>
 <body class="l-bm">
@@ -127,6 +128,9 @@ footer{font-family:Inter,sans-serif;font-size:12.5px;color:#5b6b7b;line-height:1
 <p>Strategi ini milik @Tradewrite. Saya tidak membaca panduan penuh yang dipautkannya. Saya hanya mengodkan apa yang ada dalam utas.</p></div>
 <div class="en"><p>The cloud is the gap between two exponential moving averages (EMAs), 20 and 50. When the lines cross, the cloud "flips". The entry is only taken if price is inside a supply or demand zone.</p>
 <p>The setup belongs to @Tradewrite. I did not read the full guide he links. I only coded what was in the thread.</p></div>
+<div class="fig"><div class="ft"><span class="bm">Awan, dan rupa awan yang terbalik</span><span class="en">The cloud, and what a flip looks like</span></div>
+<img class="bm" src="fig2_cloud_bm.png" alt="Awan antara EMA 20 dan EMA 50 dengan titik awan terbalik"><img class="en" src="fig2_cloud_en.png" alt="Cloud between EMA 20 and EMA 50 with the flip point marked">
+<div class="src"><span class="bm">Ilustrasi pada data rawak, bukan data sebenar.</span><span class="en">Illustration on random data, not real data.</span></div></div>
 <div class="fig"><div class="ft"><span class="bm">Peraturan dalam satu rajah</span><span class="en">The rules in one diagram</span></div>
 <svg viewBox="0 0 700 340" role="img" aria-label="Rules flow">
 <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5b6b7b"/></marker></defs>
@@ -145,12 +149,18 @@ footer{font-family:Inter,sans-serif;font-size:12.5px;color:#5b6b7b;line-height:1
 <div class="src"><span class="bm">Sumber: utas @Tradewrite di X; dilukis semula oleh penulis.</span><span class="en">Source: @Tradewrite thread on X; redrawn by the author.</span></div></div>
 
 
+<div class="fig"><div class="ft"><span class="bm">Contoh dagangan jual dalam utas, dilukis semula</span><span class="en">The thread's short example, redrawn</span></div>
+<img class="bm" src="fig3_setup_bm.png" alt="Contoh dagangan jual dengan zon, awan, henti rugi dan sasaran"><img class="en" src="fig3_setup_en.png" alt="Short trade example with zone, cloud, stop and target">
+<div class="src"><span class="bm">Gambar rajah oleh penulis berdasarkan contoh @Tradewrite. Bukan data sebenar.</span><span class="en">Schematic by the author based on @Tradewrite's example. Not real data.</span></div></div>
 <div class="bm"><p>Utas itu tidak menetapkan cara zon dilukis, penapis tambahan, jarak henti rugi dan titik sasaran. Saya isi dengan pilihan sendiri: pivot dengan lonjakan volum, tinggi zon 0.8 ATR, penampan henti rugi 0.2 ATR, dan sasaran di tepi zon seterusnya.</p></div>
 <div class="en"><p>The thread does not say how zones are drawn, what extra filter to use, how far the stop goes or where the target sits. I filled those in myself: pivots with a volume spike, zone height of 0.8 ATR, a stop buffer of 0.2 ATR, and a target at the near edge of the next zone.</p></div>
 <div class="box b-watch"><div class="lab"><span class="bm">Perhatian</span><span class="en">Watch</span></div>
 <p class="bm">Pilihan itu milik saya. Ujian ini hanya memberitahu kita tentang versi saya, bukan semestinya versi penulis asal.</p>
 <p class="en">Those choices are mine. This test only tells us about my version, not necessarily the author's.</p></div>
 
+<div class="fig"><div class="ft"><span class="bm">Idea penapis zon</span><span class="en">The zone filter idea</span></div>
+<img class="bm" src="fig4_filter_bm.png" alt="Awan terbalik dalam dan luar zon pada data rawak"><img class="en" src="fig4_filter_en.png" alt="Cloud flips inside and outside zones on random data">
+<div class="src"><span class="bm">Bulatan hijau: awan terbalik dalam zon, diambil. Kelabu: dilangkau. Data rawak, ilustrasi sahaja. Ini bukan bukti bahawa penapis berkesan.</span><span class="en">Green dots: flips inside a zone, taken. Grey: skipped. Random data, illustration only. This does not show the filter works.</span></div></div>
 <h2><span class="num">02</span><span class="bm">Ujian 5 minit</span><span class="en">The 5-minute test</span></h2>
 <div class="bm"><p>Data ialah <b>694,855</b> bar Bitcoin 5 minit dari Bybit, Mac 2020 hingga November 2026, dibahagi 70/30 untuk ujian dalam sampel dan luar sampel. Kos: yuran 0.06% dan gelinciran 0.02% setiap hala, iaitu <b>16 bps</b> satu pusingan.</p>
 <p>Selepas kos, kelima-lima versi negatif. Zon mengurangkan dagangan sebanyak 46% tetapi tidak memperbaik hasil. Sebelum kos, kelebihan awan sahaja ialah +0.041R dan dengan zon −0.004R, iaitu hampir sifar. (R ialah satu unit risiko.)</p></div>
@@ -261,7 +271,7 @@ footer{font-family:Inter,sans-serif;font-size:12.5px;color:#5b6b7b;line-height:1
 <script>
 (function(){
   // Replace with the real LinkedIn post URL once the post is live
-  var LINKEDIN_POST_URL = "https://www.linkedin.com/feed/";
+  var LINKEDIN_POST_URL = "https://www.linkedin.com/feed/update/urn:li:activity:7522882326704332802/";
   document.querySelectorAll('.li-link').forEach(function(a){a.href=LINKEDIN_POST_URL;});
   var titles={bm:"Strategi 5 minit yang popular, diuji pada Bitcoin dan Ethereum | Field Notes",en:"A popular 5-minute setup, tested on Bitcoin and Ethereum | Field Notes"};
   function set(l,push){
