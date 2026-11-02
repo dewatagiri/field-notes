@@ -1,347 +1,368 @@
- <!DOCTYPE html>
-<html lang="ms">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Amanah Hartanah Bumiputera: A Rare Door, Read the Fine Print</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What is one pip worth? | Satu pip bernilai berapa?</title>
+<meta name="description" content="A pip is just a unit. What it is worth in money sets your risk. / Pip hanyalah unit. Nilainya dalam wang menentukan risiko anda.">
+<meta property="og:title" content="What is one pip worth? The answer sets your risk">
+<meta property="og:description" content="How to work out pip value and lot size from risk, with a calculator. Also in Bahasa Malaysia.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dewatagiri.github.io/field-notes/pip-value/">
+<meta property="og:image" content="https://dewatagiri.github.io/field-notes/pip-value/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{
-  color-scheme: light;
-  --ink:#1b2a3a; --muted:#5a6b7b; --line:#dfe6ec; --bg:#ffffff;
-  --green:#2f8f6b; --green-t:#e8f5ef; --pink:#d9667a; --pink-t:#fcebee;
-  --blue:#5b8bc7; --blue-t:#eaf1fa; --sand:#f4efe3; --sand-ink:#6b5a2b;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
+:root{--ink:#13263a;--blue:#0b5cad;--red:#b42318;--green:#16794a;--amber:#b54708;--grey:#9aa7b4;--line:#dfe6ee;--soft:#f3f7fb}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-.wrap{max-width:760px;margin:0 auto;padding:20px 18px 60px}
-.topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-.lang button,.cta{font:inherit;font-size:14px;border:1px solid var(--line);background:#fff;color:var(--ink);padding:7px 14px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-block}
-.lang button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-.cta{background:var(--blue-t);border-color:var(--blue);color:#24508a;font-weight:600}
-h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,6.2vw,44px);line-height:1.12;margin:6px 0 10px;font-weight:700;letter-spacing:-.01em}
-.sub{color:var(--muted);font-size:17px;margin:0 0 6px}
-.by{color:var(--muted);font-size:14px;margin-bottom:22px}
-h2{font-family:Georgia,"Times New Roman",serif;font-size:24px;margin:34px 0 10px;line-height:1.25}
-p{margin:0 0 12px}
-.box{border-radius:12px;padding:16px 18px;margin:16px 0;border-left:5px solid var(--green);background:var(--green-t)}
-.box.pink{border-color:var(--pink);background:var(--pink-t)}
-.box.blue{border-color:var(--blue);background:var(--blue-t)}
-.box.sand{border-color:#c9b36b;background:var(--sand)}
-.box h3{margin:0 0 6px;font-size:17px}
-.box ul{margin:6px 0 0;padding-left:20px}
-.box li{margin:4px 0}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
-.stat{border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-.stat b{display:block;font-size:26px;font-family:Georgia,serif;line-height:1.1}
-.stat span{font-size:13px;color:var(--muted)}
-.chart{border:1px solid var(--line);border-radius:12px;padding:12px;margin:14px 0}
-.chart .scroll{overflow-x:auto}
-.chart h3{margin:2px 0 8px;font-size:16px}
-.cap{font-size:13px;color:var(--muted);margin-top:6px}
-.bars{display:flex;align-items:flex-end;gap:14px;height:230px;padding:10px 6px 0}
-.bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;font-size:13px;text-align:center}
-.bar i{display:block;width:100%;border-radius:8px 8px 0 0}
-.bar b{font-size:14px;margin-bottom:4px}
-.hrow{display:grid;grid-template-columns:96px 1fr 44px;gap:8px;align-items:center;margin:7px 0;font-size:14px}
-.hrow div.t{background:#eef2f5;border-radius:6px;height:20px}
-.hrow div.t i{display:block;height:100%;border-radius:6px}
-table{border-collapse:collapse;width:100%;font-size:14px}
-td,th{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-.small{font-size:13px;color:var(--muted)}
-.foot{border-top:1px solid var(--line);margin-top:34px;padding-top:16px}
-body:not(.en) .en{display:none}
-body.en .bm{display:none}
-a{color:#24508a}
-@media (max-width:520px){.hrow{grid-template-columns:78px 1fr 40px}.bars{gap:8px}}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:18px;line-height:1.65}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.en,.bm{display:none}
+body.l-bm .bm{display:block}body.l-en .en{display:block}
+body.l-bm span.bm,body.l-bm b.bm{display:inline}body.l-en span.en,body.l-en b.en{display:inline}
+body.l-bm li.bm,body.l-en li.en{display:list-item}
+body.l-bm .bm.flex,body.l-en .en.flex{display:flex}
+h1,h2,h3,.sans{font-family:Inter,Arial,sans-serif}
+p{margin:0 0 14px}
+/* top bar */
+.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:5}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:52px}
+.mark{font:800 14px Inter,sans-serif;letter-spacing:.14em;color:var(--ink)}
+.tog{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font:600 13px Inter,sans-serif}
+.tog button{border:0;background:#fff;padding:6px 14px;cursor:pointer;color:var(--ink);font:inherit}
+.tog button.on{background:var(--ink);color:#fff}
+/* masthead */
+.kicker{font:700 12px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:34px 0 10px}
+h1{font-size:46px;line-height:1.1;font-weight:800;margin:0 0 14px;letter-spacing:-.02em}
+.stand{font:400 19px/1.5 Inter,sans-serif;color:#5a6b7c;margin:0 0 18px}
+.byline{font:500 14px Inter,sans-serif;color:#5a6b7c;padding-bottom:14px;border-bottom:4px solid var(--ink);margin-bottom:22px}
+.cbtn{display:inline-block;font:600 14px Inter,sans-serif;background:var(--blue);color:#fff;text-decoration:none;padding:10px 18px;border-radius:8px}
+.cbtn:hover{background:#094a8c}
+.cbar{margin:0 0 26px}
+/* boxes */
+.box{border-left:6px solid var(--ink);background:var(--soft);padding:16px 18px;margin:24px 0;border-radius:0 8px 8px 0}
+.box .lab{font:800 11px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;display:block}
+.box ul,.box ol{margin:0;padding-left:20px}.box li{margin-bottom:6px}
+.box.key{border-color:var(--ink)}.box.key .lab{color:var(--ink)}
+.box.data{border-color:var(--blue);background:#eef5fc}.box.data .lab{color:var(--blue)}
+.box.trap{border-color:var(--red);background:#fdf1f0}.box.trap .lab{color:var(--red)}
+.box.lesson{border-color:var(--green);background:#eef8f2}.box.lesson .lab{color:var(--green)}
+.box.watch{border-color:var(--amber);background:#fdf5ec}.box.watch .lab{color:var(--amber)}
+.box.call{border:3px solid var(--blue);background:#fff;border-radius:8px}.box.call .lab{color:var(--blue)}
+.box.over{border:2px dashed var(--blue);background:#fff;border-radius:8px}.box.over .lab{color:var(--blue)}
+/* sections */
+.sec{display:flex;align-items:center;gap:12px;margin:40px 0 12px}
+.sec .n{background:var(--blue);color:#fff;font:700 14px Inter,sans-serif;border-radius:6px;padding:4px 9px}
+.sec h2{font-size:26px;line-height:1.25;margin:0;font-weight:800}
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.tile{border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:8px;padding:12px 10px;text-align:center;font-family:Inter,sans-serif}
+.tile b{display:block;font-size:24px;font-weight:800;color:var(--blue)}
+.tile span{font-size:12px;color:#5a6b7c;line-height:1.3;display:block}
+/* exhibits */
+.ex{border:1px solid var(--line);border-radius:10px;padding:16px;margin:22px 0;font-family:Inter,sans-serif}
+.ex h3{font-size:16px;margin:0 0 4px;font-weight:700}
+.ex .src{font-size:12px;color:#5a6b7c;margin-top:8px}
+.ex svg{width:100%;height:auto;display:block}
+.formula{font:600 16px Inter,sans-serif;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:14px;text-align:center;margin:16px 0;overflow-x:auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+.card{border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:8px;padding:12px;font:400 15px/1.5 Inter,sans-serif}
+.card b{display:block;margin-bottom:4px}
+.card.r{border-top-color:var(--red)}.card.g{border-top-color:var(--green)}.card.a{border-top-color:var(--amber)}
+/* calculator */
+.calc{border:2px solid var(--blue);border-radius:12px;padding:18px;margin:24px 0;font-family:Inter,sans-serif;background:#fff}
+.calc h3{margin:0 0 12px;font-size:20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid label{font:600 13px Inter,sans-serif;display:block;margin-bottom:4px;color:#3b4d60}
+.grid input,.grid select{width:100%;padding:10px;border:1px solid #c5d0dc;border-radius:8px;font:500 16px Inter,sans-serif;color:var(--ink);background:#fff}
+.full{grid-column:1/-1}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.res div{background:var(--soft);border-radius:8px;padding:12px;text-align:center}
+.res small{display:block;font-size:12px;color:#5a6b7c}
+.res b{font-size:22px;font-weight:800;color:var(--blue)}
+.res .big b{color:var(--green)}
+.note{font:400 13px/1.5 Inter,sans-serif;color:#5a6b7c;margin-top:12px}
+#err{color:var(--red);font:600 14px Inter,sans-serif;margin-top:10px;min-height:18px}
+/* footer */
+details{border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:24px 0;font:400 15px/1.6 Inter,sans-serif}
+summary{cursor:pointer;font-weight:700}
+.bio{display:flex;gap:14px;align-items:center;margin:30px 0;font:400 15px/1.5 Inter,sans-serif}
+.av{flex:0 0 52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;font:700 18px Inter,sans-serif;display:flex;align-items:center;justify-content:center}
+.disc{font:400 13px/1.6 Inter,sans-serif;color:#5a6b7c;border-top:1px solid var(--line);padding-top:14px}
+footer{padding:20px 0 50px;font:400 13px Inter,sans-serif;color:#5a6b7c}
+@media(max-width:620px){
+h1{font-size:34px}.tiles{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}
+.grid{grid-template-columns:1fr}.res{grid-template-columns:1fr}.sec h2{font-size:22px}body{font-size:17px}}
 </style>
 </head>
-<body>
-<div class="wrap">
- 
-<div class="topbar">
-  <div class="lang"><button id="bEn" type="button">English</button> <button id="bBm" class="on" type="button">Bahasa Malaysia</button></div>
-  <a class="cta" href="https://lnkd.in/p/gA_w7F_U" target="_blank" rel="noopener" id="ctaTop">Comment on LinkedIn</a>
+<body class="l-en">
+<div class="top"><div class="wrap">
+  <div class="mark">FIELD NOTES</div>
+  <div class="tog"><button id="b-en" class="on" onclick="setL('en')">EN</button><button id="b-bm" onclick="setL('bm')">BM</button></div>
+</div></div>
+
+<main class="wrap">
+<div class="kicker"><span class="bm">Pengurusan risiko · Forex</span><span class="en">Risk management · Forex</span></div>
+<h1><span class="bm">Satu pip bernilai berapa? Jawapannya menentukan risiko anda</span><span class="en">What is one pip worth? The answer sets your risk</span></h1>
+<p class="stand"><span class="bm">Pip hanyalah unit. Yang penting ialah nilainya dalam wang, kerana itulah yang menentukan saiz kerugian anda.</span><span class="en">A pip is just a unit. What matters is what it is worth in money, because that sets the size of your loss.</span></p>
+<div class="byline">Azman Taufik · <span class="bm">2 November 2026 · 5 minit baca</span><span class="en">2 November 2026 · 5 min read</span></div>
+<div class="cbar"><a class="cbtn" data-li href="#" target="_blank" rel="noopener"><span class="bm">Komen di LinkedIn</span><span class="en">Comment on LinkedIn</span></a></div>
+
+<!-- SUMMARY -->
+<div class="box key bm"><span class="lab">Ringkasan pantas</span><ul>
+<li>1 pip = <b>0.0001</b> bagi kebanyakan pasangan, <b>0.01</b> bagi pasangan JPY.</li>
+<li>Nilai satu pip bergantung pada <b>3 perkara</b>: pasangan, saiz lot dan mata wang akaun.</li>
+<li>EUR/USD, akaun USD: <b>1.00 lot ≈ $10</b> sepip, <b>0.10 lot ≈ $1</b>, <b>0.01 lot ≈ $0.10</b>.</li>
+<li>Henti rugi 20 pip boleh bermaksud rugi <b>$20 atau $200</b>. Saiz lot yang membezakannya.</li>
+<li>Kira saiz lot daripada <b>risiko dalam wang</b>, bukan daripada perasaan.</li>
+<li><b>Emas dan perak:</b> broker mentakrifkan pip secara berbeza. Guna pergerakan harga ($) × bilangan auns.</li></ul></div>
+<div class="box key en"><span class="lab">The short version</span><ul>
+<li>1 pip = <b>0.0001</b> for most pairs, <b>0.01</b> for JPY pairs.</li>
+<li>A pip's value depends on <b>3 things</b>: the pair, your lot size and your account currency.</li>
+<li>EUR/USD, USD account: <b>1.00 lot ≈ $10</b> per pip, <b>0.10 lot ≈ $1</b>, <b>0.01 lot ≈ $0.10</b>.</li>
+<li>A 20-pip stop can mean a <b>$20 or a $200</b> loss. Lot size makes the difference.</li>
+<li>Size the lot from <b>risk in money</b>, not from feel.</li>
+<li><b>Gold and silver:</b> brokers define the pip differently. Use price move ($) × ounces.</li></ul></div>
+
+<!-- OPENING -->
+<div class="bm">
+<p>Kebanyakan peniaga baharu belajar "1 pip = 0.0001" lalu berhenti di situ. Itu bahagian yang mudah.</p>
+<p>Bahagian yang menentukan risiko ialah nilai satu pip dalam wang. Dua peniaga boleh memakai henti rugi yang sama, tetapi menanggung risiko yang jauh berbeza.</p>
 </div>
- 
-<h1><span class="en">Amanah Hartanah Bumiputera: A Rare Door, Read the Fine Print</span><span class="bm">Amanah Hartanah Bumiputera: Pintu yang Jarang Ada, Baca Dulu Sebelum Masuk</span></h1>
-<p class="sub"><span class="en">What AHB pays, what stands behind it, and what RM300 a month could become in 10 years.</span><span class="bm">Apa yang AHB bayar, apa yang menyokongnya, dan apa jadi kepada RM300 sebulan selepas 10 tahun.</span></p>
-<div class="by"><span class="en">By Azman Taufik · November 2026 · Personal research note</span><span class="bm">Oleh Azman Taufik · November 2026 · Nota kajian peribadi</span></div>
-<p class="en">I attended a Pelaburan Hartanah Berhad (PHB) event today and heard how Amanah Hartanah Bumiputera works. Credit to PHB for opening a door to property ownership for Bumiputera savers. It made me curious, so I checked the numbers and set AHB beside REITs, EPF, ASB, Tabung Haji and fixed deposits.</p>
-<p class="bm">Hari ini saya berpeluang menghadiri satu majlis Pelaburan Hartanah Berhad (PHB) dan mendengar cara Amanah Hartanah Bumiputera berfungsi. Syabas kepada PHB kerana membuka pintu pemilikan hartanah kepada penabung Bumiputera. Ia buat saya ingin tahu, jadi saya semak angka dan letakkan AHB bersebelahan REIT, KWSP, ASB, Tabung Haji dan simpanan tetap.</p>
- 
-<div class="box">
-  <h3><span class="en">The answer first</span><span class="bm">Jawapan dahulu</span></h3>
-  <ul class="en">
-    <li>AHB paid <b>5.00 sen per unit for FY2026</b>, the fifth year in a row at that level. Net of tax and zakat.</li>
-    <li>RM300 a month for 10 years (RM36,000 in) grows to about <b>RM46,000</b> at 5%, or about <b>RM44,000</b> without the sponsor bonus.</li>
-    <li>It is regulated as a unit trust, not a REIT. That means a fixed RM1 price, no capital gain, and a sponsor behind the income.</li>
-    <li>It is not a free lunch. Payouts are lower than 2012–2018, and part of the 5 sen is sponsor-funded.</li>
-    <li>Against the field: about double a fixed deposit, below EPF and ASB, and a similar yield to Axis REIT but with no price swings and no growth.</li>
-  </ul>
-  <ul class="bm">
-    <li>AHB agih <b>5.00 sen seunit bagi FY2026</b>, tahun kelima berturut-turut pada kadar ini. Bersih cukai dan zakat.</li>
-    <li>RM300 sebulan selama 10 tahun (RM36,000 modal) menjadi lebih kurang <b>RM46,000</b> pada 5%, atau lebih kurang <b>RM44,000</b> tanpa bonus penaja.</li>
-    <li>Ia dikawal selia sebagai unit amanah, bukan REIT. Maksudnya harga tetap RM1, tiada keuntungan modal, dan ada penaja di belakang pendapatan.</li>
-    <li>Bukan makan percuma. Agihan lebih rendah berbanding 2012–2018, dan sebahagian daripada 5 sen itu dibiayai penaja.</li>
-    <li>Berbanding yang lain: kira-kira dua kali ganda simpanan tetap, di bawah KWSP dan ASB, dan hasil setara Axis REIT tetapi tanpa turun naik harga dan tanpa pertumbuhan.</li>
-  </ul>
+<div class="en">
+<p>Most new traders learn "1 pip = 0.0001" and stop there. That is the easy part.</p>
+<p>The part that decides your risk is what one pip is worth in money. Two traders can use the same stop and carry very different risk.</p>
 </div>
- 
-<div class="stats">
-  <div class="stat"><b>5.00 sen</b><span><span class="en">FY2026 distribution per unit</span><span class="bm">Agihan FY2026 seunit</span></span></div>
-  <div class="stat"><b>RM2.5bn</b><span><span class="en">Paid out since 2010 (Apr 2026)</span><span class="bm">Telah diagih sejak 2010 (Apr 2026)</span></span></div>
-  <div class="stat"><b>~82,000</b><span><span class="en">Unitholders (Oct 2026)</span><span class="bm">Pemegang unit (Okt 2026)</span></span></div>
-  <div class="stat"><b>RM100</b><span><span class="en">Minimum, RM1m maximum</span><span class="bm">Minimum, maksimum RM1 juta</span></span></div>
+
+<!-- 01 -->
+<div class="sec"><span class="n">01</span><h2><span class="bm">Pip ialah unit, bukan wang</span><span class="en">A pip is a unit, not money</span></h2></div>
+<div class="bm">
+<p>Pip ialah langkah harga yang terkecil dalam sebut harga biasa. Pada EUR/USD, pergerakan dari 1.0850 ke 1.0851 ialah satu pip.</p>
+<p>Pasangan JPY menggunakan tempat perpuluhan kedua, jadi satu pip ialah 0.01. USD/JPY dari 150.00 ke 150.01 ialah satu pip.</p>
 </div>
- 
-<h2><span class="en">1. AHB is not a REIT: same regulator, different deal</span><span class="bm">1. AHB bukan REIT: pengawal selia sama, perjanjian berbeza</span></h2>
-<div class="box sand">
-  <p class="en">Both sit under the Capital Markets and Services Act 2007 and the Securities Commission. The difference is the rulebook. AHB is an <b>unlisted unit trust</b> under the SC’s Guidelines on Unit Trust Funds, with a registered prospectus. A listed REIT follows the SC’s Guidelines on Listed REITs plus Bursa’s listing rules. So a REIT unit trades at a market price that moves daily. An AHB unit is bought and sold at a fixed RM1 and the fund does not share in property capital gains. In return, the unitholder gets a steadier ride, with the sponsor (PHB) leasing back the properties and topping up income.</p>
-  <p class="bm">Kedua-duanya berada di bawah Akta Pasaran Modal dan Perkhidmatan 2007 dan Suruhanjaya Sekuriti. Bezanya buku peraturan. AHB ialah <b>unit amanah tidak tersenarai</b> di bawah Garis Panduan Dana Unit Amanah SC, dengan prospektus berdaftar. REIT tersenarai mengikut Garis Panduan REIT Tersenarai SC serta peraturan penyenaraian Bursa. Jadi unit REIT didagangkan pada harga pasaran yang bergerak setiap hari. Unit AHB dibeli dan dijual pada RM1 tetap dan dana tidak menikmati keuntungan modal hartanah. Sebagai ganti, pemegang unit mendapat perjalanan yang lebih stabil, dengan penaja (PHB) menyewa balik hartanah dan menokok pendapatan.</p>
+<div class="en">
+<p>A pip is the smallest standard step in a price quote. On EUR/USD, a move from 1.0850 to 1.0851 is one pip.</p>
+<p>JPY pairs use the second decimal place, so one pip is 0.01. USD/JPY moving from 150.00 to 150.01 is one pip.</p>
 </div>
-<div class="scroll" style="overflow-x:auto">
-<table>
-  <tr><th></th><th>AHB (<span class="en">unit trust</span><span class="bm">unit amanah</span>)</th><th><span class="en">Listed REIT</span><span class="bm">REIT tersenarai</span></th></tr>
-  <tr><td><b><span class="en">Rules</span><span class="bm">Peraturan</span></b></td><td>CMSA 2007 + SC Guidelines on Unit Trust Funds</td><td>CMSA 2007 + SC Guidelines on Listed REITs + Bursa listing rules</td></tr>
-  <tr><td><b><span class="en">Price</span><span class="bm">Harga</span></b></td><td><span class="en">Fixed at RM1</span><span class="bm">Tetap RM1</span></td><td><span class="en">Market price on Bursa</span><span class="bm">Harga pasaran di Bursa</span></td></tr>
-  <tr><td><b><span class="en">Who can buy</span><span class="bm">Siapa boleh beli</span></b></td><td><span class="en">Bumiputera only, RM100 to RM1m</span><span class="bm">Bumiputera sahaja, RM100 hingga RM1 juta</span></td><td><span class="en">Anyone, through a stockbroker</span><span class="bm">Sesiapa, melalui broker saham</span></td></tr>
-  <tr><td><b><span class="en">Capital gain</span><span class="bm">Keuntungan modal</span></b></td><td><span class="en">None. Income only</span><span class="bm">Tiada. Pendapatan sahaja</span></td><td><span class="en">Possible, and losses too</span><span class="bm">Boleh ada, begitu juga kerugian</span></td></tr>
-  <tr><td><b><span class="en">Income support</span><span class="bm">Sokongan pendapatan</span></b></td><td><span class="en">Sponsor lease-back and bonus. Not a capital guarantee</span><span class="bm">Sewa balik penaja dan bonus. Bukan jaminan modal</span></td><td><span class="en">Rental from tenants. No sponsor top-up</span><span class="bm">Sewa daripada penyewa. Tiada tokokan penaja</span></td></tr>
-  <tr><td><b><span class="en">Payout rule</span><span class="bm">Peraturan agihan</span></b></td><td><span class="en">Twice a year, net of tax and zakat</span><span class="bm">Dua kali setahun, bersih cukai dan zakat</span></td><td><span class="en">Tax-exempt at fund level if at least 90% of income is paid out</span><span class="bm">Bebas cukai di peringkat dana jika sekurang-kurangnya 90% pendapatan diagihkan</span></td></tr>
-  <tr><td><b><span class="en">Borrowing</span><span class="bm">Pinjaman</span></b></td><td><span class="en">Property held through sale and lease-back, not geared by the fund</span><span class="bm">Hartanah dipegang melalui jual dan sewa balik, dana tidak berhutang</span></td><td><span class="en">Gearing capped at 50% of assets (60% was allowed temporarily to 2022)</span><span class="bm">Had hutang 50% aset (60% dibenarkan sementara hingga 2022)</span></td></tr>
-</table>
+
+<!-- 02 -->
+<div class="sec"><span class="n">02</span><h2><span class="bm">Tiga perkara yang mengubah nilai pip</span><span class="en">Three things that change a pip's value</span></h2></div>
+<div class="cards">
+ <div class="card"><b><span class="bm">Pasangan</span><span class="en">The pair</span></b><span class="bm">JPY guna 0.01. Kebanyakan lain guna 0.0001.</span><span class="en">JPY pairs use 0.01. Most others use 0.0001.</span></div>
+ <div class="card"><b><span class="bm">Saiz lot</span><span class="en">Lot size</span></b><span class="bm">Lot lebih besar, nilai sepip lebih besar, secara berkadar.</span><span class="en">A bigger lot means a bigger pip value, in proportion.</span></div>
+ <div class="card"><b><span class="bm">Mata wang akaun</span><span class="en">Account currency</span></b><span class="bm">Nilai pip ditukar ke mata wang akaun anda.</span><span class="en">Pip value is converted into your account currency.</span></div>
 </div>
-<div class="box">
-  <h3><span class="en">Strengths of each</span><span class="bm">Kekuatan masing-masing</span></h3>
-  <p class="en"><b>AHB:</b> stable price, steady income, low entry at RM100, access built for Bumiputera. <b>REIT:</b> open market pricing, can be sold any trading day, and rents and asset values can grow. The trade-off is simple: AHB gives calm, a REIT gives upside and swings.</p>
-  <p class="bm"><b>AHB:</b> harga stabil, pendapatan tetap, modal permulaan rendah RM100, akses dibina untuk Bumiputera. <b>REIT:</b> harga pasaran terbuka, boleh dijual pada hari dagangan, sewa dan nilai aset boleh meningkat. Pertukarannya mudah: AHB memberi ketenangan, REIT memberi potensi naik dan turun.</p>
-  <p class="small en">The “not geared” point is my reading of the lease-back structure; check the prospectus before quoting it.</p>
-  <p class="small bm">Perkara “tidak berhutang” ialah bacaan saya terhadap struktur sewa balik; semak prospektus sebelum memetiknya.</p>
+<div class="bm"><p>Contoh EUR/USD pada akaun USD, dengan 1.00 lot bersamaan 100,000 unit:</p></div>
+<div class="en"><p>Example: EUR/USD on a USD account, where 1.00 lot equals 100,000 units:</p></div>
+<div class="tiles">
+ <div class="tile"><b>$10</b><span><span class="bm">sepip, 1.00 lot</span><span class="en">per pip, 1.00 lot</span></span></div>
+ <div class="tile"><b>$1</b><span><span class="bm">sepip, 0.10 lot</span><span class="en">per pip, 0.10 lot</span></span></div>
+ <div class="tile"><b>$0.10</b><span><span class="bm">sepip, 0.01 lot</span><span class="en">per pip, 0.01 lot</span></span></div>
+ <div class="tile"><b>100,000</b><span><span class="bm">unit dalam 1.00 lot</span><span class="en">units in 1.00 lot</span></span></div>
 </div>
- 
-<h2><span class="en">2. The wider field: REITs, EPF, ASB, Tabung Haji and fixed deposits</span><span class="bm">2. Gambaran lebih luas: REIT, KWSP, ASB, Tabung Haji dan simpanan tetap</span></h2>
-<p class="en">Same question, different answers. The bases differ (net, gross, forecast), so read each label before comparing.</p>
-<p class="bm">Soalan sama, jawapan berbeza. Asas pengiraan berbeza (bersih, kasar, ramalan), jadi baca label sebelum membandingkan.</p>
-<div class="chart">
-  <h3><span class="en">Latest annual payout or yield (%)</span><span class="bm">Agihan atau hasil tahunan terkini (%)</span></h3>
-  <div id="cmp"></div>
-  <p class="cap"><span class="en">AHB FY2026 and Tabung Haji 2025 are net of tax and zakat. REIT figures are gross yields: Axis on its RM1.92 year-end 2025 price, the others Kenanga forecasts for June 2026 as reported by StashAway. FD: top of the 1.8–2.5% board range and best promo (about 3.9%).</span><span class="bm">AHB FY2026 dan Tabung Haji 2025 bersih cukai dan zakat. Angka REIT ialah hasil kasar: Axis pada harga RM1.92 hujung 2025, yang lain ramalan Kenanga Jun 2026 seperti dilaporkan StashAway. FD: hujung julat kadar papan 1.8–2.5% dan promosi terbaik (sekitar 3.9%).</span></p>
+<div class="ex">
+ <h3><span class="bm">Nilai sepip naik selari dengan saiz lot</span><span class="en">Pip value rises in line with lot size</span></h3>
+ <svg viewBox="0 0 640 170" role="img" aria-label="Pip value by lot size">
+  <g font-family="Inter,Arial" font-size="14" fill="#13263a">
+   <text x="0" y="34">1.00 lot</text><rect x="90" y="16" width="480" height="26" rx="4" fill="#0b5cad"/><text x="578" y="35" font-weight="700">$10</text>
+   <text x="0" y="84">0.10 lot</text><rect x="90" y="66" width="48" height="26" rx="4" fill="#9aa7b4"/><text x="146" y="85" font-weight="700">$1</text>
+   <text x="0" y="134">0.01 lot</text><rect x="90" y="116" width="4.8" height="26" rx="2" fill="#9aa7b4"/><text x="102" y="135" font-weight="700">$0.10</text>
+  </g></svg>
+ <div class="src"><span class="bm">Anggaran, EUR/USD, akaun USD. Nilai sebenar mengikut spesifikasi kontrak broker anda.</span><span class="en">Approximate, EUR/USD, USD account. Actual values follow your broker's contract specification.</span></div>
 </div>
-<div class="box blue">
-  <h3><span class="en">Reading the field</span><span class="bm">Membaca perbandingan</span></h3>
-  <ul class="en">
-    <li><b>Fixed deposit:</b> the policy rate (OPR) is 2.75% and inflation was about 1.6% in early 2026. AHB pays about double the board FD rate, but FD has PIDM protection and AHB does not.</li>
-    <li><b>EPF and ASB:</b> both pay more (6.15% for 2025; 5.75% ASB). EPF is retirement savings you cannot freely withdraw, so it is not a like-for-like choice.</li>
-    <li><b>Tabung Haji:</b> 3.50% for 2025, after zakat.</li>
-    <li><b>Large REITs:</b> forecast gross yields of roughly 4.9–6.6%. The unit price moves every day, and the yield moves with it.</li>
-  </ul>
-  <ul class="bm">
-    <li><b>Simpanan tetap:</b> kadar dasar (OPR) 2.75% dan inflasi sekitar 1.6% awal 2026. AHB bayar kira-kira dua kali ganda kadar papan FD, tetapi FD dilindungi PIDM dan AHB tidak.</li>
-    <li><b>KWSP dan ASB:</b> kedua-duanya bayar lebih (6.15% bagi 2025; ASB 5.75%). KWSP ialah simpanan persaraan yang tidak boleh dikeluarkan sesuka hati, jadi bukan pilihan setara.</li>
-    <li><b>Tabung Haji:</b> 3.50% bagi 2025, selepas zakat.</li>
-    <li><b>REIT besar:</b> ramalan hasil kasar sekitar 4.9–6.6%. Harga unit bergerak setiap hari, dan hasil bergerak bersamanya.</li>
-  </ul>
+
+<!-- 03 -->
+<div class="sec"><span class="n">03</span><h2><span class="bm">Pip sama, risiko berbeza</span><span class="en">Same pips, different risk</span></h2></div>
+<div class="bm"><p>Dua peniaga memakai henti rugi 20 pip. Seorang berdagang 0.10 lot. Seorang lagi berdagang 1.00 lot.</p><p>Pip sama. Kerugian jika terkena henti rugi: $20 berbanding $200.</p></div>
+<div class="en"><p>Two traders both use a 20-pip stop. One trades 0.10 lot. The other trades 1.00 lot.</p><p>Same pips. Loss if the stop is hit: $20 versus $200.</p></div>
+<div class="ex">
+ <h3><span class="bm">Henti rugi 20 pip: kerugian bergantung pada lot</span><span class="en">20-pip stop: the loss depends on the lot</span></h3>
+ <svg viewBox="0 0 640 120" role="img" aria-label="Loss at 20 pip stop">
+  <g font-family="Inter,Arial" font-size="14" fill="#13263a">
+   <text x="0" y="34">0.10 lot</text><rect x="90" y="16" width="48" height="26" rx="4" fill="#9aa7b4"/><text x="146" y="35" font-weight="700">$20</text>
+   <text x="0" y="84">1.00 lot</text><rect x="90" y="66" width="480" height="26" rx="4" fill="#b42318"/><text x="578" y="85" font-weight="700">$200</text>
+  </g></svg>
+ <div class="src"><span class="bm">Anggaran, EUR/USD, akaun USD.</span><span class="en">Approximate, EUR/USD, USD account.</span></div>
 </div>
- 
-<h3 style="font-family:Georgia,serif;font-size:19px;margin:22px 0 6px"><span class="en">Axis REIT up close</span><span class="bm">Menelusuri Axis REIT</span></h3>
-<p class="en">Axis REIT is a Shariah-compliant industrial and logistics REIT listed on Bursa. It paid 10.55 sen for FY2025, up 13.8% from 9.27 sen, and that includes a 0.43 sen one-off disposal gain. On RM1.92 that is a 5.5% yield. The price traded between RM1.71 and RM2.20 in 2025, so the high was about 29% above the low. An AHB unit stayed at RM1.00.</p>
-<p class="bm">Axis REIT ialah REIT industri dan logistik patuh Syariah yang tersenarai di Bursa. Ia membayar 10.55 sen bagi FY2025, naik 13.8% daripada 9.27 sen, termasuk keuntungan pelupusan sekali sahaja 0.43 sen. Pada harga RM1.92 itu ialah hasil 5.5%. Harga didagangkan antara RM1.71 dan RM2.20 pada 2025, jadi paras tertinggi kira-kira 29% di atas terendah. Unit AHB kekal RM1.00.</p>
-<div class="scroll" style="overflow-x:auto">
-<table>
-  <tr><th><span class="en">Year</span><span class="bm">Tahun</span></th><th>AHB (<span class="en">on RM1</span><span class="bm">atas RM1</span>)</th><th>Axis REIT (<span class="en">yield on year-end price</span><span class="bm">hasil atas harga hujung tahun</span>)</th><th>Axis DPU (sen)</th></tr>
-  <tr><td>2021</td><td>4.70%</td><td>4.89%</td><td>9.49</td></tr>
-  <tr><td>2022</td><td>5.00%</td><td>5.45%</td><td>9.75</td></tr>
-  <tr><td>2023</td><td>5.00%</td><td>4.83%</td><td>8.65</td></tr>
-  <tr><td>2024</td><td>5.00%</td><td>5.36%</td><td>9.27</td></tr>
-  <tr><td>2025</td><td>5.00%</td><td>5.49%</td><td>10.55</td></tr>
-</table>
+
+<!-- 04 -->
+<div class="sec"><span class="n">04</span><h2><span class="bm">Tentukan saiz lot daripada risiko</span><span class="en">Size the lot from risk</span></h2></div>
+<div class="bm"><p>Mulakan dengan wang yang sanggup anda rugi, kemudian bina saiz lot daripadanya.</p></div>
+<div class="en"><p>Start with the money you are willing to lose, then build the lot size from it.</p></div>
+<div class="formula"><span class="bm">Saiz lot = risiko ($) ÷ (henti rugi dalam pip × nilai sepip bagi 1 lot)</span><span class="en">Lot size = risk ($) ÷ (stop in pips × value per pip per 1 lot)</span></div>
+<div class="box data"><span class="lab"><span class="bm">Contoh kerja</span><span class="en">Worked example</span></span>
+ <div class="bm">Akaun $10,000, risiko 1% = $100, henti rugi 20 pip, nilai sepip $10 bagi 1 lot.<br>$100 ÷ (20 × $10) = <b>0.50 lot</b>.</div>
+ <div class="en">Account $10,000, risk 1% = $100, stop 20 pips, pip value $10 per 1 lot.<br>$100 ÷ (20 × $10) = <b>0.50 lot</b>.</div>
 </div>
-<p class="small en" style="margin-top:8px">AHB financial year ends 30 Sep; Axis is calendar year. Axis 2025 includes the one-off gain. The year order of Axis figures is my reading of its annual report table.</p>
-<p class="small bm" style="margin-top:8px">Tahun kewangan AHB berakhir 30 Sep; Axis tahun kalendar. Axis 2025 termasuk keuntungan sekali sahaja. Susunan tahun bagi angka Axis ialah bacaan saya terhadap jadual laporan tahunannya.</p>
-<div class="box sand">
-  <h3><span class="en">Where AHB fits</span><span class="bm">Di mana AHB sesuai</span></h3>
-  <p class="en">Axis paid a similar yield, and its payout grew about 11% from 2021 to 2025 (9.49 to 10.55 sen). But 2026 is softer: the 1H26 DPU was 4.8 sen, and the Q2 payout of 2.3 sen was below 2.65 sen a year earlier. A REIT can rise and fall. AHB trades growth for a flat RM1 price. Pick by what you need: calm income, or income with upside and swings.</p>
-  <p class="bm">Axis membayar hasil yang serupa, dan agihannya naik kira-kira 11% dari 2021 ke 2025 (9.49 ke 10.55 sen). Tetapi 2026 lebih lembut: DPU 1H26 ialah 4.8 sen, dan agihan S2 sebanyak 2.3 sen lebih rendah daripada 2.65 sen setahun lalu. REIT boleh naik dan turun. AHB menukar pertumbuhan dengan harga RM1 yang rata. Pilih ikut keperluan: pendapatan tenang, atau pendapatan dengan potensi naik dan turun.</p>
+<div class="bm"><p>Jika henti rugi dilebarkan ke 40 pip, saiz lot menjadi separuh iaitu 0.25. Risiko kekal $100.</p></div>
+<div class="en"><p>Widen the stop to 40 pips and the lot size halves to 0.25. The risk stays at $100.</p></div>
+<div class="ex">
+ <h3><span class="bm">Henti rugi lebih lebar, lot lebih kecil, risiko tetap $100</span><span class="en">Wider stop, smaller lot, risk fixed at $100</span></h3>
+ <svg viewBox="0 0 640 220" role="img" aria-label="Lot size by stop distance">
+  <g font-family="Inter,Arial" font-size="14" fill="#13263a">
+   <text x="0" y="34">10 pip</text><rect x="90" y="16" width="480" height="26" rx="4" fill="#9aa7b4"/><text x="578" y="35" font-weight="700">1.00</text>
+   <text x="0" y="84">20 pip</text><rect x="90" y="66" width="240" height="26" rx="4" fill="#0b5cad"/><text x="338" y="85" font-weight="700">0.50</text>
+   <text x="0" y="134">40 pip</text><rect x="90" y="116" width="120" height="26" rx="4" fill="#9aa7b4"/><text x="218" y="135" font-weight="700">0.25</text>
+   <text x="0" y="184">80 pip</text><rect x="90" y="166" width="60" height="26" rx="4" fill="#9aa7b4"/><text x="158" y="185" font-weight="700">0.125</text>
+  </g></svg>
+ <div class="src"><span class="bm">Ilustrasi, bukan data. Akaun $10,000, risiko 1%, $10 sepip bagi 1 lot.</span><span class="en">Illustration, not data. $10,000 account, 1% risk, $10 per pip per 1 lot.</span></div>
 </div>
- 
-<h2><span class="en">3. What it has paid over time</span><span class="bm">3. Rekod agihan dari tahun ke tahun</span></h2>
-<p class="en">AHB started at 5.42 sen in FY2011, peaked at 6.60 sen in FY2014–2015, slid to 4.70 sen in FY2021, then settled at 5.00 sen. The fund then ran the same direction as its better-known peer, ASB, but at a lower level in every year where I have both numbers.</p>
-<p class="bm">AHB bermula dengan 5.42 sen pada FY2011, mencapai puncak 6.60 sen pada FY2014–2015, jatuh ke 4.70 sen pada FY2021, kemudian tetap pada 5.00 sen. Arahnya sama dengan ASB yang lebih dikenali, tetapi lebih rendah bagi setiap tahun yang saya ada kedua-dua angka.</p>
- 
-<div class="chart">
-  <h3><span class="en">Yearly payout: AHB, ASB and EPF (sen per unit, or %)</span><span class="bm">Agihan tahunan: AHB, ASB dan KWSP (sen seunit, atau %)</span></h3>
-  <div class="scroll"><div id="lineChart"></div></div>
-  <p class="cap"><span class="en">Green AHB, pink ASB, blue EPF conventional. AHB: financial year to 30 Sep; ASB and EPF: calendar year. Gaps mean I did not retrieve a verified figure (AHB FY2020; ASB 2018–2022 and 2026; EPF 2011–12, 2021–23 and 2026). AHB FY2013 excludes a one-off 1.00 sen bonus. ASB 2015–2017 are community-compiled; verify with ASNB.</span><span class="bm">Hijau AHB, merah jambu ASB, biru KWSP konvensional. AHB: tahun kewangan hingga 30 Sep; ASB dan KWSP: tahun kalendar. Ruang kosong bermakna angka disahkan tidak diperoleh (AHB FY2020; ASB 2018–2022 dan 2026; KWSP 2011–12, 2021–23 dan 2026). AHB FY2013 tidak termasuk bonus sekali sahaja 1.00 sen. ASB 2015–2017 dikumpul komuniti; sila semak dengan ASNB.</span></p>
+
+<!-- CALCULATOR -->
+<div class="calc" id="calc">
+ <h3><span class="bm">Kalkulator saiz lot</span><span class="en">Lot size calculator</span></h3>
+ <div class="grid">
+  <div><label><span class="bm">Baki akaun (USD)</span><span class="en">Account balance (USD)</span></label><input id="bal" type="number" inputmode="decimal" value="10000" min="0"></div>
+  <div><label><span class="bm">Risiko setiap dagangan (%)</span><span class="en">Risk per trade (%)</span></label><input id="rk" type="number" inputmode="decimal" value="1" min="0" step="0.1"></div>
+  <div><label><span class="bm" id="slBm">Henti rugi (pip)</span><span class="en" id="slEn">Stop loss (pips)</span></label><input id="sl" type="number" inputmode="decimal" value="20" min="0"></div>
+  <div><label><span class="bm">Jenis pasangan</span><span class="en">Pair type</span></label>
+   <select id="pt" onchange="pairChange()">
+    <option value="q">EUR/USD, GBP/USD, AUD/USD (USD quote)</option>
+    <option value="b">USD/CHF, USD/CAD (USD base)</option>
+    <option value="j">USD/JPY</option>
+    <option value="m">Gold / silver / metals (by ounces)</option>
+    <option value="c">Custom: pip value per 1 lot</option>
+   </select></div>
+  <div class="full" id="pxw" style="display:none"><label id="pxl">Harga semasa / Current price</label><input id="px" type="number" inputmode="decimal" step="any" value="1"></div>
+ </div>
+ <div class="res">
+  <div><small><span class="bm">Risiko ($)</span><span class="en">Risk ($)</span></small><b id="r1">-</b></div>
+  <div><small><span class="bm" id="r2Bm">Nilai sepip, 1 lot</span><span class="en" id="r2En">Pip value, 1 lot</span></small><b id="r2">-</b></div>
+  <div class="big"><small><span class="bm">Saiz lot</span><span class="en">Lot size</span></small><b id="r3">-</b></div>
+ </div>
+ <div id="err"></div>
+ <div class="note"><span class="bm">Saiz lot dibundarkan ke bawah kepada 0.01. Kalkulator ini berjalan dalam pelayar anda. Tiada data dihantar atau disimpan, selaras dengan semangat PDPA Malaysia dan UU PDP Indonesia. Pasangan silang (contohnya EUR/GBP) perlukan pilihan Custom. Bagi emas dan perak, masukkan henti rugi sebagai pergerakan harga dalam dolar dan semak bilangan auns bagi satu lot dalam spesifikasi broker. Untuk pendidikan sahaja.</span><span class="en">Lot size is rounded down to 0.01. This calculator runs in your browser. No data is sent or stored, in line with the spirit of Malaysia's PDPA and Indonesia's UU PDP. Cross pairs (for example EUR/GBP) need the Custom option. For gold and silver, enter the stop as a dollar price move and check the ounces per lot in your broker's specification. For education only.</span></div>
 </div>
- 
-<div class="box pink">
-  <h3><span class="en">Read this next to the 5 sen</span><span class="bm">Baca ini bersama 5 sen itu</span></h3>
-  <ul class="en">
-    <li>The sponsor bonus has been 0.40–0.67 sen a year (2022–2024), paid by PHB on the first 1 million units.</li>
-    <li>PHB’s <i>hibah</i> contribution to AHB rose from RM10.2m in 2021 to RM27.9m in 2024.</li>
-    <li>If support were cut, the base income alone was about 4.1 sen in FY2026 (2.06 + 2.10 sen).</li>
-  </ul>
-  <ul class="bm">
-    <li>Bonus penaja ialah 0.40–0.67 sen setahun (2022–2024), dibayar PHB bagi 1 juta unit pertama.</li>
-    <li>Sumbangan <i>hibah</i> PHB kepada AHB naik daripada RM10.2 juta pada 2021 kepada RM27.9 juta pada 2024.</li>
-    <li>Jika sokongan ditarik, pendapatan asas sahaja ialah sekitar 4.1 sen pada FY2026 (2.06 + 2.10 sen).</li>
-  </ul>
+
+<!-- 05 -->
+<div class="sec"><span class="n">05</span><h2><span class="bm">Emas dan perak: pip bukan ukuran piawai</span><span class="en">Gold and silver: the pip is not standard</span></h2></div>
+<div class="bm"><p>Emas dan perak disebut dalam dolar bagi satu auns. Broker mentakrifkan "pip" secara berbeza, jadi "pip" rakan anda mungkin tidak sama dengan "pip" di platform anda.</p>
+<p>Cara yang selamat ialah melangkau pip: kerugian = pergerakan harga dalam dolar × bilangan auns dalam posisi.</p></div>
+<div class="en"><p>Gold and silver are quoted in dollars per ounce. Brokers define the pip differently, so a friend's "pips" may not match the pips on your platform.</p>
+<p>The safe method skips the pip: loss = price move in dollars × ounces in your position.</p></div>
+<div class="cards">
+ <div class="card a"><b><span class="bm">Emas</span><span class="en">Gold</span></b><span class="bm">1.00 lot sering bersamaan 100 auns. Pergerakan $1 = $100 bagi 1 lot, atau $1 bagi 0.01 lot (1 auns).</span><span class="en">1.00 lot is often 100 oz. A $1 move = $100 per lot, or $1 at 0.01 lot (1 oz).</span></div>
+ <div class="card a"><b><span class="bm">Perak</span><span class="en">Silver</span></b><span class="bm">1.00 lot sering bersamaan 5,000 auns. Jika pip broker ialah 0.01, sepip = $50 bagi 1 lot. Jika 0.001, sepip = $5.</span><span class="en">1.00 lot is often 5,000 oz. If the broker's pip is 0.01, one pip = $50 per lot. If it is 0.001, one pip = $5.</span></div>
+ <div class="card r"><b><span class="bm">Perangkap</span><span class="en">The trap</span></b><span class="bm">Lot sama, pergerakan harga sama, tetapi "nilai pip" berbeza. Semak saiz kontrak dan saiz pip dalam spesifikasi broker.</span><span class="en">Same lot, same price move, different "pip value". Check the contract size and pip size in your broker's specification.</span></div>
 </div>
- 
-<h2><span class="en">4. What stands behind the unit</span><span class="bm">4. Apa yang menyokong unit anda</span></h2>
-<p class="en">Unitholders hold beneficial ownership of commercial properties that PHB leases back. Named assets include Menara Prisma (Putrajaya), NU Sentral and Menara 1 Sentrum (KL Sentral), Gleneagles Hospital Block B, CP Tower (Petaling Jaya), One Precinct (Penang) and The Shore (Melaka). Healthcare and offices lead the list, with newer industrial buys in Kulim and near Tanjung Pelepas.</p>
-<p class="bm">Pemegang unit memegang pemilikan benefisial hartanah komersial yang disewa balik oleh PHB. Antara aset yang dinamakan: Menara Prisma (Putrajaya), NU Sentral dan Menara 1 Sentrum (KL Sentral), Hospital Gleneagles Blok B, CP Tower (Petaling Jaya), One Precinct (Pulau Pinang) dan The Shore (Melaka). Pejabat dan kesihatan menonjol, dengan pembelian industri baharu di Kulim dan berhampiran Tanjung Pelepas.</p>
- 
-<div class="stats">
-  <div class="stat"><b>RM7.85bn</b><span><span class="en">PHB: 26 buildings, Dec 2024</span><span class="bm">PHB: 26 bangunan, Dis 2024</span></span></div>
-  <div class="stat"><b>+12.6%</b><span><span class="en">Fair value, 2021 to 2024 (RM6.98bn to RM7.86bn)</span><span class="bm">Nilai saksama 2021–2024 (RM6.98bn ke RM7.86bn)</span></span></div>
-  <div class="stat"><b>21 of 26</b><span><span class="en">Buildings injected into AHB (80.8%)</span><span class="bm">Bangunan disuntik ke AHB (80.8%)</span></span></div>
-  <div class="stat"><b>5.4bn</b><span><span class="en">Units after Sept 2026 issue of 400m</span><span class="bm">Unit selepas terbitan 400j, Sep 2026</span></span></div>
+<div class="box data"><span class="lab"><span class="bm">Contoh kerja</span><span class="en">Worked examples</span></span>
+ <div class="bm">Emas: henti rugi $5 dari harga masuk, risiko $100. Auns = $100 ÷ $5 = 20 auns = <b>0.20 lot</b> (jika 1 lot = 100 auns).<br>Perak: 0.01 lot (50 auns), henti rugi $0.50. Kerugian = 0.50 × 50 = <b>$25</b>.</div>
+ <div class="en">Gold: stop $5 from entry, risk $100. Ounces = $100 ÷ $5 = 20 oz = <b>0.20 lot</b> (if 1 lot = 100 oz).<br>Silver: 0.01 lot (50 oz), stop $0.50. Loss = 0.50 × 50 = <b>$25</b>.</div>
 </div>
- 
-<div class="chart">
-  <h3><span class="en">PHB portfolio mix (%)</span><span class="bm">Komposisi portfolio PHB (%)</span></h3>
-  <div id="mix"></div>
-  <p class="cap"><span class="en">As reported by PHB (“as of August”). “Other” is the balance to 100%, my arithmetic.</span><span class="bm">Seperti dilaporkan PHB (“setakat Ogos”). “Lain-lain” ialah baki kepada 100%, kiraan saya.</span></p>
+<div class="bm"><p>Kalkulator di atas ada mod Emas / perak. Masukkan henti rugi sebagai pergerakan dolar dan auns bagi satu lot.</p></div>
+<div class="en"><p>The calculator above has a Gold / silver mode. Enter the stop as a dollar move and the ounces per lot.</p></div>
+
+<!-- 06 -->
+<div class="sec"><span class="n">06</span><h2><span class="bm">Tiga semakan sebelum setiap dagangan</span><span class="en">Three checks before every trade</span></h2></div>
+<div class="box watch bm"><span class="lab">Senarai semak</span><ol>
+<li>Tahu henti rugi anda dalam pip.</li>
+<li>Tahu nilai sepip bagi pasangan itu.</li>
+<li>Kira kerugian dalam wang jika henti rugi terkena.</li></ol></div>
+<div class="box watch en"><span class="lab">Checklist</span><ol>
+<li>Know your stop in pips.</li>
+<li>Know the pip value for that pair.</li>
+<li>Work out the dollar loss if the stop is hit.</li></ol></div>
+<div class="bm"><p>Jika anda tidak dapat menyatakan kerugian dalam wang sebelum masuk dagangan, saiz posisi terlalu besar atau pelan belum jelas.</p></div>
+<div class="en"><p>If you cannot state the dollar loss before entering, the position is too big or the plan is unclear.</p></div>
+
+<div class="box trap bm"><span class="lab">Perhatian</span>Indeks dan kripto juga tidak mengikut peraturan pip forex. Saiz kontrak berbeza antara broker, jadi semak spesifikasi kontrak di platform anda dahulu.</div>
+<div class="box trap en"><span class="lab">Watch out</span>Indices and crypto do not follow the forex pip rule either. Contract sizes vary by broker, so check the contract specification on your platform first.</div>
+
+<div class="box call"><span class="lab"><span class="bm">Cuba sekarang</span><span class="en">Try it now</span></span>
+ <div class="bm">Ambil dagangan terakhir anda. Berapakah kerugian dalam wang jika henti rugi terkena? Gunakan kalkulator di atas untuk menyemaknya.</div>
+ <div class="en">Take your last trade. What would the dollar loss have been if the stop was hit? Use the calculator above to check.</div></div>
+
+<div class="box over"><span class="lab"><span class="bm">Giliran anda</span><span class="en">Over to you</span></span>
+ <div class="bm">Adakah anda menetapkan risiko dalam wang dahulu, atau saiz lot dahulu?</div>
+ <div class="en">Do you set your risk in money first, or your lot size first?</div>
+ <p style="margin:14px 0 0"><a class="cbtn" data-li href="#" target="_blank" rel="noopener"><span class="bm">Komen di LinkedIn</span><span class="en">Comment on LinkedIn</span></a></p></div>
+
+<details><summary><span class="bm">Andaian dan nota</span><span class="en">Assumptions and notes</span></summary>
+<div class="bm"><ul><li>Semua contoh menganggap akaun USD dan 1.00 lot = 100,000 unit, iaitu saiz kontrak forex standard. Broker anda mungkin berbeza.</li>
+<li>Nilai sepip bagi pasangan USD asas dikira sebagai 10 ÷ harga (USD/CHF, USD/CAD). Bagi USD/JPY, 1,000 ÷ harga.</li>
+<li>Emas dan perak: 100 auns dan 5,000 auns bagi 1 lot ialah saiz yang lazim, bukan semua broker. Takrifan pip juga berbeza (0.01 atau 0.001 bagi perak).</li>
+<li>Angka adalah anggaran untuk pendidikan. Sahkan dengan spesifikasi kontrak dan kalkulator broker anda.</li></ul></div>
+<div class="en"><ul><li>All examples assume a USD account and 1.00 lot = 100,000 units, the standard forex contract size. Your broker may differ.</li>
+<li>Pip value for USD-base pairs is worked as 10 ÷ price (USD/CHF, USD/CAD). For USD/JPY, 1,000 ÷ price.</li>
+<li>Gold and silver: 100 oz and 5,000 oz per 1 lot are common sizes, not universal. Pip definitions also differ (0.01 or 0.001 for silver).</li>
+<li>Figures are approximate and for education. Verify against your broker's contract specification and calculator.</li></ul></div>
+</details>
+
+<details><summary><span class="bm">Sumber (gold dan perak)</span><span class="en">Sources (gold and silver)</span></summary>
+<ul>
+<li><a href="https://tradersunion.com/trading-glossary/what-is-xauusd/how-to-calculate-pips/" target="_blank" rel="noopener">Traders Union: How to calculate pips in XAU/USD</a></li>
+<li><a href="https://roboforex.com/beginners/info/charts/metals/xagusd/" target="_blank" rel="noopener">RoboForex: XAGUSD specification (pip 0.01, 5,000 oz lot)</a></li>
+<li><a href="https://ifcmfx.com/en/trading-conditions/precious-metals/xagusd" target="_blank" rel="noopener">IFC Markets: XAGUSD conditions (pip 0.001, 5,000 oz lot)</a></li>
+<li><a href="https://forum.mql4.com/61157" target="_blank" rel="noopener">MQL4 forum: XAG/USD value per pip differs between brokers (trader posts)</a></li>
+</ul></details>
+
+<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b><br><span class="bm">Menulis tentang pengurusan risiko dan dagangan sistematik.</span><span class="en">Writes about risk management and systematic trading.</span></div></div>
+
+<div class="cbar"><a class="cbtn" data-li href="#" target="_blank" rel="noopener"><span class="bm">Komen di LinkedIn</span><span class="en">Comment on LinkedIn</span></a></div>
+
+<div class="disc">
+ <div class="bm">Pandangan dalam artikel ini ialah pandangan peribadi saya. Ia tidak mewakili majikan saya atau mana-mana organisasi yang pernah atau sedang saya sertai. Artikel ini tidak berkaitan dengan, tidak disokong oleh dan tidak ditulis bagi pihak mana-mana institusi. Sebarang kesilapan adalah tanggungjawab saya sendiri. Artikel ini bukan nasihat kewangan, pelaburan atau undang-undang. Kajian dan penulisan artikel ini dibantu oleh alat AI.</div>
+ <div class="en">The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution. Any errors are mine. Nothing here is financial, investment or legal advice. Research and drafting were assisted by AI tools.</div>
 </div>
- 
-<div class="box blue">
-  <h3><span class="en">What the Auditor-General noted</span><span class="bm">Apa yang dicatat Ketua Audit Negara</span></h3>
-  <p class="en">Report 1/26 says PHB largely met its mandate. It also flagged five buildings not injected into AHB because they did not meet collateral criteria, and value declines of 3–7% in some office assets (Menara Hextar, Tower 6 Skypark, Elevate Medini) on weaker occupancy. That limits how fast PHB can issue new units.</p>
-  <p class="bm">Laporan 1/26 menyatakan PHB sebahagian besarnya memenuhi mandat. Ia turut menandakan lima bangunan tidak disuntik ke AHB kerana tidak memenuhi kriteria cagaran, serta penurunan nilai 3–7% bagi beberapa aset pejabat (Menara Hextar, Tower 6 Skypark, Elevate Medini) akibat kadar penghunian lemah. Ini mengehadkan kelajuan PHB menerbitkan unit baharu.</p>
-</div>
- 
-<h2><span class="en">5. The RM300 a month challenge</span><span class="bm">5. Cabaran RM300 sebulan</span></h2>
-<p class="en">A young Bumiputera starts work and puts RM300 into AHB every month for 10 years. Distributions are reinvested as units, which is how AHB pays holders under 10,000 units.</p>
-<p class="bm">Seorang anak muda Bumiputera mula bekerja dan melabur RM300 sebulan dalam AHB selama 10 tahun. Agihan dilaburkan semula sebagai unit, seperti cara AHB membayar pemegang di bawah 10,000 unit.</p>
- 
-<div class="chart">
-  <h3><span class="en">Value after 10 years (RM)</span><span class="bm">Nilai selepas 10 tahun (RM)</span></h3>
-  <div class="bars">
-    <div class="bar"><b>36,000</b><i style="height:156px;background:#c9d3dc"></i><span class="en">Put in</span><span class="bm">Modal</span></div>
-    <div class="bar"><b>40,600</b><i style="height:177px;background:var(--blue)"></i><span class="en">At 2.5% (FD-type)</span><span class="bm">2.5% (jenis FD)</span></div>
-    <div class="bar"><b>44,100</b><i style="height:192px;background:#e2b45f"></i><span class="en">At 4.2%, no bonus</span><span class="bm">4.2%, tiada bonus</span></div>
-    <div class="bar"><b>46,000</b><i style="height:200px;background:var(--green)"></i><span class="en">At 5.0%</span><span class="bm">Pada 5.0%</span></div>
-  </div>
-  <p class="cap"><span class="en">My estimate. Semi-annual compounding, 120 monthly deposits, deposits earn nothing until the next half-year (slightly conservative). 2.5% is the top of today’s 12-month board FD range (about 1.8–2.5%); promotions reach about 3.9%. Rates are not guaranteed.</span><span class="bm">Anggaran saya. Pengkompaunan setengah tahunan, 120 deposit bulanan, deposit tidak mendapat pulangan sehingga separuh tahun berikutnya (agak konservatif). 2.5% ialah hujung julat kadar papan FD 12 bulan hari ini (sekitar 1.8–2.5%); promosi mencecah sekitar 3.9%. Kadar tidak dijamin.</span></p>
-</div>
- 
-<table>
-  <tr><th><span class="en">Rate</span><span class="bm">Kadar</span></th><th><span class="en">Ends at</span><span class="bm">Jumlah akhir</span></th><th><span class="en">Gain</span><span class="bm">Untung</span></th></tr>
-  <tr><td>5.0%</td><td>RM45,981</td><td>RM9,981</td></tr>
-  <tr><td>4.2%</td><td>RM44,094</td><td>RM8,094</td></tr>
-  <tr><td>2.5% (FD-type)</td><td>RM40,608</td><td>RM4,608</td></tr>
-</table>
-<p class="small en" style="margin-top:8px">The point is not the gain. It is the habit: RM300 a month builds a base without needing market timing.</p>
-<p class="small bm" style="margin-top:8px">Intinya bukan untung. Ia tabiat: RM300 sebulan membina asas tanpa perlu meneka pasaran.</p>
- 
-<h2><span class="en">6. Before you start: five checks</span><span class="bm">6. Sebelum mula: lima semakan</span></h2>
-<div class="box pink">
-  <ul class="en">
-    <li><b>Not a government guarantee.</b> The RM1 price is supported by PHB’s structure, not a sovereign guarantee.</li>
-    <li><b>Bonus is not promised.</b> It is declared each period by the sponsor.</li>
-    <li><b>No capital growth.</b> Price stays at RM1, so you earn income only.</li>
-    <li><b>Subscription comes in tranches.</b> Units are issued when PHB injects assets, so supply is limited.</li>
-    <li><b>Compare with ASB first.</b> Where I have both, ASB paid more. AHB is a way to add Bumiputera savings beyond that limit, in property rather than equities.</li>
-  </ul>
-  <ul class="bm">
-    <li><b>Bukan jaminan kerajaan.</b> Harga RM1 disokong struktur PHB, bukan jaminan kerajaan.</li>
-    <li><b>Bonus tidak dijanjikan.</b> Ia diisytiharkan penaja setiap tempoh.</li>
-    <li><b>Tiada pertumbuhan modal.</b> Harga kekal RM1, jadi anda hanya dapat pendapatan.</li>
-    <li><b>Langganan dibuka secara berperingkat.</b> Unit diterbitkan apabila PHB menyuntik aset, jadi bekalan terhad.</li>
-    <li><b>Banding dengan ASB dahulu.</b> Di mana saya ada kedua-dua angka, ASB bayar lebih. AHB ialah cara menambah simpanan Bumiputera melebihi had itu, dalam hartanah dan bukan ekuiti.</li>
-  </ul>
-</div>
- 
-<div class="box">
-  <h3><span class="en">The challenge</span><span class="bm">Cabarannya</span></h3>
-  <p class="en">Do your own research. Read the prospectus. Ask the questions in this note. If it fits, start with RM100 and build the habit.</p>
-  <p class="bm">Buat kajian sendiri. Baca prospektus. Tanya soalan dalam nota ini. Kalau sesuai, mulakan dengan RM100 dan bina tabiat.</p>
-</div>
- 
-<div class="foot">
-  <p><a class="cta" href="https://lnkd.in/p/gA_w7F_U" target="_blank" rel="noopener" id="ctaBot">Comment on LinkedIn</a></p>
-  <p class="small en"><b>Sources.</b> SC Guidelines on Unit Trust Funds and AHB Product Highlights Sheet and prospectus; SC REIT guidelines as summarised by Azmi &amp; Associates, Chambers and LHDN Public Ruling 9/2018; PHB / PHBAM and Bernama, The Star, The Edge, Business Today (FY2026 and 2026 interim distributions, Apr and Oct 2026); PHB press releases (FY2022, FY2024); Maybank AM releases (FY2021, FY2023); AmBank AHB distribution history table (2011–2020); AHB prospectus; Bernama on Auditor-General’s Report 1/26 (23 Feb 2026); The Exchange (PHB portfolio mix); NST (Sept 2026 unit issue); StashAway, a Lowyat forum compilation and malaysia4u (ASB). Axis-REIT 4Q2025 results presentation and 2025 annual report, with 2026 quarterly results via The Edge, The Star and Business Today; EPF dividends via The Star and Malay Mail; StashAway and iMoney (FD, Tabung Haji and large-REIT forecast yields, which are secondary and should be re-checked). Original authors and publishers retain their rights; figures are restated in my own words.</p>
-  <p class="small bm"><b>Sumber.</b> Garis Panduan Dana Unit Amanah SC dan Lembaran Maklumat Produk serta prospektus AHB; garis panduan REIT SC seperti diringkaskan Azmi &amp; Associates, Chambers dan Pandangan Umum LHDN 9/2018; PHB / PHBAM dan Bernama, The Star, The Edge, Business Today (agihan FY2026 dan interim 2026, Apr dan Okt 2026); siaran akhbar PHB (FY2022, FY2024); siaran Maybank AM (FY2021, FY2023); jadual sejarah agihan AHB AmBank (2011–2020); prospektus AHB; Bernama mengenai Laporan Ketua Audit Negara 1/26 (23 Feb 2026); The Exchange (komposisi portfolio PHB); NST (terbitan unit Sep 2026); StashAway, kompilasi forum Lowyat dan malaysia4u (ASB). Pembentangan keputusan 4Q2025 dan laporan tahunan 2025 Axis-REIT, dengan keputusan suku tahunan 2026 melalui The Edge, The Star dan Business Today; dividen KWSP melalui The Star dan Malay Mail; StashAway dan iMoney (hasil FD, Tabung Haji dan ramalan REIT besar, yang merupakan sumber sekunder dan perlu disemak semula). Hak cipta asal kekal pada penulis dan penerbit; angka dinyatakan semula dengan ayat sendiri.</p>
-  <p class="small en"><b>Disclaimer.</b> The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from publicly available sources listed above, and any errors are mine. Nothing here is financial, investment or legal advice. Past distributions do not guarantee future returns.</p>
-  <p class="small en">Research and drafting were assisted by AI tools. All facts were checked against the sources listed.</p>
-  <p class="small bm"><b>Penafian.</b> Pandangan dalam artikel ini ialah pandangan peribadi saya. Ia tidak mewakili majikan saya atau mana-mana organisasi yang pernah atau sedang saya sertai. Artikel ini tidak berkaitan dengan, tidak disokong oleh dan tidak ditulis bagi pihak mana-mana institusi yang disebut. Semua angka diambil daripada sumber awam yang disenaraikan, dan sebarang kesilapan adalah tanggungjawab saya sendiri. Artikel ini bukan nasihat kewangan, pelaburan atau undang-undang. Agihan lalu tidak menjamin pulangan akan datang.</p>
-  <p class="small bm">Kajian dan penulisan artikel ini dibantu oleh alat AI. Semua fakta telah disemak dengan sumber asal.</p>
-</div>
- 
-</div>
- 
+</main>
+<footer><div class="wrap">© 2026 Azman Taufik · Field Notes</div></footer>
+
 <script>
-(function(){
-  var en=document.getElementById('bEn'), bm=document.getElementById('bBm');
-  function set(isBm){
-    document.body.classList.toggle('en',!isBm);
-    document.documentElement.lang=isBm?'ms':'en';
-    en.classList.toggle('on',!isBm); bm.classList.toggle('on',isBm);
-    document.getElementById('ctaTop').textContent=isBm?'Komen di LinkedIn':'Comment on LinkedIn';
-    document.getElementById('ctaBot').textContent=isBm?'Komen di LinkedIn':'Comment on LinkedIn';
+// Replace with the live LinkedIn post URL once posted
+var LINKEDIN_URL = "https://lnkd.in/p/gtTtQbRk";
+document.querySelectorAll('a[data-li]').forEach(function(a){a.href=LINKEDIN_URL});
+
+function setL(l){
+  document.body.className='l-'+l;
+  document.documentElement.lang = l==='bm'?'ms':'en';
+  document.getElementById('b-bm').className=l==='bm'?'on':'';
+  document.getElementById('b-en').className=l==='en'?'on':'';
+  try{history.replaceState(null,'','#'+l)}catch(e){}
+}
+(function(){var h=(location.hash||'').replace('#','');if(h==='en'||h==='bm')setL(h);})();
+
+function setMetal(m){
+  document.getElementById('slBm').textContent=m?'Henti rugi ($ pergerakan harga)':'Henti rugi (pip)';
+  document.getElementById('slEn').textContent=m?'Stop distance ($ price move)':'Stop loss (pips)';
+  document.getElementById('r2Bm').textContent=m?'Rugi bagi $1 pergerakan, 1 lot':'Nilai sepip, 1 lot';
+  document.getElementById('r2En').textContent=m?'Loss per $1 move, 1 lot':'Pip value, 1 lot';
+}
+function pairChange(){
+  var t=document.getElementById('pt').value, w=document.getElementById('pxw'), l=document.getElementById('pxl'), p=document.getElementById('px');
+  setMetal(t==='m');
+  if(t==='q'){w.style.display='none';}
+  else{w.style.display='block';
+    if(t==='b'){l.textContent='Harga semasa / Current price (e.g. 0.9000)';p.value=0.9;}
+    if(t==='j'){l.textContent='Harga semasa / Current price (e.g. 150.00)';p.value=150;}
+    if(t==='c'){l.textContent='Nilai sepip bagi 1 lot (USD) / Pip value per 1 lot (USD)';p.value=10;}
+    if(t==='m'){l.textContent='Auns bagi 1 lot (semak broker) / Ounces per 1 lot (check your broker)';p.value=100;}
   }
-  en.onclick=function(){set(false);try{history.replaceState(null,'','#en')}catch(e){}};
-  bm.onclick=function(){set(true);try{history.replaceState(null,'','#bm')}catch(e){}};
-  function fromHash(){set(location.hash!=='#en')}
-  window.addEventListener('hashchange',fromHash);
-  fromHash();
- 
-  // Line chart
-  var years=[2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
-  var ahb=[5.42,6.50,6.50,6.60,6.60,6.50,6.20,6.20,5.60,null,4.70,5.00,5.00,5.00,5.00,5.00];
-  var asb=[8.80,8.90,8.70,8.50,7.75,7.25,8.25,null,null,null,null,null,5.25,5.75,5.75,null];
-  var epf=[null,null,6.35,6.75,6.40,5.70,6.90,6.15,5.45,5.20,null,null,null,6.30,6.15,null];
-  var W=720,H=330,L=40,R=14,T=16,B=42,ymin=4,ymax=9.5;
-  function X(i){return L+i*(W-L-R)/(years.length-1)}
-  function Y(v){return T+(ymax-v)*(H-T-B)/(ymax-ymin)}
-  function series(arr,color){
-    var d='',pen=false,dots='';
-    arr.forEach(function(v,i){
-      if(v===null){pen=false;return}
-      d+=(pen?'L':'M')+X(i).toFixed(1)+' '+Y(v).toFixed(1)+' ';pen=true;
-      dots+='<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(v).toFixed(1)+'" r="3.6" fill="'+color+'"/>';
-    });
-    return '<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="2.4" stroke-linejoin="round"/>'+dots;
-  }
-  var s='<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="min-width:560px" role="img" aria-label="AHB versus ASB distribution per unit, 2011 to 2026">';
-  for(var g=4;g<=9;g++){
-    s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(g)+'" y2="'+Y(g)+'" stroke="#e3e9ee"/>';
-    s+='<text x="'+(L-6)+'" y="'+(Y(g)+4)+'" font-size="11" text-anchor="end" fill="#5a6b7b">'+g+'</text>';
-  }
-  years.forEach(function(y,i){
-    s+='<text x="'+X(i)+'" y="'+(H-22)+'" font-size="11" text-anchor="middle" fill="#5a6b7b">'+String(y).slice(2)+'</text>';
-  });
-  s+=series(epf,'#5b8bc7')+series(asb,'#d9667a')+series(ahb,'#2f8f6b');
-  s+='<text x="'+X(0)+'" y="'+(Y(8.8)-10)+'" font-size="12" fill="#d9667a" font-weight="600">ASB 8.80</text>';
-  s+='<text x="'+X(3)+'" y="'+(Y(6.6)+20)+'" font-size="12" fill="#2f8f6b" font-weight="600">AHB 6.60</text>';
-  s+='<text x="'+X(13)+'" y="'+(Y(5.75)+17)+'" font-size="12" fill="#d9667a" font-weight="600">ASB 5.75</text>';
-  s+='<text x="'+(X(12)-4)+'" y="'+(Y(6.3)-10)+'" font-size="12" fill="#5b8bc7" font-weight="600">EPF 6.15</text>';
-  s+='<text x="'+X(12)+'" y="'+(Y(5.0)+22)+'" font-size="12" fill="#2f8f6b" font-weight="600">AHB 5.00</text>';
-  s+='<text x="'+(W/2)+'" y="'+(H-4)+'" font-size="11" text-anchor="middle" fill="#5a6b7b">Year (20xx)</text>';
-  s+='</svg>';
-  document.getElementById('lineChart').innerHTML=s;
- 
-  // Portfolio mix
-  var mix=[['Office / Pejabat',38,'#5b8bc7'],['Retail / Runcit',20,'#2f8f6b'],['Land / Tanah',13,'#e2b45f'],['Industrial / Industri',10,'#d9667a'],['Healthcare / Kesihatan',8,'#8f7bc7'],['Other / Lain-lain',11,'#c9d3dc']];
-  var h='';
-  mix.forEach(function(m){
-    h+='<div class="hrow"><span style="font-size:13px">'+m[0]+'</span><div class="t"><i style="width:'+(m[1]/38*100)+'%;background:'+m[2]+'"></i></div><b>'+m[1]+'%</b></div>';
-  });
-  document.getElementById('mix').innerHTML=h;
- 
-  // Wider comparison
-  var cmp=[['AHB (FY2026)',5.00,'#2f8f6b'],['ASB (2025)',5.75,'#7fc4a6'],['EPF (2025)',6.15,'#5b8bc7'],['Tabung Haji (2025)',3.50,'#a9c3e6'],['Axis REIT (FY2025)',5.5,'#d9667a'],['KLCC Stapled (f)',4.9,'#eb9aa8'],['IGB REIT (f)',5.6,'#eb9aa8'],['Sunway REIT (f)',5.7,'#eb9aa8'],['Pavilion REIT (f)',6.6,'#eb9aa8'],['FD best promo',3.9,'#e2b45f'],['FD board, top',2.5,'#efd39a']];
-  var c='';
-  cmp.forEach(function(m){
-    c+='<div class="hrow" style="grid-template-columns:130px 1fr 44px"><span style="font-size:13px">'+m[0]+'</span><div class="t"><i style="width:'+(m[1]/7*100)+'%;background:'+m[2]+'"></i></div><b>'+m[1].toFixed(2).replace(/0$/,'')+'</b></div>';
-  });
-  document.getElementById('cmp').innerHTML=c;
-})();
+  calc();
+}
+function calc(){
+  var bal=parseFloat(document.getElementById('bal').value),
+      rk=parseFloat(document.getElementById('rk').value),
+      sl=parseFloat(document.getElementById('sl').value),
+      t=document.getElementById('pt').value,
+      px=parseFloat(document.getElementById('px').value),
+      err=document.getElementById('err'), pv;
+  err.textContent='';
+  if(!(bal>0)||!(rk>0)||!(sl>0)){set('-','-','-');return;}
+  if(t==='q')pv=10;
+  else if(!(px>0)){set('-','-','-');err.textContent='Masukkan nilai yang sah / Enter a valid value';return;}
+  else if(t==='b')pv=10/px;
+  else if(t==='j')pv=1000/px;
+  else pv=px;
+  var risk=bal*rk/100, lot=Math.floor(risk/(sl*pv)*100)/100;
+  set('$'+risk.toFixed(2),'$'+pv.toFixed(2),lot.toFixed(2));
+  if(lot<0.01)err.textContent='Risiko terlalu kecil untuk 0.01 lot / Risk is too small for even 0.01 lot';
+}
+function set(a,b,c){document.getElementById('r1').textContent=a;document.getElementById('r2').textContent=b;document.getElementById('r3').textContent=c;}
+['bal','rk','sl','px'].forEach(function(id){document.getElementById(id).addEventListener('input',calc)});
+calc();
 </script>
 </body>
 </html>
