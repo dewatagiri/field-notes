@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What is one pip worth? | Satu pip bernilai berapa?</title>
+<meta name="description" content="A pip is just a unit. What it is worth in money sets your risk. / Pip hanyalah unit. Nilainya dalam wang menentukan risiko anda.">
+<meta property="og:title" content="What is one pip worth? The answer sets your risk">
+<meta property="og:description" content="How to work out pip value and lot size from risk, with a calculator. Also in Bahasa Malaysia.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dewatagiri.github.io/field-notes/pip-value/">
+<meta property="og:image" content="https://dewatagiri.github.io/field-notes/pip-value/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#13263a;--blue:#0b5cad;--red:#b42318;--green:#16794a;--amber:#b54708;--grey:#9aa7b4;--line:#dfe6ee;--soft:#f3f7fb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:18px;line-height:1.65}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.en,.bm{display:none}
+body.l-bm .bm{display:block}body.l-en .en{display:block}
+body.l-bm span.bm,body.l-bm b.bm{display:inline}body.l-en span.en,body.l-en b.en{display:inline}
+body.l-bm li.bm,body.l-en li.en{display:list-item}
+body.l-bm .bm.flex,body.l-en .en.flex{display:flex}
+h1,h2,h3,.sans{font-family:Inter,Arial,sans-serif}
+p{margin:0 0 14px}
+/* top bar */
+.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:5}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:52px}
+.mark{font:800 14px Inter,sans-serif;letter-spacing:.14em;color:var(--ink)}
+.tog{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font:600 13px Inter,sans-serif}
+.tog button{border:0;background:#fff;padding:6px 14px;cursor:pointer;color:var(--ink);font:inherit}
+.tog button.on{background:var(--ink);color:#fff}
+/* masthead */
+.kicker{font:700 12px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin:34px 0 10px}
+h1{font-size:46px;line-height:1.1;font-weight:800;margin:0 0 14px;letter-spacing:-.02em}
+.stand{font:400 19px/1.5 Inter,sans-serif;color:#5a6b7c;margin:0 0 18px}
+.byline{font:500 14px Inter,sans-serif;color:#5a6b7c;padding-bottom:14px;border-bottom:4px solid var(--ink);margin-bottom:22px}
+.cbtn{display:inline-block;font:600 14px Inter,sans-serif;background:var(--blue);color:#fff;text-decoration:none;padding:10px 18px;border-radius:8px}
+.cbtn:hover{background:#094a8c}
+.cbar{margin:0 0 26px}
+/* boxes */
+.box{border-left:6px solid var(--ink);background:var(--soft);padding:16px 18px;margin:24px 0;border-radius:0 8px 8px 0}
+.box .lab{font:800 11px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;display:block}
+.box ul,.box ol{margin:0;padding-left:20px}.box li{margin-bottom:6px}
+.box.key{border-color:var(--ink)}.box.key .lab{color:var(--ink)}
+.box.data{border-color:var(--blue);background:#eef5fc}.box.data .lab{color:var(--blue)}
+.box.trap{border-color:var(--red);background:#fdf1f0}.box.trap .lab{color:var(--red)}
+.box.lesson{border-color:var(--green);background:#eef8f2}.box.lesson .lab{color:var(--green)}
+.box.watch{border-color:var(--amber);background:#fdf5ec}.box.watch .lab{color:var(--amber)}
+.box.call{border:3px solid var(--blue);background:#fff;border-radius:8px}.box.call .lab{color:var(--blue)}
+.box.over{border:2px dashed var(--blue);background:#fff;border-radius:8px}.box.over .lab{color:var(--blue)}
+/* sections */
+.sec{display:flex;align-items:center;gap:12px;margin:40px 0 12px}
+.sec .n{background:var(--blue);color:#fff;font:700 14px Inter,sans-serif;border-radius:6px;padding:4px 9px}
+.sec h2{font-size:26px;line-height:1.25;margin:0;font-weight:800}
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.tile{border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:8px;padding:12px 10px;text-align:center;font-family:Inter,sans-serif}
+.tile b{display:block;font-size:24px;font-weight:800;color:var(--blue)}
+.tile span{font-size:12px;color:#5a6b7c;line-height:1.3;display:block}
+/* exhibits */
+.ex{border:1px solid var(--line);border-radius:10px;padding:16px;margin:22px 0;font-family:Inter,sans-serif}
+.ex h3{font-size:16px;margin:0 0 4px;font-weight:700}
+.ex .src{font-size:12px;color:#5a6b7c;margin-top:8px}
+.ex svg{width:100%;height:auto;display:block}
+.formula{font:600 16px Inter,sans-serif;background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:14px;text-align:center;margin:16px 0;overflow-x:auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+.card{border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:8px;padding:12px;font:400 15px/1.5 Inter,sans-serif}
+.card b{display:block;margin-bottom:4px}
+.card.r{border-top-color:var(--red)}.card.g{border-top-color:var(--green)}.card.a{border-top-color:var(--amber)}
+/* calculator */
+.calc{border:2px solid var(--blue);border-radius:12px;padding:18px;margin:24px 0;font-family:Inter,sans-serif;background:#fff}
+.calc h3{margin:0 0 12px;font-size:20px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid label{font:600 13px Inter,sans-serif;display:block;margin-bottom:4px;color:#3b4d60}
+.grid input,.grid select{width:100%;padding:10px;border:1px solid #c5d0dc;border-radius:8px;font:500 16px Inter,sans-serif;color:var(--ink);background:#fff}
+.full{grid-column:1/-1}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.res div{background:var(--soft);border-radius:8px;padding:12px;text-align:center}
+.res small{display:block;font-size:12px;color:#5a6b7c}
+.res b{font-size:22px;font-weight:800;color:var(--blue)}
+.res .big b{color:var(--green)}
+.note{font:400 13px/1.5 Inter,sans-serif;color:#5a6b7c;margin-top:12px}
+#err{color:var(--red);font:600 14px Inter,sans-serif;margin-top:10px;min-height:18px}
+/* footer */
+details{border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:24px 0;font:400 15px/1.6 Inter,sans-serif}
+summary{cursor:pointer;font-weight:700}
+.bio{display:flex;gap:14px;align-items:center;margin:30px 0;font:400 15px/1.5 Inter,sans-serif}
+.av{flex:0 0 52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;font:700 18px Inter,sans-serif;display:flex;align-items:center;justify-content:center}
+.disc{font:400 13px/1.6 Inter,sans-serif;color:#5a6b7c;border-top:1px solid var(--line);padding-top:14px}
+footer{padding:20px 0 50px;font:400 13px Inter,sans-serif;color:#5a6b7c}
+@media(max-width:620px){
+h1{font-size:34px}.tiles{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}
+.grid{grid-template-columns:1fr}.res{grid-template-columns:1fr}.sec h2{font-size:22px}body{font-size:17px}}
+</style>
+</head>
+<body class="l-en">
+<div class="top"><div class="wrap">
+  <div class="mark">FIELD NOTES</div>
+  <div class="tog"><button id="b-en" class="on" onclick="setL('en')">EN</button><button id="b-bm" onclick="setL('bm')">BM</button></div>
+</div></div>
+
+<main class="wrap">
+<div class="kicker"><span class="bm">Pengurusan risiko · Forex</span><span class="en">Risk management · Forex</span></div>
+<h1><span class="bm">Satu pip bernilai berapa? Jawapannya menentukan risiko anda</span><span class="en">What is one pip worth? The answer sets your risk</span></h1>
+<p class="stand"><span class="bm">Pip hanyalah unit. Yang penting ialah nilainya dalam wang, kerana itulah yang menentukan saiz kerugian anda.</span><span class="en">A pip is just a unit. What matters is what it is worth in money, because that sets the size of your loss.</span></p>
+<div class="byline">Azman Taufik · <span class="bm">2 November 2026 · 5 minit baca</span><span class="en">2 November 2026 · 5 min read</span></div>
+<div class="cbar"><a class="cbtn" data-li href="#" target="_blank" rel="noopener"><span class="bm">Komen di LinkedIn</span><span class="en">Comment on LinkedIn</span></a></div>
+
+<!-- SUMMARY -->
+<div class="box key bm"><span class="lab">Ringkasan pantas</span><ul>
+<li>1 pip = <b>0.0001</b> bagi kebanyakan pasangan, <b>0.01</b> bagi pasangan JPY.</li>
+<li>Nilai satu pip bergantung pada <b>3 perkara</b>: pasangan, saiz lot dan mata wang akaun.</li>
+<li>EUR/USD, akaun USD: <b>1.00 lot ≈ $10</b> sepip, <b>0.10 lot ≈ $1</b>, <b>0.01 lot ≈ $0.10</b>.</li>
+<li>Henti rugi 20 pip boleh bermaksud rugi <b>$20 atau $200</b>. Saiz lot yang membezakannya.</li>
+<li>Kira saiz lot daripada <b>risiko dalam wang</b>, bukan daripada perasaan.</li></ul></div>
+<div class="box key en"><span class="lab">The short version</span><ul>
+<li>1 pip = <b>0.0001</b> for most pairs, <b>0.01</b> for JPY pairs.</li>
+<li>A pip's value depends on <b>3 things</b>: the pair, your lot size and your account currency.</li>
+<li>EUR/USD, USD account: <b>1.00 lot ≈ $10</b> per pip, <b>0.10 lot ≈ $1</b>, <b>0.01 lot ≈ $0.10</b>.</li>
+<li>A 20-pip stop can mean a <b>$20 or a $200</b> loss. Lot size makes the difference.</li>
+<li>Size the lot from <b>risk in money</b>, not from feel.</li></ul></div>
+
+<!-- OPENING -->
+<div class="bm">
+<p>Kebanyakan peniaga baharu belajar "1 pip = 0.0001" lalu berhenti di situ. Itu bahagian yang mudah.</p>
+<p>Bahagian yang menentukan risiko ialah nilai satu pip dalam wang. Dua peniaga boleh memakai henti rugi yang sama, tetapi menanggung risiko yang jauh berbeza.</p>
+</div>
+<div class="en">
+<p>Most new traders learn "1 pip = 0.0001" and stop there. That is the easy part.</p>
+<p>The part that decides your risk is what one pip is worth in money. Two traders can use the same stop and carry very different risk.</p>
+</div>
+
+<!-- 01 -->
+<div class="sec"><span class="n">01</span><h2><span class="bm">Pip ialah unit, bukan wang</span><span class="en">A pip is a unit, not money</span></h2></div>
+<div class="bm">
+<p>Pip ialah langkah harga yang terkecil dalam sebut harga biasa. Pada EUR/USD, pergerakan dari 1.0850 ke 1.0851 ialah satu pip.</p>
+<p>Pasangan JPY menggunakan tempat perpuluhan kedua, jadi satu pip ialah 0.01. USD/JPY dari 150.00 ke 150.01 ialah satu pip.</p>
+</div>
+<div class="en">
+<p>A pip is the smallest standard step in a price quote. On EUR/USD, a move from 1.0850 to 1.0851 is one pip.</p>
+<p>JPY pairs use the second decimal place, so one pip is 0.01. USD/JPY moving from 150.00 to 150.01 is one pip.</p>
+</div>
+
+<!-- 02 -->
+<div class="sec"><span class="n">02</span><h2><span class="bm">Tiga perkara yang mengubah nilai pip</span><span class="en">Three things that change a pip's value</span></h2></div>
+<div class="cards">
+ <div class="card"><b><span class="bm">Pasangan</span><span class="en">The pair</span></b><span class="bm">JPY guna 0.01. Kebanyakan lain guna 0.0001.</span><span class="en">JPY pairs use 0.01. Most others use 0.0001.</span></div>
+ <div class="card"><b><span class="bm">Saiz lot</span><span class="en">Lot size</span></b><span class="bm">Lot lebih besar, nilai sepip lebih besar, secara berkadar.</span><span class="en">A bigger lot means a bigger pip value, in proportion.</span></div>
+ <div class="card"><b><span class="bm">Mata wang akaun</span><span class="en">Account currency</span></b><span class="bm">Nilai pip ditukar ke mata wang akaun anda.</span><span class="en">Pip value is converted into your account currency.</span></div>
+</div>
+<div class="bm"><p>Contoh EUR/USD pada akaun USD, dengan 1.00 lot bersamaan 100,000 unit:</p></div>
+<div class="en"><p>Example: EUR/USD on a USD account, where 1.00 lot equals 100,000 units:</p></div>
+<div class="tiles">
+ <div class="tile"><b>$10</b><span><span class="bm">sepip, 1.00 lot</span><span class="en">per pip, 1.00 lot</span></span></div>
+ <div class="tile"><b>$1</b><span><span class="bm">sepip, 0.10 lot</span><span class="en">per pip, 0.10 lot</span></span></div>
+ <div class="tile"><b>$0.10</b><span><span class="bm">sepip, 0.01 lot</span><span class="en">per pip, 0.01 lot</span></span></div>
+ <div class="tile"><b>100,000</b><span><span class="bm">unit dalam 1.00 lot</span><span class="en">units in 1.00 lot</span></span></div>
+</div>
+<div class="ex">
+ <h3><span class="bm">Nilai sepip naik selari dengan saiz lot</span><span class="en">Pip value rises in line with lot size</span></h3>
+ <svg viewBox="0 0 640 170" role="img" aria-label="Pip value by lot size">
+  <g font-family="Inter,Arial" font-size="14" fill="#13263a">
+   <text x="0" y="34">1.00 lot</text><rect x="90" y="16" width="480" height="26" rx="4" fill="#0b5cad"/><text x="578" y="35" font-weight="700">$10</text>
+   <text x="0" y="84">0.10 lot</text><rect x="90" y="66" width="48" height="26" rx="4" fill="#9aa7b4"/><text x="146" y="85" font-weight="700">$1</text>
+   <text x="0" y="134">0.01 lot</text><rect x="90" y="116" width="4.8" height="26" rx="2" fill="#9aa7b4"/><text x="102" y="135" font-weight="700">$0.10</text>
+  </g></svg>
+ <div class="src"><span class="bm">Anggaran, EUR/USD, akaun USD. Nilai sebenar mengikut spesifikasi kontrak broker anda.</span><span class="en">Approximate, EUR/USD, USD account. Actual values follow your broker's contract specification.</span></div>
+</div>
+
+<!-- 03 -->
+<div class="sec"><span class="n">03</span><h2><span class="bm">Pip sama, risiko berbeza</span><span class="en">Same pips, different risk</span></h2></div>
+<div class="bm"><p>Dua peniaga memakai henti rugi 20 pip. Seorang berdagang 0.10 lot. Seorang lagi berdagang 1.00 lot.</p><p>Pip sama. Kerugian jika terkena henti rugi: $20 berbanding $200.</p></div>
+<div class="en"><p>Two traders both use a 20-pip stop. One trades 0.10 lot. The other trades 1.00 lot.</p><p>Same pips. Loss if the stop is hit: $20 versus $200.</p></div>
+<div class="ex">
+ <h3><span class="bm">Henti rugi 20 pip: kerugian bergantung pada lot</span><span class="en">20-pip stop: the loss depends on the lot</span></h3>
+ <svg viewBox="0 0 640 120" role="img" aria-label="Loss at 20 pip stop">
+  <g font-family="Inter,Arial" font-size="14" fill="#13263a">
+   <text x="0" y="34">0.10 lot</text><rect x="90" y="16" width="48" height="26" rx="4" fill="#9aa7b4"/><text x="146" y="35" font-weight="700">$20</text>
+   <text x="0" y="84">1.00 lot</text><rect x="90" y="66" width="480" height="26" rx="4" fill="#b42318"/><text x="578" y="85" font-weight="700">$200</text>
+  </g></svg>
+ <div class="src"><span class="bm">Anggaran, EUR/USD, akaun USD.</span><span class="en">Approximate, EUR/USD, USD account.</span></div>
+</div>
+
+<!-- 04 -->
+<div class="sec"><span class="n">04</span><h2><span class="bm">Tentukan saiz lot daripada risiko</span><span class="en">Size the lot from risk</span></h2></div>
+<div class="bm"><p>Mulakan dengan wang yang sanggup anda rugi, kemudian bina saiz lot daripadanya.</p></div>
+<div class="en"><p>Start with the money you are willing to lose, then build the lot size from it.</p></div>
+<div class="formula"><span class="bm">Saiz lot = risiko ($) ÷ (henti rugi dalam pip × nilai sepip bagi 1 lot)</span><span class="en">Lot size = risk ($) ÷ (stop in pips × value per pip per 1 lot)</span></div>
+<div class="box data"><span class="lab"><span class="bm">Contoh kerja</span><span class="en">Worked example</span></span>
+ <div class="bm">Akaun $10,000, risiko 1% = $100, henti rugi 20 pip, nilai sepip $10 bagi 1 lot.<br>$100 ÷ (20 × $10) = <b>0.50 lot</b>.</div>
+ <div class="en">Account $10,000, risk 1% = $100, stop 20 pips, pip value $10 per 1 lot.<br>$100 ÷ (20 × $10) = <b>0.50 lot</b>.</div>
+</div>
+<div class="bm"><p>Jika henti rugi dilebarkan ke 40 pip, saiz lot menjadi separuh iaitu 0.25. Risiko kekal $100.</p></div>
+<div class="en"><p>Widen the stop to 40 pips and the lot size halves to 0.25. The risk stays at $100.</p></div>
+<div class="ex">
+ <h3><span class="bm">Henti rugi lebih lebar, lot lebih kecil, risiko tetap $100</span><span class="en">Wider stop, smaller lot, risk fixed at $100</span></h3>
+ <svg viewBox="0 0 640 220" role="img" aria-label="Lot size by stop distance">
+  <g font-family="Inter,Arial" font-size="14" fill="#13263a">
+   <text x="0" y="34">10 pip</text><rect x="90" y="16" width="480" height="26" rx="4" fill="#9aa7b4"/><text x="578" y="35" font-weight="700">1.00</text>
+   <text x="0" y="84">20 pip</text><rect x="90" y="66" width="240" height="26" rx="4" fill="#0b5cad"/><text x="338" y="85" font-weight="700">0.50</text>
+   <text x="0" y="134">40 pip</text><rect x="90" y="116" width="120" height="26" rx="4" fill="#9aa7b4"/><text x="218" y="135" font-weight="700">0.25</text>
+   <text x="0" y="184">80 pip</text><rect x="90" y="166" width="60" height="26" rx="4" fill="#9aa7b4"/><text x="158" y="185" font-weight="700">0.125</text>
+  </g></svg>
+ <div class="src"><span class="bm">Ilustrasi, bukan data. Akaun $10,000, risiko 1%, $10 sepip bagi 1 lot.</span><span class="en">Illustration, not data. $10,000 account, 1% risk, $10 per pip per 1 lot.</span></div>
+</div>
+
+<!-- CALCULATOR -->
+<div class="calc" id="calc">
+ <h3><span class="bm">Kalkulator saiz lot</span><span class="en">Lot size calculator</span></h3>
+ <div class="grid">
+  <div><label><span class="bm">Baki akaun (USD)</span><span class="en">Account balance (USD)</span></label><input id="bal" type="number" inputmode="decimal" value="10000" min="0"></div>
+  <div><label><span class="bm">Risiko setiap dagangan (%)</span><span class="en">Risk per trade (%)</span></label><input id="rk" type="number" inputmode="decimal" value="1" min="0" step="0.1"></div>
+  <div><label><span class="bm">Henti rugi (pip)</span><span class="en">Stop loss (pips)</span></label><input id="sl" type="number" inputmode="decimal" value="20" min="0"></div>
+  <div><label><span class="bm">Jenis pasangan</span><span class="en">Pair type</span></label>
+   <select id="pt" onchange="pairChange()">
+    <option value="q">EUR/USD, GBP/USD, AUD/USD (USD quote)</option>
+    <option value="b">USD/CHF, USD/CAD (USD base)</option>
+    <option value="j">USD/JPY</option>
+    <option value="c">Custom: pip value per 1 lot</option>
+   </select></div>
+  <div class="full" id="pxw" style="display:none"><label id="pxl">Harga semasa / Current price</label><input id="px" type="number" inputmode="decimal" step="any" value="1"></div>
+ </div>
+ <div class="res">
+  <div><small><span class="bm">Risiko ($)</span><span class="en">Risk ($)</span></small><b id="r1">-</b></div>
+  <div><small><span class="bm">Nilai sepip, 1 lot</span><span class="en">Pip value, 1 lot</span></small><b id="r2">-</b></div>
+  <div class="big"><small><span class="bm">Saiz lot</span><span class="en">Lot size</span></small><b id="r3">-</b></div>
+ </div>
+ <div id="err"></div>
+ <div class="note"><span class="bm">Saiz lot dibundarkan ke bawah kepada 0.01. Kalkulator ini berjalan dalam pelayar anda. Tiada data dihantar atau disimpan, selaras dengan semangat PDPA Malaysia dan UU PDP Indonesia. Pasangan silang (contohnya EUR/GBP) perlukan pilihan Custom. Untuk pendidikan sahaja.</span><span class="en">Lot size is rounded down to 0.01. This calculator runs in your browser. No data is sent or stored, in line with the spirit of Malaysia's PDPA and Indonesia's UU PDP. Cross pairs (for example EUR/GBP) need the Custom option. For education only.</span></div>
+</div>
+
+<!-- 05 -->
+<div class="sec"><span class="n">05</span><h2><span class="bm">Tiga semakan sebelum setiap dagangan</span><span class="en">Three checks before every trade</span></h2></div>
+<div class="box watch bm"><span class="lab">Senarai semak</span><ol>
+<li>Tahu henti rugi anda dalam pip.</li>
+<li>Tahu nilai sepip bagi pasangan itu.</li>
+<li>Kira kerugian dalam wang jika henti rugi terkena.</li></ol></div>
+<div class="box watch en"><span class="lab">Checklist</span><ol>
+<li>Know your stop in pips.</li>
+<li>Know the pip value for that pair.</li>
+<li>Work out the dollar loss if the stop is hit.</li></ol></div>
+<div class="bm"><p>Jika anda tidak dapat menyatakan kerugian dalam wang sebelum masuk dagangan, saiz posisi terlalu besar atau pelan belum jelas.</p></div>
+<div class="en"><p>If you cannot state the dollar loss before entering, the position is too big or the plan is unclear.</p></div>
+
+<div class="box trap bm"><span class="lab">Perhatian</span>Logam, indeks dan kripto tidak mengikut peraturan pip forex. Saiz kontrak berbeza antara broker, jadi semak spesifikasi kontrak di platform anda dahulu.</div>
+<div class="box trap en"><span class="lab">Watch out</span>Metals, indices and crypto do not follow the forex pip rule. Contract sizes vary by broker, so check the contract specification on your platform first.</div>
+
+<div class="box call"><span class="lab"><span class="bm">Cuba sekarang</span><span class="en">Try it now</span></span>
+ <div class="bm">Ambil dagangan terakhir anda. Berapakah kerugian dalam wang jika henti rugi terkena? Gunakan kalkulator di atas untuk menyemaknya.</div>
+ <div class="en">Take your last trade. What would the dollar loss have been if the stop was hit? Use the calculator above to check.</div></div>
+
+<div class="box over"><span class="lab"><span class="bm">Giliran anda</span><span class="en">Over to you</span></span>
+ <div class="bm">Adakah anda menetapkan risiko dalam wang dahulu, atau saiz lot dahulu?</div>
+ <div class="en">Do you set your risk in money first, or your lot size first?</div>
+ <p style="margin:14px 0 0"><a class="cbtn" data-li href="#" target="_blank" rel="noopener"><span class="bm">Komen di LinkedIn</span><span class="en">Comment on LinkedIn</span></a></p></div>
+
+<details><summary><span class="bm">Andaian dan nota</span><span class="en">Assumptions and notes</span></summary>
+<div class="bm"><ul><li>Semua contoh menganggap akaun USD dan 1.00 lot = 100,000 unit, iaitu saiz kontrak forex standard. Broker anda mungkin berbeza.</li>
+<li>Nilai sepip bagi pasangan USD asas dikira sebagai 10 ÷ harga (USD/CHF, USD/CAD). Bagi USD/JPY, 1,000 ÷ harga.</li>
+<li>Angka adalah anggaran untuk pendidikan. Sahkan dengan spesifikasi kontrak dan kalkulator broker anda.</li></ul></div>
+<div class="en"><ul><li>All examples assume a USD account and 1.00 lot = 100,000 units, the standard forex contract size. Your broker may differ.</li>
+<li>Pip value for USD-base pairs is worked as 10 ÷ price (USD/CHF, USD/CAD). For USD/JPY, 1,000 ÷ price.</li>
+<li>Figures are approximate and for education. Verify against your broker's contract specification and calculator.</li></ul></div>
+</details>
+
+<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b><br><span class="bm">Menulis tentang pengurusan risiko dan dagangan sistematik.</span><span class="en">Writes about risk management and systematic trading.</span></div></div>
+
+<div class="cbar"><a class="cbtn" data-li href="#" target="_blank" rel="noopener"><span class="bm">Komen di LinkedIn</span><span class="en">Comment on LinkedIn</span></a></div>
+
+<div class="disc">
+ <div class="bm">Pandangan dalam artikel ini ialah pandangan peribadi saya. Ia tidak mewakili majikan saya atau mana-mana organisasi yang pernah atau sedang saya sertai. Artikel ini tidak berkaitan dengan, tidak disokong oleh dan tidak ditulis bagi pihak mana-mana institusi. Sebarang kesilapan adalah tanggungjawab saya sendiri. Artikel ini bukan nasihat kewangan, pelaburan atau undang-undang. Kajian dan penulisan artikel ini dibantu oleh alat AI.</div>
+ <div class="en">The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution. Any errors are mine. Nothing here is financial, investment or legal advice. Research and drafting were assisted by AI tools.</div>
+</div>
+</main>
+<footer><div class="wrap">© 2026 Azman Taufik · Field Notes</div></footer>
+
+<script>
+// Replace with the live LinkedIn post URL once posted
+var LINKEDIN_URL = "#";
+document.querySelectorAll('a[data-li]').forEach(function(a){a.href=LINKEDIN_URL});
+
+function setL(l){
+  document.body.className='l-'+l;
+  document.documentElement.lang = l==='bm'?'ms':'en';
+  document.getElementById('b-bm').className=l==='bm'?'on':'';
+  document.getElementById('b-en').className=l==='en'?'on':'';
+  try{history.replaceState(null,'','#'+l)}catch(e){}
+}
+(function(){var h=(location.hash||'').replace('#','');if(h==='en'||h==='bm')setL(h);})();
+
+function pairChange(){
+  var t=document.getElementById('pt').value, w=document.getElementById('pxw'), l=document.getElementById('pxl'), p=document.getElementById('px');
+  if(t==='q'){w.style.display='none';}
+  else{w.style.display='block';
+    if(t==='b'){l.textContent='Harga semasa / Current price (e.g. 0.9000)';p.value=0.9;}
+    if(t==='j'){l.textContent='Harga semasa / Current price (e.g. 150.00)';p.value=150;}
+    if(t==='c'){l.textContent='Nilai sepip bagi 1 lot (USD) / Pip value per 1 lot (USD)';p.value=10;}
+  }
+  calc();
+}
+function calc(){
+  var bal=parseFloat(document.getElementById('bal').value),
+      rk=parseFloat(document.getElementById('rk').value),
+      sl=parseFloat(document.getElementById('sl').value),
+      t=document.getElementById('pt').value,
+      px=parseFloat(document.getElementById('px').value),
+      err=document.getElementById('err'), pv;
+  err.textContent='';
+  if(!(bal>0)||!(rk>0)||!(sl>0)){set('-','-','-');return;}
+  if(t==='q')pv=10;
+  else if(!(px>0)){set('-','-','-');err.textContent='Masukkan nilai yang sah / Enter a valid value';return;}
+  else if(t==='b')pv=10/px;
+  else if(t==='j')pv=1000/px;
+  else pv=px;
+  var risk=bal*rk/100, lot=Math.floor(risk/(sl*pv)*100)/100;
+  set('$'+risk.toFixed(2),'$'+pv.toFixed(2),lot.toFixed(2));
+  if(lot<0.01)err.textContent='Risiko terlalu kecil untuk 0.01 lot / Risk is too small for even 0.01 lot';
+}
+function set(a,b,c){document.getElementById('r1').textContent=a;document.getElementById('r2').textContent=b;document.getElementById('r3').textContent=c;}
+['bal','rk','sl','px'].forEach(function(id){document.getElementById(id).addEventListener('input',calc)});
+calc();
+</script>
+</body>
+</html>
