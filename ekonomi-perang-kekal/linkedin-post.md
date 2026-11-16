@@ -25,6 +25,9 @@ Artikel penuh (BM dan EN): https://dewatagiri.github.io/field-notes/ekonomi-pera
 
 Soalan untuk anda: apa yang Malaysia boleh sebut, tunjuk dan lindung dahulu?
 
+Sumber data: @SIPRI @Brown University (Costs of War) @Quincy Institute @International Energy Agency @UNICEF @UN OCHA
+Untuk perhatian: @Kementerian Dalam Negeri (KDN) @Kementerian Pertahanan Malaysia @Wisma Putra @ASEAN Secretariat
+
 Pandangan ini ialah pandangan peribadi saya dan tidak mewakili mana-mana organisasi yang pernah atau sedang saya sertai.
 
 #EkonomiPerang #Geopolitik #DasarAwam #Malaysia #ASEAN #Keamanan #FieldNotes
@@ -53,6 +56,21 @@ Full article (EN and BM): https://dewatagiri.github.io/field-notes/ekonomi-peran
 
 Over to you: what should Malaysia speak, show and shield first?
 
+Data sources: @SIPRI @Brown University (Costs of War) @Quincy Institute @International Energy Agency @UNICEF @UN OCHA
+For attention: @Ministry of Home Affairs Malaysia (KDN) @Ministry of Defence Malaysia @Wisma Putra @ASEAN Secretariat
+
 Views are my own and do not represent any organisation I am or have been associated with.
 
 #WarEconomy #Geopolitics #PublicPolicy #Malaysia #ASEAN #Peace #FieldNotes
+
+---
+
+## Tag list (taip @ dalam LinkedIn dan pilih halaman rasmi; saya tidak boleh tag bagbagi pihak anda)
+
+Keutamaan 1, dalam badan post (maksimum 8-10):
+SIPRI, Brown University Costs of War, Quincy Institute, IEA, UNICEF, UN OCHA, KDN, Kementerian Pertahanan, Wisma Putra, ASEAN Secretariat
+
+Keutamaan 2, dalam komen pertama bersama pautan:
+Council on Foreign Relations, Mercatus Center, Al Jazeera, Anadolu Agency, The Star Malaysia
+
+Sengaja ditinggalkan: Lockheed Martin, RTX, General Dynamics, Boeing, Northrop Grumman. Mereka dikritik dalam artikel, jarang berinteraksi dengan post begini, dan tag itu boleh menarik perhatian pasukan komunikasi atau undang-undang mereka.
