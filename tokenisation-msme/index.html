@@ -182,3 +182,134 @@ table.stack td::before{content:attr(data-l);display:block;font-size:11px;font-we
 <table class="stack">
 <thead><tr><th>Duluan</th><th>Apa yang berlaku</th><th>Apa yang ditunjukkan</th></tr></thead>
 <tbody>
+<tr><td data-l="Duluan">Maybank bersama V Systems, 20 Ogos 2026</td><td data-l="Apa yang berlaku">Pembiayaan rantaian bekalan bertoken RM1 juta di atas NexA, dalam kotak pasir Suruhanjaya Sekuriti, dari kelulusan invois hingga penyelesaian. Lejar dan wang penyelesaian tidak didedahkan.</td><td data-l="Ditunjukkan">Ia boleh dilaksanakan. Ia tidak membuktikan ia mengatasi alternatif.</td></tr>
+<tr><td data-l="Duluan">Olea bersama SWIAT, Sep 2024</td><td data-l="Apa yang berlaku">Satu tuntutan belum terima perdagangan ditokenkan pada lejar berizin, dibiayai oleh DekaBank.</td><td data-l="Ditunjukkan">Satu urus niaga, bukan satu pasaran.</td></tr>
+<tr><td data-l="Duluan">StraitsX, Dis 2025</td><td data-l="Apa yang berlaku">Reka bentuk yang diterbitkan untuk bayaran belum dijelaskan (payables) bertoken, diselesaikan dengan stablecoin.</td><td data-l="Ditunjukkan">Satu konsep, belum hasil sebenar.</td></tr>
+</tbody></table>
+
+<h2><span class="n">03</span>Lejar mesti kekal peribadi</h2>
+<p>Nilai kontrak, nama PMKS dan terma bayaran tidak boleh diletakkan pada lejar awam. Kerahsiaan perbankan dan PDPA menghalangnya, dan pihak undang-undang perlu mengesahkan butirannya. Jawapannya ialah lejar berizin yang hanya boleh dibaca oleh pihak yang diluluskan, dan hanya menyimpan rujukan.</p>
+<div class="diag"><div class="split">
+<div class="pane on"><h4>Di atas lejar</h4><ul><li>ID tuntutan</li><li>Status</li><li>Cincang dokumen (hash)</li><li>Cap masa</li></ul></div>
+<div class="link"><i></i>cincang<br>dokumen<i></i></div>
+<div class="pane"><h4>Di luar lejar, dalam sistem bank dan platform</h4><ul><li>Nilai kontrak</li><li>Nama PMKS dan pembayar</li><li>Sijil</li><li>Terma bayaran</li></ul></div>
+</div><div class="cap">Ilustrasi: rujukan di atas lejar, butiran di luarnya. Cincang dokumen ialah satu-satunya pautan antara kedua-dua belah.</div></div>
+<p>Apabila butiran berada di luar lejar, token hanyalah bendera status dan kunci pembiayaan berganda, yang boleh juga dilakukan oleh daftar bersama. Inilah hujah terkuat untuk tidak bertokenisasi sekarang.</p>
+
+<h2><span class="n">04</span>Siapa yang mengeluarkannya, siapa yang berdagang, dan bagaimana jika kunci hilang</h2>
+<p>Pertama, istilah yang akan anda dengar. Ia datang daripada blockchain awam.</p>
+<div class="diag"><div class="layers">
+<div class="ly l3"><b>Lapisan 3</b>Aplikasi khusus yang dibina di atas, seperti satu produk atau satu industri.</div>
+<div class="ly l2"><b>Lapisan 2</b>Duduk di atas lapisan 1 untuk menjadikan transaksi lebih pantas dan murah.</div>
+<div class="ly l1"><b>Lapisan 1</b>Rantaian asas. Ia menyimpan rekod dan membuat semakan akhir.</div>
+</div><div class="cap">Ilustrasi: platform berizin menjalankan lejarnya sendiri, jadi label ini tidak menentukan pilihan. Pilih berdasarkan bidang kuasa pengawal selia dan rakan bank.</div></div>
+<table class="stack">
+<thead><tr><th>Soalan</th><th>Jawapan ringkas</th></tr></thead>
+<tbody>
+<tr><td data-l="Soalan">Siapa yang mengeluarkan token?</td><td data-l="Jawapan">Bank berlesen atau pengendali platform, setelah pembayar mengesahkan tuntutan. Penjamin mengeluarkan sijil jaminan, bukan rekod tuntutan. Ini pandangan reka bentuk saya. Pihak undang-undang dan pengawal selia yang memutuskan.</td></tr>
+<tr><td data-l="Soalan">Adakah ada bursa?</td><td data-l="Jawapan">Tidak dalam projek perintis. Rekod ini sekali guna dan hanya berpindah antara pihak yang diluluskan. Pasaran terbuka memerlukan tempat dagangan dan kelulusan Suruhanjaya Sekuriti.</td></tr>
+<tr><td data-l="Soalan">Bagaimana jika kunci hilang?</td><td data-l="Jawapan">Institusi memegang kunci, bukan PMKS. Kunci yang hilang dibatalkan dan diganti di bawah tadbir urus pengendali. Penyerahan hak, notis dan akaun terkawal masih menyatakan siapa yang berhak dibayar. Dalam kripto awam, kunci yang hilang boleh bermakna aset hilang. Di sini ia tidak sepatutnya begitu.</td></tr>
+</tbody></table>
+<p>Risiko yang lebih besar ialah kunci dicuri, bukan hilang. Bayaran yang telah dikeluarkan sebelum sesiapa sempat membekukannya tidak boleh ditarik balik. Kawalan yang penting: beberapa pelulus bagi setiap pengeluaran, kunci perkakasan, had pengeluaran dan pembekuan segera.</p>
+<div class="box watch"><span class="lab">Keselamatan dan kehilangan: catatan</span>
+<table class="stack">
+<thead><tr><th>Peristiwa</th><th>Apa yang berlaku</th><th>Apa yang menghalangnya</th></tr></thead>
+<tbody>
+<tr><td data-l="Peristiwa">Kunci hilang</td><td data-l="Apa yang berlaku">Dibatalkan dan diganti di bawah tadbir urus pengendali. Rekod atas kertas masih menyatakan siapa yang berhak dibayar.</td><td data-l="Penghalang">Peraturan tadbir urus dan proses sandaran</td></tr>
+<tr><td data-l="Peristiwa">Kunci dicuri</td><td data-l="Apa yang berlaku">Bayaran yang telah dikeluarkan tidak boleh ditarik balik.</td><td data-l="Penghalang">Beberapa pelulus, kunci perkakasan, had pengeluaran, pembekuan segera</td></tr>
+<tr><td data-l="Peristiwa">Rekod tuntutan dipindahkan atau dikunci secara salah</td><td data-l="Apa yang berlaku">Pengendali membekukan dan mengeluarkannya semula, kerana rekod undang-undang berasingan daripada lejar. Ini pandangan reka bentuk saya. Pihak undang-undang perlu mengesahkan.</td><td data-l="Penghalang">Jejak audit dan proses pertikaian</td></tr>
+</tbody></table>
+<p><b>Belum diputuskan:</b> siapa yang menanggung kerugian jika berlaku kecurian. Saya tidak menemui sebarang sumber atau peraturan Malaysia mengenainya. Bank, pengendali platform dan penjamin mesti bersetuju secara bertulis sebelum sebarang penggunaan sebenar.</p></div>
+
+<h2><span class="n">05</span>Projek perintis yang tidak memerlukan token</h2>
+<p>Produknya ialah pembiayaan tuntutan belum terima yang disahkan dan dijamin, untuk pembekal atau subkontraktor kecil. Aset yang dibiayai ialah tuntutan yang telah disahkan pembayar dan tidak dipertikaikan. Fasa 1 tidak menggunakan blockchain.</p>
+<div class="diag"><div class="flow">
+<div class="step"><b>1</b>Kontrak diluluskan dan pencapaian kerja diterima</div>
+<div class="step"><b>2</b>Tuntutan disahkan dan diakui oleh pembayar</div>
+<div class="step"><b>3</b>Penyerahan hak dengan notis, arahan pembayaran, akaun terkawal</div>
+<div class="step"><b>4</b>Satu ID tuntutan bagi setiap kerja dalam daftar yang menghalang pembiayaan berganda</div>
+<div class="step"><b>5</b>Jaminan ke atas pendedahan bank</div>
+</div>
+<div class="gate"><b>Pintu keputusan.</b> Selepas projek perintis, tanya: adakah ada jurang yang tidak dapat ditutup oleh pangkalan data bersama? Jika ada, tambah token sekali guna yang tidak boleh didagangkan pada Fasa 2. Jika tiada, token tidak diperlukan.</div>
+<div class="cap">Ilustrasi: aliran projek perintis, lima langkah dan satu pintu keputusan.</div></div>
+<div class="box lesson"><span class="lab">Apa yang mesti dijawab oleh projek perintis</span>
+<p>Kejayaan bermakna lebih ramai PMKS mendapat pembiayaan, dan lebih cepat. Projek perintis mesti menunjukkannya dalam angka.</p>
+<ul>
+<li><b>Akses.</b> Berapa ramai pembekal layak yang dibiayai, dan berapa ramai antara mereka yang sebelum ini tidak dapat pembiayaan?</li>
+<li><b>Kepantasan.</b> Bilangan hari dari tuntutan disahkan hingga wang diterima, berbanding kaedah biasa. Pecahkan hari kepada tiga: pengesahan pembayar, keputusan kredit bank, dan kerja dokumen.</li>
+<li><b>Keselamatan.</b> Pertikaian selepas pembiayaan, percubaan pembiayaan berganda dan tuntutan jaminan.</li>
+</ul>
+<p><b>Peraturan keputusan.</b> Jika masa yang dijimatkan datang daripada pengesahan dan dokumen, token tidak diperlukan. Jika pembiayaan berganda antara bank menjadi masalah sebenar, token layak ditambah. Pihak Risiko dan Kewangan menetapkan sasaran sebelum projek perintis bermula.</p></div>
+<p>Kadar pendahuluan, tempoh dan had ditetapkan oleh pihak risiko dan kewangan, jadi saya tidak nyatakannya di sini.</p>
+<div class="box watch"><span class="lab">Uji sepuluh kes kegagalan sebelum kelulusan</span>
+<ul>
+<li>Tuntutan dipertikaikan selepas pembiayaan</li><li>Sijil disemak turun</li><li>Ganti rugi tertentu atau tolak balas mengurangkan bayaran</li><li>Pembayar membayar terus kepada kontraktor</li><li>Tuntutan yang sama dibiayai dua kali</li><li>Pembayar muflis</li><li>Projek digantung</li><li>Platform gagal</li><li>Rizab habis</li><li>Tuntutan jaminan dibuat ketika penyerahan hak dipertikaikan</li>
+</ul></div>
+<p>Satu soalan reka bentuk belum selesai: rizab. Rizab yang dicagarkan pada hakikatnya ialah cagaran tunai, jadi rizab kerugian pertama peringkat program, dibiayai oleh pembeli utama atau penaja dan bukan oleh setiap PMKS, ialah pilihan yang lebih selamat untuk diterokai.</p>
+
+<h2><span class="n">06</span>Selain tuntutan belum terima: data dahulu, token kemudian</h2>
+<p>Saya menilai sembilan idea lain: dua ya, dua berkemungkinan, tiga bersyarat, dua ditangguhkan. Tiada satu pun yang memerlukan token dengan sendirinya hari ini. Semuanya mengikut tujuh langkah yang sama, dan token hanya boleh berada di langkah 4.</p>
+<div class="diag"><div class="seven">
+<div class="s7"><b>1</b>Pencetus</div>
+<div class="s7 weak"><b>2</b>Pengesahan</div>
+<div class="s7"><b>3</b>Kawalan undang-undang</div>
+<div class="s7 tok"><b>4</b>Rekod</div>
+<div class="s7"><b>5</b>Wang bergerak</div>
+<div class="s7"><b>6</b>Tindakan jaminan</div>
+<div class="s7"><b>7</b>Tutup dan belajar</div>
+</div>
+<div class="legend"><span style="color:var(--red);font-weight:700">Merah:</span> pautan paling lemah dalam setiap kes. Sesiapa yang mengesahkan peristiwa itu menentukan tahap risiko. <span style="color:var(--blue);font-weight:700">Biru:</span> satu-satunya langkah yang boleh menempatkan token.</div></div>
+<p>Tambah token hanya jika ketiga-tiganya benar: dua atau lebih bank atau agensi memerlukan status tuntutan yang sama, satu pangkalan data bersama telah gagal atau ditolak, dan kawalan undang-undang serta aliran wang boleh berfungsi tanpa token. Satu "tidak" sahaja memastikan projek perintis kekal di platform biasa.</p>
+
+<div class="grp g-yes"><div class="gh"><span class="gl">a</span><div><b>Ya</b><small>Setuju. Bina.</small></div></div>
+<div class="gi"><b>Sijil jaminan digital.</b> Ciri pada mana-mana produk jaminan: e-sijil dengan rekod status langsung.<i>Token: tidak.</i></div>
+<div class="gi"><b>Bayaran pencapaian dan akaun escrow.</b> Pembiayaan tuntutan belum terima terhadap tuntutan yang disahkan pembayar, dengan jaminan ke atas pendedahan bank. Inilah teras projek perintis.<i>Token: tidak. Kunci bersama kemudian.</i></div></div>
+<div class="grp g-prob"><div class="gh"><span class="gl">b</span><div><b>Berkemungkinan</b><small>Besar kemungkinan, dengan satu perkara untuk disahkan.</small></div></div>
+<div class="gi"><b>Bayaran atas peristiwa yang disahkan.</b> Struktur yang sama, dengan bayaran dikaitkan dengan bukti penghantaran. Bergantung kepada sumber peristiwa yang diterima kedua-dua pihak.<i>Token: tidak.</i></div>
+<div class="gi"><b>Automasi kontrak Islam.</b> Versi patuh Syariah bagi struktur di atas, dengan jejak audit setiap langkah. Jawatankuasa Syariah mesti mengesahkan.<i>Token: tidak.</i></div></div>
+<div class="grp g-cond"><div class="gh"><span class="gl">c</span><div><b>Bersyarat</b><small>Hanya jika syarat dipenuhi dahulu.</small></div></div>
+<div class="gi"><b>Pembiayaan pesanan belian.</b> Bank membayar pembekal terus, dengan jaminan peringkat portfolio. Mulakan hanya selepas projek perintis tuntutan belum terima menunjukkan pertikaian yang rendah.<i>Token: kemudian, sebagai kunci bersama.</i></div>
+<div class="gi"><b>Geran boleh atur cara.</b> Geran untuk sebahagian kos, pinjaman berjamin untuk bakinya. Sebuah agensi mesti mengetuainya.<i>Token: tidak.</i></div>
+<div class="gi"><b>Yuran berkait kelestarian.</b> Rebat yuran bagi hasil yang disahkan, ditambah pada jaminan sedia ada. Perlukan sumber data yang dipercayai dahulu.<i>Token: tidak.</i></div></div>
+<div class="grp g-park"><div class="gh"><span class="gl">d</span><div><b>Tangguh</b><small>Bukan sekarang.</small></div></div>
+<div class="gi"><b>Wang ringgit bertoken rentas sempadan.</b> Pembiayaan eksport dibayar dalam ringgit bertoken. Ia landasan pembayaran, bukan untuk kita bina.<i>Token: lapisan wang, bukan milik kita.</i></div>
+<div class="gi"><b>Asal-usul produk (elektronik, bioperubatan, pertanian, halal).</b> Data asal-usul yang disahkan digunakan sebagai bukti kredit. Saya tidak menemui kes Malaysia yang memberi pinjaman berdasarkan data kebolehkesanan. Jalankan sebagai projek perintis data.<i>Token: belum lagi.</i></div></div>
+
+<h2><span class="n">07</span>Undang-undang dan pengawal selia: soalan untuk peguam</h2>
+<p>Semua ini datang daripada semakan kedua. Jika saya tidak dapat menyemaknya dengan sumber, ia hujah, bukan undang-undang yang mantap.</p>
+<div class="box watch"><span class="lab">Kemukakan kepada peguam sebelum membina</span>
+<ul>
+<li><b>Penyerahan hak (Akta Undang-Undang Sivil 1956, s.4(3)).</b> Penyerahan hak mesti mutlak, bertulis, dengan notis bertulis kepada pembayar. Memecahkan tuntutan melemahkannya, dan setiap penyerahan ke bawah kelihatan seperti penyerahan hak baharu.</li>
+<li><b>Pendaftaran cagaran (Akta Syarikat 2016, s.352).</b> Cagaran syarikat mesti difailkan dalam 30 hari. Jika bank mengekalkan hak kembali sepenuhnya (recourse), mahkamah mungkin menganggap "jualan" tuntutan belum terima sebagai cagaran, dan cagaran yang tidak berdaftar boleh gagal terhadap pelikuidasi.</li>
+<li><b>CIPAA 2012.</b> Pertikaian pembayaran pembinaan boleh dibawa ke adjudikasi, dan klausa bayar-apabila-dibayar adalah tidak sah di bawah s.35. Uji kes pertikaian dan tolak balas dalam projek perintis berdasarkannya.</li>
+<li><b>Kerahsiaan perbankan dan PDPA.</b> Walaupun cincang pada lejar yang boleh dibaca bank lain mungkin dianggap pendedahan. Peniaga tunggal ialah individu, jadi datanya ialah data peribadi.</li>
+<li><b>Pengawal selia mana.</b> Pandangan saya: pinjaman yang dipegang bank hingga matang kekal di bawah BNM, manakala rekod yang dipecahkan, diserahkan kepada pembiaya luar atau didagangkan mungkin tertakluk kepada peraturan Suruhanjaya Sekuriti. Ini inferens, bukan keputusan.</li>
+</ul></div>
+
+<h2><span class="n">08</span>Hujah yang menentang</h2>
+<div class="box trap"><span class="lab">Hujah terkuat untuk tidak bertokenisasi</span>
+<ul>
+<li><b>Kesesakan mungkin bukan pangkalan data.</b> Pembayar besar lambat mengesahkan, kerap mempertikai dan enggan menandatangani ikatan pembayaran. Token tidak membaiki bahagian akaun belum bayar yang lambat.</li>
+<li><b>Ada kunci yang lebih murah.</b> Daftar cincang invois bersama boleh menghalang pembiayaan berganda tanpa nod, kontrak pintar atau tadbir urus kunci.</li>
+<li><b>e-Invois LHDN hanya merangkumi sebahagian.</b> e-Invois menunjukkan invois telah dikeluarkan, bukan pembayar telah mengesahkan kerja, dan ramai subkontraktor kecil berada di bawah had RM3 juta.</li>
+<li><b>Tadbir urus memakan masa.</b> Lejar berbilang bank memerlukan perjanjian konsortium, pengehosan nod, audit dan peraturan pertikaian.</li>
+<li><b>Kuasa pembayar.</b> Baucar elektronik China menunjukkan bagaimana pembeli utama boleh melewatkan bayaran dengan instrumen digital.</li>
+<li><b>Kadar kerugian tidak diketahui.</b> Saya tidak menemui kadar kerugian kontraktor yang disahkan. Jangan petik satu pun.</li>
+</ul></div>
+<p>Apa yang boleh mengubah pandangan saya: beberapa bank memerlukan satu daftar, masalah pembiayaan berganda yang tidak dapat diselesaikan oleh satu platform, atau panduan jelas bank pusat mengenai deposit dan tuntutan belum terima bertoken.</p>
+
+<h2><span class="n">09</span>Enam soalan yang patut ditanya</h2>
+<div class="cards">
+<div class="q"><small>Untuk bank</small>Di mana kelewatan sebenar: keputusan kredit, pengesahan pembayar atau kerja dokumen?</div>
+<div class="q"><small>Untuk pembayar</small>Sanggupkah anda menandatangani ikatan pembayaran dan membayar ke akaun terkawal?</div>
+<div class="q"><small>Untuk pengawal selia</small>Bilakah token yang dipegang bank hingga matang menjadi produk pasaran modal?</div>
+<div class="q"><small>Untuk peguam</small>Adakah token yang diserahkan ke bawah membawa hak milik sah, atau setiap langkah memerlukan penyerahan hak bertulis yang baharu?</div>
+<div class="q"><small>Untuk penjamin</small>Apakah status rizab yang dicagarkan di bawah peraturan skim itu sendiri?</div>
+<div class="q"><small>Untuk platform</small>Apakah jurang yang membuatkan beberapa bank memerlukan satu rekod bersama?</div>
+</div>
+
+<h2><span class="n">10</span>Apa yang akan saya buat</h2>
+<table class="stack">
+<thead><tr><th>Langkah</th><th>Tindakan</th><th>Ukuran</th></tr></thead>
+<tbody>
+<tr><td data-l="Langkah"><b>1. Jalankan Fasa 1 di platform biasa</b></td><td data-l="Tindakan">Tuntutan belum terima yang disahkan, penyerahan hak dengan notis, akaun terkawal, jaminan.</td><td data-l="Ukuran">Bilangan hari dari pengesahan hingga wang diterima</td></tr>
