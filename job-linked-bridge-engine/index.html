@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="ms"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jika pelanggan tidak membayar, siapa menanggung kerugian? | Field Notes</title>
+<meta name="description" content="A plain-words look at a job-linked bridge loan: who pays the shop, who takes the loss, and what a computer test showed. All figures are made up.">
+<meta property="og:title" content="If the customer does not pay, who takes the loss?">
+<meta property="og:description" content="A job-linked bridge loan in plain words. Made-up numbers, real rules.">
+<meta property="og:type" content="article"><meta property="og:url" content="https://dewatagiri.github.io/field-notes/job-linked-bridge-engine/"><meta property="og:image" content="https://dewatagiri.github.io/field-notes/job-linked-bridge-engine/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:#13263a;font:18px/1.6 'Source Serif 4',Georgia,serif}
+body.bm .en{display:none!important}body.en .bm{display:none!important}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 48px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #e3e8ee;font-family:Inter,Arial,sans-serif}
+.brand{font-weight:800;letter-spacing:.12em;font-size:13px}
+.tg button{font:600 12px Inter,Arial,sans-serif;border:1px solid #c9d3de;background:#fff;color:#13263a;padding:6px 12px;cursor:pointer}
+.tg button:first-child{border-radius:6px 0 0 6px}.tg button:last-child{border-radius:0 6px 6px 0;border-left:0}
+.tg button.on{background:#13263a;color:#fff;border-color:#13263a}
+.kicker{font:700 12px Inter,Arial,sans-serif;color:#0b5cad;letter-spacing:.14em;text-transform:uppercase;margin:32px 0 8px}
+h1{font:800 44px/1.12 Inter,Arial,sans-serif;margin:0 0 12px;letter-spacing:-.02em}
+.stand{font:400 19px/1.5 Inter,Arial,sans-serif;color:#5b6b7b;margin:0 0 16px}
+.by{font:500 13px Inter,Arial,sans-serif;color:#5b6b7b;padding:10px 0;border-bottom:4px solid #13263a;margin-bottom:24px}
+h2{font:800 25px/1.25 Inter,Arial,sans-serif;margin:42px 0 10px;display:flex;gap:10px;align-items:center}
+h2 .n{background:#0b5cad;color:#fff;font-size:14px;border-radius:6px;padding:3px 8px;flex:none}
+p{margin:0 0 14px}
+.shout{border:4px solid #b42318;background:#fff5f4;border-radius:10px;padding:16px 18px;margin:22px 0;font:700 17px/1.45 Inter,Arial,sans-serif;color:#b42318}
+.shout b{display:block;font-size:22px;font-weight:800;margin-bottom:4px}
+.big{border:4px solid #0b5cad;background:#eef5fc;border-radius:10px;padding:16px 18px;margin:22px 0;font:800 26px/1.3 Inter,Arial,sans-serif;color:#0b5cad;text-align:center}
+.big small{display:block;font:500 15px/1.4 Inter,Arial,sans-serif;color:#13263a;margin-top:6px}
+.box{border-left:6px solid #13263a;background:#f4f6f9;padding:14px 18px;margin:20px 0;border-radius:0 8px 8px 0;font-size:16.5px}
+.box .lb{font:800 11px Inter,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px;display:block}
+.box ul{margin:6px 0 0;padding-left:20px}.box li{margin-bottom:6px}
+.key .lb{color:#13263a}.data{border-color:#0b5cad;background:#eef5fc}.data .lb{color:#0b5cad}
+.watch{border-color:#b54708;background:#fdf6ec}.watch .lb{color:#b54708}
+.lesson{border-color:#16794a;background:#eef8f2}.lesson .lb{color:#16794a}
+.call{border:3px solid #0b5cad;background:#fff;border-left-width:3px;border-radius:8px}.call .lb{color:#0b5cad}
+.take{background:#13263a;color:#fff;border-color:#0b5cad}.take .lb{color:#9cc4ee}
+.over{border:2px dashed #0b5cad;background:#fff;border-left:2px dashed #0b5cad}.over .lb{color:#0b5cad}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0}
+.tile{border:1px solid #d6dee7;border-top:4px solid #0b5cad;border-radius:8px;padding:12px;font-family:Inter,Arial,sans-serif}
+.tile>b{display:block;font-size:24px;font-weight:800;color:#0b5cad;line-height:1.1}
+.tile>span{font-size:12.5px;color:#5b6b7b;line-height:1.35;display:block;margin-top:4px}
+.tile.gap{border-top-color:#b54708}.tile.gap>b{color:#b54708}
+.steps{margin:16px 0}.step{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #e3e8ee;font-size:17px}
+.step .no{flex:none;background:#0b5cad;color:#fff;font:800 14px Inter,Arial,sans-serif;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+.card{border:1px solid #d6dee7;border-top:4px solid #0b5cad;border-radius:8px;padding:14px;font-size:15.5px;line-height:1.5}
+.card h3{font:800 15px Inter,Arial,sans-serif;margin:0 0 6px}
+.c2{border-top-color:#b54708}.c3{border-top-color:#16794a}.c4{border-top-color:#b42318}
+.q{display:flex;gap:12px;align-items:flex-start;border:1px solid #d6dee7;border-left:5px solid #0b5cad;background:#f3f8fd;border-radius:8px;padding:12px 14px;margin:8px 0;font-size:16px}
+.q .no{flex:none;background:#0b5cad;color:#fff;font:800 13px Inter,Arial,sans-serif;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.q .for{display:block;font:800 10.5px Inter,Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#0b5cad;margin-bottom:2px}
+.dgw{margin:18px 0;border:1px solid #e3e8ee;border-radius:10px;padding:12px;background:#fff}
+svg.dg{width:100%;height:auto;display:block;font-family:Inter,Arial,sans-serif}
+.cap{font:12px Inter,Arial,sans-serif;color:#5b6b7b;margin-top:6px}
+.tw{overflow-x:auto;margin:16px 0}
+table{border-collapse:collapse;width:100%;font:14px/1.45 Inter,Arial,sans-serif}
+th{background:#13263a;color:#fff;text-align:left;padding:9px 10px;font-weight:700;font-size:12.5px}
+td{padding:9px 10px;border-bottom:1px solid #e3e8ee;vertical-align:top}td:first-child{font-weight:700}
+details{border:1px solid #d6dee7;border-radius:8px;padding:10px 14px;margin:14px 0;font:14px/1.5 Inter,Arial,sans-serif}
+summary{cursor:pointer;font-weight:700}
+.bio{display:flex;gap:12px;align-items:center;margin:28px 0;font:14px/1.5 Inter,Arial,sans-serif;color:#5b6b7b}
+.av{flex:none;width:44px;height:44px;border-radius:50%;background:#13263a;color:#fff;font:800 15px Inter,Arial,sans-serif;display:flex;align-items:center;justify-content:center}
+footer{border-top:1px solid #e3e8ee;padding-top:14px;font:12.5px/1.55 Inter,Arial,sans-serif;color:#5b6b7b}
+a{color:#0b5cad}
+@media(max-width:620px){h1{font-size:32px}.tiles{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.big{font-size:21px}}
+</style></head>
+<body class="bm"><div class="wrap">
+<div class="top"><span class="brand">FIELD NOTES</span><span class="tg"><button id="bBM" class="on">BM</button><button id="bEN">EN</button></span></div>
+
+<div class="kicker"><span class="bm">Field Notes · Pinjaman jambatan, bahasa mudah</span><span class="en">Field Notes · Bridge loans, in plain words</span></div>
+<h1><span class="bm">Jika pelanggan tidak membayar, siapa menanggung kerugian?</span><span class="en">If the customer does not pay, who takes the loss?</span></h1>
+<p class="stand"><span class="bm">Saya bina satu enjin yang mengikut peraturan pinjaman jambatan terikat kerja, kemudian mengujinya. Ini hasilnya, dalam bahasa yang mudah.</span><span class="en">I built an engine that follows the rules of a job-linked bridge loan, then tested it. Here is what it showed, in plain words.</span></p>
+<div class="by">Azman Taufik · 20 Nov 2026 · <span class="bm">6 minit bacaan</span><span class="en">6 min read</span></div>
+
+<div class="shout"><b><span class="bm">PERHATIAN: SEMUA ANGKA RM DI SINI ADALAH REKAAN.</span><span class="en">WARNING: EVERY RM FIGURE HERE IS MADE UP.</span></b>
+<span class="bm">Data kerugian sebenar di Malaysia belum ada. Angka ini hanya untuk menguji enjin. Yang penting ialah cara ia berfungsi, bukan angkanya.</span><span class="en">No real Malaysian loss data exists yet. These numbers only test the engine. What matters is how it works, not the numbers.</span></div>
+
+<div class="box key"><span class="lb"><span class="bm">Ringkasan pantas</span><span class="en">The short version</span></span><ul>
+<li><span class="bm"><b>Kedai bahan dibayar, bukan tukang.</b> Wang pinjaman tidak pernah masuk ke tangan tukang.</span><span class="en"><b>The shop gets paid, not the tradesman.</b> The loan money never reaches his hands.</span></li>
+<li><span class="bm">Jika pelanggan tidak membayar, <b>tiga pihak menanggung kerugian mengikut turutan</b>: rizab penaja, penjamin, kemudian pembiaya.</span><span class="en">If the customer does not pay, <b>three parties take the loss in order</b>: the sponsor's reserve, the guarantor, then the lender.</span></li>
+<li><span class="bm">Dalam ujian komputer, perkara yang paling menentukan ialah <b>berapa banyak wang berjaya dikutip semula</b> apabila ada masalah.</span><span class="en">In the computer test, the biggest factor was <b>how much money is recovered</b> when something goes wrong.</span></li>
+<li><span class="bm">Yuran yang adil dikira daripada <b>kos sebenar</b>, bukan ditebak.</span><span class="en">A fair fee is worked out from <b>real costs</b>, not guessed.</span></li></ul></div>
+
+<h2><span class="n">01</span><span class="bm">Kisah seorang tukang cat</span><span class="en">A painter's story</span></h2>
+<p><span class="bm">Seorang tukang cat mendapat kerja bernilai RM12,000. Pelanggan membayar deposit RM2,000. Cat dan bahan lain berharga RM5,000, dan kedai mahu dibayar sebelum menghantar. Bank meminta cagaran. Dia tidak mempunyainya. Siapa menampung jurang itu?</span><span class="en">A painter wins a RM12,000 job. The customer pays a RM2,000 deposit. Paint and other materials cost RM5,000, and the shop wants payment before it delivers. A bank asks for security. He has none. Who covers the gap?</span></p>
+<div class="tiles">
+<div class="tile"><b>RM12,000</b><span><span class="bm">nilai kerja</span><span class="en">the job</span></span></div>
+<div class="tile"><b>RM2,000</b><span><span class="bm">deposit daripada pelanggan</span><span class="en">deposit from the customer</span></span></div>
+<div class="tile"><b>RM5,000</b><span><span class="bm">kos cat dan bahan</span><span class="en">cost of paint and materials</span></span></div>
+<div class="tile gap"><b>RM3,000</b><span><span class="bm">jurang yang perlu ditampung</span><span class="en">the gap to cover</span></span></div></div>
+<div class="big"><span class="bm">RM5,000 − RM2,000 = RM3,000</span><span class="en">RM5,000 − RM2,000 = RM3,000</span><small><span class="bm">Itulah jumlah pinjaman. Tidak lebih daripada jurang itu.</span><span class="en">That is the loan. Never more than the gap.</span></small></div>
+
+<h2><span class="n">02</span><span class="bm">Ke mana wang pergi?</span><span class="en">Where does the money go?</span></h2>
+<div class="steps">
+<div class="step"><span class="no">1</span><div><span class="bm">Pelanggan mengesahkan kerja dan membayar deposit.</span><span class="en">The customer confirms the job and pays the deposit.</span></div></div>
+<div class="step"><span class="no">2</span><div><span class="bm"><b>Pembiaya membayar RM3,000 terus kepada kedai bahan.</b></span><span class="en"><b>The lender pays the RM3,000 straight to the materials shop.</b></span></div></div>
+<div class="step"><span class="no">3</span><div><span class="bm">Tukang menyiapkan kerja.</span><span class="en">The painter finishes the job.</span></div></div>
+<div class="step"><span class="no">4</span><div><span class="bm">Pelanggan membayar baki ke satu akaun yang dikawal pembiaya.</span><span class="en">The customer pays the balance into an account the lender controls.</span></div></div>
+<div class="step"><span class="no">5</span><div><span class="bm">Pinjaman dilunaskan dahulu. Bakinya dilepaskan kepada tukang.</span><span class="en">The loan is repaid first. The rest goes to the painter.</span></div></div></div>
+<div class="shout"><b><span class="bm">WANG TIDAK PERNAH MASUK AKAUN TUKANG.</span><span class="en">THE MONEY NEVER ENTERS THE PAINTER'S ACCOUNT.</span></b>
+<span class="bm">Kedai dibayar terus. Dengan cara ini, pinjaman tidak boleh dibelanjakan untuk perkara lain.</span><span class="en">The shop is paid directly. So the loan cannot be spent on anything else.</span></div>
+
+<h2><span class="n">03</span><span class="bm">Siapa yang layak?</span><span class="en">Who qualifies?</span></h2>
+<p><span class="bm">Empat soalan. <b>Keempat-empatnya mesti dijawab ya.</b></span><span class="en">Four questions. <b>All four must be yes.</b></span></p>
+<div class="cards">
+<div class="card"><h3>1</h3><span class="bm">Ada kerja yang sah dan pembayar bernama, yang bukan tukang itu sendiri?</span><span class="en">Is there a real job with a named payer who is not the tradesman himself?</span></div>
+<div class="card"><h3>2</h3><span class="bm">Kos utama ialah bahan yang boleh dibeli, seperti cat, jubin atau wayar?</span><span class="en">Is the main cost something you can buy, like paint, tiles or wire?</span></div>
+<div class="card"><h3>3</h3><span class="bm">Pembayar ialah isi rumah, individu atau perniagaan kecil?</span><span class="en">Is the payer a household, a person or a small business?</span></div>
+<div class="card"><h3>4</h3><span class="bm">Deposit kurang daripada kos bahan? Jika tidak, pinjaman tidak diperlukan.</span><span class="en">Is the deposit less than the cost of materials? If not, no loan is needed.</span></div></div>
+<p><span class="bm">Selepas itu, ada semakan lain: pengesahan identiti, saringan jenayah kewangan, rekod kredit, dan kedai bahan mesti dalam senarai yang diluluskan. <b>Jika pegawai perlu menyemak, pegawai yang menentukan. Enjin hanya mencadangkan.</b></span><span class="en">Then come more checks: proof of identity, financial-crime screening, credit record, and the shop must be on an approved list. <b>If a person needs to review, the person decides. The engine only recommends.</b></span></p>
+
+<h2><span class="n">04</span><span class="bm">Jika pelanggan tidak membayar</span><span class="en">If the customer does not pay</span></h2>
+<p><span class="bm">Ini soalan yang paling penting. Kerugian ditanggung <b>tiga pihak mengikut turutan</b>. Contoh di bawah menggunakan kerugian rekaan RM25,000 bagi satu kumpulan pinjaman.</span><span class="en">This is the most important question. The loss falls on <b>three parties, in order</b>. The example below uses a made-up RM25,000 loss across one group of loans.</span></p>
+<div class="dgw"><svg class="dg" viewBox="0 0 640 150" role="img" aria-label="Who takes a RM25,000 loss"><rect x="16.0" y="40" width="240.2" height="46" rx="4" fill="#0b5cad"/><text x="26.0" y="69" fill="#fff" font-weight="800" font-size="16">RM10,000</text><text x="18.0" y="30" font-weight="700" font-size="13" fill="#0b5cad">1. <tspan class="bm">Rizab penaja</tspan><tspan class="en">Sponsor's reserve</tspan></text><rect x="259.2" y="40" width="118.6" height="46" rx="4" fill="#b54708"/><text x="269.2" y="69" fill="#fff" font-weight="800" font-size="16">RM5,000</text><text x="261.2" y="30" font-weight="700" font-size="13" fill="#b54708">2. <tspan class="bm">Penjamin</tspan><tspan class="en">Guarantor</tspan></text><rect x="380.8" y="40" width="240.2" height="46" rx="4" fill="#16794a"/><text x="390.8" y="69" fill="#fff" font-weight="800" font-size="16">RM10,000</text><text x="382.8" y="30" font-weight="700" font-size="13" fill="#16794a">3. <tspan class="bm">Pembiaya</tspan><tspan class="en">Lender</tspan></text><text x="16" y="120" font-size="13" fill="#5b6b7b"><tspan class="bm">Kerugian RM25,000 dalam satu kumpulan pinjaman. Angka rekaan.</tspan><tspan class="en">A RM25,000 loss across one group of loans. Made-up numbers.</tspan></text></svg><div class="cap"><span class="bm">Ilustrasi, bukan data.</span><span class="en">Illustration, not data.</span></div></div>
+<div class="cards">
+<div class="card"><h3>1 · <span class="bm">Rizab penaja</span><span class="en">Sponsor's reserve</span></h3><span class="bm">Pihak yang memilih tukang turut menanggung risiko. Rizab ini habis dahulu.</span><span class="en">The party that picks the tradespeople shares the risk. This reserve goes first.</span></div>
