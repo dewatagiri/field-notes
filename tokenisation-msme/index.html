@@ -464,3 +464,128 @@ table.stack td::before{content:attr(data-l);display:block;font-size:11px;font-we
 <li><b>Speed.</b> Days from certified claim to cash, against the usual route. Split the days into three: the payer's certificate, the bank's credit decision, and the paperwork.</li>
 <li><b>Safety.</b> Disputes after financing, duplicate-financing attempts, and guarantee claims.</li>
 </ul>
+<p><b>Decision rule.</b> If the time saved comes from the certificate and the paperwork, no token. If duplicate financing across banks is a real problem, the token earns its place. Risk and finance set targets before the pilot starts.</p></div>
+<p>Advance rate, tenor and limits are for risk and finance to set, so I leave them out.</p>
+<div class="box watch"><span class="lab">Test ten failure cases before approval</span>
+<ul>
+<li>Claim disputed after financing</li><li>Certificate revised down</li><li>Liquidated damages or set-off cut the payment</li><li>Payer pays the contractor directly</li><li>Same claim financed twice</li><li>Payer insolvent</li><li>Project suspended</li><li>Platform fails</li><li>Reserve exhausted</li><li>Guarantee claim made while the assignment is disputed</li>
+</ul></div>
+<p>Open design question: the reserve. A pledged reserve is cash security in substance, so a programme-level first-loss reserve, funded by the anchor or a sponsor and not by each MSME, is the safer option to explore.</p>
+
+<h2><span class="n">06</span>Beyond receivables: data first, token second</h2>
+<p>I reviewed nine other ideas: two yes, two probable, three conditional, two parked. None needs a token on its own today. All follow the same seven steps, and a token can only sit at step 4.</p>
+<div class="diag"><div class="seven">
+<div class="s7"><b>1</b>Trigger</div>
+<div class="s7 weak"><b>2</b>Verify</div>
+<div class="s7"><b>3</b>Legal control</div>
+<div class="s7 tok"><b>4</b>Record</div>
+<div class="s7"><b>5</b>Money moves</div>
+<div class="s7"><b>6</b>Guarantee action</div>
+<div class="s7"><b>7</b>Close and learn</div>
+</div>
+<div class="legend"><span style="color:var(--red);font-weight:700">Red:</span> the weakest link in every case. Whoever verifies the event sets the risk. <span style="color:var(--blue);font-weight:700">Blue:</span> the only step where a token can sit.</div></div>
+<p>Add a token only if all three are true: two or more banks or agencies need the same claim status, a single shared database has failed or been refused, and the legal control and money flow work without the token. Any single no keeps the pilot on an ordinary platform.</p>
+<div class="grp g-yes"><div class="gh"><span class="gl">a</span><div><b>Yes</b><small>Agree. Build it.</small></div></div><div class="gi"><b>Digital guarantee certificate.</b> A feature on any guarantee product: an e-certificate with a live status record.<i>Token: no.</i></div><div class="gi"><b>Milestone and escrow payments.</b> Receivables financing against a payer-confirmed claim, with the guarantee on the bank's exposure. This is the core of the pilot.<i>Token: no. A shared lock later.</i></div></div><div class="grp g-prob"><div class="gh"><span class="gl">b</span><div><b>Probable</b><small>Likely, with one point to confirm.</small></div></div><div class="gi"><b>Payment on a verified event.</b> The same structure, with payment tied to proof of delivery or shipment. Depends on an event source both sides accept.<i>Token: no.</i></div><div class="gi"><b>Islamic contract automation.</b> A Shariah-compliant version of the structures above, with an audit trail of each step. The Shariah committee must confirm.<i>Token: no.</i></div></div><div class="grp g-cond"><div class="gh"><span class="gl">c</span><div><b>Conditional</b><small>Only if a condition is met first.</small></div></div><div class="gi"><b>Purchase-order finance.</b> The bank pays the supplier directly, with a portfolio-level guarantee. Start only after the receivables pilot shows low disputes.<i>Token: later, as a shared lock.</i></div><div class="gi"><b>Programmable grants.</b> A grant for part of the cost, a guaranteed loan for the rest. An agency must lead.<i>Token: no.</i></div><div class="gi"><b>Sustainability-linked fees.</b> A fee rebate for verified results, added to an existing guarantee. Needs a trusted data source first.<i>Token: no.</i></div></div><div class="grp g-park"><div class="gh"><span class="gl">d</span><div><b>Park</b><small>Not now.</small></div></div><div class="gi"><b>Cross-border ringgit tokenised money.</b> Export financing paid in tokenised ringgit. A payment rail, not ours to build.<i>Token: money layer, not ours.</i></div><div class="gi"><b>Provenance (electronics, biomedical, agriculture, halal).</b> Verified origin data used as credit evidence. I found no Malaysian case of lending on traceability data. Run it as a data pilot.<i>Token: not yet.</i></div></div>
+
+<h2><span class="n">07</span>Law and regulators: questions for a lawyer</h2>
+<p>These come from a second review. Where I could not check a point against a source, it is argument, not settled law.</p>
+<div class="box watch"><span class="lab">Put these to a lawyer before building</span>
+<ul>
+<li><b>Assignment (Civil Law Act 1956, s.4(3)).</b> An assignment must be absolute, in writing, with written notice to the payer. Splitting a receivable weakens it, and each pass-down looks like a new assignment.</li>
+<li><b>Charge registration (Companies Act 2016, s.352).</b> A company's charge must be lodged within 30 days. If the bank keeps full recourse, a court may treat a "sale" of receivables as a charge, and an unregistered charge can fail against a liquidator.</li>
+<li><b>CIPAA 2012.</b> Construction payment disputes can go to adjudication, and pay-when-paid clauses are void under s.35. Test the pilot's dispute and set-off cases against it.</li>
+<li><b>Banking secrecy and PDPA.</b> Even a hash on a ledger other banks can read may count as disclosure. Sole traders are natural persons, so their data is personal data.</li>
+<li><b>Which regulator.</b> My reading: a loan a bank holds to maturity stays with BNM, while a record that is split, passed to outside funders or traded may fall under Securities Commission rules. An inference, not a ruling.</li>
+</ul></div>
+
+<h2><span class="n">08</span>The case against</h2>
+<div class="box trap"><span class="lab">The strongest argument against tokenising</span>
+<ul>
+<li><b>The bottleneck may not be the database.</b> Large payers certify slowly, dispute often and resist signing payment undertakings. A token does not fix a slow accounts-payable team.</li>
+<li><b>A cheaper lock exists.</b> A shared registry of invoice hashes can stop double financing without nodes, smart contracts or key governance.</li>
+<li><b>LHDN e-Invoice covers only part of it.</b> An e-invoice shows an invoice was issued, not that the payer certified the work, and many small subcontractors are below the RM3 million threshold.</li>
+<li><b>Governance costs time.</b> A multi-bank ledger needs a consortium agreement, node hosting, audits and dispute rules.</li>
+<li><b>Payer power.</b> China's electronic vouchers showed how anchor buyers can stretch payment with a digital instrument.</li>
+<li><b>The loss rate is unknown.</b> I found no verified contractor loss rate. Do not quote one.</li>
+</ul></div>
+<p>What would change my view: several banks needing one registry, a duplicate-financing problem one platform cannot fix, or clear central bank guidance on tokenised deposits and receivables.</p>
+
+<h2><span class="n">09</span>Six questions worth asking</h2>
+<div class="cards">
+<div class="q"><small>For the bank</small>Where does the delay sit: the credit decision, the payer's certificate or the paperwork?</div>
+<div class="q"><small>For payers</small>Will you sign a payment undertaking and pay into a controlled account?</div>
+<div class="q"><small>For regulators</small>When does a token a bank holds to maturity become a capital market product?</div>
+<div class="q"><small>For lawyers</small>Does a passed-down token carry legal title, or does each step need a new written assignment?</div>
+<div class="q"><small>For the guarantor</small>What does a pledged reserve count as under the scheme's own rules?</div>
+<div class="q"><small>For platforms</small>What gap would make several banks need one shared record?</div>
+</div>
+
+<h2><span class="n">10</span>What I would do</h2>
+<table class="stack">
+<thead><tr><th>Step</th><th>What to do</th><th>Measure</th></tr></thead>
+<tbody>
+<tr><td data-l="Step"><b>1. Run Phase 1 on an ordinary platform</b></td><td data-l="What">Certified receivables, assignment with notice, controlled account, guarantee.</td><td data-l="Measure">Days from certification to cash</td></tr>
+<tr><td data-l="Step"><b>2. Measure the gap</b></td><td data-l="What">Log duplicate attempts, disputes after financing and suppliers reached.</td><td data-l="Measure">Share of eligible suppliers financed, and how fast</td></tr>
+<tr><td data-l="Step"><b>3. Get the legal opinion first</b></td><td data-l="What">Assignment, charge registration, secrecy and the regulator perimeter.</td><td data-l="Measure">Written opinion before any ledger is built</td></tr>
+<tr><td data-l="Step"><b>4. Talk to regulators early</b></td><td data-l="What">Use the existing sandboxes and pilots.</td><td data-l="Measure">A clear view on who covers the token</td></tr>
+</tbody></table>
+
+<div class="box call"><span class="lab">A call to banks, payers and regulators</span>
+<p>If small suppliers are to get cash faster, the first fixes are on your side: certify claims quickly and sign payment undertakings. Tell us which gap a token should close, and we can test it.</p></div>
+
+<div class="box take"><span class="lab">My take</span>
+<p>Start with the paper and an ordinary platform. Measure delay, disputes and duplicate pledges through the pilot. If several banks then need one shared lock, add the token. If not, you saved the cost and still got suppliers paid faster.</p></div>
+
+<div class="box you"><span class="lab">Over to you</span>
+<p>Where does financing delay really sit for the suppliers you know: the credit decision, the payer's certificate, or the paperwork?</p>
+<p><a class="btn" href="#" data-linkedin>Comment on LinkedIn</a></p></div>
+
+<details><summary>Sources (all public, read from search results and summaries; check before reuse)</summary>
+<ul>
+<li><a href="https://www.thestar.com.my/business/business-news/2026/08/20/maybank-performs-malaysia039s-first-tokenised-supply-chain-financing-transaction">Maybank performs Malaysia's first tokenised supply chain financing transaction</a>, The Star, 20 August 2026</li>
+<li><a href="https://www.nst.com.my/amp/business/corporate/2026/08/1514941/maybank-makes-malaysias-tokenised-financing-debut">Maybank makes Malaysia's tokenised financing debut</a>, NST, 20 August 2026</li>
+<li><a href="https://www.businesstoday.com.my/2026/08/20/maybank-moves-rm1-million-supply-chain-financing-onto-tokenised-platform/">Maybank moves RM1 million supply chain financing onto tokenised platform</a>, Business Today, 20 August 2026</li>
+<li><a href="https://hubbis.com/news/maybank-completes-malaysia-s-first-tokenised-supply-chain-financing-transaction">Maybank completes Malaysia's first tokenised supply chain financing transaction</a>, Hubbis</li>
+<li><a href="https://www.sc.com.my/resources/media/media-release/sc-seeks-public-feedback-on-proposed-framework-on-tokenisation-of-capital-market-products">SC seeks public feedback on tokenised capital market products</a>, Securities Commission, 6 May 2025</li>
+<li><a href="https://fintechnews.my/54847/blockchain/bank-negara-malaysia-bnm-roadmap-for-asset-tokenisation-in-finance/">BNM is exploring stablecoins and tokenised assets</a>, Fintech News Malaysia, summary of BNM's October 2025 discussion paper</li>
+<li><a href="https://theedgemalaysia.com/node/792560">BNM onboards three projects to test ringgit stablecoins, tokenised deposits</a>, The Edge, 11 February 2026</li>
+<li><a href="https://www.ssm.com.my:443/Pages/Legal_Framework/GUIDELINES/13.-Guidelines-For-Registration-Of-Charges.pdf">Guidelines for registration of charges</a>, SSM</li>
+<li><a href="https://www.legal500.com/developments/?p=50234">CIPAA 2012: key insights for contractors</a>, Legal500</li>
+<li><a href="https://www.ledgerinsights.com/sc-ventures-backed-swiat-olea-partner-for-tokenized-trade-finance/">SC Ventures-backed SWIAT, Olea partner for tokenized trade finance</a>, Ledger Insights, September 2024</li>
+<li><a href="https://www.theasset.com/article/52432/swiat-olea-team-up-on-blockchain-enabled-trade-financing">SWIAT, Olea team up on blockchain-enabled trade financing</a>, The Asset</li>
+<li><a href="https://thestar.com.my/news/nation/2026/08/30/over-11-million-businesses-to-benefit-from-higher-e-invoicing-threshold-says-lhdn">Over 1.1 million businesses to benefit from higher e-invoicing threshold</a>, The Star, 30 August 2026</li>
+<li><a href="https://www.bernama.com/tv/news.php?id=2601057">MSMEs with annual revenue below RM3 mln exempt from e-invoicing</a>, Bernama, 30 August 2026</li>
+</ul>
+<p>Credits: I used AI assistants for first-pass research and for a sceptical second review.</p>
+</details>
+
+<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b><br>Writes on MSME financing, AI automation for SMEs, and policy and long-term strategy for Malaysia.</div></div>
+
+<div class="disc">
+<p>The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from publicly available sources listed above, and any errors are mine. Nothing here is financial, investment or legal advice.</p>
+<p>Research and drafting were assisted by AI tools. All facts were checked against the sources listed.</p>
+</div>
+
+</div>
+<div class="foot">© 2026 Azman Taufik · Field Notes</div>
+</div>
+<script>
+(function(){
+var LINKEDIN_POST_URL="";
+var T={bm:{t:"Tokenisasi untuk pembiayaan PMKS yang lebih pantas | Field Notes",l:"ms"},en:{t:"Tokenisation for faster MSME financing: what it can and cannot do | Field Notes",l:"en"}};
+function setLang(k){
+  document.getElementById("bm").hidden=(k!=="bm");
+  document.getElementById("en").hidden=(k!=="en");
+  document.documentElement.lang=T[k].l; document.title=T[k].t;
+  var a=document.querySelectorAll(".toggle a");
+  for(var i=0;i<a.length;i++){a[i].className=(a[i].getAttribute("data-set")===k)?"on":"";}
+}
+function fromHash(){var h=(location.hash||"").replace("#","");setLang(h==="en"?"en":"bm");}
+window.addEventListener("hashchange",fromHash);
+var els=document.querySelectorAll("[data-linkedin]");
+for(var i=0;i<els.length;i++){ if(LINKEDIN_POST_URL){els[i].href=LINKEDIN_POST_URL;} }
+fromHash();
+})();
+</script>
+</body>
+</html>
