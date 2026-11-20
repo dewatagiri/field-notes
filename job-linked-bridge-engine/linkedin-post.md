@@ -32,11 +32,11 @@ Hasilnya (angka rekaan):
 
 Tentang enjin ini: 15 bahagian kod Python, 141 ujian automatik, 12 keputusan yang saya buat dan direkodkan. Saya tetapkan peraturan dan buat keputusan, AI tulis kod dan ujian, dan ujian itu yang buktikan. Bukan "minta AI buat aplikasi".
 
-Kod terbuka (MIT): https://github.com/dewatagiri/self_employed_bridge
+Penjelasan penuh langkah demi langkah (BM dan EN): https://dewatagiri.github.io/field-notes/job-linked-bridge-engine/
 
 PERHATIAN: semua angka RM di atas ialah angka rekaan untuk ujian, bukan anggaran daripada data sebenar. Data kerugian sebenar di Malaysia belum ada.
 
-Penjelasan penuh langkah demi langkah (BM dan EN): https://dewatagiri.github.io/field-notes/job-linked-bridge-engine/
+Kod terbuka (MIT): https://github.com/dewatagiri/self_employed_bridge
 
 Kalau anda ada proses kerja yang peraturannya dah ditulis tapi masih dikira dengan tangan, yang mana satu patut jadi enjin dahulu?
 
@@ -67,11 +67,11 @@ The result (made-up numbers):
 
 About the engine: 15 parts in Python, 141 automatic tests, 12 decisions I made and recorded. I set the rules and made the decisions, AI wrote the code and the tests, and the tests proved it. I did not just ask AI to build an app.
 
-Open code (MIT): https://github.com/dewatagiri/self_employed_bridge
+The full step-by-step walkthrough (BM and EN): https://dewatagiri.github.io/field-notes/job-linked-bridge-engine/
 
 WARNING: every RM figure above is made up for testing, not estimated from real data. No real Malaysian loss data exists yet.
 
-The full step-by-step walkthrough (BM and EN): https://dewatagiri.github.io/field-notes/job-linked-bridge-engine/
+Open code (MIT): https://github.com/dewatagiri/self_employed_bridge
 
 If you have a work process whose rules are already written but still worked out by hand, which one should become an engine first?
 
