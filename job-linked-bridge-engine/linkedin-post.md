@@ -4,11 +4,16 @@ Article: https://dewatagiri.github.io/field-notes/job-linked-bridge-engine/
 Code (MIT): https://github.com/dewatagiri/self_employed_bridge
 Previous post: https://www.linkedin.com/feed/update/urn:li:activity:7529550240052523008/
 
+First comment to add (paste right after posting):
+  BM: Siaran sebelum ini: https://www.linkedin.com/feed/update/urn:li:activity:7529550240052523008/
+  EN: The previous post: https://www.linkedin.com/feed/update/urn:li:activity:7529550240052523008/
+Why: LinkedIn builds the link card from the first link in the post, so the article link must be the first one.
+
 ---
 
 ## BM
 
-Dalam artikel sebelum ini, saya tulis peraturan pinjaman jambatan untuk tukang: bayar kedai bahan terus, bukan tukang. Siaran itu di sini: https://www.linkedin.com/feed/update/urn:li:activity:7529550240052523008/
+Dalam artikel sebelum ini, saya tulis peraturan pinjaman jambatan untuk tukang: bayar kedai bahan terus, bukan tukang. Siaran itu saya letak dalam komen pertama.
 
 Kali ini saya jadikan semua peraturan itu sebuah enjin yang berjalan. Kalau peraturan dah ditulis, kenapa kita masih kira dengan tangan? Ini cara enjin itu berfikir, daripada satu kerja tukang cat sehingga keputusan simulasi:
 
@@ -43,7 +48,7 @@ Kalau anda ada proses kerja yang peraturannya dah ditulis tapi masih dikira deng
 
 ## EN
 
-In my last post I set out the rules of a bridge loan for tradespeople: pay the materials shop directly, not the painter. That post: https://www.linkedin.com/feed/update/urn:li:activity:7529550240052523008/
+In my last post I set out the rules of a bridge loan for tradespeople: pay the materials shop directly, not the painter. I put that post in the first comment.
 
 This time I turned all those rules into a working engine. If the rules are already written down, why are we still working them out by hand? Here is how the engine thinks, from one painter's job to the simulation result:
 
