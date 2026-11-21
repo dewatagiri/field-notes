@@ -24,55 +24,50 @@ blockquote{margin:26px 0;padding:4px 0 4px 18px;border-left:5px solid #9b1c1c;fo
 .box{border:1px solid #161616;padding:14px 18px;margin:26px 0;background:#fafafa;font:16px/1.55 Arial,sans-serif}
 .box b.t{display:block;font:800 12px/1 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
 .box ul{margin:6px 0 0 18px;padding:0}.box li{margin-bottom:8px}
-a{color:#0b5cad}
+a{color:#0b5cad}code{font:.85em Consolas,monospace;background:#f1f1f1;padding:1px 4px}
 footer{font:12px/1.5 Arial,sans-serif;color:#666;border-top:1px solid #ccc;margin-top:40px;padding-top:12px}
 @media(max-width:560px){h1{font-size:31px}body{font-size:18px}}
 </style></head><body><div class="w">
 
 <div class="kick">Field Notes · Opinion</div>
 <h1>The Poverty Trap Is Not a Failure of the System. It Is the System Working.</h1>
-<p class="dek">I built a loan engine for tradespeople, then spent a week trying to argue against it. This is what I found.</p>
+<p class="dek">I built a loan engine for tradespeople. Then I read what its own numbers say.</p>
 <div class="by">By Azman Taufik · Companion to <a href="https://dewatagiri.github.io/field-notes/job-linked-bridge-engine/">how the engine thinks</a> · Code: <a href="https://github.com/dewatagiri/self_employed_bridge">github.com/dewatagiri/self_employed_bridge</a></div>
 
-<p class="lead">I should say up front that I don't think anyone designed it this way. Nobody sat in a room and decided to trap painters in debt. The incentives just end up there anyway, and my own engine is a good example. It pays the painter's paint supplier directly, collects from the customer through a controlled account, and splits any loss between a development institution, a guarantor and a lender. On paper it works fine. What I should have asked sooner is who it works for.</p>
+<h2 style="margin-top:0"><small>1</small>We Are Exporting the Failed American Dream to the Rest of the World</h2>
+<p>The American Dream died the moment the system stopped helping working people build equity and started hooking them on perpetual access to debt. When real wages stagnated in the U.S., the establishment didn't fix bargaining power. It "democratized credit." Credit cards, subprime loans, and Buy-Now-Pay-Later were sold as inclusion while workers turned into 1099 gig serfs: doing all the physical sweating, absorbing all the liability, and owning zero capital at the end of the week.</p>
+<p>The entire developing world is now blindly copying that exact Wall Street rent-extraction blueprint. Everywhere you look, "financial inclusion" just means connecting the bottom 40% to the extraction pipes of the top 10% with better APIs.</p>
 
-<h2><small>1 · Where this comes from</small>We're copying a dream that already failed</h2>
-<p>In the US, wages stopped keeping up and the fix wasn't giving workers more bargaining power. It was giving them more credit. Credit cards, subprime loans, buy-now-pay-later, all sold as inclusion. A lot of people ended up as contractors doing the physical work, carrying the liability, and owning very little at the end of the week.</p>
-<p>Much of the developing world is now copying that. "Financial inclusion" too often means plugging the people at the bottom into the same pipes, just with better APIs.</p>
-<p>A bridge loan for a tradesperson could be the opposite of that. It could also be the same thing in a smaller package. The design decides which, and that's what this piece is about.</p>
-
-<h2><small>2 · The control</small>The controlled account is what makes the loan work, and what it costs the painter</h2>
-<p>My engine makes the customer pay into an account the lender controls, so the loan is repaid before the painter touches the money. That isn't a minor feature. It's the number that decides whether the product can exist at all. In my base case, if just 5% of customers pay the painter in cash instead, the development institution and the guarantor together lose about RM210 on a typical RM10,000 loan. Get that below roughly 1% and it starts to work.</p>
+<h2><small>2</small>The Digital Company Store</h2>
+<p>When a bridge-loan engine forces a tradesperson to buy paint only from approved hardware stores and intercepts the customer's payment so the lender and the supplier eat first, the worker stops being an entrepreneur. He is an unpaid branch manager for the supplier and the lender. He loses the right to haggle for cash discounts, manage his own liquidity, or hold cash between jobs. All the upside goes to the ecosystem. All the physical risk stays on his back.</p>
+<p>And here is the uncomfortable part. In my own simulation that control is the whole product. If just 5% of customers pay the painter in cash instead, the funders lose about RM210 on every RM10,000 loan. Below roughly 1% it starts to work. The business only exists because the painter is not allowed to hold his own money.</p>
 <blockquote>Controlling the account matters more than the price.</blockquote>
-<p>Now look at it from the painter's side. He can't haggle for a cash discount. He can't hold cash between jobs. He can't manage his own cash flow. The supplier and the lender get paid first, and he gets whatever's left. The engine is upfront about this, but being upfront isn't the same as the painter agreeing to it. A regulator or a funder should see this trade-off before the first loan goes out.</p>
 
-<h2><small>3 · The loss waterfall</small>Charity takes the first loss, the lender takes the profit</h2>
-<p>The way losses are shared is simple. The first-loss reserve takes the first RM50,000 of every group of 100 loans. The guarantor takes 70% of what's left. The lender takes the rest. Here's how that plays out in my base case. These are my assumptions, not findings, because there's no Malaysian loss data to use:</p>
+<h2><small>3</small>Socializing Risk for Institutional Cowardice</h2>
+<p>Look at the loss waterfall. When a cohort goes bad, the first-loss reserve (a development institution's money, the same kind of pot that Zakat, Waqf or CSR could fill tomorrow) takes the hit first, so the lender's balance sheet barely gets scratched. On my assumptions, which are assumptions and not findings because no Malaysian loss data exists:</p>
 <div class="nums">
 <div><b>90%</b>of expected loss lands on the reserve</div>
 <div><b>7%</b>on the guarantor</div>
 <div><b>3%</b>on the lender</div>
-<div><b>37%</b>of groups use up the whole reserve</div></div>
-<p>That's a development tool doing what it was built to do, which is to carry risk a commercial lender won't touch. But if you look at it plainly, it's also cheap insurance for the lender. If the reserve is public or philanthropic money, you have to ask what the borrower actually gets for that subsidy. A lender who earns a margin on loans where someone else carries nearly all the risk hasn't learned to serve this customer. He's just learned to get paid for standing nearby.</p>
-<p>The buyer isn't in the picture at all. The engine counts any deposit the customer has already paid and only lends the gap, but it doesn't ask for one. A homeowner who pays nothing up front still gets his paint, and the painter ends up borrowing against his own future labour to cover the buyer's cash flow.</p>
+<div><b>37%</b>of groups wipe out the whole reserve</div></div>
+<p>Meanwhile, the rich homeowner or corporate buyer gets away without paying an upfront mobilization deposit, forcing the poor contractor to borrow against his own future labor just to subsidize the buyer's cash flow. The engine credits a deposit if there is one. It never asks for one. Charity-grade money is being used as free credit-default insurance for risk-averse lenders.</p>
 
-<h2><small>4 · The treadmill</small>A ladder, or a toll booth?</h2>
-<p>Picture a painter who takes a loan on every job to buy RM3,000 of paint. He isn't climbing anything. He's paying a toll to the supplier, the payment rail and the lender every time he wants permission to work. The engine tracks defaults, recoveries, how fast the reserve runs down, and the lender's profit. It also checks whether borrowers are new to formal credit. That tells you who got access. It doesn't tell you whether anyone got ahead.</p>
-<p>Nothing in the engine asks whether the painter finishes the year with more of his own money than he started with.</p>
+<h2><small>4</small>The Debt Treadmill vs. Capital Accumulation</h2>
+<p>A loan that a painter has to take out every single month just to buy RM3,000 of paint is not a ladder out of poverty. It is a treadmill. Without a mechanism to retain surplus, he never accumulates enough cash to buy his own materials. He stays permanently leveraged, forever paying a toll to the payment rail, the supplier, and the lender just for permission to work.</p>
 
-<h2><small>5 · Getting out</small>One bad week shouldn't count forever</h2>
-<p>The engine treats paying late and paying around the lender as two different things, on purpose. A late payment is just late. If someone pays the painter in cash, they can cure it by repaying in full and getting an officer's approval. A second time blocks them for the rest of the pilot. I think that's a reasonable rule, but it was written by people who haven't had a child end up in the emergency room, or a client sit on an invoice for two months. Before this blocks anyone for good, a pilot should find out how often an honest delay looks like a bypass.</p>
+<h2><small>5</small>Algorithmic Exile for Being Poor</h2>
+<p>Deterministic collections code (<code>collections.py</code>) cannot tell the difference between a crook and a guy whose kid ended up in the ER or whose client stalled on an invoice. Paying late is not treated as a bypass, to be fair. But the first time money goes round the lender, he has to repay in full and wait for an officer's approval. The second time, he is blocked for the rest of the pilot. That skims the top 10% of compliant workers and throws the rest right back to Ah Long loan sharks.</p>
 
-<div class="box"><b class="t">Three things I'd change next</b><ul>
-<li><b>A way out.</b> Put 5% to 10% of every settled job into a savings pot the worker owns. Once it covers three jobs' worth of materials, the engine stops lending to him, because he now has his own working capital.</li>
-<li><b>Put the buyer's money first.</b> Ask for a deposit before the worker is assessed, and charge late-paying customers a penalty that goes to the worker.</li>
-<li><b>Room for emergencies.</b> Give reliable workers one 60-day pause that doesn't count against them.</li></ul>
-None of these is in the engine today. They're ideas.</div>
+<h2><small>The silver lining</small>Rewriting the Code Before the Cage Hardens</h2>
+<p>The only reason this engine isn't a total loss is that the rules are written in open-source code, not carved in stone by Wall Street lobbyists. Because the math is exposed in broad daylight, showing exactly where reserves run dry and who eats the loss, we can rewrite the state machine before the trap hardens:</p>
+<div class="box"><ul>
+<li><b>Encode a Graduation Exit (<code>decide.py</code>).</b> Force a 5% to 10% slice of every settled job into a locked savings pot owned by the worker. The moment that pot covers three jobs' worth of paint, the algorithm kicks him off debt because he now owns his own working capital.</li>
+<li><b>Flip the Escrow onto the Buyer (<code>screen.py</code>).</b> Stop underwriting the worker's desperation and start locking the buyer's cash upfront, charging automatic late penalties to corporate clients and homeowners that flow straight into the worker's pocket.</li>
+<li><b>Build Human-Shock Grace (<code>simulate.py</code>).</b> Give reliable workers automatic restructuring tokens so a family emergency buys a 60-day pause instead of permanent algorithmic exile.</li></ul>
+None of these three is in the code yet.</div>
 
-<h2><small>6 · What to measure</small>The number that's missing</h2>
-<p>If an engine only reports lender profit and default rates, it only proves that the cage is well built. The number I'd add is the <b>graduation rate</b>: out of all the small tradespeople who borrow, how many build up enough capital to tell the lender they don't need them any more.</p>
-<blockquote>If we don't measure graduation, we aren't breaking the cycle. We're automating it.</blockquote>
-<p>One thing I'll give the engine. Its rules are in open code, not hidden in a vendor contract, and the assumptions sit in a file anyone can change. So the weak spots I've described are easy for anyone to see. That's why I think it's worth fixing and not just worth criticising.</p>
+<h2><small>The only metric that matters</small>Graduation</h2>
+<p>If an engine only measures lender profit and default rates, all it proves is that the bars of the cage are strong. Unless the code tracks Borrower Graduation Rate (how many small people actually accumulate enough capital to tell the bank "I don't need you anymore") we aren't breaking the poverty cycle. We are just automating it.</p>
 
 <footer>Views are my own and do not represent my employer or any organisation I am or have been associated with. Every figure is the output of an engine run on my own assumptions, not on data, and none of it is a forecast. Not financial, investment or legal advice. Research and writing were assisted by AI tools. © Azman Taufik · Field Notes</footer>
 </div></body></html>
