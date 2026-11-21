@@ -3,189 +3,84 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Does safe micro-lending end the poverty cycle, or automate it? | Field Notes</title>
-<meta name="description" content="A hypothesis and three rules to test: can a lending engine protect the bank and still keep the borrower stuck?">
+<title>Why Modern "Safe" Micro-Lending Engines Tighten the Poverty Cycle | Azman Taufik</title>
+<meta name="description" content="When a credit system is engineered strictly to eliminate risk for banks, suppliers and corporate buyers, it does not break the poverty cycle. It automates it.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Does safe micro-lending end the poverty cycle, or automate it?">
-<meta property="og:description" content="A hypothesis and three rules to test, judged by one number: borrower graduation rate.">
+<meta property="og:title" content="Why Modern &quot;Safe&quot; Micro-Lending Engines Tighten the Poverty Cycle">
+<meta property="og:description" content="When a credit system is engineered strictly to eliminate risk for banks, suppliers and corporate buyers, it does not break the poverty cycle. It automates it.">
 <meta property="og:image" content="https://dewatagiri.github.io/field-notes/safe-lending-poverty-cycle/cover.png">
 <meta property="og:url" content="https://dewatagiri.github.io/field-notes/safe-lending-poverty-cycle/">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#13263a;--blue:#0b5cad;--red:#b42318;--green:#16794a;--amber:#b54708;--grey:#9aa7b4}
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:var(--ink);font:18px/1.65 'Source Serif 4',Georgia,serif}
+body{margin:0;background:#fff;color:#111;font:18px/1.6 Georgia,'Times New Roman',serif}
 body[data-l=bm] en,body[data-l=en] bm{display:none}
-body[data-l=bm] svg .en,body[data-l=en] svg .bm{display:none}
-.wrap{max-width:760px;margin:0 auto;padding:0 16px 40px}
-h1,h2,h3,.ui,table,.kicker,.tag{font-family:Inter,Arial,sans-serif}
-.top{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #e3e8ee;font:700 14px Inter,sans-serif;letter-spacing:.08em}
-.tog button{font:600 13px Inter,sans-serif;border:1px solid var(--blue);background:#fff;color:var(--blue);padding:5px 12px;cursor:pointer}
-.tog button.on{background:var(--blue);color:#fff}
-.tog button:first-child{border-radius:6px 0 0 6px}.tog button:last-child{border-radius:0 6px 6px 0;margin-left:-1px}
-.kicker{color:var(--blue);font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin:34px 0 8px}
-h1{font-size:46px;line-height:1.1;font-weight:800;margin:0 0 14px}
-.stand{font:400 20px/1.45 Inter,sans-serif;color:#5a6b7c;margin:0 0 16px}
-.by{font:600 14px Inter,sans-serif;color:#5a6b7c;padding-bottom:14px;border-bottom:4px solid var(--ink);margin-bottom:22px}
-.cbtn{display:inline-block;font:600 14px Inter,sans-serif;background:var(--blue);color:#fff;padding:9px 16px;border-radius:6px;text-decoration:none;margin:6px 0 10px}
-h2{font-size:27px;line-height:1.25;font-weight:800;margin:44px 0 10px}
-h2 .n{display:inline-block;background:var(--blue);color:#fff;font-size:15px;border-radius:6px;padding:2px 9px;margin-right:10px;vertical-align:3px}
-p{margin:0 0 14px}
-.box{border-left:6px solid var(--blue);background:#f5f8fb;padding:14px 18px;margin:20px 0;border-radius:0 6px 6px 0}
-.box .l{font:800 12px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;display:block}
-.box ul{margin:6px 0 0;padding-left:20px}.box li{margin-bottom:6px}
-.key{border-color:var(--ink)}.key .l{color:var(--ink)}
-.data .l{color:var(--blue)}
-.lesson{border-color:var(--green);background:#f1f9f4}.lesson .l{color:var(--green)}
-.watch{border-color:var(--amber);background:#fff7ed}.watch .l{color:var(--amber)}
-.call{border:3px solid var(--blue);background:#fff;border-radius:6px}.call .l{color:var(--blue)}
-.take{background:var(--ink);color:#fff;border-color:var(--ink)}.take .l{color:#bcd3ea}
-.over{border:2px dashed var(--blue);background:#fff;border-radius:6px;padding:14px 18px;margin:20px 0}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0}
-.tile{border:1px solid #dbe3ec;border-top:4px solid var(--blue);padding:10px;border-radius:6px;font-family:Inter,sans-serif}
-.tile b{display:block;font-size:22px;font-weight:800;color:var(--blue);line-height:1.15}
-.tile span{font-size:12.5px;color:#5a6b7c;line-height:1.35;display:block;margin-top:4px}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
-.card{border:1px solid #dbe3ec;border-top:5px solid var(--red);border-radius:6px;padding:12px 14px;font-size:16px;line-height:1.5}
-.card h3{font-size:16px;margin:0 0 6px}
-.tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:4px}
-.prop{display:flex;gap:12px;border:1px solid #dbe3ec;border-radius:6px;padding:12px 14px;margin:12px 0;font-size:16px;line-height:1.5}
-.prop .c{flex:none;width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;font:800 15px Inter,sans-serif;display:flex;align-items:center;justify-content:center}
-.prop h3{font-size:16px;margin:0 0 4px}
-.meas{color:var(--green);font:600 14px/1.4 Inter,sans-serif;margin-top:6px}
-.q{border-left:5px solid #7fb0e0;background:#eef5fc;padding:10px 14px;margin:10px 0;border-radius:0 6px 6px 0;font-size:17px}
-.q i{display:block;font:800 11px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);font-style:normal;margin-bottom:3px}
-table{width:100%;border-collapse:collapse;font-size:15px;margin:12px 0}
-td,th{border-bottom:1px solid #dbe3ec;padding:8px 6px;text-align:left;vertical-align:top}th{color:var(--blue);font-size:13px}
-.fig{margin:22px 0}.fig svg{width:100%;height:auto;display:block}
-.cap{font:13px/1.4 Inter,sans-serif;color:#5a6b7c;margin-top:4px}
-details{margin:14px 0;font-size:15px}summary{font:700 15px Inter,sans-serif;cursor:pointer;color:var(--blue)}
-.bio{display:flex;gap:14px;align-items:center;border-top:1px solid #e3e8ee;margin-top:30px;padding-top:18px;font-size:15px;line-height:1.5}
-.av{flex:none;width:54px;height:54px;border-radius:50%;background:var(--ink);color:#fff;font:800 18px Inter,sans-serif;display:flex;align-items:center;justify-content:center}
-.foot{font:13px/1.5 Inter,sans-serif;color:#5a6b7c;border-top:1px solid #e3e8ee;margin-top:20px;padding-top:14px}
-@media(max-width:620px){h1{font-size:32px}.grid{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}body{font-size:17px}}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 40px}
+.mast{display:flex;justify-content:space-between;align-items:center;border-bottom:3px double #111;padding:14px 0 8px;font:700 13px Georgia,serif;letter-spacing:.18em;text-transform:uppercase}
+.mast .t{font:700 22px Georgia,serif;letter-spacing:.08em}
+.tog button{font:600 12px Arial,sans-serif;border:1px solid #111;background:#fff;color:#111;padding:4px 11px;cursor:pointer}
+.tog button.on{background:#111;color:#fff}
+.dl{font:13px Arial,sans-serif;color:#555;border-bottom:1px solid #111;padding:6px 0;display:flex;justify-content:space-between}
+.kick{font:700 13px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#a11;margin:26px 0 6px}
+h1{font:700 44px/1.12 Georgia,'Times New Roman',serif;margin:0 0 14px}
+.by{font:600 14px Arial,sans-serif;border-top:1px solid #111;border-bottom:1px solid #111;padding:8px 0;margin-bottom:20px}
+.cbtn{display:inline-block;font:600 13px Arial,sans-serif;border:1px solid #111;color:#111;padding:7px 14px;text-decoration:none;margin:0 0 18px}
+.cbtn:hover{background:#111;color:#fff}
+.cols{column-count:2;column-gap:36px;column-rule:1px solid #ccc;text-align:justify;hyphens:auto}
+h2{font:700 15px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;border-top:2px solid #111;padding-top:8px;margin:22px 0 8px;break-after:avoid}
+p{margin:0 0 12px}
+.cols>p:first-of-type:first-letter,.drop:first-letter{float:left;font:700 64px/.85 Georgia,serif;padding:6px 8px 0 0}
+ul,ol{margin:0 0 12px;padding-left:22px}li{margin-bottom:9px}
+li b{font-family:Georgia,serif}
+.foot{font:12.5px/1.5 Arial,sans-serif;color:#555;border-top:3px double #111;margin-top:26px;padding-top:10px}
+@media(max-width:700px){.cols{column-count:1;text-align:left}h1{font-size:31px}body{font-size:17px}}
 </style>
 </head>
 <body data-l="bm">
 <div class="wrap">
-<div class="top"><span>FIELD NOTES</span><span class="tog"><button id="b-en" onclick="L('en')">EN</button><button id="b-bm" onclick="L('bm')">BM</button></span></div>
+<div class="mast"><span class="t">Field Notes</span><span class="tog"><button id="b-en" onclick="L('en')">EN</button><button id="b-bm" onclick="L('bm')">BM</button></span></div>
+<div class="dl"><span>Azman Taufik</span><span>21 <en>November</en><bm>November</bm> 2026</span></div>
 
-<div class="kicker"><en>Field Notes · Hypothesis</en><bm>Field Notes · Hipotesis</bm></div>
-<h1><en>Does safe micro-lending end the poverty cycle, or automate it?</en><bm>Pinjaman mikro yang “selamat”: memutuskan kitaran kemiskinan, atau mengautomasikannya?</bm></h1>
-<p class="stand"><en>A lending engine can protect the bank on every run and still leave the borrower where they started. A hypothesis, and three rules to test it.</en><bm>Enjin pinjaman boleh melindungi bank pada setiap larian dan masih membiarkan peminjam di tempat asalnya. Satu hipotesis, dan tiga peraturan untuk mengujinya.</bm></p>
-<div class="by">Azman Taufik · 21 <en>November</en><bm>November</bm> 2026 · <en>6 min read</en><bm>6 minit membaca</bm></div>
+<div class="kick"><en>Hypothesis</en><bm>Hipotesis</bm></div>
+<h1><en>Why Modern “Safe” Micro-Lending Engines Tighten the Poverty Cycle—And How to Engineer a Way Out</en><bm>Mengapa Enjin Pinjaman Mikro Moden yang “Selamat” Mengetatkan Kitaran Kemiskinan, dan Bagaimana Merekayasa Jalan Keluar</bm></h1>
+<div class="by"><en>By Azman Taufik</en><bm>Oleh Azman Taufik</bm></div>
 <a class="cbtn lk" href="https://www.linkedin.com/feed/" target="_blank" rel="noopener"><en>Comment on LinkedIn</en><bm>Komen di LinkedIn</bm></a>
 
-<div class="box key"><span class="l"><en>The short version</en><bm>Ringkasan pantas</bm></span>
+<div class="cols">
+<h2 style="margin-top:0;border-top:0;padding-top:0"><en>1. The Core Problem: The Small-Ticket Unit Economics Trap</en><bm>1. Masalah Teras: Perangkap Ekonomi Seunit bagi Tiket Kecil</bm></h2>
+<p><en>In traditional finance, lending small amounts (RM3,000) to unbanked, informal workers carries high fixed servicing costs, zero physical collateral, and high default risk. Because banks cannot make the math work at fair interest rates, they exit the market—leaving the poor to choose between turning down work or borrowing from predatory loan sharks (Ah Long).</en><bm>Dalam kewangan tradisional, memberi pinjaman kecil (RM3,000) kepada pekerja tidak formal yang tiada akaun bank membawa kos servis tetap yang tinggi, tiada cagaran fizikal langsung, dan risiko mungkir yang tinggi. Oleh sebab bank tidak dapat membuat kiraan itu berbaloi pada kadar faedah yang adil, mereka keluar dari pasaran. Orang miskin pula dibiarkan memilih antara menolak kerja atau meminjam daripada lintah darat yang memangsa (along).</bm></p>
+<p><en>Modern fintech and blended-finance engines solve the lender’s problem using deterministic code:</en><bm>Enjin fintech dan pembiayaan campuran moden menyelesaikan masalah pemberi pinjaman menggunakan kod deterministik:</bm></p>
 <ul>
-<li><en>Small loans (RM3,000) do not pay at fair rates. Banks leave, and workers fall back on the <i>along</i>.</en><bm>Pinjaman kecil (RM3,000) tidak berbaloi pada kadar yang adil. Bank keluar, dan pekerja kembali kepada <i>along</i>.</bm></li>
-<li><en>My rules-based engine pays suppliers directly, intercepts customer payments and puts a <b>RM10,000 first-loss reserve per RM200,000 cohort</b> in front of the lender.</en><bm>Enjin berasaskan peraturan saya membayar pembekal terus, memintas bayaran pelanggan dan meletakkan <b>rizab kerugian pertama RM10,000 bagi setiap kohort RM200,000</b> di hadapan pemberi pinjaman.</bm></li>
-<li><en>In 1,000 simulated runs the lender’s median profit was <b>RM2,030 to RM2,485</b>. The reserve ran dry in <b>36%</b> of cohorts.</en><bm>Dalam 1,000 larian simulasi, keuntungan median pemberi pinjaman ialah <b>RM2,030 hingga RM2,485</b>. Rizab habis dalam <b>36%</b> kohort.</bm></li>
-<li><en>Hypothesis: an engine built only to remove lender risk can keep the borrower dependent.</en><bm>Hipotesis: enjin yang dibina semata-mata untuk membuang risiko pemberi pinjaman boleh mengekalkan peminjam dalam kebergantungan.</bm></li>
-<li><en>Three rules to test: graduation savings, payer accountability, grace buffers. Judge by <b>graduation rate</b>.</en><bm>Tiga peraturan untuk diuji: simpanan graduasi, akauntabiliti pembayar, ruang bernafas. Ukur dengan <b>kadar graduasi</b>.</bm></li>
-</ul></div>
-
-<p><en>If a lending engine never loses money, who is it working for? I could not shake that question after the simulation finished.</en><bm>Jika enjin pinjaman tidak pernah rugi, ia bekerja untuk siapa? Soalan itu terus menghantui saya selepas simulasi siap.</bm></p>
-<p><en>I built a rules-based bridge-loan engine for tradespeople, such as painters and renovators, who need money for materials before the customer pays. The numbers worked for the lender. Then I asked a different question: do they work for the borrower?</en><bm>Saya membina enjin pinjaman jambatan berasaskan peraturan untuk tukang seperti pelukis dan kontraktor ubah suai yang perlukan wang bahan sebelum pelanggan membayar. Angkanya menjadi untuk pemberi pinjaman. Kemudian saya bertanya soalan lain: adakah ia menjadi untuk peminjam?</bm></p>
-<p><en>This article is a hypothesis, not a finding. The lender figures come from my own simulation. The claims about borrowers are arguments that still need testing on real cohorts.</en><bm>Artikel ini hipotesis, bukan dapatan. Angka pemberi pinjaman datang daripada simulasi saya sendiri. Dakwaan tentang peminjam ialah hujah yang masih perlu diuji pada kohort sebenar.</bm></p>
-
-<h2><en>Why the poorest should not be the shock absorber</en><bm>Mengapa golongan termiskin tidak patut menjadi penampan</bm></h2>
-<p><en>Zakat and Waqf exist to relieve need and to build the capacity of people in need. When they sit in the first-loss layer to protect a commercial lender, the purpose runs backwards.</en><bm>Zakat dan Wakaf wujud untuk meringankan keperluan dan memampukan golongan yang memerlukan. Apabila dana ini diletakkan di lapisan kerugian pertama bagi melindungi pemberi pinjaman komersial, tujuannya menjadi terbalik.</bm></p>
-
-<h2><span class="n">01</span><en>The small-ticket trap</en><bm>Perangkap tiket kecil</bm></h2>
-<p><en>Lending RM3,000 to an informal worker has high fixed servicing costs, no physical collateral and high default risk. Banks cannot make the sums work at a fair interest rate, so they exit.</en><bm>Memberi pinjaman RM3,000 kepada pekerja tidak formal membawa kos servis tetap yang tinggi, tiada cagaran fizikal dan risiko mungkir yang tinggi. Bank tidak dapat membuat kiraan yang berbaloi pada kadar faedah yang adil, lalu keluar.</bm></p>
-<p><en>The worker then chooses between turning down the job and borrowing from the <i>along</i>.</en><bm>Pekerja terpaksa memilih antara menolak kerja atau meminjam daripada <i>along</i>.</bm></p>
-
-<h2><span class="n">02</span><en>An engine that solves the lender’s problem</en><bm>Enjin yang menyelesaikan masalah pemberi pinjaman</bm></h2>
-<ul>
-<li><en><b>Direct supplier payment.</b> Capital goes straight to a whitelisted hardware store. The borrower never touches the cash.</en><bm><b>Bayaran terus kepada pembekal.</b> Modal dibayar terus kepada kedai perkakasan yang disenarai putih. Peminjam tidak pernah memegang wang tunai.</bm></li>
-<li><en><b>Split-payment interception.</b> Customer payments are intercepted at the gateway, so the bank and supplier are paid first.</en><bm><b>Pintasan bayaran.</b> Bayaran pelanggan dipintas di get bayaran supaya bank dan pembekal dibayar dahulu.</bm></li>
-<li><en><b>Tiered loss waterfall.</b> Zakat, Waqf, CSR and guarantors sit in a first-loss reserve that absorbs defaults before the commercial lender loses a ringgit.</en><bm><b>Lapisan kerugian bertingkat.</b> Zakat, Wakaf, CSR dan penjamin berada dalam rizab kerugian pertama yang menyerap mungkir sebelum pemberi pinjaman komersial kehilangan satu ringgit.</bm></li>
+<li><en><b>Direct-to-Supplier Payments (decide.py):</b> Capital is paid straight to whitelisted hardware stores so the borrower never touches the cash.</en><bm><b>Bayaran Terus kepada Pembekal (decide.py):</b> Modal dibayar terus kepada kedai perkakasan yang disenarai putih supaya peminjam tidak pernah memegang wang tunai.</bm></li>
+<li><en><b>Split-Payment Interception:</b> Customer payments are intercepted at the gateway so the bank and supplier get paid first.</en><bm><b>Pintasan Bayaran Berpecah:</b> Bayaran pelanggan dipintas di get bayaran supaya bank dan pembekal dibayar dahulu.</bm></li>
+<li><en><b>Tiered Loss Waterfalls (waterfall.py):</b> Social funds (Zakat, Waqf, CSR) and guarantors sit in a first-loss reserve (RM10,000 per RM200,000 cohort) to absorb defaults before the commercial lender loses a single Ringgit.</en><bm><b>Air Terjun Kerugian Berperingkat (waterfall.py):</b> Dana sosial (Zakat, Wakaf, CSR) dan penjamin berada dalam rizab kerugian pertama (RM10,000 bagi setiap kohort RM200,000) untuk menyerap mungkir sebelum pemberi pinjaman komersial kehilangan walau satu ringgit.</bm></li>
 </ul>
-<div class="grid">
-<div class="tile"><b>RM3,000</b><span><en>loan ticket modelled</en><bm>tiket pinjaman dimodelkan</bm></span></div>
-<div class="tile"><b>RM10,000</b><span><en>first-loss reserve per RM200,000 cohort (5%)</en><bm>rizab kerugian pertama bagi setiap kohort RM200,000 (5%)</bm></span></div>
-<div class="tile"><b>RM2,030–2,485</b><span><en>lender median profit, 1,000 runs</en><bm>keuntungan median pemberi pinjaman, 1,000 larian</bm></span></div>
-<div class="tile"><b>36%</b><span><en>of cohorts where the reserve ran dry</en><bm>kohort yang rizabnya habis</bm></span></div>
+<p><en>In a 1,000-run Monte Carlo simulation, this architecture protects the lender (RM2,030–RM2,485 median profit), even though the first-loss reserve runs completely dry in 36% of cohorts.</en><bm>Dalam simulasi Monte Carlo 1,000 larian, seni bina ini melindungi pemberi pinjaman (keuntungan median RM2,030–RM2,485), walaupun rizab kerugian pertama habis sepenuhnya dalam 36% kohort.</bm></p>
+
+<h2><en>2. The Central Hypothesis: Digital Plumbing That Deepens the Poverty Trap</en><bm>2. Hipotesis Utama: Saluran Digital yang Memperdalam Perangkap Kemiskinan</bm></h2>
+<p><en><b>Hypothesis:</b> When a credit system is engineered strictly to eliminate risk for banks, suppliers, and corporate buyers, it does not break the poverty cycle—it automates it.</en><bm><b>Hipotesis:</b> Apabila sistem kredit direka semata-mata untuk menghapuskan risiko bagi bank, pembekal dan pembeli korporat, ia tidak memutuskan kitaran kemiskinan. Ia mengautomasikannya.</bm></p>
+<p><en>By stripping away the borrower’s control over cash flow while leaving them exposed to every real-world shock, the modern “safe” lending engine replicates the exact structural flaws that broke upward mobility in the American gig economy:</en><bm>Dengan melucutkan kawalan peminjam ke atas aliran tunai sambil membiarkan mereka terdedah kepada setiap kejutan dunia sebenar, enjin pinjaman “selamat” moden mengulang kecacatan struktur yang sama yang mematahkan mobiliti ke atas dalam ekonomi gig Amerika:</bm></p>
+<ul>
+<li><en><b>The Digital Company Store (H_1):</b> Forcing a tradesperson to buy materials only from approved suppliers and routing all customer payments through lender-controlled rails strips away their basic business autonomy. They cannot haggle for cash discounts, manage their own working capital, or retain surplus during slow weeks. They do all the physical labor while the platform, supplier, and bank capture the margin.</en><bm><b>Kedai Syarikat Digital (H_1):</b> Memaksa tukang membeli bahan daripada pembekal yang diluluskan sahaja dan menyalurkan semua bayaran pelanggan melalui saluran yang dikawal pemberi pinjaman melucutkan autonomi perniagaan asas mereka. Mereka tidak boleh tawar-menawar untuk diskaun tunai, mengurus modal kerja sendiri, atau menyimpan lebihan pada minggu-minggu yang perlahan. Merekalah yang membuat semua kerja fizikal, sementara platform, pembekal dan bank mengaut margin.</bm></li>
+<li><en><b>The Debt Treadmill vs. Asset Ownership (H_2):</b> Just as “financial inclusion” and Buy-Now-Pay-Later debt replaced real wage growth in the U.S.—turning independent workers into permanently leveraged 1099 gig serfs—a bridge loan that must be taken out for every single job keeps the worker on a permanent treadmill. Access to credit is mistaken for building wealth, when in reality the worker never accumulates enough cash to buy their own paint.</en><bm><b>Mesin Larian Hutang lawan Pemilikan Aset (H_2):</b> Sebagaimana “inklusi kewangan” dan hutang Beli Sekarang Bayar Kemudian (BNPL) menggantikan pertumbuhan gaji sebenar di Amerika Syarikat, lalu menjadikan pekerja bebas “hamba gig” 1099 yang berhutang selama-lamanya, pinjaman jambatan yang mesti diambil untuk setiap kerja mengekalkan pekerja di atas mesin larian yang tidak berhenti. Akses kepada kredit disalah anggap sebagai membina kekayaan, sedangkan hakikatnya pekerja itu tidak pernah mengumpul tunai yang cukup untuk membeli catnya sendiri.</bm></li>
+<li><en><b>Socializing Risk for Institutional Comfort (H_3):</b> When Zakat, Waqf, or CSR funds absorb the first 36% of losses while wealthy homeowners and corporate clients withhold upfront mobilization deposits, public and sacred charity is effectively used as free credit-default insurance for commercial banks. Wealth flows upward; risk stays at the bottom.</en><bm><b>Memasyarakatkan Risiko demi Keselesaan Institusi (H_3):</b> Apabila dana Zakat, Wakaf atau CSR menyerap 36% kerugian pertama sementara pemilik rumah yang berada dan pelanggan korporat menahan deposit mobilisasi di awal, amal awam yang suci sebenarnya digunakan sebagai insurans mungkir kredit percuma untuk bank komersial. Kekayaan mengalir ke atas; risiko kekal di bawah.</bm></li>
+<li><en><b>Algorithmic Exile for Human Vulnerability (H_4):</b> Deterministic collections code (collections.py) cannot tell the difference between a fraudster and a painter whose child landed in the hospital or whose client delayed payment. One liquidity shock triggers blacklisting—filtering out the most vulnerable workers and pushing them right back to illegal lenders.</en><bm><b>Pembuangan Algoritma bagi Kerentanan Manusia (H_4):</b> Kod kutipan deterministik (collections.py) tidak dapat membezakan penipu daripada pelukis yang anaknya dimasukkan ke hospital atau yang pelanggannya lewat membayar. Satu kejutan kecairan mencetuskan senarai hitam, menapis keluar pekerja yang paling rentan dan menolak mereka kembali kepada pemberi pinjaman haram.</bm></li>
+</ul>
+
+<h2><en>3. The Silver Lining: Re-Engineering the Code for Liberation</en><bm>3. Sinar Harapan: Menulis Semula Kod untuk Pembebasan</bm></h2>
+<p><en>Despite these traps, open-source, rules-based engines remain vastly superior to opaque bank committees and predatory street lenders. Because the rules are written in transparent, adjustable code rather than hidden behind closed doors, the system can be re-engineered to break the cycle rather than reinforce it.</en><bm>Walaupun terdapat perangkap ini, enjin sumber terbuka berasaskan peraturan masih jauh lebih baik daripada jawatankuasa bank yang legap dan pemberi pinjaman jalanan yang memangsa. Oleh sebab peraturannya ditulis dalam kod yang telus dan boleh diubah suai, bukan disembunyikan di sebalik pintu tertutup, sistem ini boleh direka semula untuk memutuskan kitaran, bukan mengukuhkannya.</bm></p>
+<p><en>To test whether a bridge-loan engine genuinely lifts workers out of poverty, three structural rules must be built into the system:</en><bm>Untuk menguji sama ada enjin pinjaman jambatan benar-benar mengangkat pekerja keluar daripada kemiskinan, tiga peraturan struktur mesti dibina ke dalam sistem:</bm></p>
+<ol>
+<li><en><b>Automated Capital Retention (The Graduation Rule):</b> Automatically divert 5%–10% of every settled job into a locked savings wallet owned by the tradesperson. Once that wallet equals the average material cost of three jobs, the borrower graduates off the platform and self-funds their own work.</en><bm><b>Pengekalan Modal Automatik (Peraturan Graduasi):</b> Alihkan 5%–10% daripada setiap kerja yang selesai secara automatik ke dompet simpanan berkunci milik tukang. Apabila dompet itu bersamaan purata kos bahan bagi tiga kerja, peminjam tamat daripada platform dan membiayai kerjanya sendiri.</bm></li>
+<li><en><b>Symmetric Payer Accountability:</b> Require corporate anchors and homeowners to lock deposits in smart escrow upfront, penalizing late-paying clients rather than punishing the worker when invoices stall.</en><bm><b>Akauntabiliti Pembayar yang Simetri:</b> Wajibkan pelanggan korporat utama dan pemilik rumah mengunci deposit dalam eskrow pintar di awal, dan kenakan penalti kepada pelanggan yang lewat membayar, bukan menghukum pekerja apabila invois tersangkut.</bm></li>
+<li><en><b>Human-Shock Grace Buffers:</b> Reward reliable borrowers with automatic, zero-penalty restructuring tokens so a single medical emergency or rained-out week results in a 60-day extension rather than permanent algorithmic exile.</en><bm><b>Penampan Belas Kasihan bagi Kejutan Insani:</b> Ganjari peminjam yang boleh dipercayai dengan token penstrukturan semula automatik tanpa penalti supaya satu kecemasan perubatan atau seminggu hujan lebat menghasilkan lanjutan 60 hari, bukan pembuangan algoritma yang kekal.</bm></li>
+</ol>
+
+<h2><en>4. The Bottom Line Metric</en><bm>4. Ukuran Intipati Akhir</bm></h2>
+<p><en>A micro-lending system cannot be judged solely by lender yield or low default rates—those metrics only prove the cage is secure. The true test of the model is the Borrower Graduation Rate: the percentage of workers who use the bridge to build their own capital and eventually walk away from debt altogether.</en><bm>Sistem pinjaman mikro tidak boleh dinilai semata-mata berdasarkan hasil pemberi pinjaman atau kadar mungkir yang rendah. Ukuran itu hanya membuktikan sangkar itu selamat. Ujian sebenar bagi model ini ialah Kadar Graduasi Peminjam: peratusan pekerja yang menggunakan jambatan itu untuk membina modal sendiri dan akhirnya meninggalkan hutang sepenuhnya.</bm></p>
 </div>
-<div class="box data"><span class="l"><en>What the data says</en><bm>Apa kata angka</bm></span><en>The engine protects the lender, even though the reserve is empty in more than a third of cohorts. Assumptions: RM3,000 average ticket, RM200,000 cohort, RM10,000 reserve. These results come from my model, not from live loans.</en><bm>Enjin ini melindungi pemberi pinjaman, walaupun rizab kosong dalam lebih sepertiga kohort. Andaian: tiket purata RM3,000, kohort RM200,000, rizab RM10,000. Keputusan ini datang daripada model saya, bukan pinjaman sebenar.</bm></div>
 
-<h2><span class="n">03</span><en>Four ways it can tighten the cycle</en><bm>Empat cara ia boleh mengetatkan kitaran</bm></h2>
-<div class="cards">
-<div class="card"><span class="tag"><en>Trap 1</en><bm>Perangkap 1</bm></span><h3><en>The digital company store</en><bm>Kedai syarikat digital</bm></h3><en>Approved suppliers only, and every customer payment on lender-controlled rails. The tradesperson cannot haggle for cash discounts, manage their own working capital or keep a surplus in slow weeks. The labour is theirs. The margin goes to the supplier, the platform and the bank.</en><bm>Pembekal yang diluluskan sahaja, dan semua bayaran pelanggan melalui saluran yang dikawal pemberi pinjaman. Tukang tidak boleh tawar-menawar diskaun tunai, mengurus modal kerja sendiri atau menyimpan lebihan pada minggu perlahan. Tenaga datang daripada tukang. Margin pergi kepada pembekal, platform dan bank.</bm></div>
-<div class="card"><span class="tag"><en>Trap 2</en><bm>Perangkap 2</bm></span><h3><en>Running on the spot</en><bm>Berlari di tempat</bm></h3><en>A bridge loan is needed for every job. The worker has credit but never builds the cash to buy their own paint. Critics of the US gig economy and of buy-now-pay-later make a similar argument: access to credit stands in for wage or asset growth.</en><bm>Pinjaman jambatan diperlukan untuk setiap kerja. Pekerja ada akses kredit tetapi tidak pernah mengumpul tunai untuk membeli cat sendiri. Pengkritik ekonomi gig Amerika dan skim Beli Sekarang Bayar Kemudian berhujah perkara yang sama: akses kepada kredit menggantikan pertumbuhan gaji atau aset.</bm></div>
-<div class="card"><span class="tag"><en>Trap 3</en><bm>Perangkap 3</bm></span><h3><en>Risk pushed downward</en><bm>Risiko ditolak ke bawah</bm></h3><en>Zakat, Waqf or CSR money takes the first loss, while homeowners and corporate clients pay no upfront mobilisation deposit. Charity ends up acting as free default insurance for a commercial lender.</en><bm>Dana Zakat, Wakaf atau CSR menanggung kerugian pertama, sementara pemilik rumah dan pelanggan korporat tidak membayar deposit mobilisasi di awal. Dana amal akhirnya menjadi insurans mungkir percuma untuk pemberi pinjaman komersial.</bm></div>
-<div class="card"><span class="tag"><en>Trap 4</en><bm>Perangkap 4</bm></span><h3><en>Exile by algorithm</en><bm>Dibuang oleh algoritma</bm></h3><en>Collections code cannot tell a fraudster from a painter whose child is in hospital or whose client paid late. One cash shock triggers a blacklist, and the worker goes back to the <i>along</i>.</en><bm>Kod kutipan tidak dapat membezakan penipu daripada pelukis yang anaknya dimasukkan ke hospital atau yang pelanggannya lewat membayar. Satu kejutan tunai mencetuskan senarai hitam, dan pekerja kembali kepada <i>along</i>.</bm></div>
-</div>
-<div class="box watch"><span class="l"><en>Who gains from this design</en><bm>Siapa untung daripada reka bentuk ini</bm></span><en>The lender is protected. The supplier gets guaranteed sales. The corporate payer can pay late without a penalty. The borrower carries the shocks. This is my reading of the model’s design, not live loan data.</en><bm>Pemberi pinjaman dilindungi. Pembekal dijamin jualan. Pembayar korporat boleh lewat tanpa penalti. Peminjam menanggung kejutan. Ini bacaan saya terhadap reka bentuk model, bukan data pinjaman sebenar.</bm></div>
-
-<h2><span class="n">04</span><en>Three rules worth testing</en><bm>Tiga peraturan yang patut diuji</bm></h2>
-<p><en>Open, rules-based engines are still better than closed bank committees and street lenders. The rules are visible, so they can be changed. That is the reason to change them.</en><bm>Enjin terbuka berasaskan peraturan masih lebih baik daripada jawatankuasa bank yang tertutup dan pemberi pinjaman jalanan. Peraturannya boleh dilihat, jadi boleh diubah. Itulah sebab untuk mengubahnya.</bm></p>
-<div class="prop"><div class="c">1</div><div><h3><en>The graduation rule</en><bm>Peraturan graduasi</bm></h3><en>Divert 5% to 10% of every settled job into a locked savings wallet owned by the tradesperson. When the wallet equals the average material cost of three jobs, the borrower graduates and self-funds.</en><bm>Alihkan 5% hingga 10% daripada setiap kerja yang selesai ke dompet simpanan berkunci milik tukang. Apabila dompet bersamaan purata kos bahan bagi tiga kerja, peminjam tamat daripada platform dan membiayai kerja sendiri.</bm><div class="meas"><en>Measure: share of borrowers who reach the three-job wallet, and how many jobs it takes.</en><bm>Ukuran: peratusan peminjam yang sampai ke dompet tiga kerja, dan berapa kerja diperlukan.</bm></div></div></div>
-<div class="prop"><div class="c">2</div><div><h3><en>Symmetric payer accountability</en><bm>Akauntabiliti pembayar yang seimbang</bm></h3><en>Homeowners and corporate anchors lock deposits in escrow upfront. Late payers are penalised. The worker is not punished when an invoice stalls.</en><bm>Pemilik rumah dan pelanggan korporat mengunci deposit dalam eskrow di awal. Pembayar yang lewat dikenakan penalti. Pekerja tidak dihukum apabila invois tersangkut.</bm><div class="meas"><en>Measure: average days from job completion to payment, and share of invoices paid late.</en><bm>Ukuran: purata hari dari kerja siap hingga bayaran diterima, dan peratusan invois lewat bayar.</bm></div></div></div>
-<div class="prop"><div class="c">3</div><div><h3><en>Grace buffers for human shocks</en><bm>Ruang bernafas ketika kejutan</bm></h3><en>Reliable borrowers earn automatic, zero-penalty restructuring tokens. A medical emergency or a rained-out week gives a 60-day extension, not permanent exile.</en><bm>Peminjam yang boleh dipercayai menerima token penstrukturan semula automatik tanpa penalti. Kecemasan perubatan atau seminggu hujan lebat menghasilkan lanjutan 60 hari, bukan pembuangan kekal.</bm><div class="meas"><en>Measure: share of borrowers who use a token and then resume repayment, and the blacklisting rate.</en><bm>Ukuran: peratusan peminjam yang menggunakan token lalu menyambung bayaran, dan kadar senarai hitam.</bm></div></div></div>
-
-<div class="fig"><svg viewBox="0 0 720 120" role="img" aria-label="Graduation flow">
-<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#13263a"/></marker></defs>
-<g font-family="Inter,Arial" font-size="13" font-weight="600" text-anchor="middle">
-<rect x="4" y="25" width="150" height="70" rx="8" fill="#eef5fc" stroke="#0b5cad"/><rect x="190" y="25" width="150" height="70" rx="8" fill="#eef5fc" stroke="#0b5cad"/><rect x="376" y="25" width="150" height="70" rx="8" fill="#eef5fc" stroke="#0b5cad"/><rect x="562" y="25" width="154" height="70" rx="8" fill="#f1f9f4" stroke="#16794a" stroke-width="2"/>
-<g fill="#13263a" class="en"><text x="79" y="56">Job is paid</text><text x="79" y="75">and settled</text><text x="265" y="56">5–10% to locked</text><text x="265" y="75">savings wallet</text><text x="451" y="56">Wallet = materials</text><text x="451" y="75">for 3 jobs</text><text x="639" y="56">Graduate:</text><text x="639" y="75">self-fund the work</text></g>
-<g fill="#13263a" class="bm"><text x="79" y="56">Kerja dibayar</text><text x="79" y="75">dan selesai</text><text x="265" y="56">5–10% ke dompet</text><text x="265" y="75">simpanan berkunci</text><text x="451" y="56">Dompet = bahan</text><text x="451" y="75">untuk 3 kerja</text><text x="639" y="56">Graduasi: biayai</text><text x="639" y="75">kerja sendiri</text></g>
-</g>
-<path d="M156 60H186M342 60H372M528 60H558" stroke="#13263a" stroke-width="2" marker-end="url(#a)"/></svg>
-<div class="cap"><en>Exhibit 1. The graduation rule as a flow.</en><bm>Pameran 1. Peraturan graduasi sebagai aliran.</bm></div></div>
-
-<div class="fig"><svg viewBox="0 0 720 250" role="img" aria-label="Illustration of borrower cash">
-<g font-family="Inter,Arial" font-size="12" fill="#5a6b7c">
-<path d="M60 20V210H700" stroke="#13263a" stroke-width="1.5" fill="none"/>
-<line x1="60" y1="70" x2="700" y2="70" stroke="#16794a" stroke-dasharray="6 5"/>
-<path d="M60 200L200 198L340 199L480 197L620 198L700 197" stroke="#9aa7b4" stroke-width="3" fill="none"/>
-<path d="M60 200L200 170L340 125L470 70L700 70" stroke="#0b5cad" stroke-width="3.5" fill="none"/>
-<circle cx="470" cy="70" r="6" fill="#16794a"/>
-<g class="en"><text x="64" y="14" font-weight="700" fill="#13263a">Borrower’s own cash</text><text x="520" y="232" font-weight="700" fill="#13263a">Jobs completed →</text><text x="64" y="62" fill="#16794a" font-weight="700">Three jobs of materials</text><text x="486" y="92" fill="#16794a" font-weight="700">Graduates</text><text x="340" y="190" fill="#5a6b7c">Today: cash stays near zero</text><text x="190" y="150" fill="#0b5cad" font-weight="700">With graduation rule</text></g>
-<g class="bm"><text x="64" y="14" font-weight="700" fill="#13263a">Tunai sendiri peminjam</text><text x="520" y="232" font-weight="700" fill="#13263a">Kerja siap →</text><text x="64" y="62" fill="#16794a" font-weight="700">Bahan untuk tiga kerja</text><text x="486" y="92" fill="#16794a" font-weight="700">Graduasi</text><text x="340" y="190" fill="#5a6b7c">Hari ini: tunai kekal hampir sifar</text><text x="190" y="150" fill="#0b5cad" font-weight="700">Dengan peraturan graduasi</text></g>
-</g></svg>
-<div class="cap"><en>Exhibit 2. Illustration, not data. It shows the shape I expect, not measured results.</en><bm>Pameran 2. Ilustrasi, bukan data. Ia menunjukkan bentuk yang saya jangka, bukan keputusan yang diukur.</bm></div></div>
-
-<h2><span class="n">05</span><en>The one number that matters</en><bm>Satu angka yang penting</bm></h2>
-<p><en>Lender yield and low default rates only prove the cage is secure. The real test is the share of workers who use the bridge to build their own capital and walk away from debt.</en><bm>Hasil pemberi pinjaman dan kadar mungkir yang rendah hanya membuktikan sangkar itu selamat. Ujian sebenar ialah peratusan pekerja yang menggunakan jambatan itu untuk membina modal sendiri dan akhirnya keluar daripada hutang.</bm></p>
-<div class="box lesson"><span class="l"><en>Borrower Graduation Rate</en><bm>Kadar Graduasi Peminjam</bm></span><en>Borrowers who build their own capital and leave the platform ÷ all borrowers who took a bridge loan.</en><bm>Peminjam yang membina modal sendiri dan keluar daripada platform ÷ semua peminjam yang mengambil pinjaman jambatan.</bm></div>
-
-<h2><en>Hard questions</en><bm>Soalan yang sukar</bm></h2>
-<div class="q"><i><en>For lenders</en><bm>Untuk pemberi pinjaman</bm></i><en>If the borrower never keeps a surplus, how would you know the loan helped?</en><bm>Jika peminjam tidak pernah menyimpan lebihan, bagaimana anda tahu pinjaman itu membantu?</bm></div>
-<div class="q"><i><en>For lenders</en><bm>Untuk pemberi pinjaman</bm></i><en>How many of your defaults came from a late-paying client, not a bad borrower?</en><bm>Berapa banyak mungkir anda berpunca daripada pelanggan yang lewat membayar, bukan peminjam yang buruk?</bm></div>
-<div class="q"><i><en>For Zakat, Waqf and CSR managers</en><bm>Untuk pengurus dana Zakat, Wakaf dan CSR</bm></i><en>Should this money sit in first loss for a commercial lender, or fund the borrower’s own savings wallet?</en><bm>Patutkah dana ini berada di kerugian pertama untuk pemberi pinjaman komersial, atau membiayai dompet simpanan peminjam sendiri?</bm></div>
-<div class="q"><i><en>For suppliers</en><bm>Untuk pembekal</bm></i><en>Would you keep your terms if the borrower could take cash discounts elsewhere?</en><bm>Adakah anda kekalkan syarat jika peminjam boleh mendapat diskaun tunai di tempat lain?</bm></div>
-<div class="q"><i><en>For regulators</en><bm>Untuk pengawal selia</bm></i><en>What should a lender report besides its default rate?</en><bm>Apa lagi yang patut dilaporkan pemberi pinjaman selain kadar mungkir?</bm></div>
-<div class="q"><i><en>For tradespeople</en><bm>Untuk tukang</bm></i><en>What would you do with a locked wallet worth three jobs of materials?</en><bm>Apa yang anda akan lakukan dengan dompet berkunci bernilai bahan untuk tiga kerja?</bm></div>
-
-<div class="box call"><span class="l"><en>Call to action</en><bm>Seruan bertindak</bm></span><en>To lenders, fintechs and social-fund managers building these engines: add the graduation rule, payer escrow and grace tokens as settings, run the same simulation again, and publish the graduation rate next to the default rate.</en><bm>Kepada pemberi pinjaman, fintech dan pengurus dana sosial yang membina enjin sebegini: tambah peraturan graduasi, eskrow pembayar dan token ruang bernafas sebagai tetapan, jalankan semula simulasi yang sama, dan terbitkan kadar graduasi bersebelahan kadar mungkir.</bm></div>
-<table>
-<tr><th><en>Who</en><bm>Siapa</bm></th><th><en>Ask</en><bm>Permintaan</bm></th></tr>
-<tr><td><en>Lenders and fintechs</en><bm>Pemberi pinjaman dan fintech</bm></td><td><en>Report graduation rate. Let borrowers keep part of every job.</en><bm>Laporkan kadar graduasi. Biarkan peminjam menyimpan sebahagian setiap kerja.</bm></td></tr>
-<tr><td><en>Social-fund administrators</en><bm>Pentadbir dana sosial</bm></td><td><en>Fund savings wallets, not lender protection.</en><bm>Biayai dompet simpanan, bukan perlindungan pemberi pinjaman.</bm></td></tr>
-<tr><td><en>Regulators</en><bm>Pengawal selia</bm></td><td><en>Ask for payer-side data: days to pay, late share.</en><bm>Minta data sisi pembayar: hari untuk bayar, peratusan lewat.</bm></td></tr>
-<tr><td><en>Suppliers and payers</en><bm>Pembekal dan pembayar</bm></td><td><en>Lock deposits upfront. Pay on time.</en><bm>Kunci deposit di awal. Bayar tepat pada masanya.</bm></td></tr>
-</table>
-
-<div class="box watch"><span class="l"><en>Self-check</en><bm>Semak sendiri</bm></span><ul>
-<li><en>Does our engine report a graduation rate?</en><bm>Adakah enjin kita melaporkan kadar graduasi?</bm></li>
-<li><en>Can a borrower hold cash from a job?</en><bm>Bolehkah peminjam memegang tunai daripada sesuatu kerja?</bm></li>
-<li><en>Who pays the price when the customer pays late?</en><bm>Siapa menanggung kos apabila pelanggan lewat membayar?</bm></li>
-<li><en>What happens after one missed instalment caused by a shock?</en><bm>Apa berlaku selepas satu ansuran terlepas akibat kejutan?</bm></li>
-<li><en>Who loses first when the reserve runs dry?</en><bm>Siapa rugi dahulu apabila rizab habis?</bm></li>
-</ul></div>
-
-<div class="box take"><span class="l"><en>My take</en><bm>Pandangan saya</bm></span><en>I still prefer open, rules-based engines to closed committees and street lenders. I would not judge any bridge-loan pilot on default rate alone. If workers do not leave the debt, the pilot has not worked, however good the lender’s numbers look.</en><bm>Saya masih memilih enjin terbuka berasaskan peraturan berbanding jawatankuasa tertutup dan pemberi pinjaman jalanan. Saya tidak akan menilai mana-mana projek perintis pinjaman jambatan berdasarkan kadar mungkir sahaja. Jika pekerja tidak keluar daripada hutang, projek itu belum berjaya, walau secantik mana angka pemberi pinjaman.</bm></div>
-<div class="over"><b class="ui"><en>Over to you</en><bm>Giliran anda</bm></b><br><en>If you have run a financing programme for small traders, how many borrowers left it on their own capital?</en><bm>Jika anda pernah menjalankan program pembiayaan untuk peniaga kecil, berapa ramai peminjam yang keluar dengan modal sendiri?</bm></div>
-<a class="cbtn lk" href="https://www.linkedin.com/feed/" target="_blank" rel="noopener"><en>Comment on LinkedIn</en><bm>Komen di LinkedIn</bm></a>
-
-<details><summary><en>Basis and sources</en><bm>Asas dan sumber</bm></summary>
-<p><en>All lender figures come from my own 1,000-run Monte Carlo simulation of a rules-based bridge-loan engine (RM3,000 ticket, RM200,000 cohort, RM10,000 first-loss reserve). It is a model, not live loan data. The comparison with the US gig economy and buy-now-pay-later reflects arguments made by critics and is not separately sourced here. No other sources were used.</en><bm>Semua angka pemberi pinjaman datang daripada simulasi Monte Carlo 1,000 larian saya sendiri bagi enjin pinjaman jambatan berasaskan peraturan (tiket RM3,000, kohort RM200,000, rizab kerugian pertama RM10,000). Ia model, bukan data pinjaman sebenar. Perbandingan dengan ekonomi gig Amerika dan Beli Sekarang Bayar Kemudian mencerminkan hujah pengkritik dan tidak disumberkan secara berasingan di sini. Tiada sumber lain digunakan.</bm></p></details>
-
-<div class="bio"><div class="av">AT</div><div><en>Azman Taufik writes on MSME financing, AI automation for SMEs and long-term policy for Malaysia.</en><bm>Azman Taufik menulis tentang pembiayaan PMKS, automasi AI untuk PKS dan dasar jangka panjang untuk Malaysia.</bm></div></div>
-<div class="foot"><en>The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from the simulation described above, and any errors are mine. Nothing here is financial, investment or legal advice. Research and drafting were assisted by AI tools. All facts were checked against the sources listed.</en><bm>Pandangan dalam artikel ini ialah pandangan peribadi saya. Ia tidak mewakili majikan saya atau mana-mana organisasi yang pernah atau sedang saya sertai. Artikel ini tidak berkaitan dengan, tidak disokong oleh dan tidak ditulis bagi pihak mana-mana institusi yang disebut. Semua angka datang daripada simulasi yang diterangkan di atas, dan sebarang kesilapan adalah tanggungjawab saya sendiri. Artikel ini bukan nasihat kewangan, pelaburan atau undang-undang. Kajian dan penulisan artikel ini dibantu oleh alat AI. Semua fakta telah disemak dengan sumber asal.</bm><br>© 2026 Azman Taufik</div>
+<a class="cbtn lk" href="https://www.linkedin.com/feed/" target="_blank" rel="noopener" style="margin-top:14px"><en>Comment on LinkedIn</en><bm>Komen di LinkedIn</bm></a>
+<div class="foot"><en>The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. Figures come from my own simulation. Nothing here is financial, investment or legal advice. Research and drafting were assisted by AI tools. © 2026 Azman Taufik</en><bm>Pandangan dalam artikel ini ialah pandangan peribadi saya. Ia tidak mewakili majikan saya atau mana-mana organisasi yang pernah atau sedang saya sertai. Artikel ini tidak berkaitan dengan, tidak disokong oleh dan tidak ditulis bagi pihak mana-mana institusi yang disebut. Angka datang daripada simulasi saya sendiri. Artikel ini bukan nasihat kewangan, pelaburan atau undang-undang. Kajian dan penulisan dibantu oleh alat AI. © 2026 Azman Taufik</bm></div>
 </div>
 <script>
 function L(l){document.body.dataset.l=l;document.documentElement.lang=l=='bm'?'ms':'en';document.getElementById('b-en').className=l=='en'?'on':'';document.getElementById('b-bm').className=l=='bm'?'on':'';}
