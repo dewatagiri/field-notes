@@ -1,678 +1,503 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ekonomi Perang Kekal · The Permanent War Economy | Azman Taufik</title>
-<meta name="description" content="War is not only a failure of diplomacy. It has become a political-economic system. Strategic study 2026–2076.">
-<meta property="og:title" content="Ekonomi Perang Kekal · The Permanent War Economy">
-<meta property="og:description" content="Siapa untung? Soalan sebenar: bagaimana negara lemah mahu mengejar? / Who profits? The real question: how can weaker nations ever catch up?">
+<title>The Hidden Architecture of Chaos | Azman Taufik</title>
+<meta name="description" content="From Riemann's prime numbers to Bitcoin, Malaysia's economy, financial markets and human behaviour: an exploratory investigation into hidden structure, uncertainty and the limits of prediction.">
+<meta property="og:title" content="The Hidden Architecture of Chaos">
+<meta property="og:description" content="Is the structure of uncertainty more predictable than the outcomes themselves? An exploratory research article by Azman Taufik.">
 <meta property="og:type" content="article">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#13263a;--blue:#0b5cad;--red:#b42318;--green:#16794a;--amber:#b54708;--grey:#9aa7b4;--line:#dfe6ee}
+:root{--ink:#13263a;--blue:#0b5cad;--red:#b42318;--green:#16794a;--amber:#b54708;--grey:#5b6b7a;--line:#d5dbe2}
 *{box-sizing:border-box}
-body{margin:0;background:#fff;color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:18px;line-height:1.65}
-body[data-l="ms"] .en{display:none}
-body[data-l="en"] .ms{display:none}
-.wrap{max-width:760px;margin:0 auto;padding:0 16px 60px}
-.top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid var(--line);font-family:Inter,sans-serif;font-size:13px}
-.top b{letter-spacing:.12em;color:var(--blue)}
-.tr{display:flex;gap:10px;align-items:center}
-.tg{display:inline-flex;border:2px solid var(--blue);border-radius:6px;overflow:hidden}
-.tg button{font-family:Inter,sans-serif;font-weight:700;font-size:13px;border:0;background:#fff;color:var(--blue);padding:7px 12px;cursor:pointer}
-.tg button.on{background:var(--blue);color:#fff}
-.btn{display:inline-block;font-family:Inter,sans-serif;font-weight:600;font-size:14px;background:var(--blue);color:#fff;text-decoration:none;padding:10px 18px;border-radius:6px}
-.btn.o{background:#fff;color:var(--blue);border:2px solid var(--blue);padding:7px 12px;font-size:13px}
-.kicker{font-family:Inter,sans-serif;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--blue);text-transform:uppercase;margin:34px 0 8px}
-h1{font-family:Inter,sans-serif;font-weight:800;font-size:46px;line-height:1.1;margin:0 0 14px;letter-spacing:-.02em}
-.stand{font-family:Inter,sans-serif;color:#5b6b7c;font-size:19px;line-height:1.45;margin:0 0 18px}
-.by{font-family:Inter,sans-serif;font-size:14px;color:#5b6b7c;padding:12px 0;border-bottom:4px solid var(--ink);margin-bottom:26px}
-h2{font-family:Inter,sans-serif;font-weight:800;font-size:26px;line-height:1.2;margin:42px 0 12px}
-h2 .n{display:inline-block;background:var(--blue);color:#fff;border-radius:6px;font-size:15px;padding:3px 9px;margin-right:10px;vertical-align:4px}
-h3{font-family:Inter,sans-serif;font-size:18px;margin:0 0 6px}
-p{margin:0 0 14px}
-.box{border-left:6px solid var(--ink);background:#f5f8fb;padding:14px 18px;margin:22px 0;border-radius:0 8px 8px 0}
-.box .l{font-family:Inter,sans-serif;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;display:block}
-.box ul{margin:0;padding-left:20px}.box li{margin-bottom:6px}
-.b-data{border-color:var(--blue);background:#eef5fc}.b-data .l{color:var(--blue)}
-.b-trap{border-color:var(--red);background:#fdf0ee}.b-trap .l{color:var(--red)}
-.b-less{border-color:var(--green);background:#edf8f2}.b-less .l{color:var(--green)}
-.b-watch{border-color:var(--amber);background:#fdf5ea}.b-watch .l{color:var(--amber)}
-.b-call{background:#fff;border:3px solid var(--blue);border-radius:8px}.b-call .l{color:var(--blue)}
-.b-take{background:var(--ink);color:#fff;border-color:var(--ink)}.b-take .l{color:#9cc7f2}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:22px 0}
-.tiles.f{grid-template-columns:repeat(2,1fr)}
-.tile{border:1px solid var(--line);border-top:5px solid var(--blue);border-radius:8px;padding:12px;font-family:Inter,sans-serif}
-.tile.r{border-top-color:var(--red)}.tile.r .v{color:var(--red)}
-.tile .v{font-size:28px;font-weight:800;color:var(--blue);line-height:1.15}.tile .t{font-size:13px;color:#5b6b7c;line-height:1.35;margin-top:4px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
-.card{border:1px solid var(--line);border-top:5px solid var(--blue);border-radius:8px;padding:14px;font-size:16px;line-height:1.5}
-.card .tag{font-family:Inter,sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
-.card.r{border-top-color:var(--red)}.card.r .tag{color:var(--red)}
-.card.g{border-top-color:var(--green)}.card.g .tag{color:var(--green)}
-.card.a{border-top-color:var(--amber)}.card.a .tag{color:var(--amber)}
-.q{background:#eef5fc;border-left:5px solid var(--blue);padding:12px 16px;margin:12px 0;border-radius:0 8px 8px 0}
-.q small{display:block;font-family:Inter,sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
-.fig{margin:26px 0}.fig .cap{font-family:Inter,sans-serif;font-size:13px;color:#5b6b7c;margin-top:6px}
-.fig .ft{font-family:Inter,sans-serif;font-weight:700;font-size:16px;margin-bottom:8px}
-svg{max-width:100%;height:auto;display:block;font-family:Inter,sans-serif}
-.flow{display:flex;flex-direction:column;font-family:Inter,sans-serif}
-.step{border:2px solid var(--blue);border-radius:8px;padding:10px 14px;background:#fff}
-.step b{display:block;font-size:15px}.step span{font-size:13px;color:#5b6b7c}
-.arrow{text-align:center;color:var(--blue);font-size:20px;line-height:1.1}
-.step.last{border-style:dashed;border-color:var(--red)}
-ol.plan{padding:0;list-style:none;counter-reset:p}
-ol.plan li{counter-increment:p;position:relative;border:1px solid var(--line);border-radius:8px;padding:12px 14px 12px 56px;margin-bottom:10px;font-size:16px;line-height:1.5}
-ol.plan li:before{content:counter(p);position:absolute;left:14px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;font-family:Inter,sans-serif;font-weight:700;text-align:center;line-height:30px}
-.ms-m{display:block;color:var(--green);font-family:Inter,sans-serif;font-size:13px;font-weight:600;margin-top:4px}
-.over{border:2px dashed var(--blue);border-radius:8px;padding:14px 18px;margin:22px 0}
-details{border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin:22px 0;font-family:Inter,sans-serif;font-size:14px}
-details a{color:var(--blue);word-break:break-all}
-.bio{display:flex;gap:14px;align-items:center;margin-top:30px;font-family:Inter,sans-serif;font-size:14px}
-.av{flex:0 0 52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
-.disc{font-family:Inter,sans-serif;font-size:12.5px;color:#5b6b7c;border-top:1px solid var(--line);margin-top:26px;padding-top:14px;line-height:1.5}
-.cta{text-align:center;margin:30px 0}
-@media(max-width:640px){h1{font-size:34px}.tiles,.tiles.f,.cards{grid-template-columns:1fr}.tile .v{font-size:25px}.top{flex-wrap:wrap}}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.58}
+.page{max-width:1040px;margin:0 auto;padding:0 18px 40px}
+.sans{font-family:'Inter',Arial,sans-serif}
+
+/* nameplate */
+.top{display:flex;justify-content:space-between;align-items:center;padding:10px 0;font:600 11px/1 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
+.toggle button{font:700 11px 'Inter',sans-serif;letter-spacing:.08em;border:1px solid var(--ink);background:#fff;color:var(--ink);padding:6px 10px;cursor:pointer}
+.toggle button.on{background:var(--ink);color:#fff}
+.nameplate{text-align:center;border-top:4px solid var(--ink);border-bottom:1px solid var(--ink);padding:14px 0 10px;position:relative}
+.nameplate:after{content:"";position:absolute;left:0;right:0;bottom:-6px;border-bottom:2px solid var(--ink)}
+.nameplate h2{margin:0;font:900 clamp(34px,7vw,64px)/1 'Playfair Display',Georgia,serif;letter-spacing:.02em}
+.nameplate p{margin:6px 0 0;font:600 11px 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+.dateline{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:14px;padding:6px 0;border-bottom:1px solid var(--line);font:600 11px 'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
+
+/* headline */
+.kicker{margin:26px 0 8px;font:800 12px 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+h1{margin:0;font:900 clamp(34px,6.4vw,60px)/1.06 'Playfair Display',Georgia,serif;letter-spacing:-.01em}
+.deck{margin:14px 0 0;font:italic 400 clamp(18px,2.4vw,22px)/1.4 'Source Serif 4',serif;color:#3b4d5f;max-width:820px}
+.byline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0 0;padding:10px 0;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);font:600 12px 'Inter',sans-serif;letter-spacing:.05em;text-transform:uppercase}
+.byline .who b{color:var(--blue)}
+.cta{display:none;font:700 12px 'Inter',sans-serif;letter-spacing:.04em;text-decoration:none;background:var(--blue);color:#fff;padding:8px 14px;border-radius:3px;text-transform:none}
+.cta.show{display:inline-block}
+
+/* stats strip */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin:22px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.stat{padding:12px 14px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font:800 30px/1 'Playfair Display',serif;color:var(--blue)}
+.stat span{display:block;margin-top:6px;font:600 11px/1.35 'Inter',sans-serif;color:var(--grey);text-transform:uppercase;letter-spacing:.05em}
+
+/* body */
+.cols{column-count:2;column-gap:36px;column-rule:1px solid var(--line);text-align:justify;hyphens:auto}
+.cols p{margin:0 0 .85em}
+.cols>p.lead{break-inside:avoid}
+.cols>p.lead:first-of-type::first-letter{float:left;font:900 64px/.82 'Playfair Display',serif;padding:6px 8px 0 0;color:var(--ink)}
+.cols h3{margin:1.1em 0 .5em;font:800 12px/1.3 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);border-top:2px solid var(--ink);padding-top:8px;break-after:avoid;text-align:left}
+.cols h4{margin:1em 0 .3em;font:700 15px 'Inter',sans-serif;break-after:avoid;text-align:left}
+.cols ul{margin:0 0 .9em;padding-left:1.1em}
+.cols li{margin-bottom:.3em}
+.eq{display:block;margin:.4em 0 1em;padding:8px 10px;background:#f4f7fa;border-left:3px solid var(--blue);font:italic 400 17px 'Source Serif 4',serif;text-align:center;break-inside:avoid;overflow-x:auto}
+.hyp{margin:.2em 0 .8em;padding:8px 12px;border-left:3px solid var(--ink);background:#fafbfc;break-inside:avoid;text-align:left;font-size:16px}
+.hyp b.sans{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);display:block}
+
+.pull{column-span:all;margin:18px 0;padding:16px 0;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);text-align:center;font:italic 500 clamp(22px,3.4vw,32px)/1.25 'Playfair Display',serif}
+.pull small{display:block;margin-top:8px;font:700 11px 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);font-style:normal}
+
+.box{hyphens:manual;break-inside:avoid;margin:0 0 1.1em;padding:12px 14px;border:1px solid var(--line);border-left:5px solid var(--ink);text-align:left;font-size:15.5px;line-height:1.5}
+.box .lbl{display:block;margin-bottom:6px;font:800 11px 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.box.key{border-left-color:var(--ink);background:#f4f7fa}
+.box.data{border-left-color:var(--blue)} .box.data .lbl{color:var(--blue)}
+.box.watch{border-left-color:var(--amber);background:#fff9f2} .box.watch .lbl{color:var(--amber)}
+.box.ok{border-left-color:var(--green);background:#f3faf6} .box.ok .lbl{color:var(--green)}
+.box p{margin:0 0 .5em}.box ul{margin:0;padding-left:1.1em}
+
+.flow{column-span:all;margin:14px 0;display:flex;flex-wrap:wrap;gap:0;align-items:stretch;font:700 12px/1.3 'Inter',sans-serif;text-align:center}
+.flow div{flex:1 1 120px;padding:12px 8px;border:1px solid var(--ink);margin-left:-1px;background:#fff;position:relative}
+.flow div:nth-child(odd){background:#f4f7fa}
+.flow-cap{column-span:all;margin:-6px 0 14px;font:600 11px 'Inter',sans-serif;color:var(--grey);text-align:center;letter-spacing:.05em;text-transform:uppercase}
+
+.fig{column-span:all;margin:12px 0 18px;padding:12px 14px;border:1px solid var(--line)}
+.fig .t{font:800 13px 'Inter',sans-serif;margin-bottom:8px}
+.fig svg{width:100%;height:auto;display:block}
+.fig .src{margin-top:6px;font:400 11px 'Inter',sans-serif;color:var(--grey)}
+
+.foot{margin-top:26px;border-top:3px solid var(--ink);padding-top:16px;font-size:14.5px;line-height:1.55}
+.foot h3{margin:0 0 8px;font:800 12px 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.foot ol{padding-left:1.3em;margin:0}.foot li{margin-bottom:5px}
+details{margin:14px 0;border:1px solid var(--line);padding:8px 12px}
+summary{cursor:pointer;font:700 13px 'Inter',sans-serif}
+.disc{margin-top:14px;padding:12px 14px;background:#f4f7fa;font-size:13.5px;line-height:1.5}
+.bio{display:flex;gap:12px;align-items:center;margin:18px 0}
+.av{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:800 15px 'Inter',sans-serif}
+.endcta{text-align:center;margin:18px 0}
+.copy{margin-top:18px;text-align:center;font:600 11px 'Inter',sans-serif;color:var(--grey);letter-spacing:.06em;text-transform:uppercase}
+
+body .bm-only{display:none}
+body.bm .bm-only{display:block}
+body.bm .en-only{display:none}
+
+@media (max-width:760px){
+ body{font-size:16.5px}
+ .cols{column-count:1;text-align:left;hyphens:manual}
+ .stats{grid-template-columns:1fr 1fr}
+ .stat:nth-child(2){border-right:0}
+ .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
 </style>
 </head>
-<body data-l="ms">
-<div class="wrap">
+<body>
+<div class="page">
 
-<div class="top"><b>FIELD NOTES</b>
-<div class="tr"><div class="tg"><button id="bm" class="on" type="button">BM</button><button id="en" type="button">EN</button></div>
-<a class="btn o cm" href="#" target="_blank" rel="noopener"><span class="ms">Komen di LinkedIn</span><span class="en">Comment on LinkedIn</span></a></div></div>
-
-<!-- ============================ BAHASA MALAYSIA ============================ -->
-<main class="ms" lang="ms">
-<div class="kicker">Kajian strategik · 2026–2076</div>
-<h1>Ekonomi Perang Kekal</h1>
-<p class="stand">Kuasa, keuntungan, legitimasi yang direka, dan masa depan kedaulatan. Soalan sebenar bukan siapa yang untung. Soalan sebenar: bagaimana negara yang lemah mahu mengejar?</p>
-<div class="by">Azman Taufik · 16 November 2026 · Bacaan 11 minit</div>
-
-<div class="box"><span class="l">Ringkasan pantas</span>
-<ul>
-<li>Perbelanjaan ketenteraan dunia pada 2025: <b>US$2.887 trilion</b>. Naik 11 tahun berturut-turut.</li>
-<li>Kontrak Pentagon 2020–24: <b>US$2.4 trilion</b>. Lima kontraktor terbesar ambil <b>US$771 bilion</b>, kira-kira 32%.</li>
-<li>Perang pasca-9/11: sekurang-kurangnya <b>4.5 juta</b> mati dalam zon perang, dan <b>38 juta</b> dipindahkan (Brown University).</li>
-<li>Pentagon gagal audit tahun kelapan berturut-turut. Ini tidak bermakna wang hilang. Ini bermakna pengaudit tidak cukup bukti.</li>
-<li>Hipotesis utama: jurang kuasa makin <b>bergabung dan membesar</b>. Negara lemah tidak boleh tunggu masa membantu mereka.</li>
-</ul></div>
-
-<h2>Mulakan dengan fizik, bukan dengan marah</h2>
-<p>Kebanyakan perbahasan tentang perang tersangkut pada satu soalan: siapa jahat?</p>
-<p>Itu soalan yang salah. Ia tidak boleh diuji. Ia hanya melahirkan pertengkaran.</p>
-<p>Mari kita pecahkan kepada asas. Ada wang. Ada insentif. Ada keputusan. Ada naratif yang menjustifikasikan keputusan itu. Dan ada manusia yang menanggung akibatnya. Kalau kita faham kelima-limanya, kita faham sistemnya.</p>
-<p>Tesis saya mudah. <b>Perang bukan sekadar kegagalan diplomasi. Ia sudah menjadi sistem ekonomi-politik yang berkekalan.</b> Institusi berkuasa boleh mengaut untung daripada konflik, mempengaruhi dasar yang menyokongnya, dan membentuk cerita awam yang mengesahkannya.</p>
-<p>Tetapi saya tidak akan mendakwa setiap perang ada satu punca. Saya juga tidak akan mendakwa pihak yang untung itulah yang memulakan konflik. Itu tidak boleh dibuktikan. Kajian yang baik membezakan apa yang terbukti, apa yang dipertikaikan dan apa yang sekadar ramalan.</p>
-
-<h2><span class="n">01</span>Lima tesis yang perlu diuji</h2>
-<div class="cards">
-<div class="card"><span class="tag">Tesis 1</span><h3>Ekonomi perang kekal</h3>Belanjawan, perolehan, penumpuan korporat dan pengaruh politik saling menguatkan. Ia boleh bertahan lebih lama daripada konflik yang mulanya menjustifikasikannya.</div>
-<div class="card"><span class="tag">Tesis 2</span><h3>Legitimasi yang direka</h3>Kerajaan, media dan industri strategik bersaing menentukan perang mana yang perlu, mangsa mana yang penting dan campur tangan mana yang halal.</div>
-<div class="card"><span class="tag">Tesis 3</span><h3>Jurang kuasa bergabung</h3>Keunggulan tentera kini bergantung pada semikonduktor, AI, kewangan, tenaga, satelit dan kapasiti industri. Kelebihan ini boleh membesar lebih laju daripada kemampuan negara lemah mengejar.</div>
-<div class="card a"><span class="tag">Tesis 4</span><h3>Paradoks kedaulatan</h3>Negara yang mahu merdeka perlu bina kuasa ekonomi dan pertahanan. Kuasa yang sama boleh melahirkan perampasan oleh elit, autoritarianisme dan kepentingan tentera-industri sendiri.</div>
-<div class="card a"><span class="tag">Tesis 5</span><h3>Dilema seratus tahun</h3>Kesabaran strategik perlu. Menunggu secara pasif berbahaya. Soalannya: boleh institusi, kerjasama serantau dan penyebaran teknologi mengatasi kelebihan kuasa sedia ada?</div>
-</div>
-
-<h2><span class="n">02</span>Apa kata angka</h2>
-<p>Tiga angka cukup untuk asas.</p>
-<div class="tiles">
-<div class="tile"><div class="v">$2.887T</div><div class="t">Perbelanjaan ketenteraan dunia, 2025. 11 tahun berturut-turut naik.</div></div>
-<div class="tile"><div class="v">$2.4T</div><div class="t">Kontrak Pentagon 2020–24. 54% daripada perbelanjaan jabatan.</div></div>
-<div class="tile"><div class="v">$771B</div><div class="t">Lima kontraktor teratas, 2020–24. Kira-kira 32% anugerah kontrak.</div></div>
-</div>
-<div class="fig">
-<div class="ft">Lima syarikat ambil hampir sepertiga kontrak Pentagon</div>
-<svg viewBox="0 0 640 130" role="img" aria-label="Carta bar anugerah kontrak Pentagon 2020-2024">
-<text x="0" y="22" font-size="13" fill="#13263a">Lima kontraktor teratas</text>
-<rect x="170" y="8" width="150" height="22" fill="#0b5cad"/>
-<text x="328" y="24" font-size="13" font-weight="700" fill="#0b5cad">$771B</text>
-<text x="0" y="68" font-size="13" fill="#13263a">Semua kontraktor lain</text>
-<rect x="170" y="54" width="460" height="22" fill="#9aa7b4"/>
-<text x="560" y="70" font-size="13" font-weight="700" fill="#13263a">~$1.63T</text>
-<text x="0" y="116" font-size="11" fill="#5b6b7c">Anggaran: $2.4T tolak $771B. Skala bar mengikut nilai.</text>
-</svg>
-<div class="cap">Sumber: Quincy Institute, Julai 2025. Angka ialah anugerah kontrak kasar, bukan keuntungan syarikat. Bar "lain" ialah pengiraan saya.</div>
-</div>
-<div class="box b-data"><span class="l">Apa yang data kata</span>
-Angka ini tidak membuktikan pembaziran. Angkatan tentera moden memang perlukan peralatan, logistik, penyelidikan dan penyelenggaraan.<br>Angka ini membuktikan satu perkara: kepentingan komersial yang besar dan tertumpu sudah tertanam dalam keputusan keselamatan negara. Quincy turut mendokumenkan lobi industri, dana pusat pemikir dan hubungan dengan suruhanjaya penasihat. Itu saluran pengaruh yang boleh dikenal pasti.</div>
-<div class="box b-watch"><span class="l">Awas: audit Pentagon</span>
-Pentagon gagal audit keseluruhan buat tahun kelapan berturut-turut pada FY2025. Ini <b>tidak</b> bermakna berbilion wang dicuri atau hilang. Ia bermakna pengaudit tidak mempunyai bukti yang cukup boleh dipercayai untuk memberi pendapat tentang penyata kewangan. Bezanya penting.</div>
-
-<h2><span class="n">03</span>Wajah di sebalik angka</h2>
-<p>Bahagian 02 bercakap tentang wang. Bahagian ini bercakap tentang orang.</p>
-<p>Kita tidak boleh faham ekonomi perang kalau kita hanya baca sisi untungnya. Ada sisi kosnya. Dan kos itu tidak dibayar oleh mereka yang membuat keputusan.</p>
-<div class="tiles">
-<div class="tile r"><div class="v">4.5 juta+</div><div class="t">Mati dalam zon perang pasca-9/11. Sekitar 3.6–3.8 juta daripadanya mati secara tidak langsung (Brown University).</div></div>
-<div class="tile r"><div class="v">38 juta+</div><div class="t">Dipindahkan oleh perang pasca-9/11. Anggaran konservatif. Mungkin 49–60 juta.</div></div>
-<div class="tile r"><div class="v">275–306 ribu</div><div class="t">Mati dalam perang Iraq, termasuk 185–209 ribu orang awam (Brown, 2021).</div></div>
-<div class="tile r"><div class="v">74,237</div><div class="t">Kematian dilaporkan di Gaza sehingga 4 Oktober 2026, dengan 175,206 cedera (Kementerian Kesihatan Gaza).</div></div>
-</div>
-
-<div class="fig">
-<div class="ft">Kematian langsung yang dilaporkan, mengikut perang</div>
-<svg viewBox="0 0 640 190" role="img" aria-label="Carta bar kematian langsung mengikut perang">
-<text x="0" y="22" font-size="13" fill="#13263a">Iraq</text>
-<rect x="110" y="8" width="460" height="22" fill="#b42318"/><text x="578" y="24" font-size="12" font-weight="700" fill="#b42318">275–306 ribu</text>
-<text x="0" y="62" font-size="13" fill="#13263a">Afghanistan</text>
-<rect x="110" y="48" width="295" height="22" fill="#9aa7b4"/><text x="413" y="64" font-size="12" font-weight="700" fill="#13263a">176,206</text>
-<text x="0" y="102" font-size="13" fill="#13263a">Gaza</text>
-<rect x="110" y="88" width="124" height="22" fill="#9aa7b4"/><text x="242" y="104" font-size="12" font-weight="700" fill="#13263a">74,237</text>
-<text x="0" y="142" font-size="13" fill="#13263a">Pakistan</text>
-<rect x="110" y="128" width="111" height="22" fill="#9aa7b4"/><text x="229" y="144" font-size="12" font-weight="700" fill="#13263a">66,650</text>
-<text x="0" y="180" font-size="11" fill="#5b6b7c">Skala bar mengikut nilai terendah. Tempoh dan kaedah pengiraan berbeza.</text>
-</svg>
-<div class="cap">Sumber: Brown University Costs of War (Iraq, Afghanistan, Pakistan, laporan 2021); Kementerian Kesihatan Gaza melalui Anadolu, 7 Oktober 2026. Ini bukan perbandingan setara. Jangan baca sebagai kedudukan.</div>
-</div>
-
-<h3>Gaza: yang paling baru</h3>
-<p>Kementerian Kesihatan Gaza melaporkan 74,237 kematian pada 4 Oktober 2026. Itu kira-kira 3.4%, atau seorang daripada setiap 30 penduduk sebelum perang.</p>
-<p>UNICEF melaporkan sehingga 31 Mac 2026 lebih 73,300 rakyat Palestin dilaporkan terbunuh, termasuk sekurang-kurangnya <b>21,500 kanak-kanak</b>.</p>
-<p>Gencatan senjata diumumkan pada 10 Oktober 2025. Ia tidak menghentikan kematian. Menurut OCHA, sehingga awal September 2026, 1,334 orang dilaporkan terbunuh selepas gencatan senjata. UNICEF pula berkata sekurang-kurangnya 300 kanak-kanak terbunuh dalam 300 hari pertama gencatan itu, kira-kira seorang sehari.</p>
-<p>PBB menganggarkan kira-kira 1.7 juta orang, lebih kurang 80% penduduk, kekal berpindah. Sekitar 76.6% unit rumah musnah atau rosak.</p>
-
-<div class="box b-watch"><span class="l">Apa yang angka ini tidak katakan</span>
-<ul>
-<li><b>Ia tidak membuktikan industri senjata mencetuskan perang.</b> Itu soalan 4 di bahagian 06, dan ia belum terjawab.</li>
-<li>Brown sendiri menyatakan ia tidak menyalahkan satu pihak, sebab atau tempoh tertentu. Banyak pihak bertempur.</li>
-<li>Data Brown mengikut zon perang, bukan agama mangsa. Kebanyakan negara itu majoriti Muslim. Jadi saya tulis "dalam negara majoriti Muslim", bukan "Muslim disasarkan".</li>
-<li>Angka Gaza ialah angka Kementerian Kesihatan, yang beroperasi di bawah pihak berkuasa de facto. PBB menggunakannya sebagai angka yang dilaporkan. Perang itu bermula selepas serangan 7 Oktober 2023 ke atas Israel.</li>
-</ul></div>
-
-<p>Maka apa kaitannya dengan tesis kita? Satu perkara. Sistem yang dibincang dalam bahagian 05 bukan sistem abstrak. Apabila ia gagal dikawal, pihak yang membayar ialah orang awam di zon perang, yang tidak ada suara dalam lobi, belanjawan atau kontrak.</p>
-<div class="q"><small>Soalan keadilan</small>Siapa yang menanggung kos, dan siapa yang membuat keputusan? Adakah mereka orang yang sama?</div>
-
-<h2><span class="n">04</span>Kebencian yang terorganisasi</h2>
-<p>Ada yang berkata artikel ini menapis. Jadi inilah buktinya, tanpa dilembutkan. Saya asingkan kepada tiga tahap: apa yang terbukti, apa yang dituduh dan apa yang masih dipertikaikan.</p>
-<div class="cards">
-<div class="card g"><span class="tag">Terbukti</span><h3>Kebencian anti-Muslim yang terorganisasi</h3>CAIR merekodkan <b>8,683</b> aduan diskriminasi anti-Muslim dan anti-Arab di AS pada 2025, tertinggi sejak 1996. Daripadanya, 555 ialah insiden kebencian langsung dan 33 menyasarkan institusi Islam. Insiden terhadap masjid pada Mei–Julai 2026 lebih tinggi 183% berbanding tempoh sama 2025. CAIR ialah kumpulan advokasi dan angkanya ialah aduan, bukan kes yang disahkan mahkamah.</div>
-<div class="card g"><span class="tag">Terbukti</span><h3>Mesin undang-undang</h3>Antara 2010 dan 2017, 201 RUU anti-Syariah dibentangkan di 43 negeri AS (SPLC, Haas Institute). CAIR berkata RUU 2025 memakai istilah yang dicipta ekstremis anti-Muslim pada pertengahan 2000-an.</div>
-<div class="card g"><span class="tag">Terbukti</span><h3>Keganasan dan simbol</h3>Penyerang Christchurch (2019) dan Breivik (2011, 77 mati) menulis manifesto yang merujuk Perang Salib. Mereka penjenayah tunggal, bukan dasar negara. Pada 2001, Bush menyebut perang melawan keganasan sebagai "crusade", dan Rumah Putih menarik balik perkataan itu dua hari kemudian.</div>
-<div class="card a"><span class="tag">Dituduh</span><h3>Genosid di Gaza</h3>Suruhanjaya Siasatan bebas PBB (Navi Pillay) memutuskan pada 16 September 2025 bahawa genosid berlaku di Gaza dan Israel bertanggungjawab. Ia bukan badan undang-undang dan tidak bercakap bagi pihak PBB. Israel menolaknya sebagai "distorted and false".</div>
-<div class="card a"><span class="tag">Dituduh</span><h3>Jenayah perang</h3>ICC mengeluarkan waran tangkap untuk Netanyahu dan Gallant atas jenayah perang dan jenayah terhadap kemanusiaan, termasuk kebuluran sebagai kaedah perang. Itu bukan pertuduhan genosid.</div>
-<div class="card r"><span class="tag">Dipertikaikan</span><h3>Niat</h3>Genosid dalam undang-undang memerlukan niat memusnahkan sesuatu kumpulan. Di ICJ, kes Afrika Selatan lawan Israel belum diputuskan. Mahkamah memerintahkan langkah kecemasan yang mengikat, tetapi tiada keputusan akhir. Israel membantah bidang kuasa. Afrika Selatan dijangka membalas hanya menjelang 22 November 2027.</div>
-</div>
-<div class="box b-trap"><span class="l">Empat perkara berbeza</span>
-Bukti di atas menunjuk kepada empat perkara berbeza: kebencian yang terorganisasi, penjenayah ekstremis, perang yang menelan orang awam, dan tuduhan niat di Gaza yang belum diputuskan mahkamah.</div>
-<h2><span class="n">05</span>Bagaimana sistem ini berjalan</h2>
-<p>Tiada pusat arahan rahsia. Yang ada ialah gelung insentif. Setiap langkah munasabah bagi pihak yang berada di situ. Hasil akhirnya, sistem terus membesar.</p>
-<div class="fig">
-<div class="ft">Gelung penguat: hipotesis untuk diuji</div>
-<div class="flow">
-<div class="step"><b>1. Ancaman keselamatan, nyata atau yang dilihat</b><span>Perang, persaingan, keganasan, pertikaian wilayah</span></div><div class="arrow">↓</div>
-<div class="step"><b>2. Mobilisasi politik dan belanjawan tentera</b><span>Legitimasi awam, peruntukan perundangan</span></div><div class="arrow">↓</div>
-<div class="step"><b>3. Perolehan, kontrak dan pengembangan institusi</b><span>Hasil industri, sumber organisasi, pekerjaan</span></div><div class="arrow">↓</div>
-<div class="step"><b>4. Lobi, kepakaran dan pengaruh politik</b><span>Pintu pusingan, rangkaian penasihat, dana penyelidikan</span></div><div class="arrow">↓</div>
-<div class="step last"><b>5. Persepsi ancaman dan keutamaan belanja mungkin terus diperkukuh</b><span>Kembali ke langkah 1. Perlu diuji secara empirikal, bukan dianggap benar dalam setiap kes.</span></div>
-</div></div>
-<div class="box b-data"><span class="l">Siapa sebenarnya pemilik?</span>
-Lima kontraktor teratas ialah syarikat awam: Lockheed Martin ($313B), RTX ($145B), General Dynamics ($116B), Boeing ($115B) dan Northrop Grumman ($81B), 2020–24. Pemilik mereka boleh dinamakan.<br><br>
-<b>Contoh Lockheed Martin</b> (fail SEC 13F, Mac 2026): State Street kira-kira 14.1%, BlackRock 7.7%, Vanguard sekitar 6.1% pada satu entiti dan lebih lagi pada entiti lain. Institusi memegang kira-kira 75% saham. Pemegang saham teratas bagi lima syarikat itu secara umum juga dana besar seperti Vanguard, BlackRock dan State Street, tetapi saya belum semak angka bagi empat lagi satu demi satu.<br><br>
-Satu perkara perlu jujur: dana ini mengurus wang untuk ramai pelabur, termasuk dana pencen dan penabung biasa. Mereka pemilik atas kertas, bukan satu kumpulan yang berpakat.<br><br>
-<b>Dua angka yang benar serentak.</b> Pemegang saham dan pengurusan menerima untung dan gaji dalam laporan tahunan. Di zon perang, orang awam menanggung kos (bahagian 03). Menghubungkan keduanya sebagai sebab dan akibat ialah soalan 4 di bahagian 06, dan ia belum terjawab. Tetapi jurang antara yang menerima dan yang membayar itu sendiri sudah cukup untuk dipersoalkan.</div>
-<p>Model ini lebih kukuh daripada teori konspirasi. Kelebihannya: ia boleh diuji.</p>
-<div class="q"><small>Untuk penyelidik</small>Adakah lobi industri mendahului perubahan dasar?</div>
-<div class="q"><small>Untuk penyelidik</small>Adakah komitmen perolehan bertahan selepas ancaman yang menjustifikasikannya hilang?</div>
-<div class="q"><small>Untuk penyelidik</small>Adakah kewujudan pilihan diplomatik mengubah keputusan belanja?</div>
-
-<h3>Seberapa kuat? Dan di mana hadnya</h3>
-<p>Pembaca patut yakin sistem ini kuat dan mengakar. Tetapi bukti juga menunjukkan ia bukan tidak boleh dihadkan. Dua-dua perlu ditunjukkan.</p>
-<div class="cards">
-<div class="card r"><span class="tag">Di mana ia kuat</span><h3>Sukar dipotong, sukar dibunuh</h3>Pengaruh bukan sahaja di Washington. V-22 Osprey pernah cuba dibatalkan oleh dua setiausaha pertahanan, Harold Brown dan Dick Cheney, tetapi Kongres membatalkan keputusan mereka. Apabila Rumsfeld mahu membunuh Crusader pada 2002, pejabat Tentera Darat didakwa menyediakan "talking points" untuk melobi Kongres, dan sebahagian ahli Kongres yang negerinya menerima manfaat berikrar melawan.</div>
-<div class="card g"><span class="tag">Di mana ia terhad</span><h3>Selepas Perang Dingin</h3>Menurut Mercatus, perbelanjaan pertahanan AS jatuh daripada 5.2% KDNK pada 1990 kepada 3.0% pada 2000, dengan konsensus dua parti. CFR mengira 3.7% pada 2000 dengan takrifan berbeza. Arahnya sama: ia turun banyak apabila ancaman dilihat hilang.</div>
-<div class="card g"><span class="tag">Di mana ia terhad</span><h3>Program yang dibunuh</h3>Rumsfeld membatalkan Crusader (program US$11 bilion) pada 2002. Comanche dibatalkan pada 2004 selepas 22 tahun dan kira-kira US$6.9 bilion, tanpa sebuah helikopter pun. Gates membunuh FCS pada 2009 selepas kira-kira US$19–21 bilion.</div>
-</div>
-<div class="box b-less"><span class="l">Apa maknanya</span>
-Kuasa ini <b>mengakar, bukan mutlak</b>. Ia kuat melawan pemotongan kecil dan pembatalan satu-satu. Ia kalah pada skala besar apabila ancaman dilihat sudah berlalu. Tetapi perbelanjaan naik semula selepas 2001. Maknanya pengungkit sebenar ialah <b>persepsi ancaman</b>. Siapa yang membentuk persepsi itu memegang kuncinya. Itu tesis 2, dan inilah sebabnya legitimasi yang direka begitu penting.<br><br>
-Bagi negara yang lemah, ini berita yang tidak mudah tetapi bukan putus asa. Anda tidak boleh menumbangkan sistem ini dengan konfrontasi. Anda boleh mengurangkan kebergantungan anda padanya.</div>
-<h2><span class="n">06</span>Ujian paling sukar untuk tesis ini</h2>
-<p>Saya mesti hadapi bantahan terkuat dahulu.</p>
-<p>Perang sering lahir daripada dilema keselamatan yang sebenar, cita-cita wilayah, pertembungan ideologi dan salah kira. Bukan semata-mata wang.</p>
-<p>Perang di Ukraine menunjukkan perkara yang sama. Penjelasannya dipertikaikan: ada yang menekankan pencerobohan Rusia dan ancamannya kepada negara jiran, ada yang menekankan perluasan NATO ke arah sempadan Rusia dan perjanjian lisan yang dikatakan dilanggar. Apa pun pandangan anda, pengeluar senjata untung daripada permintaan yang naik. Itu tidak membuktikan mereka yang mencetuskan perang.</p>
-<p>Pengeluaran senjata juga boleh jadi pencegahan yang sah. Memotong belanja tanpa menyelesaikan ancaman boleh menaikkan risiko perang, bukan menurunkannya.</p>
-<div class="box b-trap"><span class="l">Perangkap: mencampuradukkan empat soalan</span>
-Kertas saya yang awal sering menganggap soalan ini sama. Ia tidak sama.</div>
-<div class="cards">
-<div class="card"><span class="tag">Soalan 1</span><h3>Siapa untung dari segi kewangan?</h3>Boleh diukur: kontrak, margin, pemilikan, penumpuan pasaran.</div>
-<div class="card"><span class="tag">Soalan 2</span><h3>Siapa pengaruhi dasar?</h3>Perlu bukti lobi, derma politik, peranan penasihat dan keputusan sebenar.</div>
-<div class="card"><span class="tag">Soalan 3</span><h3>Siapa bentuk legitimasi awam?</h3>Perlu analisis media, wacana, pembiayaan dan pendapat umum.</div>
-<div class="card r"><span class="tag">Soalan 4</span><h3>Siapa cetus atau panjangkan konflik?</h3>Soalan sebab-akibat yang paling sukar. Insentif kewangan sahaja tidak boleh menjawabnya.</div>
-</div>
-
-<h2><span class="n">07</span>Dari mana kuasa datang pada 2036, 2046 dan 2076</h2>
-<p>Ini senario bersyarat. Bukan ramalan dengan kebarangkalian statistik.</p>
-<div class="fig">
-<div class="ft">Tiga horizon, satu pergeseran: dari senjata ke infrastruktur</div>
-<svg viewBox="0 0 640 190" role="img" aria-label="Ilustrasi tiga horizon">
-<line x1="40" y1="120" x2="610" y2="120" stroke="#13263a" stroke-width="3"/>
-<circle cx="110" cy="120" r="11" fill="#0b5cad"/><circle cx="320" cy="120" r="11" fill="#0b5cad"/><circle cx="530" cy="120" r="11" fill="#0b5cad"/>
-<text x="110" y="100" text-anchor="middle" font-size="20" font-weight="800" fill="#13263a">2036</text>
-<text x="320" y="100" text-anchor="middle" font-size="20" font-weight="800" fill="#13263a">2046</text>
-<text x="530" y="100" text-anchor="middle" font-size="20" font-weight="800" fill="#13263a">2076</text>
-<text x="110" y="148" text-anchor="middle" font-size="13" fill="#0b5cad" font-weight="700">Teknologi tentera</text>
-<text x="110" y="166" text-anchor="middle" font-size="12" fill="#5b6b7c">AI, dron, siber, satelit</text>
-<text x="320" y="148" text-anchor="middle" font-size="13" fill="#0b5cad" font-weight="700">Sistem kuasa bersaing</text>
-<text x="320" y="166" text-anchor="middle" font-size="12" fill="#5b6b7c">Blok teknologi dan kewangan</text>
-<text x="530" y="148" text-anchor="middle" font-size="13" fill="#0b5cad" font-weight="700">Berdaulat atau bergantung</text>
-<text x="530" y="166" text-anchor="middle" font-size="12" fill="#5b6b7c">Siapa kawal infrastruktur</text>
-<text x="40" y="20" font-size="11" fill="#5b6b7c">Ilustrasi konsep, bukan data.</text>
-</svg></div>
-
-<h3>2036: dekad pemiliteran teknologi</h3>
-<p>Industri tentera berubah daripada pengeluar senjata dan platform kepada ekosistem teknologi tentera. Perisikan dibantu AI, dron autonomi, keselamatan siber, rangkaian satelit dan infrastruktur data medan perang menjadi sumber leveraj strategik.</p>
-<p>Quincy sudah menyenaraikan Palantir, Anduril dan SpaceX sebagai pemain industri pertahanan yang sedang muncul, bersama kontraktor tradisional.</p>
-<div class="box b-less"><span class="l">Implikasi</span>Kuasa tentera makin bergantung pada perisian, data, kapasiti pembuatan dan akses kepada komponen canggih. Bukan lagi bilangan pesawat atau kapal perang.</div>
-<p><b>Pantau:</b> bahagian perolehan untuk firma teknologi tentera, tadbir urus AI, penggunaan senjata autonomi, dan kebergantungan negara kecil pada infrastruktur digital asing.</p>
-
-<h3>2046: era sistem kuasa yang bersaing</h3>
-<p>Pengaruh global jadi lebih berselerak. Tetapi negara kecil mungkin menghadapi tekanan lebih besar untuk memilih blok keselamatan, kewangan dan teknologi.</p>
-<p>Multipolar tidak semestinya aman. Kuasa yang bersaing boleh bina industri pertahanan, kemampuan pengawasan, mekanisme sekatan dan naratif politik masing-masing.</p>
-<div class="tiles">
-<div class="tile"><div class="v">86%</div><div class="t">Purata bahagian tiga negara pemprosesan teratas bagi mineral tenaga utama, 2024 (IEA).</div></div>
-<div class="tile"><div class="v">Sedikit</div><div class="t">Kepelbagaian yang diunjurkan menjelang 2035. Hanya sederhana.</div></div>
-<div class="tile"><div class="v">Risiko</div><div class="t">Negara tanpa autonomi teknologi boleh tukar kebergantungan satu kuasa kepada kuasa lain.</div></div>
-</div>
-<p><b>Pantau:</b> akses semikonduktor, pemprosesan mineral kritikal, kepelbagaian mata wang rizab, penyelesaian dagangan serantau, dan keupayaan ASEAN menjaga pilihan diplomatik yang bebas.</p>
-
-<h3>2076: kedaulatan atau kebergantungan kekal</h3>
-<p>Pembahagian penentu mungkin bukan lagi Barat lawan bukan-Barat. Ia mungkin antara masyarakat yang mengawal infrastruktur teknologi dan ekonomi asas mereka, dengan yang kekal bergantung secara struktur.</p>
-<p>AI canggih, pengeluaran automatik, sistem tenaga dan rangkaian maklumat boleh mendemokrasikan keupayaan pengeluaran. Atau menumpukan kuasa yang belum pernah ada kepada segelintir kerajaan dan korporat.</p>
-<p><b>Pantau:</b> penumpuan kapasiti pengkomputeran, inovasi domestik, akauntabiliti institusi, akses teknologi dan keupayaan negara membuat keputusan sendiri.</p>
-
-<h2><span class="n">08</span>Tiga masa depan yang bersaing</h2>
-<p>Tesis ini tidak boleh anggap konflik berterusan itu pasti. Kita perlukan senario bersaing sebagai alat uji.</p>
-<div class="cards">
-<div class="card r"><span class="tag">Senario A</span><h3>Pemiliteran berakar</h3>Persepsi ancaman, belanja pertahanan dan pengaruh komersial saling menguatkan. Teknologi tentera baharu memperluas sistem, bukan menggantikannya.</div>
-<div class="card a"><span class="tag">Senario B</span><h3>Multipolariti bersaing</h3>Beberapa pusat kuasa bersaing dengan sistem pertahanan, kewangan dan teknologi sendiri.</div>
-<div class="card g"><span class="tag">Senario C</span><h3>Pemiliteran terkawal</h3>Belanja dan pengaruh dihadkan oleh institusi, perjanjian dan akauntabiliti.</div>
-</div>
-<div class="box b-watch"><span class="l">Penunjuk awal untuk Senario A</span>Belanja terus naik walaupun ada pembukaan diplomatik. Penumpuan perolehan meningkat. Pengawasan lemah.</div>
-<p>Senario ini tidak saling menafikan. Rantau berbeza boleh mengalami hasil berbeza pada masa yang sama.</p>
-
-<h2><span class="n">09</span>Apa maknanya untuk Malaysia dan ASEAN</h2>
-<p>Malaysia tidak boleh menandingi kuasa besar dari segi jumlah kuasa tentera. Itu fakta.</p>
-<p>Tetapi autonomi strategik tidak bermaksud menyaingi senjata demi senjata. Ia bermaksud <b>mengurangkan bilangan kelemahan kritikal</b> yang boleh dieksploitasi pihak luar.</p>
-<div class="cards">
-<div class="card"><span class="tag">Kawasan 1</span>Semikonduktor dan pembuatan canggih</div>
-<div class="card"><span class="tag">Kawasan 2</span>Keselamatan makanan dan tenaga</div>
-<div class="card"><span class="tag">Kawasan 3</span>Kedaulatan digital</div>
-<div class="card"><span class="tag">Kawasan 4</span>Daya tahan kewangan serantau</div>
-<div class="card"><span class="tag">Kawasan 5</span>Keselamatan maritim</div>
-<div class="card"><span class="tag">Kawasan 6</span>Kualiti institusi</div>
-</div>
-<div class="q"><small>Soalan teras untuk ASEAN</small>Bolehkah ASEAN membina kuasa tawar-menawar kolektif tanpa menjadi blok tentera dan tanpa mengorbankan autonomi setiap ahli?</div>
-<p>Jepun, China, Korea Selatan dan Singapura menunjukkan kemampuan industri dan pembangunan institusi boleh mengubah kuasa tawar-menawar sesebuah negara. Tetapi geografi, jaminan keselamatan luar, sistem politik dan sejarah mereka berbeza. Kejayaan mereka tidak boleh disalin bulat-bulat.</p>
-<div class="box b-trap"><span class="l">Paradoks kedaulatan</span>Kuasa yang kita bina untuk merdeka boleh jadi sumber masalah baharu: elit yang merampas, autoritarianisme dan kepentingan tentera-industri tempatan. Reka institusi dahulu. Bina keupayaan kemudian.</div>
-
-<h3>Kuasa tanpa senjata: berkecuali dan bersuara untuk keamanan</h3>
-<p>Malaysia tidak punya leveraj ketenteraan. Terima hakikat itu. Soalan yang berguna ialah: apa yang kita ada?</p>
-<div class="cards">
-<div class="card g"><span class="tag">Aset 1</span><h3>Kredibiliti berkecuali</h3>Kita bukan sebahagian blok tentera mana-mana kuasa besar. Deklarasi ZOPFAN diisytiharkan di Kuala Lumpur pada 1971, dengan hasrat menjadikan Asia Tenggara bebas daripada campur tangan kuasa luar. Tradisi itu masih ada.</div>
-<div class="card g"><span class="tag">Aset 2</span><h3>Boleh bercakap dengan semua pihak</h3>Negara yang tidak mengancam sesiapa lebih mudah dipercayai sebagai pengantara dan penganjur dialog. Itu aset yang tidak boleh dibeli dengan belanjawan pertahanan.</div>
-<div class="card g"><span class="tag">Aset 3</span><h3>Suara moral yang konsisten</h3>Angka di bahagian 03 ialah orang sebenar. Negara kecil yang menyebut kos manusia dengan jelas, di mana-mana ia berlaku, membawa autoriti yang tidak bergantung pada saiz tentera.</div>
-</div>
-<div class="box b-watch"><span class="l">Syarat dan kos</span>
-<ul>
-<li><b>Berkecuali bukan diam.</b> Ia aktif: bercakap, menjadi tuan rumah, membawa isu ke forum antarabangsa.</li>
-<li><b>Suara keamanan hanya dipercayai jika piawainya sama</b> untuk semua mangsa dan semua pihak. Piawai berganda menghapuskan kredibiliti dengan cepat.</li>
-<li><b>Berkecuali ada harga.</b> Tekanan untuk memilih blok akan datang (bahagian 07). Sebab itu ia mesti disokong ekonomi yang tidak mudah ditekan: semikonduktor, mineral, digital dan kewangan.</li>
-</ul></div>
-<div class="box b-call"><span class="l">Apa yang Malaysia boleh buat</span>
-<ol style="margin:0;padding-left:20px">
-<li>Pertahankan berkecuali yang aktif dalam ASEAN, bukan berkecuali yang pasif.</li>
-<li>Bawa keamanan dan undang-undang antarabangsa ke setiap forum yang kita ada.</li>
-<li>Sebut kos manusia dengan angka dan sumber, supaya suara itu sukar dipertikai.</li>
-<li>Kurangkan kebergantungan kritikal, supaya berkecuali itu pilihan dan bukan sekadar harapan.</li>
-</ol></div>
-<h2><span class="n">10</span>Program kajian dan ujian</h2>
-<ol class="plan">
-<li><b>Kajian kes mendalam.</b> Perang pasca-9/11, pencerobohan Iraq, Libya, Ukraine, Gaza dan persaingan strategik AS–China. Setiap satu: justifikasi keselamatan, penerima manfaat, pengaruh institusi, akibat kemanusiaan dan penjelasan bersaing.<span class="ms-m">Ukuran: setiap kes jawab empat soalan di bahagian 06 secara berasingan.</span></li>
-<li><b>Satu takrifan kuantitatif yang konsisten.</b> Anugerah kontrak, bukan keuntungan. Anggaran, bukan fakta.<span class="ms-m">Ukuran: setiap angka ada sumber, tahun dan takrifan.</span></li>
-<li><b>Kes balas.</b> Cari contoh di mana belanja tentera jatuh selepas ancaman hilang.<span class="ms-m">Ukuran: sekurang-kurangnya tiga kes balas, ditulis jujur.</span></li>
-<li><b>Kaedah ramalan telus.</b> Setiap unjuran ada andaian dan syarat jelas.<span class="ms-m">Ukuran: boleh disemak dan disanggah pembaca.</span></li>
-</ol>
-
-<div class="box b-call"><span class="l">Seruan</span>
-<b>Untuk penggubal dasar Malaysia dan ASEAN: tiga langkah, bermula sekarang.</b>
-<ul>
-<li><b>Sebut.</b> Jadilah suara berkecuali yang konsisten untuk keamanan, dengan piawai yang sama untuk setiap mangsa, siapa pun pelakunya. Malaysia tiada kuasa senjata, tetapi suara yang konsisten itulah modal kita.</li>
-<li><b>Tunjuk.</b> Bawa ketelusan ke ASEAN: dedahkan kontrak perolehan pertahanan dan perbelanjaan senjata secara terbuka. Sistem ini subur dalam kekaburan, dan cahaya ialah ubat pertama.</li>
-<li><b>Lindung.</b> Petakan dan kurangkan kebergantungan kritikal, iaitu semikonduktor, mineral, digital dan kewangan. Kita tidak boleh urus apa yang belum kita ukur.</li>
-</ul></div>
-
-<div class="box b-take"><span class="l">Pandangan saya</span>
-Tragedi ekonomi perang kekal bukan semata-mata konflik menjana untung. Tragedinya, institusi yang ditugaskan melindungi masyarakat boleh menjadi bergantung, dari segi kewangan, politik dan organisasi, pada persepsi bahaya yang berterusan. Dan yang membayar ialah orang yang tidak pernah ada di meja keputusan.<br><br>
-Namun kebergantungan ini tidak universal dan tidak kekal. Ancaman boleh nyata. Kesiapsiagaan boleh perlu. Kerajaan masih mampu menukar keutamaan.<br><br>
-Bagi negara lemah, cabarannya berat. Ia tidak boleh meruntuhkan tatanan antarabangsa melalui konfrontasi. Ia juga tidak boleh menganggap masa akan menjadikannya lebih kuat. Strategi paling boleh dipercayai: kumpul keupayaan ekonomi, teknologi, institusi dan diplomatik dengan sabar.<br><br>Bagi Malaysia, jawapannya bukan senjata. Ia berkecuali yang aktif dan suara yang konsisten untuk keamanan, disokong oleh ekonomi yang tidak mudah ditekan.<br><br>
-Sepuluh tahun akan datang mungkin menentukan siapa kawal teknologi keselamatan. Dua puluh tahun berikutnya menentukan negara mana yang masih ada pilihan strategik. Dalam lima puluh tahun, soalannya: adakah teknologi menyebar kuasa lebih luas, atau menumpukannya dalam institusi yang makin tidak bertanggungjawab?<br><br>
-<b>Matlamatnya bukan membina empayar saingan. Matlamatnya dunia di mana kedaulatan tidak bergantung pada tunduk kepada satu empayar.</b></div>
-
-<div class="over"><b>Untuk anda:</b> jika yang kuat boleh gunakan kekayaan dan teknologi hari ini untuk mengunci dominasi esok, bagaimana negara lemah boleh mengejar? Dan apa jadi jika tidak boleh?</div>
-</main>
+<div class="top"><span>Independent research</span>
+ <span class="toggle"><button id="b-en" class="on" onclick="setLang('en')">EN</button><button id="b-bm" onclick="setLang('bm')">BM</button></span></div>
+<div class="nameplate"><h2>Field Notes</h2><p>Independent research &middot; Kuala Lumpur</p></div>
+<div class="dateline"><span>Monday, 23 November 2026</span><span class="en-only">Working paper &middot; Exploratory research</span><span class="bm-only">Kertas kerja &middot; Kajian penerokaan</span><span>~14 min</span></div>
 
 <!-- ============================ ENGLISH ============================ -->
-<main class="en" lang="en">
-<div class="kicker">Strategic study · 2026–2076</div>
-<h1>The Permanent War Economy</h1>
-<p class="stand">Power, profit, manufactured legitimacy, and the future of sovereignty. The real question is not who profits. It is: how can weaker nations ever catch up?</p>
-<div class="by">Azman Taufik · 16 November 2026 · 11 min read</div>
+<article class="en-only" id="art-en" lang="en">
+<div class="kicker">Research &middot; Complex systems &middot; Malaysia &middot; Bitcoin</div>
+<h1>The Hidden Architecture of Chaos</h1>
+<p class="deck">From Riemann's prime numbers to Bitcoin, Malaysia's economy, financial markets and human behaviour: an independent investigation into hidden structure, uncertainty and the limits of prediction.</p>
+<div class="byline"><span class="who">By <b>Azman Taufik</b> &middot; 23 November 2026</span><a class="cta" data-cta href="#">Comment on LinkedIn</a></div>
 
-<div class="box"><span class="l">The short version</span>
+<div class="stats">
+ <div class="stat"><b>5.5%</b><span>Malaysia GDP growth, Q3 2026 (DOSM)</span></div>
+ <div class="stat"><b>5.6%</b><span>Malaysia GDP growth, Jan&ndash;Sep 2026</span></div>
+ <div class="stat"><b>~$126k</b><span>Bitcoin record high, October 2025</span></div>
+ <div class="stat"><b>5</b><span>Domains tested for hidden structure</span></div>
+</div>
+
+<div class="cols">
+<div class="box key"><span class="lbl">The short version</span>
 <ul>
-<li>Global military spending in 2025: <b>US$2.887 trillion</b>. Up 11 years in a row.</li>
-<li>Pentagon contracts 2020–24: <b>US$2.4 trillion</b>. The top five contractors took <b>US$771 billion</b>, about 32%.</li>
-<li>Post-9/11 wars: at least <b>4.5 million</b> dead in the war zones and <b>38 million</b> displaced (Brown University).</li>
-<li>The Pentagon failed its audit for the eighth year running. That does not mean money vanished. It means auditors lacked enough evidence.</li>
-<li>Core hypothesis: the power gap is <b>compounding</b>. Weaker states cannot wait for time to help them.</li>
+<li>Individual outcomes are hard to predict. The <b>shape of the uncertainty</b> around them may not be.</li>
+<li>We propose the <b>Hidden Structure Hypothesis (HSH)</b> and apply it to five domains: Malaysia's economy, financial markets, Bitcoin, human behaviour and relationships.</li>
+<li>The practical bet: forecast <b>risk and regime changes</b>, not exact prices or growth rates.</li>
+<li>This is a <b>research proposal with preliminary evidence</b>. No predictive superiority is claimed until tested out of sample.</li>
 </ul></div>
 
-<h2>Start with physics, not anger</h2>
-<p>Most debate about war gets stuck on one question: who is evil?</p>
-<p>Wrong question. You cannot test it. It only produces arguments.</p>
-<p>Break it down to first principles. There is money. There are incentives. There are decisions. There is a story that justifies the decisions. And there are people who pay the price. Understand all five and you understand the system.</p>
-<p>My thesis is simple. <b>War is not merely a failure of diplomacy. It has become an enduring political-economic system.</b> Powerful institutions can profit from conflict, influence the policies that sustain it, and shape the public narratives that legitimise it.</p>
-<p>But I will not claim every war has one cause. I will not claim that those who profit started the conflict. That cannot be proven. Good research separates what is documented, what is contested and what is only a forecast.</p>
+<h3>1. Is chaos really random?</h3>
+<p class="lead">For centuries, mathematicians have studied how prime numbers are distributed. Primes appear irregularly along the number line, and no simple repeating rule identifies every one. Yet their collective distribution follows the Prime Number Theorem.</p>
+<p>Bernhard Riemann's 1859 work revealed a deeper link between the primes and the zeros of the zeta function. The Riemann Hypothesis proposes that all non-trivial zeros lie on a single vertical line in the complex plane. If true, it places very tight limits on how far the primes can stray from their expected pattern.</p>
+<p>The lesson is broader than mathematics: <b>irregularity in individual observations does not rule out structure in the aggregate.</b></p>
 
-<h2><span class="n">01</span>Five theses to test</h2>
-<div class="cards">
-<div class="card"><span class="tag">Thesis 1</span><h3>The permanent war economy</h3>Spending, procurement, corporate concentration and political influence reinforce each other. They can outlast the conflicts that first justified them.</div>
-<div class="card"><span class="tag">Thesis 2</span><h3>Manufactured legitimacy</h3>Governments, media and strategic industries compete to define which wars are necessary, which victims matter and which interventions are acceptable.</div>
-<div class="card"><span class="tag">Thesis 3</span><h3>The compounding power gap</h3>Military superiority now rests on semiconductors, AI, finance, energy, satellites and industrial capacity. These advantages may compound faster than weaker states can catch up.</div>
-<div class="card a"><span class="tag">Thesis 4</span><h3>The sovereignty paradox</h3>States that want independence must build economic and defensive power. The same power can produce elite capture, authoritarianism and their own military-industrial interests.</div>
-<div class="card a"><span class="tag">Thesis 5</span><h3>The hundred-year dilemma</h3>Strategic patience is necessary. Passive waiting is dangerous. Can institutions, regional cooperation and technology diffusion overcome the incumbents' advantage?</div>
-</div>
+<div class="pull">&ldquo;The uncertainty around future outcomes may sometimes be more predictable than the outcomes themselves.&rdquo;<small>Central thesis</small></div>
 
-<h2><span class="n">02</span>What the numbers say</h2>
-<p>Three numbers give a solid base.</p>
-<div class="tiles">
-<div class="tile"><div class="v">$2.887T</div><div class="t">Global military spending, 2025. 11 consecutive years of growth.</div></div>
-<div class="tile"><div class="v">$2.4T</div><div class="t">US Pentagon contracts, 2020–24. 54% of departmental spending.</div></div>
-<div class="tile"><div class="v">$771B</div><div class="t">Top five contractors, 2020–24. About 32% of contract awards.</div></div>
-</div>
-<div class="fig">
-<div class="ft">Five companies took nearly a third of Pentagon contracts</div>
-<svg viewBox="0 0 640 130" role="img" aria-label="Bar chart of Pentagon contract awards 2020-2024">
-<text x="0" y="22" font-size="13" fill="#13263a">Top five contractors</text>
-<rect x="170" y="8" width="150" height="22" fill="#0b5cad"/>
-<text x="328" y="24" font-size="13" font-weight="700" fill="#0b5cad">$771B</text>
-<text x="0" y="68" font-size="13" fill="#13263a">All other contractors</text>
-<rect x="170" y="54" width="460" height="22" fill="#9aa7b4"/>
-<text x="560" y="70" font-size="13" font-weight="700" fill="#13263a">~$1.63T</text>
-<text x="0" y="116" font-size="11" fill="#5b6b7c">Estimate: $2.4T minus $771B. Bars drawn to scale.</text>
-</svg>
-<div class="cap">Source: Quincy Institute, July 2025. Figures are gross contract awards, not corporate profits. The "other" bar is my own calculation.</div>
-</div>
-<div class="box b-data"><span class="l">What the data says</span>
-These numbers do not prove waste. Modern armed forces genuinely need equipment, logistics, research and maintenance.<br>They prove one thing: large, concentrated commercial interests are embedded in national-security decisions. Quincy also documents industry lobbying, think-tank funding and advisory-commission ties. Those are identifiable channels of influence.</div>
-<div class="box b-watch"><span class="l">Watch-out: the Pentagon audit</span>
-The Pentagon failed its agency-wide audit for the eighth consecutive year in FY2025. This does <b>not</b> mean trillions were stolen or disappeared. It means auditors lacked enough reliable evidence to give an opinion on the financial statements. The difference matters.</div>
-
-<h2><span class="n">03</span>The faces behind the numbers</h2>
-<p>Section 02 was about money. This section is about people.</p>
-<p>You cannot understand a war economy if you read only the profit side. There is a cost side. The people who make the decisions do not pay it.</p>
-<div class="tiles">
-<div class="tile r"><div class="v">4.5M+</div><div class="t">Dead in post-9/11 war zones. About 3.6–3.8 million of them died indirectly (Brown University).</div></div>
-<div class="tile r"><div class="v">38M+</div><div class="t">Displaced by the post-9/11 wars. A conservative estimate. Could be 49–60 million.</div></div>
-<div class="tile r"><div class="v">275–306K</div><div class="t">Dead in the Iraq war, including 185–209K civilians (Brown, 2021).</div></div>
-<div class="tile r"><div class="v">74,237</div><div class="t">Reported deaths in Gaza as of 4 October 2026, with 175,206 injured (Gaza Ministry of Health).</div></div>
-</div>
-
-<div class="fig">
-<div class="ft">Reported direct deaths, by war</div>
-<svg viewBox="0 0 640 190" role="img" aria-label="Bar chart of reported direct deaths by war">
-<text x="0" y="22" font-size="13" fill="#13263a">Iraq</text>
-<rect x="110" y="8" width="460" height="22" fill="#b42318"/><text x="578" y="24" font-size="12" font-weight="700" fill="#b42318">275–306K</text>
-<text x="0" y="62" font-size="13" fill="#13263a">Afghanistan</text>
-<rect x="110" y="48" width="295" height="22" fill="#9aa7b4"/><text x="413" y="64" font-size="12" font-weight="700" fill="#13263a">176,206</text>
-<text x="0" y="102" font-size="13" fill="#13263a">Gaza</text>
-<rect x="110" y="88" width="124" height="22" fill="#9aa7b4"/><text x="242" y="104" font-size="12" font-weight="700" fill="#13263a">74,237</text>
-<text x="0" y="142" font-size="13" fill="#13263a">Pakistan</text>
-<rect x="110" y="128" width="111" height="22" fill="#9aa7b4"/><text x="229" y="144" font-size="12" font-weight="700" fill="#13263a">66,650</text>
-<text x="0" y="180" font-size="11" fill="#5b6b7c">Bars drawn to the lowest value. Periods and methods differ.</text>
-</svg>
-<div class="cap">Sources: Brown University Costs of War (Iraq, Afghanistan, Pakistan, 2021 report); Gaza Ministry of Health via Anadolu, 7 October 2026. Not a like-for-like comparison. Do not read it as a ranking.</div>
-</div>
-
-<h3>Gaza: the most recent</h3>
-<p>Gaza's Health Ministry reported 74,237 deaths on 4 October 2026. That is about 3.4% of the pre-war population, roughly one in 30.</p>
-<p>UNICEF reported that by 31 March 2026 more than 73,300 Palestinians had been reported killed, including at least <b>21,500 children</b>.</p>
-<p>A ceasefire was announced on 10 October 2025. It did not end the killing. OCHA reports 1,334 people killed after the ceasefire as of early September 2026. UNICEF says at least 300 children were killed in the first 300 days of the ceasefire, about one a day.</p>
-<p>The UN estimates about 1.7 million people, roughly 80% of the population, remain displaced. About 76.6% of housing units are destroyed or damaged.</p>
-
-<div class="box b-watch"><span class="l">What these numbers do not say</span>
+<p>This paper asks whether a similar approach can help us understand economic and social systems. Five questions guide it:</p>
 <ul>
-<li><b>They do not prove arms makers started these wars.</b> That is question 4 in section 06, and it is not answered here.</li>
-<li>Brown states it does not attribute responsibility to any single party, cause or period. Many parties fought.</li>
-<li>Brown's data is by war zone, not by victims' religion. Most of these countries are Muslim-majority. So I write "in Muslim-majority countries", not "Muslims were targeted".</li>
-<li>Gaza figures come from the Ministry of Health, which operates under the de facto authorities. The UN uses them as reported figures. That war began after the 7 October 2023 attacks on Israel.</li>
-</ul></div>
-
-<p>So what does this have to do with our thesis? One thing. The system in section 05 is not abstract. When it fails to restrain itself, the people who pay are civilians in war zones. They have no voice in the lobbying, the budget or the contracts.</p>
-<div class="q"><small>The justice question</small>Who bears the cost, and who makes the decision? Are they the same people?</div>
-
-<h2><span class="n">04</span>Organised hatred</h2>
-<p>Some will say this article filters. So here is the evidence, unsoftened. I separate it into three tiers: what is documented, what is alleged and what is still contested.</p>
-<div class="cards">
-<div class="card g"><span class="tag">Documented</span><h3>Organised anti-Muslim hatred</h3>CAIR recorded <b>8,683</b> anti-Muslim and anti-Arab discrimination complaints in the US in 2025, the highest since 1996. Of these, 555 were direct hate incidents and 33 targeted Islamic institutions. Incidents against mosques in May–July 2026 were 183% higher than the same period in 2025. CAIR is an advocacy group and its figures are complaints, not court-verified cases.</div>
-<div class="card g"><span class="tag">Documented</span><h3>The legislative machine</h3>Between 2010 and 2017, 201 anti-Sharia bills were introduced in 43 US states (SPLC, Haas Institute). CAIR says 2025 bills used terminology developed by anti-Muslim extremists in the mid-2000s.</div>
-<div class="card g"><span class="tag">Documented</span><h3>Violence and symbols</h3>The Christchurch attacker (2019) and Breivik (2011, 77 dead) wrote manifestos that referenced the Crusades. They were lone criminals, not state policy. In 2001 Bush called the war on terror a "crusade", and the White House walked the word back two days later.</div>
-<div class="card a"><span class="tag">Alleged</span><h3>Genocide in Gaza</h3>The UN's independent Commission of Inquiry (chair Navi Pillay) found on 16 September 2025 that genocide is occurring in Gaza and that Israel is responsible. It is not a legal body and does not speak for the UN. Israel rejected it as "distorted and false".</div>
-<div class="card a"><span class="tag">Alleged</span><h3>War crimes</h3>The ICC issued arrest warrants for Netanyahu and Gallant for war crimes and crimes against humanity, including starvation as a method of war. That is not a genocide charge.</div>
-<div class="card r"><span class="tag">Contested</span><h3>Intent</h3>Genocide in law requires intent to destroy a group. At the ICJ, South Africa v Israel is undecided. The Court ordered binding emergency measures but made no final ruling. Israel objects to jurisdiction. South Africa's reply is not due until 22 November 2027.</div>
-</div>
-<div class="box b-trap"><span class="l">Four different things</span>
-The evidence above points to four different things: organised hatred, lone extremist criminals, wars that swallow civilians, and an allegation of intent in Gaza that no court has yet decided.</div>
-<h2><span class="n">05</span>How the system runs</h2>
-<p>There is no secret command centre. There is a loop of incentives. Each step makes sense to the people in it. The result: the system keeps growing.</p>
-<div class="fig">
-<div class="ft">The reinforcing loop: a hypothesis to test</div>
-<div class="flow">
-<div class="step"><b>1. Real or perceived security threats</b><span>War, rivalry, terrorism, territorial disputes</span></div><div class="arrow">↓</div>
-<div class="step"><b>2. Political mobilisation and military budgets</b><span>Public legitimacy, legislative appropriations</span></div><div class="arrow">↓</div>
-<div class="step"><b>3. Procurement, contracts and institutional expansion</b><span>Industry revenue, organisational resources, employment</span></div><div class="arrow">↓</div>
-<div class="step"><b>4. Lobbying, expertise and political influence</b><span>Revolving doors, advisory networks, research funding</span></div><div class="arrow">↓</div>
-<div class="step last"><b>5. Threat perceptions and spending priorities may be reinforced</b><span>Back to step 1. To be tested empirically, not assumed in every case.</span></div>
-</div></div>
-<div class="box b-data"><span class="l">Who actually owns it?</span>
-The top five contractors are public companies: Lockheed Martin ($313B), RTX ($145B), General Dynamics ($116B), Boeing ($115B) and Northrop Grumman ($81B), 2020–24. Their owners can be named.<br><br>
-<b>Lockheed Martin as an example</b> (SEC 13F filings, March 2026): State Street about 14.1%, BlackRock 7.7%, Vanguard about 6.1% in one entity and more in others. Institutions hold roughly 75% of the shares. Across the five firms the top holders also include big funds such as Vanguard, BlackRock and State Street, but I have not checked the other four one by one.<br><br>
-One thing to be honest about: these funds manage money for many investors, including pension funds and ordinary savers. They are owners on paper, not a group acting in concert.<br><br>
-<b>Two true numbers at once.</b> Shareholders and management receive profit and pay in the annual report. In war zones, civilians bear the cost (section 03). Linking the two as cause and effect is question 4 in section 06, and it is not answered. But the gap between who receives and who pays is reason enough to question it.</div>
-<p>This model is more defensible than a conspiracy theory. Its strength: you can test it.</p>
-<div class="q"><small>For researchers</small>Does industry lobbying precede policy changes?</div>
-<div class="q"><small>For researchers</small>Do procurement commitments survive the disappearance of the threats that justified them?</div>
-<div class="q"><small>For researchers</small>Does the availability of diplomatic alternatives change spending decisions?</div>
-
-<h3>How strong? And where are its limits</h3>
-<p>Readers should be convinced the system is strong and deeply rooted. But the evidence also shows it can be limited. Both need to be shown.</p>
-<div class="cards">
-<div class="card r"><span class="tag">Where it is strong</span><h3>Hard to cut, hard to kill</h3>Influence is not only in Washington. Two defence secretaries, Harold Brown and Dick Cheney, tried to cancel the V-22 Osprey, and Congress reversed them. When Rumsfeld moved to kill Crusader in 2002, the Army's legislative office was reported to have drafted "talking points" to lobby Congress, and some lawmakers whose states benefited vowed to fight.</div>
-<div class="card g"><span class="tag">Where it is limited</span><h3>After the Cold War</h3>Per Mercatus, US defence spending fell from 5.2% of GDP in 1990 to 3.0% in 2000, with bipartisan consensus. CFR counts 3.7% in 2000 on a different definition. The direction is the same: it fell sharply when the threat was seen to have gone.</div>
-<div class="card g"><span class="tag">Where it is limited</span><h3>Programmes killed</h3>Rumsfeld cancelled Crusader (an $11 billion programme) in 2002. Comanche was cancelled in 2004 after 22 years and about $6.9 billion, without a single helicopter delivered. Gates killed FCS in 2009 after roughly $19–21 billion.</div>
-</div>
-<div class="box b-less"><span class="l">What it means</span>
-This power is <b>entrenched, not absolute</b>. It is strong against small cuts and one-off cancellations. It loses at large scale when the threat is seen to have passed. But spending rose again after 2001. So the real lever is <b>threat perception</b>. Whoever shapes that perception holds the key. That is thesis 2, and it is why manufactured legitimacy matters so much.<br><br>
-For weaker nations this is not easy news, but it is not hopeless. You cannot topple this system by confrontation. You can reduce your dependence on it.</div>
-<h2><span class="n">06</span>The hardest test for this thesis</h2>
-<p>I must face the strongest objection first.</p>
-<p>Wars often come from real security dilemmas, territorial ambition, ideological conflict and miscalculation. Not only money.</p>
-<p>The war in Ukraine shows the same thing. Explanations are contested: some stress Russia's invasion and the threat it poses to its neighbours, others stress NATO's expansion toward Russia's border and verbal assurances said to have been broken. Whatever your view, arms makers benefit from rising demand. That does not show they caused the war.</p>
-<p>Arms production can also be legitimate deterrence. Cutting spending without addressing the threat may raise the risk of war, not lower it.</p>
-<div class="box b-trap"><span class="l">The trap: mixing up four questions</span>
-My original paper sometimes treated these as interchangeable. They are not.</div>
-<div class="cards">
-<div class="card"><span class="tag">Question 1</span><h3>Who benefits financially?</h3>Measurable: contracts, margins, ownership, market concentration.</div>
-<div class="card"><span class="tag">Question 2</span><h3>Who influences policy?</h3>Needs evidence of lobbying, donations, advisory roles and actual decisions.</div>
-<div class="card"><span class="tag">Question 3</span><h3>Who shapes public legitimacy?</h3>Needs media, discourse, funding and public-opinion analysis.</div>
-<div class="card r"><span class="tag">Question 4</span><h3>Who causes or prolongs conflict?</h3>The hardest causal question. Financial incentives alone cannot answer it.</div>
-</div>
-
-<h2><span class="n">07</span>Where power goes in 2036, 2046 and 2076</h2>
-<p>These are conditional scenarios. Not forecasts with statistical probabilities.</p>
-<div class="fig">
-<div class="ft">Three horizons, one shift: from weapons to infrastructure</div>
-<svg viewBox="0 0 640 190" role="img" aria-label="Illustration of three horizons">
-<line x1="40" y1="120" x2="610" y2="120" stroke="#13263a" stroke-width="3"/>
-<circle cx="110" cy="120" r="11" fill="#0b5cad"/><circle cx="320" cy="120" r="11" fill="#0b5cad"/><circle cx="530" cy="120" r="11" fill="#0b5cad"/>
-<text x="110" y="100" text-anchor="middle" font-size="20" font-weight="800" fill="#13263a">2036</text>
-<text x="320" y="100" text-anchor="middle" font-size="20" font-weight="800" fill="#13263a">2046</text>
-<text x="530" y="100" text-anchor="middle" font-size="20" font-weight="800" fill="#13263a">2076</text>
-<text x="110" y="148" text-anchor="middle" font-size="13" fill="#0b5cad" font-weight="700">Military technology</text>
-<text x="110" y="166" text-anchor="middle" font-size="12" fill="#5b6b7c">AI, drones, cyber, satellites</text>
-<text x="320" y="148" text-anchor="middle" font-size="13" fill="#0b5cad" font-weight="700">Competing power systems</text>
-<text x="320" y="166" text-anchor="middle" font-size="12" fill="#5b6b7c">Tech and financial blocs</text>
-<text x="530" y="148" text-anchor="middle" font-size="13" fill="#0b5cad" font-weight="700">Sovereign or dependent</text>
-<text x="530" y="166" text-anchor="middle" font-size="12" fill="#5b6b7c">Who controls infrastructure</text>
-<text x="40" y="20" font-size="11" fill="#5b6b7c">Conceptual illustration, not data.</text>
-</svg></div>
-
-<h3>2036: the technological militarisation decade</h3>
-<p>The military industry evolves from weapons and platforms into a broader military-technology ecosystem. AI-assisted intelligence, autonomous drones, cybersecurity, satellite networks and battlefield data infrastructure become sources of strategic leverage.</p>
-<p>Quincy already lists Palantir, Anduril and SpaceX as emerging defence-industry players alongside traditional contractors.</p>
-<div class="box b-less"><span class="l">Implication</span>Military power depends more on software, data, manufacturing capacity and access to advanced components. Not on the number of aircraft or warships.</div>
-<p><b>Monitor:</b> the share of procurement going to military-technology firms, AI governance, autonomous-weapons deployment, and smaller states' dependence on foreign digital infrastructure.</p>
-
-<h3>2046: the era of competing power systems</h3>
-<p>Global influence becomes more distributed. But smaller states may face more pressure to align with competing security, financial and technology blocs.</p>
-<p>Multipolar does not mean peaceful. Rival powers can build competing defence industries, surveillance, sanctions tools and political narratives.</p>
-<div class="tiles">
-<div class="tile"><div class="v">86%</div><div class="t">Average share of the top three refining countries in key energy minerals, 2024 (IEA).</div></div>
-<div class="tile"><div class="v">Modest</div><div class="t">Diversification projected by 2035. Only modest.</div></div>
-<div class="tile"><div class="v">Risk</div><div class="t">States without technological autonomy may swap one dominant power for another.</div></div>
-</div>
-<p><b>Monitor:</b> semiconductor access, critical-mineral processing, reserve-currency diversification, regional trade settlement, and ASEAN's ability to keep independent diplomatic choices.</p>
-
-<h3>2076: sovereignty or permanent dependency</h3>
-<p>The decisive divide may no longer be West versus non-West. It may be between societies that control their essential technological and economic infrastructure and those that stay structurally dependent.</p>
-<p>Advanced AI, automated production, energy systems and information networks could democratise productive capability. Or concentrate unprecedented power in a few governments and corporations.</p>
-<p><b>Monitor:</b> concentration of computing capacity, domestic innovation, institutional accountability, technology access, and states' ability to decide for themselves.</p>
-
-<h2><span class="n">08</span>Three competing futures</h2>
-<p>The thesis cannot assume perpetual conflict is inevitable. We need competing scenarios to test the evidence against.</p>
-<div class="cards">
-<div class="card r"><span class="tag">Scenario A</span><h3>Entrenched militarisation</h3>Threat perceptions, defence spending and commercial influence reinforce each other. New military technology expands the system rather than replacing it.</div>
-<div class="card a"><span class="tag">Scenario B</span><h3>Competitive multipolarity</h3>Several power centres compete with their own defence, financial and technology systems.</div>
-<div class="card g"><span class="tag">Scenario C</span><h3>Constrained militarisation</h3>Spending and influence are limited by institutions, treaties and accountability.</div>
-</div>
-<div class="box b-watch"><span class="l">Early indicators for Scenario A</span>Spending keeps rising despite diplomatic openings. Procurement concentration increases. Oversight is weak.</div>
-<p>These scenarios are not mutually exclusive. Different regions can see different outcomes at the same time.</p>
-
-<h2><span class="n">09</span>What this means for Malaysia and ASEAN</h2>
-<p>Malaysia cannot match the major powers in aggregate military power. That is a fact.</p>
-<p>But strategic autonomy does not mean matching weapon for weapon. It means <b>reducing the number of critical vulnerabilities</b> that outsiders can exploit.</p>
-<div class="cards">
-<div class="card"><span class="tag">Area 1</span>Semiconductors and advanced manufacturing</div>
-<div class="card"><span class="tag">Area 2</span>Food and energy security</div>
-<div class="card"><span class="tag">Area 3</span>Digital sovereignty</div>
-<div class="card"><span class="tag">Area 4</span>Regional financial resilience</div>
-<div class="card"><span class="tag">Area 5</span>Maritime security</div>
-<div class="card"><span class="tag">Area 6</span>Institutional quality</div>
-</div>
-<div class="q"><small>Core question for ASEAN</small>Can ASEAN build real collective bargaining power without becoming a military bloc or sacrificing each member's autonomy?</div>
-<p>Japan, China, South Korea and Singapore show that industrial capability and institutional development can transform a nation's bargaining power. But their geography, external security guarantees, political systems and histories differ. Their successes cannot simply be copied.</p>
-<div class="box b-trap"><span class="l">The sovereignty paradox</span>The power we build to be free can become a new problem: elite capture, authoritarianism and a domestic military-industrial interest. Design the institutions first. Build the capability second.</div>
-
-<h3>Power without weapons: neutrality and a voice for peace</h3>
-<p>Malaysia has no military leverage. Accept that. The useful question is: what do we have?</p>
-<div class="cards">
-<div class="card g"><span class="tag">Asset 1</span><h3>Credible neutrality</h3>We are not part of any great power's military bloc. The ZOPFAN declaration was made in Kuala Lumpur in 1971, aiming to keep Southeast Asia free of outside interference. That tradition is still there.</div>
-<div class="card g"><span class="tag">Asset 2</span><h3>Able to talk to every side</h3>A country that threatens no one is easier to trust as a go-between and host of dialogue. That is an asset no defence budget can buy.</div>
-<div class="card g"><span class="tag">Asset 3</span><h3>A consistent moral voice</h3>The numbers in section 03 are real people. A small state that names the human cost clearly, wherever it occurs, carries authority that does not depend on the size of its army.</div>
-</div>
-<div class="box b-watch"><span class="l">Conditions and costs</span>
-<ul>
-<li><b>Neutral does not mean silent.</b> It is active: speaking, hosting, taking issues to international forums.</li>
-<li><b>A voice for peace is trusted only if the standard is the same</b> for every victim and every side. Double standards destroy credibility fast.</li>
-<li><b>Neutrality has a price.</b> Pressure to pick a bloc is coming (section 07). That is why it must be backed by an economy that is hard to squeeze: semiconductors, minerals, digital and finance.</li>
-</ul></div>
-<div class="box b-call"><span class="l">What Malaysia can do</span>
-<ol style="margin:0;padding-left:20px">
-<li>Defend active neutrality inside ASEAN, not passive neutrality.</li>
-<li>Take peace and international law to every forum we sit in.</li>
-<li>State the human cost with numbers and sources, so the voice is hard to dispute.</li>
-<li>Cut critical dependencies, so neutrality is a choice and not just a hope.</li>
-</ol></div>
-<h2><span class="n">10</span>Research agenda and tests</h2>
-<ol class="plan">
-<li><b>Deep case studies.</b> The post-9/11 wars, the Iraq invasion, Libya, Ukraine, Gaza and US–China competition. Each: security justification, beneficiaries, institutional influence, humanitarian consequences and competing explanations.<span class="ms-m">Measure: each case answers the four questions in section 06 separately.</span></li>
-<li><b>One consistent quantitative definition.</b> Contract awards, not profits. Estimates, not facts.<span class="ms-m">Measure: every figure has a source, a year and a definition.</span></li>
-<li><b>Counterexamples.</b> Find cases where military spending fell after the threat disappeared.<span class="ms-m">Measure: at least three counterexamples, written honestly.</span></li>
-<li><b>A transparent forecasting method.</b> Every projection has clear assumptions and conditions.<span class="ms-m">Measure: readers can check it and challenge it.</span></li>
-</ol>
-
-<div class="box b-call"><span class="l">Call to action</span>
-<b>For Malaysian and ASEAN policymakers: three steps, starting now.</b>
-<ul>
-<li><b>Speak.</b> Be a consistent, neutral voice for peace, with the same standard for every victim, whoever the perpetrator. Malaysia has no military leverage, but a consistent voice is the asset we do have.</li>
-<li><b>Show.</b> Bring transparency to ASEAN: publish defence procurement contracts and arms spending in the open. This system thrives in opacity, and daylight is the first remedy.</li>
-<li><b>Shield.</b> Map and reduce critical dependencies: semiconductors, minerals, digital and financial. You cannot manage what you have not measured.</li>
-</ul></div>
-
-<div class="box b-take"><span class="l">My take</span>
-The tragedy of the permanent war economy is not merely that conflict generates profit. It is that the institutions tasked with protecting societies can become financially, politically and organisationally dependent on the continued perception of danger. And the people who pay were never at the decision table.<br><br>
-Yet this dependence is neither universal nor immutable. Threats can be genuine. Preparedness can be necessary. Governments keep the capacity to change their priorities.<br><br>
-For weaker nations the challenge is severe. They cannot safely dismantle the international order through confrontation. Nor can they assume time will make them stronger. Their most credible strategy is the patient accumulation of economic, technological, institutional and diplomatic capacity.<br><br>For Malaysia, the answer is not weapons. It is active neutrality and a consistent voice for peace, backed by an economy that is hard to squeeze.<br><br>
-The next ten years may determine who controls the technologies of security. The following twenty may determine which nations keep meaningful strategic choices. Over fifty years, the deeper question: will technology spread power more widely, or consolidate it in increasingly unaccountable institutions?<br><br>
-<b>The objective is not to build a rival empire. It is to create a world in which sovereignty does not depend on submission to one.</b></div>
-
-<div class="over"><b>Over to you:</b> if the powerful can use today's wealth and technology to secure tomorrow's dominance, how can weaker nations ever catch up? And what happens if they cannot?</div>
-</main>
-
-<!-- ============================ SHARED FOOTER ============================ -->
-<div class="cta"><a class="btn cm" href="#" target="_blank" rel="noopener"><span class="ms">Komen di LinkedIn</span><span class="en">Comment on LinkedIn</span></a></div>
-
-<details><summary><b><span class="ms">Sumber</span><span class="en">Sources</span></b></summary>
-<ul>
-<li>SIPRI, Trends in World Military Expenditure, 2025: <a href="https://www.sipri.org/publications/2026/sipri-fact-sheets/trends-world-military-expenditure-2025">sipri.org</a></li>
-<li>Quincy Institute, Profits of War, 2020–2024: <a href="https://quincyinst.org/research/profits-of-war-top-beneficiaries-of-pentagon-spending-2020-2024/">quincyinst.org</a></li>
-<li>Congressional Research Service, FY2025 Pentagon Audit Results: <a href="https://www.everycrsreport.com/reports/IF12627.html">everycrsreport.com</a></li>
-<li>IEA, Global Critical Minerals Outlook 2025: <a href="https://www.iea.org/reports/global-critical-minerals-outlook-2025/executive-summary">iea.org</a></li>
-<li>SIPRI, International Arms Transfers, 2021–2025: <a href="https://www.sipri.org/publications/2026/sipri-fact-sheets/trends-international-arms-transfers-2025">sipri.org</a></li>
-<li>Brown University, Costs of War, findings: <a href="https://costsofwar.watson.brown.edu/findings">costsofwar.watson.brown.edu/findings</a></li>
-<li>Brown University, How Death Outlives War (indirect deaths): <a href="https://watson.brown.edu/files/watson/imce/news/ResearchBriefs/2023/Indirect%20Deaths%20Executive%20Summary-2.pdf">watson.brown.edu</a></li>
-<li>Investment Monitor, summary of Costs of War 2021 report (Iraq, Afghanistan, Pakistan): <a href="https://www.investmentmonitor.ai/features/weekly-data-the-true-cost-of-the-war-on-terror/">investmentmonitor.ai</a></li>
-<li>Anadolu Agency, 3 years of Gaza: the human toll, 7 October 2026 (Gaza Ministry of Health figures): <a href="https://www.aa.com.tr/en/middle-east/3-years-of-gaza-genocide-the-human-toll-of-israel-s-assault/4081052">aa.com.tr</a></li>
-<li>UNICEF, State of Palestine Humanitarian Situation Report No. 47, 31 March 2026: <a href="https://www.unicef.org/media/180611/file/State-of-Palestine-Humanitarian-Situation-Report-No.47,31-March-2026.pdf">unicef.org</a></li>
-<li>UN OCHA, Humanitarian Situation Report, 4 September 2026: <a href="https://www.ochaopt.org/content/humanitarian-situation-report-4-september-2026">ochaopt.org</a></li>
-<li>The Star, UNICEF on children killed in 300 days since the ceasefire, 7 August 2026: <a href="https://www.thestar.com.my/news/world/2026/08/07/gazans-face-intense-israeli-violence-child-death-toll-mounts-un">thestar.com.my</a></li>
-<li>Express Tribune, UN on displacement in Gaza: <a href="https://tribune.com.pk/story/2614754/un-warns-of-dire-conditions-in-gaza-displacement-sites-as-17m-palestinians-face-shortages">tribune.com.pk</a></li>
-<li>UN OCHA, Gaza Reported Impact Snapshot, 8 July 2026 (housing damage): <a href="https://www.ochaopt.org/sites/default/files/Gaza_Reported_Impact_Snapshot_8_July_2026.pdf">ochaopt.org</a></li>
-<li>Mercatus, US Federal Budget Restraint in the 1990s: <a href="https://www.mercatus.org/publications/government-spending/us-federal-budget-restraint-1990s-success-story">mercatus.org</a>; CFR, Trends in US Military Spending: <a href="https://www.cfr.org/reports/trends-us-military-spending">cfr.org</a></li>
-<li>Cancelled programmes: <a href="https://www.foxnews.com/story/pentagon-kills-crusader-program.amp">Fox News on Crusader</a>; <a href="https://warontherocks.com/top-10-failed-defense-programs-of-the-rma-era/">War on the Rocks</a>; <a href="https://www.pogo.org/analysis/watching-defense-departments-waste-line">POGO</a>; <a href="https://d-n-i.net/fcs/comments/c448.htm">V-22 reversal, Defense and the National Interest</a></li>
-<li>Hartung and Semler, Profits of War (Costs of War / Quincy): <a href="https://costsofwar.watson.brown.edu/paper/profits-war-top-beneficiaries-pentagon-spending-2020-2024">costsofwar.watson.brown.edu</a></li>
-<li>Lockheed Martin institutional holders, SEC 13F data: <a href="https://vcpscanner.com/stock/lmt/institutional-holders">vcpscanner.com</a>; ownership breakdown: <a href="https://simplywall.st/stocks/ch/capital-goods/vtx-lmt/lockheed-martin-shares/ownership">simplywall.st</a></li>
-<li>Democracy Challenged, The Economics of War (top investors across the big five include Vanguard, BlackRock, State Street): <a href="https://democracychallenged.com/2025/11/07/the-economics-of-war-how-the-global-arms-trade-turns-conflict-into-profit/">democracychallenged.com</a></li>
-
-<li>CAIR 2025 civil rights report via Al Jazeera, 10 March 2026: <a href="https://www.aljazeera.com/news/2026/3/10/us-civil-rights-group-documents-broad-attack-on-muslim-life-in-2025">aljazeera.com</a>; via Reuters: <a href="https://www.aol.com/articles/trump-crackdown-protests-immigration-led-040311118.html">aol.com</a>; breakdown: <a href="https://arabamericannews.com/?p=164975">arabamericannews.com</a></li>
-<li>CAIR on mosque incidents, May–July 2026: <a href="https://observerbd.com/news/585524">observerbd.com</a></li>
-<li>SPLC, Anti-Sharia law bills in the United States: <a href="https://www.splcenter.org/hatewatch/2018/02/05/anti-Sharia-law-bills-united-states">splcenter.org</a></li>
-<li>Dawn on Bush's "crusade" remark: <a href="https://www.dawn.com/news/398257">dawn.com</a>; America Magazine on the Christchurch manifesto: <a href="https://www.americamagazine.org/node/233416">americamagazine.org</a></li>
-<li>Al-Monitor, UN investigators say Israel committing genocide in Gaza, 16 September 2025: <a href="https://www.al-monitor.com/originals/2025/09/un-investigators-say-israel-committing-genocide-gaza">al-monitor.com</a>; Jurist: <a href="https://www.jurist.org/news/2025/09/un-panel-finds-israel-committed-genocide-in-gaza/">jurist.org</a></li>
-<li>ICJ case status: <a href="https://www.sanews.gov.za/south-africa/presidency-notes-latest-icj-order-south-africas-genocide-case-against-israel">South African Presidency via SAnews</a>; <a href="https://www.southernafricalitigationcentre.org/salc-in-the-news-sas-genocide-case-at-icj/">Southern Africa Litigation Centre</a></li>
+<li>Why do economies move between expansion and slowdown?</li>
+<li>Why does market volatility cluster?</li>
+<li>Why does Bitcoin repeatedly swing between extreme expansion and contraction?</li>
+<li>Why do individuals experience shifting motivation?</li>
+<li>Why do relationships move between closeness, tension and reconciliation?</li>
 </ul>
-<p><span class="ms">Nota: ini ialah asas kajian dan seni bina strategik, bukan monograf akademik yang lengkap. Bar "kontraktor lain" ialah pengiraan penulis. Carta kematian bukan perbandingan setara kerana tempoh dan kaedah berbeza.</span><span class="en">Note: this is a research foundation and strategic architecture, not a completed scholarly monograph. The "other contractors" bar is the author's calculation. The deaths chart is not like-for-like because periods and methods differ.</span></p>
-</details>
+<p>These phenomena are not mathematically equivalent. They can, however, all be studied through dynamic systems, residual fluctuations, conditional dependencies and transitions between states. The aim is not a universal equation. It is to test whether one scientific method can reveal useful predictive information.</p>
 
-<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b><br><span class="ms">Menulis tentang pembiayaan PMKS, automasi AI untuk PMKS, dasar dan strategi jangka panjang untuk Malaysia.</span><span class="en">Writes on MSME financing, AI automation for SMEs, policy and long-term strategy for Malaysia.</span></div></div>
+<h3>2. The Hidden Structure Hypothesis</h3>
+<p><b>HSH:</b> in some complex systems, observable fluctuations contain conditional statistical structure that stays informative after trends, known influences and conventional predictive relationships have been accounted for. Decompose an observed outcome as:</p>
+<span class="eq">Y<sub>t</sub> = T<sub>t</sub> + S<sub>t</sub> + R<sub>t</sub></span>
+<p>where Y is the outcome, T the underlying trend, S identifiable systematic variation and R the residual. The research asks whether features extracted from R improve forecasts of future outcomes. This does not mean residuals are deterministic or that every pattern is meaningful. The null hypothesis is that candidate features add nothing beyond a well-specified baseline.</p>
+<p>A second idea concerns system states. A system may behave differently in expansion, stress, crisis or recovery, so we study:</p>
+<span class="eq">P(Z<sub>t+h</sub> | I<sub>t</sub>)</span>
+<p>Here Z is a future system state and I is the information available at the forecast date. The question is whether state probabilities can be estimated more reliably than precise outcomes.</p>
 
-<div class="disc">
-<span class="ms">Pandangan dalam artikel ini ialah pandangan peribadi saya. Ia tidak mewakili majikan saya atau mana-mana organisasi yang pernah atau sedang saya sertai. Artikel ini tidak berkaitan dengan, tidak disokong oleh dan tidak ditulis bagi pihak mana-mana institusi yang disebut. Semua angka diambil daripada sumber awam yang disenaraikan, dan sebarang kesilapan adalah tanggungjawab saya sendiri. Artikel ini bukan nasihat kewangan, pelaburan atau undang-undang.<br><br>Kajian dan penulisan artikel ini dibantu oleh alat AI. Semua fakta telah disemak dengan sumber asal.</span>
-<span class="en">The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from publicly available sources listed above, and any errors are mine. Nothing here is financial, investment or legal advice.<br><br>Research and drafting were assisted by AI tools. All facts were checked against the sources listed.</span><br><br>© 2026 Azman Taufik
+<h3>3. Why Riemann matters, and where the analogy ends</h3>
+<p>For Re(s) &gt; 1, the Riemann zeta function is defined as:</p>
+<span class="eq">&zeta;(s) = &Sigma;<sub>n=1</sub><sup>&infin;</sup> n<sup>&minus;s</sup></span>
+<p>Euler's product formula, valid in the same region, ties it to the primes:</p>
+<span class="eq">&zeta;(s) = &prod;<sub>p</sub> (1 &minus; p<sup>&minus;s</sup>)<sup>&minus;1</sup></span>
+<p>Riemann's explicit formulas connect the zeros of the function with fluctuations in the distribution of primes. The Hypothesis states that every non-trivial zero has real part one-half.</p>
+<div class="box watch"><span class="lbl">Where the analogy ends</span>There is no established evidence that Bitcoin prices, GDP fluctuations or human emotions follow this mathematical structure. We borrow Riemann's <i>method</i> of studying fluctuations, not the hypothesis itself.</div>
+<p>The question we can test: <b>when conventional models explain the broad pattern, do the remaining deviations carry additional information?</b></p>
+
+<h3>4. Malaysia: structure beneath the cycle</h3>
+<p>Malaysia's growth has been shaped by global trade, manufacturing, commodities, domestic consumption, investment, monetary conditions and policy change. Major shocks include the Asian Financial Crisis, the Global Financial Crisis and COVID-19. Outcomes reflect both persistent structure and exceptional shocks.</p>
+<div class="box data"><span class="lbl">What the data says</span>According to the Department of Statistics Malaysia (DOSM), released 18 November 2026, GDP grew <b>5.5%</b> in the third quarter of 2026, down from <b>6.0%</b> in the second quarter. Growth over the first nine months was <b>5.6%</b>. DOSM's October advance estimate for Q3 had been 5.3%. These figures show continued expansion. They do not show whether a slowdown is near.</div>
+<h4>Hypotheses</h4>
+<div class="hyp"><b class="sans">MY-H1</b>Credit conditions, external demand and financial volatility carry incremental information about future GDP growth.</div>
+<div class="hyp"><b class="sans">MY-H2</b>Slowdown probabilities are more predictable than exact quarterly growth rates.</div>
+<div class="hyp"><b class="sans">MY-H3</b>The link between financial conditions and growth changes across economic regimes.</div>
+<div class="hyp"><b class="sans">MY-H4</b>Residual patterns in conventional forecasts hold measurable predictive information.</div>
+<p>These should be tested against official leading indicators and standard econometric models. A model counts as successful only if it improves <b>out-of-sample</b> accuracy, not if it merely explains the past better. If supported, the uses include credit-risk monitoring, SME financing, investment planning and early-warning systems, provided the gains hold up when conditions change.</p>
+
+<h3>5. Financial markets: risk, not direction</h3>
+<p>Prices reflect expectations, liquidity, economic news and investor behaviour. Future returns are hard to predict consistently, but volatility tends to persist. That separates two problems: the likely <i>direction</i> of prices, and the likely <i>size and distribution</i> of moves. HSH proposes that the second is sometimes more tractable.</p>
+<p>Candidate tools include autoregressive models, GARCH, regime-switching, change-point detection and nonlinear methods. Each must beat sensible benchmarks after allowing for model complexity, transaction costs and changing markets. Statistical predictability does not automatically mean profitable trading.</p>
+
+<h3>6. Bitcoin: a high-frequency laboratory</h3>
+<p>Bitcoin is the fastest-moving test case. Introduced in 2009, it grew from an experimental peer-to-peer payment system into a globally traded asset. Unlike equities, it trades around the clock. Its history includes rapid gains, deep drawdowns, liquidity disruptions, regulatory change and growing institutional participation.</p>
+<h4>Historical evolution</h4>
+<p>Bitcoin had no continuous USD exchange-price series when the network launched in January 2009. Observable market prices appear during 2010. Major expansion and contraction episodes followed around 2013, 2017&ndash;2018 and 2020&ndash;2022. Bitcoin set a record near <b>$126,000 in October 2025</b>. By mid-November 2026 it was trading in the low $60,000s, close to half that peak.</p>
+<p>Repeated large moves do not by themselves prove a mathematical cycle. Any apparent regularity must survive controls for liquidity, macro conditions, market structure and investor behaviour.</p>
+
+<div class="fig"><div class="t">Bitcoin's record high versus its November 2026 level (approximate)</div>
+<svg viewBox="0 0 560 120" role="img" aria-label="Bar chart: Bitcoin about 126,000 dollars at October 2025 peak, about 62,000 dollars in mid-November 2026">
+<text x="0" y="28" font-family="Inter,sans-serif" font-size="12" fill="#13263a">Oct 2025 peak</text>
+<rect x="110" y="14" width="400" height="22" fill="#9aa7b4"/><text x="502" y="30" text-anchor="end" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#fff">~$126,000</text>
+<text x="0" y="78" font-family="Inter,sans-serif" font-size="12" fill="#13263a">Mid-Nov 2026</text>
+<rect x="110" y="64" width="197" height="22" fill="#0b5cad"/><text x="299" y="80" text-anchor="end" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#fff">~$62,000</text>
+</svg>
+<div class="src">Sources: Barchart (record high, 6 Oct 2025); Crypto Briefing (mid-Nov 2026 level). Figures rounded.</div></div>
+
+<h4>Five Bitcoin hypotheses</h4>
+<div class="hyp"><b class="sans">BTC-H1 &middot; Residual predictability</b>Returns contain measurable dependencies beyond conventional return models. Test with autocorrelation, nonlinear-dependence measures and out-of-sample forecasts.</div>
+<div class="hyp"><b class="sans">BTC-H2 &middot; Volatility structure</b>Future volatility is more predictable than future direction. Compare realised-volatility forecasts with historical-volatility and GARCH benchmarks.</div>
+<div class="hyp"><b class="sans">BTC-H3 &middot; Regime transitions</b>Shifts between low-volatility, high-volatility and drawdown regimes can be anticipated from past information. Regimes must be defined without looking at future data.</div>
+<div class="hyp"><b class="sans">BTC-H4 &middot; Halving and liquidity</b>Scheduled issuance halvings interact with liquidity and demand to influence later returns or volatility. With only four halvings so far (2012, 2016, 2020, 2024), causal claims are very limited.</div>
+<div class="hyp"><b class="sans">BTC-H5 &middot; Structural evolution</b>Bitcoin's statistical behaviour changes as the market matures. Test with structural-break tests, rolling estimates and comparisons across eras.</div>
+
+<h4>The mathematics</h4>
+<p>Let P<sub>t</sub> be the USD price. The daily log return is:</p>
+<span class="eq">r<sub>t</sub> = ln( P<sub>t</sub> / P<sub>t&minus;1</sub> )</span>
+<p>A baseline forecast is a constant mean plus noise, r<sub>t</sub> = &mu; + &epsilon;<sub>t</sub>. A richer model adds established predictors X and candidate hidden-structure features Z:</p>
+<span class="eq">r<sub>t+h</sub> = f( X<sub>t</sub>, Z<sub>t</sub> ) + &epsilon;<sub>t+h</sub></span>
+<p>The critical test is whether Z improves predictions on data the model has not seen. The same logic applies to realised volatility, drawdown probability and regime transitions.</p>
+
+<h4>The proposed experiment</h4>
+<p>Assemble a daily BTC/USD series from the earliest reliable 2010 observations to the study cutoff. Check for gaps, exchange differences, unusual conditions and inconsistent closing-time conventions. Forecast at 7, 30 and 90 days. Compare random-walk benchmarks, historical volatility, GARCH, regime-switching models and candidate nonlinear models. All model selection and estimation must run inside a rolling or expanding window, so that future information never leaks into earlier forecasts.</p>
+
+<div class="box ok"><span class="lbl">A defensible reading</span>Suppose direction stays hard to predict, but volatility and transition probabilities can be estimated usefully. That would support a narrower claim: <b>Bitcoin's risk environment may have persistent structure even when its price direction does not.</b> If complex models fail to beat simple benchmarks, that result should be reported too. The goal is understanding, not price targets.</div>
+
+<h3>7. Human behaviour</h3>
+<p>Behaviour is shaped by biology, psychology, social setting and environment, and it adapts as incentives change. A study could ask whether changes in sleep, stress, perceived progress and social reinforcement come before changes in motivation or persistence. Participants would give voluntary, consent-based observations. Simple behavioural baselines would be compared with models that include nonlinear dependencies and state transitions. Success would not mean decisions are predetermined. It would mean only that certain measured conditions give useful probabilistic information.</p>
+
+<h3>8. Relationships</h3>
+<p>Closeness, communication, outside stress and conflict resolution change over time. These variations may hold patterns, but relationships cannot be reduced to fixed equations. A useful hypothesis is that changes in perceived support, communication quality and external stress help explain moves between connection and tension.</p>
+<div class="box watch"><span class="lbl">Ethics first</span>Any study needs voluntary participation, mutual consent and careful protection of personal information. The purpose is mutual understanding and wellbeing, not predicting or controlling a partner. Forecast accuracy alone cannot measure relationship quality; outcomes must reflect the values and experience of the people involved.</div>
+
+<h3>9. One architecture, five domains</h3>
+<div class="flow"><div>Observation</div><div>Baseline model</div><div>Residual analysis</div><div>Structural features</div><div>Regime identification</div><div>Out-of-sample validation</div></div>
+<div class="flow-cap">The common method. Models, data and success measures stay domain-specific.</div>
+<ul>
+<li><b>Economy:</b> forecast errors and slowdown probabilities.</li>
+<li><b>Bitcoin:</b> returns, realised volatility and drawdown risk.</li>
+<li><b>Behaviour:</b> prospective prediction of measurable outcomes.</li>
+<li><b>Relationships:</b> mutually reported wellbeing and communication quality, not unilateral prediction.</li>
+</ul>
+<p>The framework is unified in method, not by any claim that the same mathematical laws apply everywhere.</p>
+
+<h3>10. Five scientific standards</h3>
+<ul>
+<li><b>Benchmark first.</b> Simple models often beat needlessly complex ones.</li>
+<li><b>Separate past from future.</b> Especially important for market cycles.</li>
+<li><b>Correct for multiple testing.</b> Searching hundreds of patterns will turn up false positives.</li>
+<li><b>Statistical gain is not practical value.</b> A small error reduction may not justify the cost.</li>
+<li><b>Report negative results.</b> Finding no useful structure is a legitimate finding.</li>
+</ul>
+<p>These safeguards separate scientific investigation from retrospective pattern matching.</p>
+
+<h3>11. Why it matters</h3>
+<p>If HSH gains empirical support, the uses extend beyond forecasting. For Malaysia: economic-risk monitoring and credit-cycle analysis. For markets: better measures of volatility and stress. For Bitcoin: clarity on whether apparent cycles reflect persistent mechanisms or unstable coincidence. For behaviour and relationships: better understanding of the conditions behind motivation and communication. The common benefit is a more precise view of uncertainty. Perfect prediction is not required; better calibration and better decisions are.</p>
+
+<h3>12. Conclusion: the structure of uncertainty</h3>
+<p>The Riemann Hypothesis remains one of mathematics' deepest open questions. Its wider value is to show that irregular observations can be tied to precise relationships. Malaysia's economy, financial markets, Bitcoin, human behaviour and relationships run on different mechanisms. Each still lets us examine the gap between trends, unexplained fluctuations and changes of state.</p>
+<p>For Bitcoin, that means studying volatility and regime transitions rather than assuming past cycles forecast future prices. For Malaysia, it means testing whether financial and economic conditions improve on established leading indicators. For people, it means studying adaptive patterns without assuming control.</p>
+<div class="pull">The next advance in predicting complex systems may come from understanding when and how uncertainty changes, not from trying to remove it.<small>Conclusion</small></div>
+<p>Validity depends on reproducible empirical evidence. This paper ends with a testable proposition, not a claim that chaos has been solved.</p>
+</div><!-- /cols -->
+
+<div class="foot">
+<div class="box watch" style="break-inside:avoid"><span class="lbl">Fact-check note</span>
+<ul>
+<li>Malaysia's Q3 2026 growth of 5.5%, Q2 growth of 6.0% and nine-month growth of 5.6% match DOSM's 18 November 2026 release as reported by Bernama, The Vibes and Business Today.</li>
+<li>Bitcoin's October 2025 record of about $126,000 and its mid-November 2026 level in the low $60,000s match market reporting. A specific closing price for 23 November 2026 was not independently confirmed, so none is quoted.</li>
+<li>A compiled public dataset reports daily Bitcoin coverage from July 2010. Its full series has not been audited here.</li>
+<li>No full Bitcoin backtest, Malaysian macroeconomic estimation, independent replication or behavioural study has been run for this article.</li>
+</ul></div>
+
+<div class="disc"><b>Research disclaimer.</b> This is an independent exploratory research paper for discussion and further empirical work. The Hidden Structure Hypothesis is a proposed framework, not an established scientific theory. The Riemann Hypothesis does not provide a proven model of economies, Bitcoin prices, stock markets or human behaviour. Established findings are distinguished from original hypotheses. The article does not claim demonstrated predictive superiority, and nothing here recommends buying, selling or holding any asset.</div>
+
+<details><summary>Selected references</summary>
+<ol>
+<li>Riemann, B. (1859). <i>&Uuml;ber die Anzahl der Primzahlen unter einer gegebenen Gr&ouml;sse.</i> Monatsberichte der Berliner Akademie.</li>
+<li>Montgomery, H. L. (1973). The pair correlation of zeros of the zeta function. <i>Proc. Sympos. Pure Math.</i> 24.</li>
+<li>Hamilton, J. D. (1989). A new approach to the economic analysis of nonstationary time series and the business cycle. <i>Econometrica.</i></li>
+<li>Engle, R. F. (1982). Autoregressive conditional heteroscedasticity with estimates of the variance of United Kingdom inflation. <i>Econometrica.</i></li>
+<li>Bollerslev, T. (1986). Generalized autoregressive conditional heteroskedasticity. <i>Journal of Econometrics.</i></li>
+<li>Diebold, F. X. and Mariano, R. S. (1995). Comparing predictive accuracy. <i>Journal of Business &amp; Economic Statistics.</i></li>
+<li>Nakamoto, S. (2008). <i>Bitcoin: A Peer-to-Peer Electronic Cash System.</i></li>
+<li>Department of Statistics Malaysia (2026). Gross Domestic Product, Third Quarter 2026, and Advance GDP Estimates, Q3 2026. dosm.gov.my</li>
+<li>Bank Negara Malaysia. Economic and Financial Statistics.</li>
+<li>CoinGecko. Bitcoin historical market data and API documentation.</li>
+<li>Coin Metrics. Community network and market data.</li>
+<li>OpenDOSM. Malaysian economic indicators dataset.</li>
+</ol></details>
+
+<details><summary>Sources used for the fact-check</summary>
+<ol>
+<li>DOSM, Advance GDP Estimates Q3 2026 (16 Oct 2026): dosm.gov.my</li>
+<li>The Vibes, "Nation's economy expands 5.6%, a first over nine months of 2026" (18 Nov 2026)</li>
+<li>Business Today Malaysia, "Malaysia's economy expands a solid 5.5% in third quarter 2026" (18 Nov 2026)</li>
+<li>Barchart, "Bitcoin: is the bullish party over?" (record high $126,184 on 6 Oct 2025)</li>
+<li>Crypto Briefing, "Bitcoin selloff tests resolve of committed investors" (Nov 2026)</li>
+</ol></details>
+
+<div class="disc">The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from publicly available sources listed above, and any errors are mine. Nothing here is financial, investment or legal advice.<br><br>Research and drafting were assisted by AI tools. All facts were checked against the sources listed.</div>
+
+<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b> writes on MSME financing, AI automation for small businesses and long-term policy for Malaysia.</div></div>
+<div class="endcta"><a class="cta" data-cta href="#">Comment on LinkedIn</a></div>
+</div>
+</article>
+
+<!-- ============================ BAHASA MALAYSIA ============================ -->
+<article class="bm-only" id="art-bm" lang="ms">
+<div class="kicker">Kajian &middot; Sistem kompleks &middot; Malaysia &middot; Bitcoin</div>
+<h1>Seni Bina Tersembunyi di Sebalik Kekacauan</h1>
+<p class="deck">Daripada nombor perdana Riemann kepada Bitcoin, ekonomi Malaysia, pasaran kewangan dan tingkah laku manusia: satu penyiasatan bebas tentang struktur tersembunyi, ketidakpastian dan had ramalan.</p>
+<div class="byline"><span class="who">Oleh <b>Azman Taufik</b> &middot; 23 November 2026</span><a class="cta" data-cta href="#">Komen di LinkedIn</a></div>
+
+<div class="stats">
+ <div class="stat"><b>5.5%</b><span>Pertumbuhan KDNK Malaysia, S3 2026 (DOSM)</span></div>
+ <div class="stat"><b>5.6%</b><span>Pertumbuhan KDNK Malaysia, Jan&ndash;Sep 2026</span></div>
+ <div class="stat"><b>~$126k</b><span>Paras tertinggi Bitcoin, Oktober 2025</span></div>
+ <div class="stat"><b>5</b><span>Bidang diuji untuk struktur tersembunyi</span></div>
 </div>
 
+<div class="cols">
+<div class="box key"><span class="lbl">Ringkasan pantas</span>
+<ul>
+<li>Hasil setiap peristiwa sukar diramal. <b>Bentuk ketidakpastian</b> di sekelilingnya mungkin tidak.</li>
+<li>Kami mencadangkan <b>Hipotesis Struktur Tersembunyi (HSH)</b> dan mengujinya pada lima bidang: ekonomi Malaysia, pasaran kewangan, Bitcoin, tingkah laku manusia dan hubungan antara manusia.</li>
+<li>Pertaruhan praktikalnya: ramal <b>risiko dan perubahan rejim</b>, bukan harga atau kadar pertumbuhan yang tepat.</li>
+<li>Ini <b>cadangan penyelidikan dengan bukti awal</b>. Tiada dakwaan keunggulan ramalan sehingga diuji di luar sampel.</li>
+</ul></div>
+
+<h3>1. Benarkah kekacauan itu rawak?</h3>
+<p class="lead">Beratus tahun lamanya ahli matematik mengkaji taburan nombor perdana. Nombor perdana muncul tanpa corak pada garis nombor, dan tiada peraturan ringkas yang berulang untuk mengenal pasti setiap satunya. Namun taburan keseluruhannya mengikut Teorem Nombor Perdana.</p>
+<p>Karya Bernhard Riemann pada tahun 1859 menemukan kaitan yang lebih dalam antara nombor perdana dengan sifar fungsi zeta. Hipotesis Riemann menyatakan bahawa semua sifar bukan remeh terletak pada satu garis menegak dalam satah kompleks. Jika benar, ia mengenakan had yang sangat ketat tentang sejauh mana nombor perdana boleh menyimpang daripada corak jangkaannya.</p>
+<p>Pengajarannya lebih luas daripada matematik: <b>ketidakteraturan pada pemerhatian individu tidak bermakna struktur tiada pada peringkat agregat.</b></p>
+
+<div class="pull">&ldquo;Ketidakpastian tentang hasil masa depan kadangkala lebih mudah diramal daripada hasil itu sendiri.&rdquo;<small>Tesis utama</small></div>
+
+<p>Kertas ini bertanya sama ada pendekatan serupa boleh membantu kita memahami sistem ekonomi dan sosial. Lima soalan menjadi panduan:</p>
+<ul>
+<li>Mengapa ekonomi berpindah antara pengembangan dan kelembapan?</li>
+<li>Mengapa kemeruapan pasaran berkelompok?</li>
+<li>Mengapa Bitcoin berulang kali mengalami lonjakan dan kejatuhan yang melampau?</li>
+<li>Mengapa motivasi seseorang berubah-ubah?</li>
+<li>Mengapa hubungan antara manusia silih berganti antara erat, tegang dan berbaik semula?</li>
+</ul>
+<p>Fenomena ini tidak setara dari segi matematik. Namun kesemuanya boleh dikaji melalui sistem dinamik, turun naik baki, kebergantungan bersyarat dan peralihan antara keadaan. Matlamatnya bukan satu persamaan sejagat. Ia untuk menguji sama ada satu kaedah saintifik boleh menyingkap maklumat ramalan yang berguna.</p>
+
+<h3>2. Hipotesis Struktur Tersembunyi</h3>
+<p><b>HSH:</b> dalam sesetengah sistem kompleks, turun naik yang dapat diperhatikan mengandungi struktur statistik bersyarat yang masih memberi maklumat selepas arah aliran, pengaruh sedia diketahui dan hubungan ramalan lazim diambil kira. Pecahkan sesuatu hasil seperti berikut:</p>
+<span class="eq">Y<sub>t</sub> = T<sub>t</sub> + S<sub>t</sub> + R<sub>t</sub></span>
+<p>Y ialah hasil yang diperhatikan, T arah aliran asas, S variasi sistematik yang dapat dikenal pasti dan R variasi baki. Kajian ini bertanya sama ada ciri yang diekstrak daripada R memperbaik ramalan hasil masa depan. Ini tidak bermakna baki bersifat deterministik atau setiap corak ada maknanya. Hipotesis nol ialah ciri yang dicadangkan tidak menambah apa-apa selepas model asas yang ditentukan dengan betul.</p>
+<p>Idea kedua berkaitan keadaan sistem. Sesuatu sistem boleh berfungsi berbeza ketika pengembangan, tekanan, krisis atau pemulihan, maka kita mengkaji:</p>
+<span class="eq">P(Z<sub>t+h</sub> | I<sub>t</sub>)</span>
+<p>Z ialah keadaan sistem pada masa depan dan I ialah maklumat yang ada pada tarikh ramalan. Soalannya: bolehkah kebarangkalian keadaan dianggar dengan lebih boleh dipercayai daripada hasil yang tepat?</p>
+
+<h3>3. Mengapa Riemann penting, dan di mana analoginya berhenti</h3>
+<p>Bagi Re(s) &gt; 1, fungsi zeta Riemann ditakrifkan sebagai:</p>
+<span class="eq">&zeta;(s) = &Sigma;<sub>n=1</sub><sup>&infin;</sup> n<sup>&minus;s</sup></span>
+<p>Rumus hasil darab Euler, yang sah dalam rantau yang sama, mengaitkannya dengan nombor perdana:</p>
+<span class="eq">&zeta;(s) = &prod;<sub>p</sub> (1 &minus; p<sup>&minus;s</sup>)<sup>&minus;1</sup></span>
+<p>Rumus tersurat Riemann menghubungkan sifar fungsi ini dengan turun naik dalam taburan nombor perdana. Hipotesis itu menyatakan setiap sifar bukan remeh mempunyai bahagian nyata satu perdua.</p>
+<div class="box watch"><span class="lbl">Di mana analogi ini berhenti</span>Tiada bukti mantap bahawa harga Bitcoin, turun naik KDNK atau emosi manusia mengikut struktur matematik ini. Kami meminjam <i>kaedah</i> Riemann dalam mengkaji turun naik, bukan hipotesisnya sendiri.</div>
+<p>Soalan yang boleh diuji: <b>apabila model lazim menerangkan corak umum, adakah sisihan yang tinggal membawa maklumat tambahan?</b></p>
+
+<h3>4. Malaysia: struktur di bawah kitaran</h3>
+<p>Pertumbuhan Malaysia dibentuk oleh perdagangan global, pembuatan, komoditi, penggunaan domestik, pelaburan, keadaan monetari dan perubahan dasar. Kejutan besar termasuk Krisis Kewangan Asia, Krisis Kewangan Global dan COVID-19. Hasil ekonomi mencerminkan struktur yang berterusan dan kejutan luar biasa.</p>
+<div class="box data"><span class="lbl">Apa kata angka</span>Menurut Jabatan Perangkaan Malaysia (DOSM) dalam keluaran 18 November 2026, KDNK tumbuh <b>5.5%</b> pada suku ketiga 2026, berbanding <b>6.0%</b> pada suku kedua. Pertumbuhan sembilan bulan pertama ialah <b>5.6%</b>. Anggaran awal DOSM pada Oktober meletakkan S3 pada 5.3%. Angka ini menunjukkan pengembangan berterusan. Ia tidak menunjukkan sama ada kelembapan sudah hampir.</div>
+<h4>Hipotesis</h4>
+<div class="hyp"><b class="sans">MY-H1</b>Keadaan kredit, permintaan luar dan kemeruapan kewangan membawa maklumat tambahan tentang pertumbuhan KDNK akan datang.</div>
+<div class="hyp"><b class="sans">MY-H2</b>Kebarangkalian kelembapan lebih mudah diramal daripada kadar pertumbuhan suku tahunan yang tepat.</div>
+<div class="hyp"><b class="sans">MY-H3</b>Hubungan antara keadaan kewangan dengan pertumbuhan berubah mengikut rejim ekonomi.</div>
+<div class="hyp"><b class="sans">MY-H4</b>Corak baki dalam ramalan ekonomi lazim mengandungi maklumat ramalan yang boleh diukur.</div>
+<p>Hipotesis ini perlu diuji berdasarkan penunjuk utama rasmi dan model ekonometrik piawai. Sesebuah model berjaya hanya jika ia memperbaik ketepatan <b>di luar sampel</b>, bukan sekadar menerangkan masa lalu dengan lebih baik. Jika disokong, kegunaannya termasuk pemantauan risiko kredit, pembiayaan PMKS, perancangan pelaburan dan sistem amaran awal, dengan syarat keuntungannya kekal apabila keadaan berubah.</p>
+
+<h3>5. Pasaran kewangan: ramal risiko, bukan arah</h3>
+<p>Harga mencerminkan jangkaan, kecairan, berita ekonomi dan tingkah laku pelabur. Pulangan masa depan sukar diramal dengan konsisten, tetapi kemeruapan cenderung berterusan. Ini memisahkan dua masalah: <i>arah</i> harga yang mungkin, dan <i>saiz serta taburan</i> pergerakan yang mungkin. HSH mencadangkan yang kedua kadangkala lebih mudah diurus.</p>
+<p>Alat calon termasuk model autoregresif, GARCH, pertukaran rejim, pengesanan titik perubahan dan kaedah tak linear. Setiap satu mesti mengalahkan penanda aras yang munasabah selepas mengambil kira kerumitan model, kos urus niaga dan perubahan pasaran. Kebolehramalan statistik tidak semestinya bermakna perdagangan yang menguntungkan.</p>
+
+<h3>6. Bitcoin: makmal berfrekuensi tinggi</h3>
+<p>Bitcoin ialah kes ujian yang paling pantas bergerak. Diperkenalkan pada 2009, ia berkembang daripada sistem pembayaran rakan-ke-rakan percubaan kepada aset yang didagangkan di seluruh dunia. Tidak seperti ekuiti, ia didagangkan sepanjang masa. Sejarahnya merangkumi kenaikan pesat, kejatuhan dalam, gangguan kecairan, perubahan peraturan dan penyertaan institusi yang semakin besar.</p>
+<h4>Evolusi sejarah</h4>
+<p>Bitcoin tidak mempunyai siri harga USD berterusan ketika rangkaiannya dilancarkan pada Januari 2009. Harga pasaran yang boleh diperhatikan muncul pada 2010. Episod pengembangan dan pengecutan besar menyusul sekitar 2013, 2017&ndash;2018 dan 2020&ndash;2022. Bitcoin mencatat rekod hampir <b>$126,000 pada Oktober 2025</b>. Menjelang pertengahan November 2026, ia didagangkan pada paras awal $60,000, hampir separuh daripada puncak itu.</p>
+<p>Pergerakan besar yang berulang tidak dengan sendirinya membuktikan kitaran matematik. Sebarang keteraturan yang kelihatan mesti bertahan selepas mengawal kecairan, keadaan makro, struktur pasaran dan tingkah laku pelabur.</p>
+
+<div class="fig"><div class="t">Rekod tertinggi Bitcoin berbanding paras November 2026 (anggaran)</div>
+<svg viewBox="0 0 560 120" role="img" aria-label="Carta bar: Bitcoin kira-kira 126,000 dolar pada puncak Oktober 2025, kira-kira 62,000 dolar pada pertengahan November 2026">
+<text x="0" y="28" font-family="Inter,sans-serif" font-size="12" fill="#13263a">Puncak Okt 2025</text>
+<rect x="110" y="14" width="400" height="22" fill="#9aa7b4"/><text x="502" y="30" text-anchor="end" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#fff">~$126,000</text>
+<text x="0" y="78" font-family="Inter,sans-serif" font-size="12" fill="#13263a">Pert. Nov 2026</text>
+<rect x="110" y="64" width="197" height="22" fill="#0b5cad"/><text x="299" y="80" text-anchor="end" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#fff">~$62,000</text>
+</svg>
+<div class="src">Sumber: Barchart (rekod tertinggi, 6 Okt 2025); Crypto Briefing (paras pertengahan Nov 2026). Angka dibundarkan.</div></div>
+
+<h4>Lima hipotesis Bitcoin</h4>
+<div class="hyp"><b class="sans">BTC-H1 &middot; Kebolehramalan baki</b>Pulangan mengandungi kebergantungan yang boleh diukur melangkaui model pulangan lazim. Uji dengan autokorelasi, ukuran kebergantungan tak linear dan ramalan di luar sampel.</div>
+<div class="hyp"><b class="sans">BTC-H2 &middot; Struktur kemeruapan</b>Kemeruapan masa depan lebih mudah diramal daripada arah pulangan. Bandingkan ramalan kemeruapan sebenar dengan penanda aras kemeruapan sejarah dan GARCH.</div>
+<div class="hyp"><b class="sans">BTC-H3 &middot; Peralihan rejim</b>Perpindahan antara rejim kemeruapan rendah, kemeruapan tinggi dan susut nilai boleh dijangka daripada maklumat lepas. Rejim mesti ditakrif tanpa merujuk data masa depan.</div>
+<div class="hyp"><b class="sans">BTC-H4 &middot; Pengurangan separuh dan kecairan</b>Pengurangan separuh (halving) penerbitan yang telah ditetapkan berinteraksi dengan kecairan dan permintaan untuk mempengaruhi pulangan atau kemeruapan kemudian. Dengan hanya empat halving setakat ini (2012, 2016, 2020, 2024), kesimpulan sebab-akibat sangat terhad.</div>
+<div class="hyp"><b class="sans">BTC-H5 &middot; Evolusi struktur</b>Sifat statistik Bitcoin berubah apabila pasaran matang. Uji dengan ujian pecahan struktur, anggaran bergulir dan perbandingan merentas era.</div>
+
+<h4>Perwakilan matematik</h4>
+<p>Biar P<sub>t</sub> ialah harga USD. Pulangan log harian ialah:</p>
+<span class="eq">r<sub>t</sub> = ln( P<sub>t</sub> / P<sub>t&minus;1</sub> )</span>
+<p>Ramalan asas ialah min tetap ditambah hingar, r<sub>t</sub> = &mu; + &epsilon;<sub>t</sub>. Model yang lebih kaya menambah peramal mantap X dan ciri struktur tersembunyi Z:</p>
+<span class="eq">r<sub>t+h</sub> = f( X<sub>t</sub>, Z<sub>t</sub> ) + &epsilon;<sub>t+h</sub></span>
+<p>Ujian penting ialah sama ada Z memperbaik ramalan pada data yang belum dilihat model. Logik yang sama terpakai kepada kemeruapan sebenar, kebarangkalian susut nilai dan peralihan rejim.</p>
+
+<h4>Eksperimen yang dicadangkan</h4>
+<p>Kumpulkan siri BTC/USD harian daripada pemerhatian 2010 yang paling boleh dipercayai hingga tarikh akhir kajian. Semak jurang data, perbezaan antara bursa, keadaan luar biasa dan konvensyen waktu penutupan yang tidak konsisten. Buat ramalan pada ufuk 7, 30 dan 90 hari. Bandingkan penanda aras jalan rawak, kemeruapan sejarah, GARCH, model pertukaran rejim dan model tak linear calon. Semua pemilihan model dan penganggaran mesti dibuat dalam tetingkap bergulir atau berkembang, supaya maklumat masa depan tidak bocor ke dalam ramalan terdahulu.</p>
+
+<div class="box ok"><span class="lbl">Tafsiran yang boleh dipertahankan</span>Andaikan arah masih sukar diramal, tetapi kemeruapan dan kebarangkalian peralihan dapat dianggar dengan berguna. Itu menyokong dakwaan yang lebih sempit: <b>persekitaran risiko Bitcoin mungkin mempunyai struktur yang berterusan walaupun arah harganya tidak.</b> Jika model kompleks gagal mengatasi penanda aras mudah, keputusan itu juga mesti dilaporkan. Tujuannya ialah kefahaman, bukan sasaran harga.</div>
+
+<h3>7. Tingkah laku manusia</h3>
+<p>Tingkah laku dibentuk oleh biologi, psikologi, suasana sosial dan persekitaran, dan ia menyesuaikan diri apabila insentif berubah. Satu kajian boleh bertanya sama ada perubahan tidur, tekanan, kemajuan yang dirasai dan sokongan sosial mendahului perubahan motivasi atau ketabahan. Peserta akan memberi pemerhatian secara sukarela dan dengan persetujuan. Garis dasar tingkah laku yang mudah akan dibandingkan dengan model yang merangkumi kebergantungan tak linear dan peralihan keadaan. Kejayaan tidak bermakna keputusan manusia telah ditentukan. Ia hanya bermakna syarat tertentu yang diukur memberi maklumat kebarangkalian yang berguna.</p>
+
+<h3>8. Hubungan antara manusia</h3>
+<p>Keakraban, komunikasi, tekanan luar dan penyelesaian konflik berubah mengikut masa. Variasi ini mungkin mengandungi corak, tetapi hubungan tidak boleh dikecilkan kepada persamaan tetap. Hipotesis yang berguna ialah perubahan dalam sokongan yang dirasai, mutu komunikasi dan tekanan luar membantu menerangkan peralihan antara keadaan erat dan tegang.</p>
+<div class="box watch"><span class="lbl">Etika dahulu</span>Sebarang kajian memerlukan penyertaan sukarela, persetujuan bersama dan perlindungan maklumat peribadi yang teliti. Tujuannya ialah saling memahami dan kesejahteraan, bukan meramal atau mengawal pasangan. Ketepatan ramalan sahaja tidak boleh mengukur mutu hubungan; hasilnya mesti mencerminkan nilai dan pengalaman orang yang terlibat.</div>
+
+<h3>9. Satu seni bina, lima bidang</h3>
+<div class="flow"><div>Pemerhatian</div><div>Model asas</div><div>Analisis baki</div><div>Ciri struktur</div><div>Pengenalpastian rejim</div><div>Pengesahan di luar sampel</div></div>
+<div class="flow-cap">Kaedah sepunya. Model, data dan ukuran kejayaan kekal khusus bagi setiap bidang.</div>
+<ul>
+<li><b>Ekonomi:</b> ralat ramalan dan kebarangkalian kelembapan.</li>
+<li><b>Bitcoin:</b> pulangan, kemeruapan sebenar dan risiko susut nilai.</li>
+<li><b>Tingkah laku:</b> ramalan prospektif terhadap hasil yang boleh diukur.</li>
+<li><b>Hubungan:</b> kesejahteraan dan mutu komunikasi yang dilaporkan bersama, bukan ramalan sebelah pihak.</li>
+</ul>
+<p>Rangka kerja ini bersatu pada kaedah, bukan kerana andaian bahawa hukum matematik yang sama terpakai di mana-mana.</p>
+
+<h3>10. Lima piawaian saintifik</h3>
+<ul>
+<li><b>Tetapkan penanda aras dahulu.</b> Model mudah sering mengalahkan model yang rumit tanpa perlu.</li>
+<li><b>Asingkan masa lalu daripada masa depan.</b> Amat penting bagi kitaran pasaran.</li>
+<li><b>Betulkan untuk ujian berganda.</b> Mencari ratusan corak pasti menghasilkan positif palsu.</li>
+<li><b>Peningkatan statistik bukan nilai praktikal.</b> Pengurangan ralat yang kecil mungkin tidak berbaloi dengan kosnya.</li>
+<li><b>Laporkan keputusan negatif.</b> Tidak menemui struktur berguna ialah dapatan yang sah.</li>
+</ul>
+<p>Langkah berjaga-jaga ini membezakan penyiasatan saintifik daripada pemadanan corak secara retrospektif.</p>
+
+<h3>11. Mengapa ia penting</h3>
+<p>Jika HSH mendapat sokongan empirikal, kegunaannya melangkaui peramalan. Bagi Malaysia: pemantauan risiko ekonomi dan analisis kitaran kredit. Bagi pasaran: ukuran kemeruapan dan tekanan yang lebih baik. Bagi Bitcoin: kejelasan sama ada kitaran yang kelihatan itu mekanisme yang berterusan atau kebetulan yang tidak stabil. Bagi tingkah laku dan hubungan: kefahaman yang lebih baik tentang keadaan di sebalik motivasi dan komunikasi. Manfaat sepunyanya ialah pandangan yang lebih tepat tentang ketidakpastian. Ramalan sempurna tidak diperlukan; penentukuran dan keputusan yang lebih baik sudah memadai.</p>
+
+<h3>12. Kesimpulan: struktur ketidakpastian</h3>
+<p>Hipotesis Riemann kekal salah satu persoalan terbuka paling mendalam dalam matematik. Nilai lebih luasnya ialah menunjukkan bahawa pemerhatian yang tidak teratur boleh dikaitkan dengan hubungan yang tepat. Ekonomi Malaysia, pasaran kewangan, Bitcoin, tingkah laku manusia dan hubungan antara manusia berjalan atas mekanisme yang berbeza. Namun setiap satu membolehkan kita meneliti jurang antara arah aliran, turun naik yang tidak dapat diterangkan dan perubahan keadaan.</p>
+<p>Bagi Bitcoin, ini bermakna mengkaji kemeruapan dan peralihan rejim, bukan menganggap kitaran lalu boleh meramal harga akan datang. Bagi Malaysia, ia bermakna menguji sama ada keadaan kewangan dan ekonomi memperbaik penunjuk utama yang sedia ada. Bagi manusia, ia bermakna mengkaji corak penyesuaian tanpa mengandaikan kita boleh mengawalnya.</p>
+<div class="pull">Kemajuan seterusnya dalam meramal sistem kompleks mungkin datang daripada memahami bila dan bagaimana ketidakpastian berubah, bukan daripada usaha menghapuskannya.<small>Kesimpulan</small></div>
+<p>Kesahihannya bergantung pada bukti empirikal yang boleh diulang. Kertas ini berakhir dengan satu cadangan yang boleh diuji, bukan dakwaan bahawa kekacauan telah diselesaikan.</p>
+</div><!-- /cols -->
+
+<div class="foot">
+<div class="box watch" style="break-inside:avoid"><span class="lbl">Nota semakan fakta</span>
+<ul>
+<li>Pertumbuhan S3 2026 sebanyak 5.5%, S2 sebanyak 6.0% dan sembilan bulan sebanyak 5.6% sepadan dengan keluaran DOSM pada 18 November 2026 seperti dilaporkan media arus perdana.</li>
+<li>Rekod Bitcoin hampir $126,000 pada Oktober 2025 dan paras awal $60,000 pada pertengahan November 2026 sepadan dengan laporan pasaran. Harga penutup khusus pada 23 November 2026 tidak dapat disahkan secara bebas, maka tiada angka dipetik.</li>
+<li>Satu set data awam yang dihimpun melaporkan liputan harian Bitcoin bermula Julai 2010. Siri penuhnya tidak diaudit di sini.</li>
+<li>Tiada ujian balik Bitcoin penuh, anggaran makroekonomi Malaysia, replikasi bebas atau kajian tingkah laku dijalankan untuk artikel ini.</li>
+</ul></div>
+
+<div class="disc"><b>Penafian kajian.</b> Ini kertas kajian penerokaan bebas untuk perbincangan dan kerja empirikal lanjut. Hipotesis Struktur Tersembunyi ialah rangka kerja yang dicadangkan, bukan teori saintifik yang mantap. Hipotesis Riemann tidak menyediakan model terbukti bagi ekonomi, harga Bitcoin, pasaran saham atau tingkah laku manusia. Dapatan mantap dibezakan daripada hipotesis asal. Artikel ini tidak mendakwa keunggulan ramalan yang telah dibuktikan, dan tiada apa di sini mengesyorkan membeli, menjual atau memegang sebarang aset.</div>
+
+<details><summary>Rujukan terpilih</summary>
+<ol>
+<li>Riemann, B. (1859). <i>&Uuml;ber die Anzahl der Primzahlen unter einer gegebenen Gr&ouml;sse.</i> Monatsberichte der Berliner Akademie.</li>
+<li>Montgomery, H. L. (1973). The pair correlation of zeros of the zeta function. <i>Proc. Sympos. Pure Math.</i> 24.</li>
+<li>Hamilton, J. D. (1989). A new approach to the economic analysis of nonstationary time series and the business cycle. <i>Econometrica.</i></li>
+<li>Engle, R. F. (1982). Autoregressive conditional heteroscedasticity with estimates of the variance of United Kingdom inflation. <i>Econometrica.</i></li>
+<li>Bollerslev, T. (1986). Generalized autoregressive conditional heteroskedasticity. <i>Journal of Econometrics.</i></li>
+<li>Diebold, F. X. dan Mariano, R. S. (1995). Comparing predictive accuracy. <i>Journal of Business &amp; Economic Statistics.</i></li>
+<li>Nakamoto, S. (2008). <i>Bitcoin: A Peer-to-Peer Electronic Cash System.</i></li>
+<li>Jabatan Perangkaan Malaysia (2026). Keluaran Dalam Negeri Kasar, Suku Ketiga 2026, dan Anggaran Awal KDNK S3 2026. dosm.gov.my</li>
+<li>Bank Negara Malaysia. Statistik Ekonomi dan Kewangan.</li>
+<li>CoinGecko. Data pasaran sejarah Bitcoin dan dokumentasi API.</li>
+<li>Coin Metrics. Data rangkaian dan pasaran komuniti.</li>
+<li>OpenDOSM. Set data penunjuk ekonomi Malaysia.</li>
+</ol></details>
+
+<details><summary>Sumber yang digunakan untuk semakan fakta</summary>
+<ol>
+<li>DOSM, Anggaran Awal KDNK S3 2026 (16 Okt 2026): dosm.gov.my</li>
+<li>The Vibes, &ldquo;Nation's economy expands 5.6%, a first over nine months of 2026&rdquo; (18 Nov 2026)</li>
+<li>Business Today Malaysia, &ldquo;Malaysia's economy expands a solid 5.5% in third quarter 2026&rdquo; (18 Nov 2026)</li>
+<li>Barchart, &ldquo;Bitcoin: is the bullish party over?&rdquo; (rekod $126,184 pada 6 Okt 2025)</li>
+<li>Crypto Briefing, &ldquo;Bitcoin selloff tests resolve of committed investors&rdquo; (Nov 2026)</li>
+</ol></details>
+
+<div class="disc">Pandangan dalam artikel ini ialah pandangan peribadi saya. Ia tidak mewakili majikan saya atau mana-mana organisasi yang pernah atau sedang saya sertai. Artikel ini tidak berkaitan dengan, tidak disokong oleh dan tidak ditulis bagi pihak mana-mana institusi yang disebut. Semua angka diambil daripada sumber awam yang disenaraikan, dan sebarang kesilapan adalah tanggungjawab saya sendiri. Artikel ini bukan nasihat kewangan, pelaburan atau undang-undang.<br><br>Kajian dan penulisan artikel ini dibantu oleh alat AI. Semua fakta telah disemak dengan sumber asal.</div>
+
+<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b> menulis tentang pembiayaan PMKS, automasi AI untuk perniagaan kecil dan dasar jangka panjang untuk Malaysia.</div></div>
+<div class="endcta"><a class="cta" data-cta href="#">Komen di LinkedIn</a></div>
 </div>
+</article>
+
+<div class="copy">&copy; 2026 Azman Taufik</div>
+</div>
+
 <script>
-// Replace with the real LinkedIn post URL after publishing / Gantikan dengan pautan pos LinkedIn sebenar
-var LINKEDIN_POST_URL = "#";
-document.querySelectorAll(".cm").forEach(function(a){a.href=LINKEDIN_POST_URL;});
-function setL(l){document.body.setAttribute("data-l",l);document.documentElement.lang=(l==="ms"?"ms":"en");
- document.getElementById("bm").className=(l==="ms"?"on":"");document.getElementById("en").className=(l==="en"?"on":"");
- try{history.replaceState(null,"","#"+(l==="ms"?"bm":"en"));}catch(e){}}
-document.getElementById("bm").onclick=function(){setL("ms")};
-document.getElementById("en").onclick=function(){setL("en")};
-if(location.hash==="#en"){setL("en");}
+// Paste the LinkedIn post URL here. The "Comment on LinkedIn" buttons stay hidden until it is set.
+var LINKEDIN_POST = "";
+document.querySelectorAll('[data-cta]').forEach(function(a){ if(LINKEDIN_POST){a.href=LINKEDIN_POST;a.target="_blank";a.rel="noopener";a.classList.add('show');} });
+function setLang(l){
+  document.body.classList.toggle('bm', l==='bm');
+  document.documentElement.lang = (l==='bm') ? 'ms' : 'en';
+  document.getElementById('b-en').classList.toggle('on', l==='en');
+  document.getElementById('b-bm').classList.toggle('on', l==='bm');
+  try{ history.replaceState(null,'','#'+l); }catch(e){}
+}
+setLang(location.hash==='#bm' ? 'bm' : 'en');
 </script>
 </body>
 </html>
