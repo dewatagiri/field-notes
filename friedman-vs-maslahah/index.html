@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friedman or Maslahah? | Azman Taufik</title>
+<meta name="description" content="Company law still sits on the shareholder side, finance leans Maqasid, and the state carries the stakeholder load. A bilingual look at Friedman vs Maslahah and where Malaysia lands by 2030.">
+<meta property="og:title" content="Friedman atau Maslahah? Peraturan siapa yang diguna pakai perniagaan Malaysia?">
+<meta property="og:description" content="Undang-undang syarikat berpihak kepada pemegang saham, kewangan condong kepada Maqasid, dan kerajaan memikul beban pihak berkepentingan. Artikel BM dan EN oleh Azman Taufik.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dewatagiri.github.io/field-notes/friedman-vs-maslahah/">
+<meta property="og:image" content="https://dewatagiri.github.io/field-notes/friedman-vs-maslahah/cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#13263a;--blue:#0b5cad;--red:#b42318;--green:#16794a;--amber:#b54708;--grey:#5b6b7a;--line:#d5dbe2}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.58}
+.page{max-width:1040px;margin:0 auto;padding:0 18px 40px}
+.sans{font-family:'Inter',Arial,sans-serif}
+
+/* nameplate */
+.top{display:flex;justify-content:space-between;align-items:center;padding:10px 0;font:600 11px/1 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
+.toggle button{font:700 11px 'Inter',sans-serif;letter-spacing:.08em;border:1px solid var(--ink);background:#fff;color:var(--ink);padding:6px 10px;cursor:pointer}
+.toggle button.on{background:var(--ink);color:#fff}
+.nameplate{text-align:center;border-top:4px solid var(--ink);border-bottom:1px solid var(--ink);padding:14px 0 10px;position:relative}
+.nameplate:after{content:"";position:absolute;left:0;right:0;bottom:-6px;border-bottom:2px solid var(--ink)}
+.nameplate h2{margin:0;font:900 clamp(34px,7vw,64px)/1 'Playfair Display',Georgia,serif;letter-spacing:.02em}
+.nameplate p{margin:6px 0 0;font:600 11px 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+.dateline{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:14px;padding:6px 0;border-bottom:1px solid var(--line);font:600 11px 'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
+
+/* headline */
+.kicker{margin:26px 0 8px;font:800 12px 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+h1{margin:0;font:900 clamp(34px,6.4vw,60px)/1.06 'Playfair Display',Georgia,serif;letter-spacing:-.01em}
+.deck{margin:14px 0 0;font:italic 400 clamp(18px,2.4vw,22px)/1.4 'Source Serif 4',serif;color:#3b4d5f;max-width:820px}
+.byline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0 0;padding:10px 0;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);font:600 12px 'Inter',sans-serif;letter-spacing:.05em;text-transform:uppercase}
+.byline .who b{color:var(--blue)}
+.cta{display:none;font:700 12px 'Inter',sans-serif;letter-spacing:.04em;text-decoration:none;background:var(--blue);color:#fff;padding:8px 14px;border-radius:3px;text-transform:none}
+.cta.show{display:inline-block}
+
+/* stats strip */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin:22px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.stat{padding:12px 14px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font:800 30px/1 'Playfair Display',serif;color:var(--blue)}
+.stat span{display:block;margin-top:6px;font:600 11px/1.35 'Inter',sans-serif;color:var(--grey);text-transform:uppercase;letter-spacing:.05em}
+
+/* body */
+.cols{column-count:2;column-gap:36px;column-rule:1px solid var(--line);text-align:justify;hyphens:auto}
+.cols p{margin:0 0 .85em}
+.cols>p.lead{break-inside:avoid}
+.cols>p.lead:first-of-type::first-letter{float:left;font:900 64px/.82 'Playfair Display',serif;padding:6px 8px 0 0;color:var(--ink)}
+.cols h3{margin:1.1em 0 .5em;font:800 12px/1.3 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);border-top:2px solid var(--ink);padding-top:8px;break-after:avoid;text-align:left}
+.cols h4{margin:1em 0 .3em;font:700 15px 'Inter',sans-serif;break-after:avoid;text-align:left}
+.cols ul{margin:0 0 .9em;padding-left:1.1em}
+.cols li{margin-bottom:.3em}
+.eq{display:block;margin:.4em 0 1em;padding:8px 10px;background:#f4f7fa;border-left:3px solid var(--blue);font:italic 400 17px 'Source Serif 4',serif;text-align:center;break-inside:avoid;overflow-x:auto}
+.hyp{margin:.2em 0 .8em;padding:8px 12px;border-left:3px solid var(--ink);background:#fafbfc;break-inside:avoid;text-align:left;font-size:16px}
+.hyp b.sans{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);display:block}
+
+.pull{column-span:all;margin:18px 0;padding:16px 0;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);text-align:center;font:italic 500 clamp(22px,3.4vw,32px)/1.25 'Playfair Display',serif}
+.pull small{display:block;margin-top:8px;font:700 11px 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);font-style:normal}
+
+.box{hyphens:manual;break-inside:avoid;margin:0 0 1.1em;padding:12px 14px;border:1px solid var(--line);border-left:5px solid var(--ink);text-align:left;font-size:15.5px;line-height:1.5}
+.box .lbl{display:block;margin-bottom:6px;font:800 11px 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.box.key{border-left-color:var(--ink);background:#f4f7fa}
+.box.data{border-left-color:var(--blue)} .box.data .lbl{color:var(--blue)}
+.box.watch{border-left-color:var(--amber);background:#fff9f2} .box.watch .lbl{color:var(--amber)}
+.box.ok{border-left-color:var(--green);background:#f3faf6} .box.ok .lbl{color:var(--green)}
+.box p{margin:0 0 .5em}.box ul{margin:0;padding-left:1.1em}
+
+.flow{column-span:all;margin:14px 0;display:flex;flex-wrap:wrap;gap:0;align-items:stretch;font:700 12px/1.3 'Inter',sans-serif;text-align:center}
+.flow div{flex:1 1 120px;padding:12px 8px;border:1px solid var(--ink);margin-left:-1px;background:#fff;position:relative}
+.flow div:nth-child(odd){background:#f4f7fa}
+.flow-cap{column-span:all;margin:-6px 0 14px;font:600 11px 'Inter',sans-serif;color:var(--grey);text-align:center;letter-spacing:.05em;text-transform:uppercase}
+
+.fig{column-span:all;margin:12px 0 18px;padding:12px 14px;border:1px solid var(--line)}
+.fig .t{font:800 13px 'Inter',sans-serif;margin-bottom:8px}
+.fig svg{width:100%;height:auto;display:block}
+.fig .src{margin-top:6px;font:400 11px 'Inter',sans-serif;color:var(--grey)}
+
+.foot{margin-top:26px;border-top:3px solid var(--ink);padding-top:16px;font-size:14.5px;line-height:1.55}
+.foot h3{margin:0 0 8px;font:800 12px 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.foot ol{padding-left:1.3em;margin:0}.foot li{margin-bottom:5px}
+details{margin:14px 0;border:1px solid var(--line);padding:8px 12px}
+summary{cursor:pointer;font:700 13px 'Inter',sans-serif}
+.disc{margin-top:14px;padding:12px 14px;background:#f4f7fa;font-size:13.5px;line-height:1.5}
+.bio{display:flex;gap:12px;align-items:center;margin:18px 0}
+.av{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font:800 15px 'Inter',sans-serif}
+.endcta{text-align:center;margin:18px 0}
+.copy{margin-top:18px;text-align:center;font:600 11px 'Inter',sans-serif;color:var(--grey);letter-spacing:.06em;text-transform:uppercase}
+
+body .bm-only{display:none}
+body.bm .bm-only{display:block}
+body.bm .en-only{display:none}
+
+@media (max-width:760px){
+ body{font-size:16.5px}
+ .cols{column-count:1;text-align:left;hyphens:manual}
+ .stats{grid-template-columns:1fr 1fr}
+ .stat:nth-child(2){border-right:0}
+ .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+
+/* additions for this article */
+.box.trap{border-left-color:var(--red);background:#fff6f5} .box.trap .lbl{color:var(--red)}
+.box.take{background:var(--ink);color:#fff;border-color:var(--ink);border-left-color:var(--blue)} .box.take .lbl{color:#fff}
+.box.call{border:3px solid var(--blue);border-left-width:3px;background:#fff} .box.call .lbl{color:var(--blue)}
+.box.over{border:2px dashed var(--blue);border-left:2px dashed var(--blue);background:#fff} .box.over .lbl{color:var(--blue)}
+.tests{column-span:all;margin:12px 0 6px;border:1px solid var(--ink);font-family:'Inter',sans-serif}
+.tests .hd,.tests .row{display:grid;grid-template-columns:1.1fr 1fr 1fr}
+.tests .hd div{padding:8px 10px;font:800 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--ink)}
+.tests .hd div:nth-child(3){background:var(--green)}
+.tests .row div{padding:10px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.4}
+.tests .row div:first-child{font-weight:800;background:#f4f7fa}
+.tests .row div:nth-child(2){border-left:1px solid var(--line)}
+.tests .row div:nth-child(3){border-left:1px solid var(--line);background:#f3faf6}
+.cap{column-span:all;margin:0 0 16px;font:600 11px 'Inter',sans-serif;color:var(--grey);letter-spacing:.05em;text-transform:uppercase;text-align:center}
+.bars{font-family:'Inter',sans-serif;text-align:left}
+.bars .r{display:grid;grid-template-columns:150px 1fr;gap:10px;align-items:center;margin:6px 0;font-size:13px}
+.bars .t{height:26px;background:#f1f4f7;position:relative}
+.bars .t i{display:block;height:100%;background:#9aa7b4}
+.bars .t i.hi{background:var(--blue)}
+.bars .t b{position:absolute;left:8px;top:0;line-height:26px;font:800 13px 'Inter',sans-serif;color:#fff}
+.cards{column-span:all;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0 18px}
+.card{border:1px solid var(--line);border-top:4px solid var(--blue);padding:10px 12px;font-size:14.5px;line-height:1.45;text-align:left}
+.card .tag{display:block;margin-bottom:4px;font:800 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.card h5{margin:0 0 6px;font:800 15px/1.25 'Inter',sans-serif}
+.card.g{border-top-color:var(--green)} .card.g .tag{color:var(--green)}
+.card.a{border-top-color:var(--amber)} .card.a .tag{color:var(--amber)}
+.card.r{border-top-color:var(--red)} .card.r .tag{color:var(--red)}
+.card ul{margin:6px 0 0;padding-left:1.1em}
+.qs{column-span:all;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 18px}
+.qc{background:#eef5fc;border-left:4px solid var(--blue);padding:10px 12px;font-size:15px;line-height:1.45;text-align:left}
+.qc small{display:block;margin-bottom:4px;font:800 10.5px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.props{column-span:all;margin:10px 0 18px}
+.prop{display:flex;gap:12px;margin:0 0 10px;padding:10px 12px;border:1px solid var(--line);text-align:left;font-size:15px;line-height:1.45}
+.prop .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font:800 14px 'Inter',sans-serif}
+.prop .m{display:block;margin-top:4px;color:var(--green);font:700 13px 'Inter',sans-serif}
+.asks{width:100%;border-collapse:collapse;margin:8px 0 14px;font:400 13.5px/1.4 'Inter',sans-serif;text-align:left}
+.asks th,.asks td{border:1px solid var(--line);padding:7px 9px;vertical-align:top}
+.asks th{background:#f4f7fa;font-weight:800;width:22%}
+.wide{column-span:all}
+@media (max-width:760px){
+ .cards{grid-template-columns:1fr}
+ .qs{grid-template-columns:1fr}
+ .tests .hd,.tests .row{grid-template-columns:1fr}
+ .tests .row div:nth-child(2),.tests .row div:nth-child(3){border-left:0}
+ .bars .r{grid-template-columns:1fr}
+}
+.cols h3.sp,.box.span{column-span:all}
+</style>
+</head>
+<body class="bm">
+<div class="page">
+
+<div class="top"><span>Independent research</span>
+ <span class="toggle"><button id="b-en" onclick="setLang('en')">EN</button><button id="b-bm" class="on" onclick="setLang('bm')">BM</button></span></div>
+<div class="nameplate"><h2>Field Notes</h2><p>Independent research &middot; Kuala Lumpur</p></div>
+<div class="dateline"><span class="en-only">Monday, 23 November 2026</span><span class="bm-only">Isnin, 23 November 2026</span><span class="en-only">Corporate purpose &middot; Islamic ethics</span><span class="bm-only">Tujuan korporat &middot; Etika Islam</span><span class="en-only">~9 min</span><span class="bm-only">~9 minit</span></div>
+
+<article class="en-only" id="art-en" lang="en">
+<div class="kicker">Corporate purpose &middot; Islamic ethics &middot; Malaysia to 2030</div>
+<h1>Friedman or Maslahah: whose rules does Malaysian business run on?</h1>
+<p class="deck">Company law still sits on the shareholder side. The language and the financial system lean towards Maqasid. The work of protecting workers and the public is being done mostly by the state, not by boards.</p>
+<div class="byline"><span class="who">By <b>Azman Taufik</b> &middot; 23 November 2026 &middot; 9 min read</span><a class="cta" data-cta href="#">Comment on LinkedIn</a></div>
+
+<div class="stats">
+ <div class="stat"><b>33.9%</b><span>Employee pay as a share of GDP, 2025 (DOSM)</span></div>
+ <div class="stat"><b>40%</b><span>Target for 2030 (13th Malaysia Plan)</span></div>
+ <div class="stat"><b>48%</b><span>Islamic share of total financing, 2025 (BNM)</span></div>
+ <div class="stat"><b>RM2,000</b><span>Minimum wage from June 2027 (Budget 2027)</span></div>
+</div>
+
+<div class="cols">
+<div class="box key"><span class="lbl">The short version</span>
+<ul>
+<li>Company law still follows the shareholder line. Section 213 of the Companies Act 2016 is about the <b>company's best interests</b>, and the MCCG is comply-or-explain.</li>
+<li>Finance leans Maqasid on scale: Islamic financing was <b>48% of total financing</b> in 2025. On outcomes it is weaker. The BNM governor says financing for priority sectors is still modest.</li>
+<li>The state, not the board, carries the stakeholder load: a <b>RM2,000 minimum wage</b> from June 2027 (firms with sales below RM50 million exempt), the Gig Workers Act, targeted fuel subsidies.</li>
+<li>Employee pay is <b>33.9% of GDP</b> against a 40% target for 2030. By my calculation the target needs about <b>3.8 times</b> the 2025 pace.</li>
+<li>Data centres are the live test: about <b>7%</b> of Peninsular electricity today, up to <b>31%</b> by 2035 on a ministry projection.</li>
+</ul></div>
+
+<p class="lead">Who does a Malaysian company answer to? In law, mostly its shareholders. In public language, everyone: workers, customers, the community, even the next generation. In 2026 the gap between those two answers is easier to measure than it used to be.</p>
+<p>Milton Friedman wrote in 1970 that a manager's job is to make money for the owners within the rules of society. Islamic commercial ethics, read through Maqasid al-Shariah and Maslahah, asks for profit that serves public welfare and shares risk. Malaysia uses both vocabularies at once.</p>
+<p>This note tests each against what the country is doing now: company law, the banks, Budget 2027 and the data-centre boom. Then it asks where 2030 lands.</p>
+
+<h3>01 &middot; What Friedman actually said</h3>
+<p>His 1970 essay is shorter and more careful than its reputation. The manager is the owners' employee, and the job is to make money for them. But he wrote that this must be done inside the basic rules of society, which he defined as both law and ethical custom.</p>
+<p>That clause matters here. If Islamic ethics is part of Malaysia's ethical custom, Friedman and Maslahah overlap more than the usual debate suggests. The real disagreement sits on three tests.</p>
+
+<div class="tests">
+ <div class="hd"><div>Test</div><div>Friedman</div><div>Maslahah / Maqasid</div></div>
+ <div class="row"><div>Who the manager answers to</div><div>The owners</div><div>The owners, plus workers, customers and society (Amanah, trusteeship)</div></div>
+ <div class="row"><div>Where the law is silent</div><div>Pursue profit inside the rules of the game</div><div>Harm (Dharar) still counts, even if it is legal</div></div>
+ <div class="row"><div>How profit relates to risk</div><div>Profit rewards the capital invested</div><div>Gain goes with liability (Al-ghunm bil ghurm)</div></div>
+</div>
+<div class="cap">Framework, not data</div>
+
+<h3>02 &middot; What Maqasid asks of business</h3>
+<p>Maqasid al-Shariah are the higher objectives of Islamic law. In commerce they show up as public welfare (Maslahah &lsquo;Ammah), trusteeship over wealth (Amanah), justice and generosity (&lsquo;Adl and Ihsan), and the principle that gain comes with risk. The legal maxim against inflicting or returning harm is the one that bites on externalities.</p>
+<p>These are not only private beliefs in Malaysia. Bank Negara says Islamic finance is built on the objectives of Shariah, and that Value-Based Intermediation (VBI) is how those values are put into practice. In 2024, Islamic financial institutions directed RM148.6 billion into VBI-aligned activities.</p>
+
+<h3>03 &middot; Law and finance today</h3>
+<p>Section 213 requires directors to act in good faith, for a proper purpose, in the best interest of the company. Commentators note that, unlike section 172 of the UK Companies Act 2006, it does not name wider stakeholders. A breach can mean a fine up to RM3 million, up to five years in jail, or both. The MCCG asks listed companies to follow its principles or explain why not.</p>
+<p>Disclosure is tightening. Under the National Sustainability Reporting Framework, the largest listed companies must apply all ISSB requirements from 1 January 2027. Reporting is a step towards stakeholder regard, but it is not yet a duty to act on it.</p>
+<p>Finance is where Malaysia looks most like Maqasid. Islamic financing rose from 25% of total financing in 2015 to 48% by 2025, and the Islamic capital market is above 60% of the domestic capital market. Scale is not the same as outcome, though. In September the BNM governor said financing for priority sectors is still modest, with approvals concentrated in services. He put it down to information gaps, complex structuring and limited sector familiarity, not unwilling banks.</p>
+<div class="box trap"><span class="lbl">Trap: the label is not the outcome</span>
+<p>Critics report that common Islamic home-financing structures in Malaysia leave buyers carrying the risk when a project stalls. That is the opposite of risk-sharing. A 48% share tells us about market share. It does not tell us whether Maqasid outcomes are being delivered.</p></div>
+
+<h3>04 &middot; The state is doing the stakeholder work</h3>
+<ul>
+<li><b>Minimum wage:</b> RM1,700 to RM2,000 from June 2027, covering more than four million workers. SMEs with annual sales below RM50 million are exempt. No end date for the exemption was given.</li>
+<li><b>Gig workers:</b> the Gig Workers Act took effect on 31 March 2026 and covers about 1.64 million people. A council is due to set minimum earnings by early 2027.</li>
+<li><b>Subsidies:</b> targeted RON95 subsidies are expected to save RM2.5 to 4 billion a year.</li>
+<li><b>SME financing:</b> financing and guarantee facilities for MSMEs and mid-sized firms go to RM57 billion in 2027, from RM50 billion this year.</li>
+</ul>
+<p>The pressure on firms arrives as regulation. So firms do what Friedman said: they follow the rules of the game. The ethic comes in as law, not as a board duty.</p>
+<p>The state has limits. The fiscal deficit target is 3.3% of GDP in 2027, with federal debt at 63.7% against a 60% cap in the fiscal responsibility framework. An election is due by February 2028. Reversals in an election year are a real risk.</p>
+
+<h3>05 &middot; The number that decides it</h3>
+<p>Employee pay was RM686.9 billion in 2025, a record, but its share of GDP rose only from 33.6% to 33.9%. The business operating surplus took 62%. The government wants employee pay at 40% of GDP by 2030.</p>
+
+<div class="fig"><div class="t">Where GDP income went in 2025</div>
+<div class="bars">
+ <div class="r"><span>Business operating surplus</span><div class="t"><i style="width:88.6%"></i><b>62.0%</b></div></div>
+ <div class="r"><span>Employee pay</span><div class="t"><i class="hi" style="width:48.4%"></i><b>33.9%</b></div></div>
+</div>
+<div class="src">Source: DOSM, reported by NST (July 2026). The remaining share is taxes less subsidies; that arithmetic is mine.</div></div>
+
+<div class="fig"><div class="t">Employee pay as % of GDP: the path to 40% vs the 2025 pace (my projection)</div>
+<svg viewBox="0 0 680 280" role="img" aria-label="Line chart: path to 40 percent by 2030 versus 35.4 percent if the 2025 pace continues">
+ <g font-family="Inter,Arial,sans-serif" font-size="12" fill="#5b6b7a">
+  <line x1="50" x2="600" y1="195" y2="195" stroke="#d5dbe2"/><line x1="50" x2="600" y1="145" y2="145" stroke="#d5dbe2"/><line x1="50" x2="600" y1="95" y2="95" stroke="#d5dbe2"/><line x1="50" x2="600" y1="45" y2="45" stroke="#d5dbe2"/>
+  <text x="42" y="199" text-anchor="end">34%</text><text x="42" y="149" text-anchor="end">36%</text><text x="42" y="99" text-anchor="end">38%</text><text x="42" y="49" text-anchor="end">40%</text>
+  <text x="50" y="250" text-anchor="middle">2025</text><text x="154" y="250" text-anchor="middle">2026</text><text x="258" y="250" text-anchor="middle">2027</text><text x="362" y="250" text-anchor="middle">2028</text><text x="466" y="250" text-anchor="middle">2029</text><text x="570" y="250" text-anchor="middle">2030</text>
+ </g>
+ <polyline fill="none" stroke="#0b5cad" stroke-width="3" points="50,197.5 154,167.5 258,137.5 362,105 466,75 570,45"/>
+ <polyline fill="none" stroke="#9aa7b4" stroke-width="3" stroke-dasharray="6 4" points="50,197.5 154,190 258,182.5 362,175 466,167.5 570,160"/>
+ <circle cx="570" cy="45" r="4" fill="#0b5cad"/><circle cx="570" cy="160" r="4" fill="#9aa7b4"/>
+ <g font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700">
+  <text x="578" y="49" fill="#0b5cad">40.0%</text><text x="578" y="164" fill="#5b6b7a">35.4%</text>
+ </g>
+ <g font-family="Inter,Arial,sans-serif" font-size="12" fill="#13263a">
+  <rect x="50" y="8" width="14" height="4" fill="#0b5cad"/><text x="70" y="14">Straight line to the 40% target</text>
+  <rect x="300" y="8" width="14" height="4" fill="#9aa7b4"/><text x="320" y="14">If the 2025 pace (+0.3 point a year) continues</text>
+ </g>
+</svg>
+<div class="src">Starting point: 33.9% (DOSM, 2025). Both lines are my projection, not an official forecast.</div></div>
+
+<div class="box data"><span class="lbl">My calculation</span>
+<ul>
+<li>Reaching 40% from 33.9% in five years needs about <b>+1.2 points a year</b>. The 2025 gain was +0.3.</li>
+<li>Employee pay must grow about <b>3.4 points a year faster</b> than nominal GDP. In 2025 it grew about 0.9 points faster. That is roughly <b>3.8 times</b> the pace.</li>
+<li>At the 2025 pace the share reaches about <b>35.4%</b> in 2030.</li>
+<li>Assumption: a straight line. Wage-share gains could bunch up after the June 2027 minimum-wage rise, so the path may bend.</li>
+</ul></div>
+<div class="box watch"><span class="lbl">Two targets, one question</span>
+<p>The Budget 2026 economy chapter lists a 45% labour-income goal under the Madani economy framework. The 13th Malaysia Plan milestone is 40% by 2030. I have not checked whether these differ only in time horizon.</p></div>
+
+<h3>06 &middot; The externality test: data centres</h3>
+<p>Data centres are where Friedman's problem shows up in plain view. The profit is private. The water and power come from the shared grid.</p>
+<div class="fig"><div class="t">Data centres&rsquo; share of Peninsular Malaysia electricity</div>
+<div class="bars">
+ <div class="r"><span>2026 (parliamentary reply)</span><div class="t"><i style="width:20%"></i><b>about 7%</b></div></div>
+ <div class="r"><span>2035 (ministry projection)</span><div class="t"><i class="hi" style="width:88.6%"></i><b>up to 31%</b></div></div>
+</div>
+<div class="src">Sources: parliamentary reply, July 2026, and ministry projection, both as reported by The Edge Malaysia, TNB press clippings and Malaysiakini (see sources).</div></div>
+<p>Bank Negara estimates that a 50MW data centre uses as much water as 2,200 households a day and as much electricity as 22,000. Johor has halted approvals for Tier-1 and Tier-2 data centres over water use. The government plans &ldquo;user-pays&rdquo; electricity pricing for large consumers and has said it will not offer cheap power and water to operators.</p>
+<p>This is the Maslahah rule against harm, applied by regulators because the firms have not been asked to apply it themselves.</p>
+
+<h3 class="sp">07 &middot; Three paths to 2030</h3>
+<div class="cards">
+ <div class="card"><span class="tag">Base case</span><h5>The state carries Maslahah, firms comply at the minimum</h5><p>Company law stays as it is. The SME exemption stays open-ended. Pay share edges up.</p><ul><li>Minimum wage, June 2027</li><li>Deficit to 3% by 2028</li></ul></div>
+ <div class="card g"><span class="tag">Upside</span><h5>Maqasid moves from label to practice</h5><p>ISSB reporting changes board agendas. Banks report risk-sharing results. Pay share follows the straight line.</p><ul><li>ISSB, 1 January 2027</li><li>2026 pay share near 35.1%</li></ul></div>
+ <div class="card r"><span class="tag">Downside</span><h5>The label without the outcome</h5><p>Pay share stalls near 35%. Election-year reversals. Data-centre costs reach households. Household debt, at 84.4% of GDP in March 2026, stays high.</p><ul><li>2026 pay share near 34.2%</li><li>General election due by Feb 2028</li></ul></div>
+</div>
+<div class="cap">Triggers are dated. The 2026 pay share is due around mid-2027 if DOSM follows last year&rsquo;s timing.</div>
+
+<div class="box watch span"><span class="lbl">The bear case, in its strongest form</span>
+<p>Friedman's side has a real reply. Malaysia is growing under this hybrid: 2026 growth is projected at 4.8 to 5.3%, and the country rose to 15th in the IMD competitiveness ranking. There is no evidence yet that the stakeholder push has cost growth. Pressure from outside also runs the other way: commentators in the US have argued that shareholder primacy is back and that stakeholder capitalism went too far. And a wage target missed this widely may only mean it was set too high.</p></div>
+
+<h3 class="sp">08 &middot; Questions worth asking</h3>
+<div class="qs">
+ <div class="qc"><small>For Parliament</small>Should section 213 name workers, community and environment, as the UK did in section 172?</div>
+ <div class="qc"><small>For the Finance Ministry</small>How long will the SME minimum-wage exemption last, and what ends it?</div>
+ <div class="qc"><small>For banks</small>What share of your financing shares risk with the customer, and what does it deliver in priority sectors?</div>
+ <div class="qc"><small>For listed boards</small>When wage cost and shareholder return conflict, who decides, and is it minuted?</div>
+ <div class="qc"><small>For SME owners</small>If the exemption ends, can your margin carry RM2,000 a month per worker?</div>
+ <div class="qc"><small>For investors</small>Do you ask for water, power and pay data, or only the earnings line?</div>
+</div>
+
+<h3 class="sp">09 &middot; What I would do</h3>
+<p>The following are my own analysis, not findings from the sources.</p>
+<div class="props">
+ <div class="prop"><div class="n">1</div><div><b>Put a review date on the SME exemption.</b> Open-ended relief is hard to remove later.<span class="m">Measure: share of workers in exempt firms paid below RM2,000, reported yearly.</span></div></div>
+ <div class="prop"><div class="n">2</div><div><b>Publish the pay-share path next to every Budget.</b> Show the DOSM figure against the straight line to 40%.<span class="m">Measure: gap to the line, in points.</span></div></div>
+ <div class="prop"><div class="n">3</div><div><b>Ask banks to report risk-sharing results under VBI.</b> Share of financing on risk-sharing or real-asset structures, and priority-sector outcomes.<span class="m">Measure: share reported yearly, by sector.</span></div></div>
+ <div class="prop"><div class="n">4</div><div><b>Publish data-centre water and power use per MW.</b> Site by site.<span class="m">Measure: litres and MWh per MW.</span></div></div>
+</div>
+
+<div class="box call span"><span class="lbl">Call to the Government</span>
+<ul>
+<li><b>By Q1 2027:</b> set the review date for the SME minimum-wage exemption.</li>
+<li><b>With Budget 2028:</b> publish the pay-share path against the 40% line.</li>
+<li><b>By end-2027:</b> open a consultation on whether section 213 should name stakeholders.</li>
+</ul></div>
+
+<table class="asks wide">
+<tr><th>Boards</th><td>Add wage, water and power cost to the board agenda. Prepare ISSB statements early if you are in the first group.</td></tr>
+<tr><th>Banks</th><td>Report risk-sharing share and priority-sector results. Build the sector structuring skills the BNM governor asked for.</td></tr>
+<tr><th>SMEs</th><td>Plan for RM2,000 even if exempt today. Ask your financier about guarantee support.</td></tr>
+<tr><th>Investors</th><td>Ask for pay and resource-use data, not only earnings.</td></tr>
+</table>
+
+<div class="box ok span"><span class="lbl">Self-check for the reader</span>
+<ul>
+<li>Do I know my firm's pay share of revenue, and has it moved in three years?</li>
+<li>Which of my costs does someone else pay for today: water, power, land, health?</li>
+<li>Does my financing share risk with me, or only move it?</li>
+<li>If the minimum wage reached my firm tomorrow, which line gives first?</li>
+<li>When did a board I know last discuss a cost that is not on its own books?</li>
+</ul></div>
+
+<div class="box take span"><span class="lbl">My take</span>
+<p>Malaysia has not chosen between Friedman and Maslahah. It has split the job. Firms follow the rules, and the state writes them. That works while the state has room to write them. The deficit is 3.3% of GDP and an election is due by February 2028. If pay share stays near 35%, the market will have chosen Friedman by default, whatever the speeches say. If boards start acting on Maslahah before the law forces them to, the gap closes faster and costs less.</p></div>
+
+<div class="box over span"><span class="lbl">Over to you</span>
+<p>When shareholder return and public welfare pull apart, which should a Malaysian board put first, and what should the law say about it?</p></div>
+</div>
+
+<div class="foot">
+<details><summary>Sources</summary>
+<ol>
+<li>Milton Friedman, "The Social Responsibility of Business Is to Increase Its Profits", New York Times Magazine, 13 September 1970.</li>
+<li>Chicago Booth Review, "What Does Business Owe Society?" (October 2020).</li>
+<li>Bank Negara Malaysia, Annual Report 2025, chapter on Islamic finance, bnm.gov.my/publications/ar2025/ch1d</li>
+<li>Bank Negara Malaysia, Governor's speech at the FIDE Forum, 24 September 2026, bnm.gov.my</li>
+<li>The Star, "Financing for priority sectors still modest despite policy ambitions, says BNM Governor", 24 September 2026.</li>
+<li>The Star, "Govt wants wages to make up 40% of GDP by 2030", 20 October 2026.</li>
+<li>New Straits Times, "Malaysian workers' pay hits record RM686.9bil in 2025", July 2026 (DOSM data).</li>
+<li>The Star, "Budget 2027: Minimum wage to rise to RM2,000 from June 2027, says Anwar", 9 October 2026.</li>
+<li>The Sun, "Budget 2027: minimum wage RM2,000", October 2026. Bernama (Malay), 12 October 2026, on the RM57 billion MSME facilities.</li>
+<li>The Star, "Gig Workers Act 2025 comes into force today", 31 March 2026. The Vibes, same date, on 1.64 million workers.</li>
+<li>Business Today, "Targeted RON95 subsidy saves govt up to RM4 billion a year", 3 August 2026.</li>
+<li>Business Today, "Budget 2027: spending rises to RM510 billion as govt targets 3.3% deficit", 9 October 2026. NST gives the federal budget as RM459.84 billion; the larger figure includes GLIC investments and other items.</li>
+<li>Business Today, Fitch Ratings on Budget 2027, 13 October 2026 (election due by February 2028).</li>
+<li>Companies Act 2016, section 213: Chambers Corporate Governance 2025 (Malaysia); Sunway University, "Reforming the Companies Act to Embrace 21st-Century Sustainability Imperatives".</li>
+<li>IFRS Foundation, Malaysia jurisdictional profile (National Sustainability Reporting Framework), ifrs.org.</li>
+<li>Data centres: The Star, "Malaysia's resource anxiety tests Asia's fastest data centre build-out", 24 July 2026; The Edge Malaysia, 14 September 2026; Malaysiakini comment on power, water and oversight; Lowyat.net, 15 October 2026.</li>
+<li>New Straits Times, "Household debt stands at RM1.73 trillion, 84.4pct of GDP, Anwar says", 1 July 2026.</li>
+<li>PwC Malaysia, Budget 2027 overview; Ministry of Finance, Pre-Budget Statement 2027 (IMD ranking).</li>
+<li>Nuarrual Hilal Md Dahlan, "Why Malaysia must reform its Islamic home financing", The Jakarta Post, 8 December 2025 (opinion).</li>
+<li>Allison Schrager, "Shareholder Capitalism Is Back", Bloomberg, 10 March 2025; Robert Profusek, Fortune, 11 February 2026 (opinion).</li>
+</ol></details>
+
+<div class="disc"><b>Disclaimer.</b> The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from publicly available sources listed above, and any errors are mine. Nothing here is financial, investment or legal advice. Research and drafting were assisted by AI tools. All facts were checked against the sources listed.</div>
+
+<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b> writes on MSME financing, AI automation for small businesses and long-term policy for Malaysia.</div></div>
+<div class="endcta"><a class="cta" data-cta href="#">Comment on LinkedIn</a></div>
+</div>
+</article>
+
+<article class="bm-only" id="art-bm" lang="ms">
+<div class="kicker">Tujuan korporat &middot; Etika Islam &middot; Malaysia menjelang 2030</div>
+<h1>Friedman atau Maslahah: peraturan siapa yang diguna pakai perniagaan Malaysia?</h1>
+<p class="deck">Undang-undang syarikat masih berpihak kepada pemegang saham. Bahasa awam dan sistem kewangan negara condong kepada Maqasid. Kerja melindungi pekerja dan orang ramai pula banyak dipikul kerajaan, bukan lembaga pengarah.</p>
+<div class="byline"><span class="who">Oleh <b>Azman Taufik</b> &middot; 23 November 2026 &middot; 9 minit membaca</span><a class="cta" data-cta href="#">Komen di LinkedIn</a></div>
+
+<div class="stats">
+ <div class="stat"><b>33.9%</b><span>Bahagian gaji pekerja dalam KDNK, 2025 (DOSM)</span></div>
+ <div class="stat"><b>40%</b><span>Sasaran 2030 (Rancangan Malaysia Ke-13)</span></div>
+ <div class="stat"><b>48%</b><span>Bahagian pembiayaan Islam daripada jumlah pembiayaan, 2025 (BNM)</span></div>
+ <div class="stat"><b>RM2,000</b><span>Gaji minimum mulai Jun 2027 (Belanjawan 2027)</span></div>
+</div>
+
+<div class="cols">
+<div class="box key"><span class="lbl">Ringkasan pantas</span>
+<ul>
+<li>Undang-undang syarikat masih mengikut garis pemegang saham. Seksyen 213 Akta Syarikat 2016 menyebut <b>kepentingan terbaik syarikat</b>, dan MCCG berasaskan &ldquo;patuh atau jelaskan&rdquo;.</li>
+<li>Dari segi skala, kewangan condong kepada Maqasid: pembiayaan Islam ialah <b>48% daripada jumlah pembiayaan</b> pada 2025. Dari segi hasil, ia lebih lemah. Gabenor BNM berkata pembiayaan untuk sektor keutamaan masih sederhana.</li>
+<li>Beban pihak berkepentingan dipikul kerajaan, bukan lembaga pengarah: <b>gaji minimum RM2,000</b> mulai Jun 2027 (firma dengan jualan di bawah RM50 juta dikecualikan), Akta Pekerja Gig, subsidi bahan api bersasar.</li>
+<li>Gaji pekerja ialah <b>33.9% daripada KDNK</b>, berbanding sasaran 40% pada 2030. Menurut kiraan saya, sasaran itu memerlukan kira-kira <b>3.8 kali ganda</b> kadar 2025.</li>
+<li>Pusat data ialah ujian sebenar: kira-kira <b>7%</b> elektrik Semenanjung hari ini, dan sehingga <b>31%</b> menjelang 2035 menurut unjuran kementerian.</li>
+</ul></div>
+
+<p class="lead">Kepada siapakah sebuah syarikat Malaysia bertanggungjawab? Dari segi undang-undang, terutamanya kepada pemegang saham. Dari segi bahasa awam, kepada semua orang: pekerja, pelanggan, masyarakat, malah generasi akan datang. Pada 2026, jurang antara dua jawapan itu lebih mudah diukur daripada dahulu.</p>
+<p>Pada 1970, Milton Friedman menulis bahawa tugas seorang pengurus ialah menjana wang untuk pemilik dalam lingkungan peraturan masyarakat. Etika muamalat Islam, apabila dibaca melalui Maqasid Syariah dan Maslahah, menuntut keuntungan yang memberi manfaat kepada kepentingan awam dan berkongsi risiko. Malaysia menggunakan kedua-dua bahasa ini serentak.</p>
+<p>Nota ini menguji kedua-duanya dengan apa yang sedang berlaku: undang-undang syarikat, bank, Belanjawan 2027 dan lonjakan pusat data. Kemudian ia bertanya di mana kita berada pada 2030.</p>
+
+<h3>01 &middot; Apa sebenarnya yang Friedman kata</h3>
+<p>Esei 1970 itu lebih pendek dan lebih berhati-hati daripada reputasinya. Pengurus ialah pekerja kepada pemilik, dan tugasnya menjana wang untuk mereka. Tetapi beliau menulis bahawa ini mesti dilakukan dalam peraturan asas masyarakat, yang beliau takrifkan sebagai undang-undang dan adat etika.</p>
+<p>Syarat itu penting di sini. Jika etika Islam sebahagian daripada adat etika Malaysia, Friedman dan Maslahah bertindih lebih banyak daripada yang disangka. Perbezaan sebenar terletak pada tiga ujian.</p>
+
+<div class="tests">
+ <div class="hd"><div>Ujian</div><div>Friedman</div><div>Maslahah / Maqasid</div></div>
+ <div class="row"><div>Pengurus bertanggungjawab kepada siapa</div><div>Pemilik</div><div>Pemilik, ditambah pekerja, pelanggan dan masyarakat (Amanah)</div></div>
+ <div class="row"><div>Apabila undang-undang tidak menyebutnya</div><div>Kejar keuntungan dalam peraturan permainan</div><div>Mudarat (Dharar) tetap diambil kira, walaupun sah di sisi undang-undang</div></div>
+ <div class="row"><div>Hubungan untung dengan risiko</div><div>Untung ialah ganjaran modal</div><div>Keuntungan datang bersama tanggungan (Al-ghunm bil ghurm)</div></div>
+</div>
+<div class="cap">Rangka kerja, bukan data</div>
+
+<h3>02 &middot; Apa yang Maqasid minta daripada perniagaan</h3>
+<p>Maqasid Syariah ialah tujuan tinggi hukum Islam. Dalam perniagaan, ia muncul sebagai kepentingan awam (Maslahah &lsquo;Ammah), amanah terhadap harta, keadilan dan ihsan (&lsquo;Adl dan Ihsan), serta prinsip bahawa keuntungan datang bersama risiko. Kaedah larangan mendatangkan dan membalas mudarat ialah yang paling terkena pada kos yang ditanggung orang lain.</p>
+<p>Di Malaysia, ini bukan sekadar pegangan peribadi. Bank Negara menyatakan kewangan Islam dibina atas tujuan Syariah, dan Perantaraan Berasaskan Nilai (VBI) ialah cara nilai itu dilaksanakan. Pada 2024, institusi kewangan Islam menyalurkan RM148.6 bilion ke dalam aktiviti selaras VBI.</p>
+
+<h3>03 &middot; Undang-undang dan kewangan hari ini</h3>
+<p>Seksyen 213 menghendaki pengarah bertindak dengan suci hati, untuk tujuan yang wajar, demi kepentingan terbaik syarikat. Pengulas menyatakan bahawa, tidak seperti seksyen 172 Akta Syarikat UK 2006, ia tidak menyebut pihak berkepentingan yang lebih luas. Pelanggaran boleh membawa denda sehingga RM3 juta, penjara sehingga lima tahun, atau kedua-duanya. MCCG pula meminta syarikat tersenarai mengikut prinsipnya atau menjelaskan sebabnya.</p>
+<p>Pendedahan semakin ketat. Di bawah Rangka Kerja Pelaporan Kemampanan Kebangsaan, syarikat tersenarai terbesar mesti menggunakan semua keperluan ISSB mulai 1 Januari 2027. Pelaporan ialah langkah ke arah menimbang pihak berkepentingan, tetapi ia belum menjadi kewajipan untuk bertindak.</p>
+<p>Kewangan ialah bidang yang paling hampir dengan Maqasid. Pembiayaan Islam naik daripada 25% jumlah pembiayaan pada 2015 kepada 48% pada 2025, dan pasaran modal Islam melebihi 60% pasaran modal domestik. Skala tidak sama dengan hasil. Pada September, Gabenor BNM berkata pembiayaan untuk sektor keutamaan masih sederhana, dengan kelulusan tertumpu pada sektor perkhidmatan. Beliau menyebut punca seperti jurang maklumat, penstrukturan yang rumit dan kurang kefahaman sektor, bukan bank enggan memberi pinjaman.</p>
+<div class="box trap"><span class="lbl">Perangkap: label bukan hasil</span>
+<p>Pengkritik melaporkan bahawa struktur pembiayaan rumah Islam yang lazim di Malaysia meninggalkan risiko pada pembeli apabila projek terbengkalai. Itu bertentangan dengan perkongsian risiko. Bahagian 48% menunjukkan saiz pasaran. Ia tidak menunjukkan sama ada hasil Maqasid benar-benar sampai.</p></div>
+
+<h3>04 &middot; Kerajaan yang memikul kerja pihak berkepentingan</h3>
+<ul>
+<li><b>Gaji minimum:</b> RM1,700 naik kepada RM2,000 mulai Jun 2027, melibatkan lebih empat juta pekerja. PMKS dengan jualan tahunan di bawah RM50 juta dikecualikan. Tiada tarikh tamat pengecualian dinyatakan.</li>
+<li><b>Pekerja gig:</b> Akta Pekerja Gig 2025 berkuat kuasa pada 31 Mac 2026 dan meliputi kira-kira 1.64 juta orang. Sebuah majlis dijangka menetapkan pendapatan minimum menjelang awal 2027.</li>
+<li><b>Subsidi:</b> subsidi RON95 bersasar dijangka menjimatkan RM2.5 hingga 4 bilion setahun.</li>
+<li><b>Pembiayaan PMKS:</b> kemudahan pembiayaan dan jaminan untuk PMKS dan syarikat pertengahan meningkat kepada RM57 bilion pada 2027, daripada RM50 bilion tahun ini.</li>
+</ul>
+<p>Tekanan ke atas firma datang dalam bentuk peraturan. Maka firma melakukan apa yang Friedman kata: mengikut peraturan permainan. Etika masuk sebagai undang-undang, bukan sebagai tugas lembaga pengarah.</p>
+<p>Kerajaan juga ada had. Sasaran defisit fiskal ialah 3.3% daripada KDNK pada 2027, dengan hutang kerajaan persekutuan 63.7% berbanding had 60% dalam kerangka tanggungjawab fiskal. Pilihan raya perlu diadakan menjelang Februari 2028. Pembalikan dasar pada tahun pilihan raya ialah risiko yang nyata.</p>
+
+<h3>05 &middot; Angka yang menentukan</h3>
+<p>Gaji pekerja mencecah rekod RM686.9 bilion pada 2025, tetapi bahagiannya dalam KDNK hanya naik daripada 33.6% kepada 33.9%. Lebihan operasi perniagaan mengambil 62%. Kerajaan mahu gaji pekerja mencapai 40% KDNK menjelang 2030.</p>
+
+<div class="fig"><div class="t">Ke mana pendapatan KDNK pergi pada 2025</div>
+<div class="bars">
+ <div class="r"><span>Lebihan operasi perniagaan</span><div class="t"><i style="width:88.6%"></i><b>62.0%</b></div></div>
+ <div class="r"><span>Gaji pekerja</span><div class="t"><i class="hi" style="width:48.4%"></i><b>33.9%</b></div></div>
+</div>
+<div class="src">Sumber: DOSM, dilaporkan NST (Julai 2026). Baki ialah cukai tolak subsidi; kiraan itu daripada saya.</div></div>
+
+<div class="fig"><div class="t">Gaji pekerja sebagai % KDNK: laluan ke 40% berbanding kadar 2025 (unjuran saya)</div>
+<svg viewBox="0 0 680 280" role="img" aria-label="Carta garis: laluan ke 40 peratus menjelang 2030 berbanding 35.4 peratus jika kadar 2025 diteruskan">
+ <g font-family="Inter,Arial,sans-serif" font-size="12" fill="#5b6b7a">
+  <line x1="50" x2="600" y1="195" y2="195" stroke="#d5dbe2"/><line x1="50" x2="600" y1="145" y2="145" stroke="#d5dbe2"/><line x1="50" x2="600" y1="95" y2="95" stroke="#d5dbe2"/><line x1="50" x2="600" y1="45" y2="45" stroke="#d5dbe2"/>
+  <text x="42" y="199" text-anchor="end">34%</text><text x="42" y="149" text-anchor="end">36%</text><text x="42" y="99" text-anchor="end">38%</text><text x="42" y="49" text-anchor="end">40%</text>
+  <text x="50" y="250" text-anchor="middle">2025</text><text x="154" y="250" text-anchor="middle">2026</text><text x="258" y="250" text-anchor="middle">2027</text><text x="362" y="250" text-anchor="middle">2028</text><text x="466" y="250" text-anchor="middle">2029</text><text x="570" y="250" text-anchor="middle">2030</text>
+ </g>
+ <polyline fill="none" stroke="#0b5cad" stroke-width="3" points="50,197.5 154,167.5 258,137.5 362,105 466,75 570,45"/>
+ <polyline fill="none" stroke="#9aa7b4" stroke-width="3" stroke-dasharray="6 4" points="50,197.5 154,190 258,182.5 362,175 466,167.5 570,160"/>
+ <circle cx="570" cy="45" r="4" fill="#0b5cad"/><circle cx="570" cy="160" r="4" fill="#9aa7b4"/>
+ <g font-family="Inter,Arial,sans-serif" font-size="13" font-weight="700">
+  <text x="578" y="49" fill="#0b5cad">40.0%</text><text x="578" y="164" fill="#5b6b7a">35.4%</text>
+ </g>
+ <g font-family="Inter,Arial,sans-serif" font-size="12" fill="#13263a">
+  <rect x="50" y="8" width="14" height="4" fill="#0b5cad"/><text x="70" y="14">Garis lurus ke sasaran 40%</text>
+  <rect x="300" y="8" width="14" height="4" fill="#9aa7b4"/><text x="320" y="14">Jika kadar 2025 (+0.3 mata setahun) diteruskan</text>
+ </g>
+</svg>
+<div class="src">Titik mula: 33.9% (DOSM, 2025). Kedua-dua garis ialah unjuran saya, bukan ramalan rasmi.</div></div>
+
+<div class="box data"><span class="lbl">Kiraan saya</span>
+<ul>
+<li>Untuk sampai 40% daripada 33.9% dalam lima tahun, bahagian itu perlu naik kira-kira <b>1.2 mata setahun</b>. Kenaikan 2025 ialah 0.3.</li>
+<li>Gaji pekerja perlu tumbuh kira-kira <b>3.4 mata setahun lebih pantas</b> daripada KDNK nominal. Pada 2025 ia lebih pantas kira-kira 0.9 mata. Itu lebih kurang <b>3.8 kali ganda</b> kadar tersebut.</li>
+<li>Pada kadar 2025, bahagian itu sampai kira-kira <b>35.4%</b> pada 2030.</li>
+<li>Andaian: garis lurus. Kenaikan bahagian gaji mungkin berkumpul selepas gaji minimum naik pada Jun 2027, jadi laluan sebenar boleh melengkung.</li>
+</ul></div>
+<div class="box watch"><span class="lbl">Dua sasaran, satu soalan</span>
+<p>Bab ekonomi Belanjawan 2026 menyenaraikan matlamat pendapatan buruh 45% di bawah kerangka Ekonomi MADANI. Pencapaian Rancangan Malaysia Ke-13 ialah 40% menjelang 2030. Saya belum menyemak sama ada perbezaan itu hanya pada tempoh masa.</p></div>
+
+<h3>06 &middot; Ujian kos luaran: pusat data</h3>
+<p>Pusat data ialah tempat masalah Friedman nampak jelas. Untungnya milik swasta. Air dan elektriknya datang daripada grid yang dikongsi.</p>
+<div class="fig"><div class="t">Bahagian pusat data dalam elektrik Semenanjung Malaysia</div>
+<div class="bars">
+ <div class="r"><span>2026 (jawapan Parlimen)</span><div class="t"><i style="width:20%"></i><b>kira-kira 7%</b></div></div>
+ <div class="r"><span>2035 (unjuran kementerian)</span><div class="t"><i class="hi" style="width:88.6%"></i><b>sehingga 31%</b></div></div>
+</div>
+<div class="src">Sumber: jawapan Parlimen, Julai 2026, dan unjuran kementerian, seperti dilaporkan The Edge Malaysia, keratan akhbar TNB dan Malaysiakini (lihat sumber).</div></div>
+<p>Bank Negara menganggarkan pusat data 50MW menggunakan air sebanyak 2,200 isi rumah sehari dan elektrik sebanyak 22,000 isi rumah. Johor telah menghentikan kelulusan pusat data Tier-1 dan Tier-2 kerana penggunaan air. Kerajaan merancang harga elektrik &ldquo;pengguna membayar&rdquo; untuk pengguna besar dan menegaskan tidak akan menawarkan elektrik dan air murah kepada pengendali.</p>
+<p>Ini ialah kaedah Maslahah terhadap mudarat, dilaksanakan oleh pengawal selia kerana firma tidak diminta melaksanakannya sendiri.</p>
+
+<h3 class="sp">07 &middot; Tiga laluan menjelang 2030</h3>
+<div class="cards">
+ <div class="card"><span class="tag">Kes asas</span><h5>Kerajaan memikul Maslahah, firma patuh pada tahap minimum</h5><p>Undang-undang syarikat kekal. Pengecualian PMKS tiada tarikh tamat. Bahagian gaji naik perlahan.</p><ul><li>Gaji minimum, Jun 2027</li><li>Defisit ke 3% menjelang 2028</li></ul></div>
+ <div class="card g"><span class="tag">Sisi baik</span><h5>Maqasid beralih daripada label kepada amalan</h5><p>Pelaporan ISSB mengubah agenda lembaga. Bank melaporkan hasil perkongsian risiko. Bahagian gaji mengikut garis lurus.</p><ul><li>ISSB, 1 Januari 2027</li><li>Bahagian gaji 2026 hampir 35.1%</li></ul></div>
+ <div class="card r"><span class="tag">Sisi buruk</span><h5>Label tanpa hasil</h5><p>Bahagian gaji tersekat sekitar 35%. Pembalikan dasar tahun pilihan raya. Kos pusat data sampai ke isi rumah. Hutang isi rumah, 84.4% KDNK pada Mac 2026, kekal tinggi.</p><ul><li>Bahagian gaji 2026 hampir 34.2%</li><li>PRU wajib diadakan sebelum Feb 2028</li></ul></div>
+</div>
+<div class="cap">Pencetus ada tarikh. Angka bahagian gaji 2026 dijangka sekitar pertengahan 2027 jika DOSM mengikut masa tahun lalu.</div>
+
+<div class="box watch span"><span class="lbl">Hujah menentang, dalam bentuk paling kuat</span>
+<p>Pihak Friedman ada jawapan yang kukuh. Malaysia berkembang di bawah campuran ini: pertumbuhan 2026 diunjur 4.8 hingga 5.3%, dan negara naik ke tempat ke-15 dalam kedudukan daya saing IMD. Setakat ini tiada bukti bahawa dorongan memihak pihak berkepentingan menjejaskan pertumbuhan. Tekanan dari luar juga berlawanan arah: pengulas di AS berhujah bahawa keutamaan pemegang saham sudah kembali dan kapitalisme pihak berkepentingan terlalu jauh. Dan sasaran gaji yang tersasar sebegini jauh mungkin sekadar bermakna sasaran itu ditetapkan terlalu tinggi.</p></div>
+
+<h3 class="sp">08 &middot; Soalan yang patut ditanya</h3>
+<div class="qs">
+ <div class="qc"><small>Untuk Parlimen</small>Patutkah seksyen 213 menyebut pekerja, komuniti dan alam sekitar, seperti seksyen 172 di UK?</div>
+ <div class="qc"><small>Untuk Kementerian Kewangan</small>Berapa lama pengecualian gaji minimum PMKS akan berjalan, dan apa yang menamatkannya?</div>
+ <div class="qc"><small>Untuk bank</small>Berapa peratus pembiayaan anda berkongsi risiko dengan pelanggan, dan apa hasilnya dalam sektor keutamaan?</div>
+ <div class="qc"><small>Untuk lembaga syarikat tersenarai</small>Apabila kos gaji bertembung dengan pulangan pemegang saham, siapa yang memutuskan, dan adakah ia dicatat dalam minit?</div>
+ <div class="qc"><small>Untuk pemilik PMKS</small>Jika pengecualian tamat, mampukah margin anda menanggung RM2,000 sebulan seorang pekerja?</div>
+ <div class="qc"><small>Untuk pelabur</small>Adakah anda meminta data gaji, air dan elektrik, atau hanya baris keuntungan?</div>
+</div>
+
+<h3 class="sp">09 &middot; Apa yang saya akan buat</h3>
+<p>Berikut ialah analisis saya sendiri, bukan dapatan daripada sumber.</p>
+<div class="props">
+ <div class="prop"><div class="n">1</div><div><b>Letakkan tarikh semakan pada pengecualian PMKS.</b> Kelonggaran tanpa tarikh tamat sukar ditarik balik kemudian.<span class="m">Ukuran: peratus pekerja dalam firma dikecualikan yang dibayar kurang RM2,000, dilapor setiap tahun.</span></div></div>
+ <div class="prop"><div class="n">2</div><div><b>Terbitkan laluan bahagian gaji bersama setiap Belanjawan.</b> Tunjukkan angka DOSM berbanding garis lurus ke 40%.<span class="m">Ukuran: jurang kepada garis, dalam mata peratusan.</span></div></div>
+ <div class="prop"><div class="n">3</div><div><b>Minta bank melaporkan hasil perkongsian risiko di bawah VBI.</b> Bahagian pembiayaan dengan struktur perkongsian risiko atau aset sebenar, dan hasil sektor keutamaan.<span class="m">Ukuran: bahagian yang dilapor setiap tahun, mengikut sektor.</span></div></div>
+ <div class="prop"><div class="n">4</div><div><b>Terbitkan penggunaan air dan elektrik pusat data bagi setiap MW.</b> Tapak demi tapak.<span class="m">Ukuran: liter dan MWj bagi setiap MW.</span></div></div>
+</div>
+
+<div class="box call span"><span class="lbl">Seruan kepada Kerajaan</span>
+<ul>
+<li><b>Menjelang suku pertama 2027:</b> tetapkan tarikh semakan bagi pengecualian gaji minimum PMKS.</li>
+<li><b>Bersama Belanjawan 2028:</b> terbitkan laluan bahagian gaji berbanding garis 40%.</li>
+<li><b>Menjelang akhir 2027:</b> buka rundingan awam sama ada seksyen 213 perlu menyebut pihak berkepentingan.</li>
+</ul></div>
+
+<table class="asks wide">
+<tr><th>Lembaga pengarah</th><td>Tambah kos gaji, air dan elektrik ke dalam agenda lembaga. Sediakan penyata ISSB lebih awal jika anda dalam kumpulan pertama.</td></tr>
+<tr><th>Bank</th><td>Laporkan bahagian perkongsian risiko dan hasil sektor keutamaan. Bina kemahiran penstrukturan sektor yang diminta Gabenor BNM.</td></tr>
+<tr><th>PMKS</th><td>Rancang untuk RM2,000 walaupun hari ini dikecualikan. Tanya pembiaya anda tentang sokongan jaminan.</td></tr>
+<tr><th>Pelabur</th><td>Minta data gaji dan penggunaan sumber, bukan hanya angka keuntungan.</td></tr>
+</table>
+
+<div class="box ok span"><span class="lbl">Semak sendiri</span>
+<ul>
+<li>Adakah saya tahu bahagian gaji daripada hasil firma saya, dan adakah ia berubah dalam tiga tahun?</li>
+<li>Kos manakah yang hari ini dibayar orang lain: air, elektrik, tanah, kesihatan?</li>
+<li>Adakah pembiayaan saya berkongsi risiko dengan saya, atau hanya memindahkannya?</li>
+<li>Jika gaji minimum sampai ke firma saya esok, baris mana yang tertekan dahulu?</li>
+<li>Bila kali terakhir sebuah lembaga yang saya kenal membincangkan kos yang tiada dalam bukunya sendiri?</li>
+</ul></div>
+
+<div class="box take span"><span class="lbl">Pandangan saya</span>
+<p>Malaysia belum memilih antara Friedman dan Maslahah. Ia membahagikan kerja. Firma mengikut peraturan, kerajaan menulisnya. Itu boleh berjalan selagi kerajaan ada ruang untuk menulisnya. Defisit 3.3% daripada KDNK dan pilihan raya perlu diadakan menjelang Februari 2028. Jika bahagian gaji kekal sekitar 35%, pasaran sebenarnya sudah memilih Friedman secara senyap, walau apa pun yang diucapkan dalam ucapan. Jika lembaga pengarah mula bertindak atas Maslahah sebelum undang-undang memaksa, jurang itu tertutup lebih cepat dan lebih murah.</p></div>
+
+<div class="box over span"><span class="lbl">Giliran anda</span>
+<p>Apabila pulangan pemegang saham dan kebajikan awam bertentangan, yang mana patut didahulukan oleh lembaga pengarah di Malaysia, dan apa yang undang-undang patut katakan?</p></div>
+</div>
+
+<div class="foot">
+<details><summary>Sumber</summary>
+<ol>
+<li>Milton Friedman, "The Social Responsibility of Business Is to Increase Its Profits", New York Times Magazine, 13 September 1970.</li>
+<li>Chicago Booth Review, "What Does Business Owe Society?" (Oktober 2020).</li>
+<li>Bank Negara Malaysia, Laporan Tahunan 2025, bab kewangan Islam, bnm.gov.my/publications/ar2025/ch1d</li>
+<li>Bank Negara Malaysia, ucapan Gabenor di Forum FIDE, 24 September 2026, bnm.gov.my</li>
+<li>The Star, "Financing for priority sectors still modest despite policy ambitions, says BNM Governor", 24 September 2026.</li>
+<li>The Star, "Govt wants wages to make up 40% of GDP by 2030", 20 Oktober 2026.</li>
+<li>New Straits Times, "Malaysian workers' pay hits record RM686.9bil in 2025", Julai 2026 (data DOSM).</li>
+<li>The Star, "Budget 2027: Minimum wage to rise to RM2,000 from June 2027, says Anwar", 9 Oktober 2026.</li>
+<li>The Sun, "Budget 2027: minimum wage RM2,000", Oktober 2026. Bernama (BM), 12 Oktober 2026, mengenai kemudahan PMKS RM57 bilion.</li>
+<li>The Star, "Gig Workers Act 2025 comes into force today", 31 Mac 2026. The Vibes, tarikh sama, mengenai 1.64 juta pekerja.</li>
+<li>Business Today, "Targeted RON95 subsidy saves govt up to RM4 billion a year", 3 Ogos 2026.</li>
+<li>Business Today, "Budget 2027: spending rises to RM510 billion as govt targets 3.3% deficit", 9 Oktober 2026. NST menyatakan belanjawan persekutuan RM459.84 bilion; angka yang lebih besar termasuk pelaburan GLIC dan item lain.</li>
+<li>Business Today, Fitch Ratings mengenai Belanjawan 2027, 13 Oktober 2026 (pilihan raya sebelum Februari 2028).</li>
+<li>Akta Syarikat 2016, seksyen 213: Chambers Corporate Governance 2025 (Malaysia); Sunway University, "Reforming the Companies Act to Embrace 21st-Century Sustainability Imperatives".</li>
+<li>IFRS Foundation, profil bidang kuasa Malaysia (Rangka Kerja Pelaporan Kemampanan Kebangsaan), ifrs.org.</li>
+<li>Pusat data: The Star, "Malaysia's resource anxiety tests Asia's fastest data centre build-out", 24 Julai 2026; The Edge Malaysia, 14 September 2026; ulasan Malaysiakini mengenai kuasa, air dan pengawasan; Lowyat.net, 15 Oktober 2026.</li>
+<li>New Straits Times, "Household debt stands at RM1.73 trillion, 84.4pct of GDP, Anwar says", 1 Julai 2026.</li>
+<li>PwC Malaysia, ringkasan Belanjawan 2027; Kementerian Kewangan, Kenyataan Pra-Belanjawan 2027 (kedudukan IMD).</li>
+<li>Nuarrual Hilal Md Dahlan, "Why Malaysia must reform its Islamic home financing", The Jakarta Post, 8 Disember 2025 (pendapat).</li>
+<li>Allison Schrager, "Shareholder Capitalism Is Back", Bloomberg, 10 Mac 2025; Robert Profusek, Fortune, 11 Februari 2026 (pendapat).</li>
+</ol></details>
+
+<div class="disc"><b>Penafian.</b> Pandangan dalam artikel ini ialah pandangan peribadi saya. Ia tidak mewakili majikan saya atau mana-mana organisasi yang pernah atau sedang saya sertai. Artikel ini tidak berkaitan dengan, tidak disokong oleh dan tidak ditulis bagi pihak mana-mana institusi yang disebut. Semua angka diambil daripada sumber awam yang disenaraikan, dan sebarang kesilapan adalah tanggungjawab saya sendiri. Artikel ini bukan nasihat kewangan, pelaburan atau undang-undang. Kajian dan penulisan artikel ini dibantu oleh alat AI. Semua fakta telah disemak dengan sumber asal.</div>
+
+<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b> menulis tentang pembiayaan PMKS, automasi AI untuk perniagaan kecil dan dasar jangka panjang untuk Malaysia.</div></div>
+<div class="endcta"><a class="cta" data-cta href="#">Komen di LinkedIn</a></div>
+</div>
+</article>
+
+<div class="copy">&copy; 2026 Azman Taufik</div>
+</div>
+
+<script>
+// Paste the LinkedIn post URL here. The "Comment on LinkedIn" buttons stay hidden until it is set.
+var LINKEDIN_POST = "";
+document.querySelectorAll('[data-cta]').forEach(function(a){ if(LINKEDIN_POST){a.href=LINKEDIN_POST;a.target="_blank";a.rel="noopener";a.classList.add('show');} });
+function setLang(l){
+  document.body.classList.toggle('bm', l==='bm');
+  document.documentElement.lang = (l==='bm') ? 'ms' : 'en';
+  document.getElementById('b-en').classList.toggle('on', l==='en');
+  document.getElementById('b-bm').classList.toggle('on', l==='bm');
+  try{ history.replaceState(null,'','#'+l); }catch(e){}
+}
+setLang(location.hash==='#en' ? 'en' : 'bm');
+</script>
+</body>
+</html>
