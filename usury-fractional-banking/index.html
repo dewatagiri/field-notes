@@ -1,0 +1,540 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Field Notes: Longevity Does Not Make a Parasite Legitimate</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --paper: #f8fafc;
+      --ink: #0f172a;
+      --body-ink: #1e293b;
+      --muted: #64748b;
+      --rule: #0f172a;
+      --light-rule: #e2e8f0;
+      --accent: #1d4ed8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--body-ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.72;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--light-rule);
+      padding: 10px 16px;
+    }
+
+    .top-bar-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .edition-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      border: 1.5px solid var(--ink);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .lang-btn {
+      background: #ffffff;
+      color: var(--ink);
+      border: none;
+      padding: 5px 13px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--ink);
+      color: #ffffff;
+    }
+
+    .article-container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    .masthead {
+      text-align: left;
+      border-bottom: 3px solid var(--rule);
+      padding-bottom: 18px;
+      margin-bottom: 26px;
+    }
+
+    .kicker {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    h1.headline {
+      color: var(--ink);
+      font-size: clamp(28px, 6vw, 38px);
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 14px;
+    }
+
+    .subheadline {
+      font-size: 18px;
+      line-height: 1.48;
+      color: #475569;
+      font-weight: 400;
+      margin-bottom: 14px;
+    }
+
+    .byline-bar {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    p {
+      margin-bottom: 18px;
+    }
+
+    h2.section-head {
+      color: var(--ink);
+      font-size: 21px;
+      line-height: 1.3;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      margin-top: 34px;
+      margin-bottom: 14px;
+      padding-top: 18px;
+      border-top: 1.5px solid var(--light-rule);
+    }
+
+    .pull-quote {
+      border-left: 3.5px solid var(--ink);
+      background: var(--paper);
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: 18px;
+      line-height: 1.55;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    ul.editorial-list {
+      margin: 14px 0 22px 0;
+      padding-left: 20px;
+    }
+
+    ul.editorial-list li {
+      margin-bottom: 14px;
+    }
+
+    .closing-box {
+      margin-top: 34px;
+      padding: 20px;
+      border: 1.5px solid var(--rule);
+      background: var(--paper);
+    }
+
+    .closing-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .closing-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    details.sources-drawer {
+      margin-top: 36px;
+      padding-top: 16px;
+      border-top: 1px solid var(--light-rule);
+    }
+
+    details.sources-drawer summary {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      cursor: pointer;
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      user-select: none;
+    }
+
+    details.sources-drawer summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.sources-drawer summary::before {
+      content: "▸";
+      font-size: 12px;
+      color: var(--ink);
+      transition: transform 0.15s ease;
+    }
+
+    details.sources-drawer[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    ol.sources-list {
+      margin-top: 14px;
+      padding-left: 22px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #334155;
+    }
+
+    ol.sources-list li {
+      margin-bottom: 8px;
+    }
+
+    ol.sources-list a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .author-footer {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--light-rule);
+    }
+
+    .author-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .avatar-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--ink);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      letter-spacing: 0.03em;
+    }
+
+    .author-bio-text {
+      font-size: 15px;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+
+    .disclaimer-text {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .copyright-line {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 16px;
+      margin-bottom: 0;
+    }
+
+    [data-lang="bm"] {
+      display: none;
+    }
+
+    body.lang-bm [data-lang="en"] {
+      display: none;
+    }
+
+    body.lang-bm [data-lang="bm"] {
+      display: block;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 16.5px;
+        line-height: 1.68;
+      }
+      .article-container {
+        padding: 20px 16px 52px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <span class="edition-tag">Field Notes &bull; Monetary Architecture</span>
+      <div class="lang-toggle" role="group" aria-label="Language Switcher">
+        <button type="button" id="btn-en" class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button type="button" id="btn-bm" class="lang-btn" onclick="setLang('bm')">BM</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="article-container">
+
+    <!-- ==================== ENGLISH VERSION ==================== -->
+    <article data-lang="en">
+      <div class="masthead">
+        <div class="kicker">Field Notes &bull; Monetary Architecture</div>
+        <h1 class="headline">Longevity Does Not Make a Parasite Legitimate: Why Usury and Fractional Banking Must Go</h1>
+        <p class="subheadline">From the fall of Rome to modern banking, relabeling interest as "profit" changes nothing while private banks conjure money out of thin air.</p>
+        <div class="byline-bar">Azman Taufik &bull; 26 Nov 2026 &bull; 5 min read</div>
+      </div>
+
+      <p>Let’s call a spade a spade. A broken system that has run for a thousand years is still a broken system. Just because something has been around forever doesn't mean it's right. Longevity does not make a parasite legitimate.</p>
+
+      <p>Look at why the Roman Empire collapsed. It wasn't just barbarians at the gate—it was rotting from the inside through currency debasement, predatory usury, and crushing debt that hollowed out the productive middle class while a tiny patrician elite hoarded all the land and wealth. Look around at our economy today, both globally and back home. The parallel is staring us right in the face.</p>
+
+      <p>Half-measures in modern finance are designed to fail. When countries merely relabel interest as "profit" while leaving fractional-reserve money creation untouched, nothing really changes on the ground. At the end of the day, the house always wins.</p>
+
+      <p>The real disease in modern finance isn't just charging interest—it is letting private banks conjure money out of thin air through fractional-reserve banking, paired with risk-free usury. When private banks create currency as interest-bearing debt, wealth concentration, boom-bust crashes, and lifelong debt-bondage are not system errors. They are the entire point of the design.</p>
+
+      <blockquote class="pull-quote">
+        "A true non-usury, 100%-reserve system is not some idealistic dream. It is a far superior engine for real productivity, managed growth, and human dignity."
+      </blockquote>
+
+      <p>Even mainstream institutions like the IMF and the Bank of England have inadvertently exposed the mechanics of why this works—and why the current gatekeepers will never let go of it willingly:</p>
+
+      <h2 class="section-head">1. Why Non-Usury Finance Supercharges Real Productivity</h2>
+      <p>Under an interest-based fractional system, banks behave like untouchable rentiers. Frankly, they don't care whether a loan builds a factory or inflates a property bubble; they only care if the borrower has land or solid collateral to guarantee their fixed cut. Because of that, trillions in newly conjured bank money flood into real estate and financial speculation—pushing up the cost of living and housing for everyone else while starving productive SMEs of real capital.</p>
+
+      <p>Strip away usury and force capital into true equity and risk-sharing (<em>Mudarabah</em>, <em>Musharakah</em>, or asset-backed trade), and the incentives flip overnight:</p>
+
+      <ul class="editorial-list">
+        <li><strong>Money can no longer sit idle and demand a risk-free tribute.</strong> To earn a return, financiers <em>must</em> roll up their sleeves and partner with productive entrepreneurs who build real goods, create real jobs, and drive real innovation.</li>
+        <li><strong>Currency stays anchored to the real economy.</strong> Every ringgit or dollar in circulation represents actual productive output, not phantom debt. Productivity surges because capital flows to <strong>project viability and human ingenuity</strong>, rather than simply rewarding whoever already holds land titles.</li>
+      </ul>
+
+      <h2 class="section-head">2. Managed, Crisis-Free Growth (Proven by the IMF's Own Math)</h2>
+      <p>Orthodox economists love to claim that an interest-free, non-fractional economy will stagnate. Yet in 2012, two senior IMF economists (Benes and Kumhof) ran a rigorous mathematical test on Irving Fisher’s <strong>Chicago Plan</strong>—a 100%-reserve banking model that strips private banks of the privilege to create money from nothing.</p>
+
+      <p>Their findings completely shattered conventional banking dogma:</p>
+
+      <ul class="editorial-list">
+        <li><strong>Boom-bust cycles vanish:</strong> Financial crashes are not acts of God. They happen because private banks recklessly pump out debt-money when times are good and violently choke off credit the moment things turn sour—sweeping up distressed assets on the cheap while ordinary folks lose everything. Separating money creation from lending creates a steady, managed growth cycle where money supply expands strictly in line with real economic output.</li>
+        <li><strong>Sustainable growth without punishing workers:</strong> Without phantom debt-money flooding the system, an economy grows steadily without central banks periodically hiking OPR or interest rates to crush wages and squeeze ordinary households.</li>
+      </ul>
+
+      <h2 class="section-head">3. Rapid Wealth Redistribution &amp; Restoring Human Dignity</h2>
+      <p>Compound interest acts like an exponential vacuum cleaner siphoning wealth upward. Almost every single item a family buys—from groceries to housing—has multiple layers of supply-chain interest baked into its price, quietly bleeding the bottom 90% who sweat and labor just to feed the top fraction of a percent who own the debt.</p>
+
+      <p>A non-usury, non-fractional system reverses that extraction fast:</p>
+
+      <ul class="editorial-list">
+        <li><strong>Immediate relief from debt bondage:</strong> As the IMF's Chicago Plan model proved, reclaiming sovereign, debt-free money creation allows a nation to wipe out massive layers of public and private debt without triggering inflation. Once businesses and families are freed from servicing compounding interest, purchasing power and savings stay in the hands of the people who actually create value.</li>
+        <li><strong>Restoring human decency through risk-sharing:</strong> Usury is legalized <strong>risk-transfer</strong>. If a crisis or pandemic strikes, the bank still demands its fixed pound of flesh, bankrupting the entrepreneur and seizing their livelihood. It treats human beings like disposable debt-servicing machines. Non-usury finance is <strong>risk-sharing</strong>. Financiers and entrepreneurs share both the upside and the downside. It treats human labor and dignity as equal partners to capital, replacing predatory foreclosures with genuine social solidarity.</li>
+      </ul>
+
+      <h2 class="section-head">4. Why History Looks Like a Graveyard of "Failures"</h2>
+      <p>Look at history through this lens, and the popular "failures" suddenly look very different:</p>
+
+      <ul class="editorial-list">
+        <li><strong>Wörgl, Austria (1932) &amp; Switzerland's Vollgeld (2018):</strong> Wörgl’s local, non-hoardable currency proved how fast an ordinary town can revive jobs and build infrastructure when money circulates freely—which is why the Austrian Central Bank crushed it in court in 1933 to protect its monopoly. Same playbook in Switzerland in 2018: the banking establishment poured millions into scaring voters into rejecting <em>Vollgeld</em> (100% reserve sovereign money) because it would have ended private banks' license to print money from thin air.</li>
+        <li><strong>Nazi Germany (1933–1939) &amp; Libya (2011):</strong> Early German recovery under Schacht proved that sovereign, labor-backed credit tied to real production (MEFO bills) can achieve full employment without foreign gold or private loans—until Hitler hijacked it for war. In Libya, Gaddafi’s push for a gold-backed pan-African currency directly threatened dollar and franc dominance, while Libya's post-2013 interest ban failed simply because they left a broken, oil-dependent banking shell behind without building real risk-sharing institutions.</li>
+        <li><strong>BRICS, Malaysia's Gold Dinar &amp; Modern Islamic Banking:</strong> Both Tun Mahathir’s 2002 gold dinar proposal and BRICS local-currency settlements are defensive moves against dollar-debt hegemony. Meanwhile, Iran (1983) and modern Islamic banking—even back home here in Malaysia at 48% market share—prove why you cannot compromise with the house. Let’s be honest with ourselves: as long as Islamic banks sit inside a fractional-reserve system, peg profit rates to conventional interest benchmarks, and sideline profit-and-loss sharing to a tiny 5% of assets, we haven't built a non-usury system. We've just painted a conventional bank green.</li>
+      </ul>
+
+      <div class="closing-box">
+        <div class="closing-label">Editorial Verdict</div>
+        <p>The issue has never been that a non-usury, non-fractional system cannot work. The real issue is that it works <em>too well</em> for ordinary humanity—and directly threatens the entrenched financial elite who sit atop the global fractional-reserve pyramid, collecting risk-free rent on money they conjured out of nothing.</p>
+        <p>A system that survived for a thousand years by enslaving the productive majority to the ledger of a few does not deserve reverence—it deserves replacement. Those who hold the keys to private money creation will never voluntarily surrender a monopoly that lets them tax the entire human race without producing a single thing of value. Until we sever the link between debt and money creation and replace risk-transfer with true risk-sharing, we will keep repeating the fall of Rome—working harder every year just to service the phantom ledger of the few.</p>
+      </div>
+
+      <details class="sources-drawer">
+        <summary>Sources</summary>
+        <ol class="sources-list">
+          <li><a href="https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy" target="_blank" rel="noopener">Bank of England, Quarterly Bulletin (2014 Q1): Money creation in the modern economy</a></li>
+          <li><a href="https://www.imf.org/external/pubs/ft/wp/2012/wp12202.pdf" target="_blank" rel="noopener">International Monetary Fund (IMF), Working Paper WP/12/202: The Chicago Plan Revisited (Benes &amp; Kumhof, 2012)</a></li>
+          <li><a href="https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2016/12/31/Rethinking-Financial-Deepening-Stability-and-Growth-in-Emerging-Markets-42868" target="_blank" rel="noopener">International Monetary Fund (IMF), Staff Discussion Note SDN/15/08: Rethinking Financial Deepening, Stability and Growth</a></li>
+          <li><a href="https://www.bnm.gov.my/banking-islamic-banking" target="_blank" rel="noopener">Bank Negara Malaysia (BNM), Monthly Statistical Bulletin: Islamic Banking Financing Share &amp; Profit-Sharing Ratios</a></li>
+          <li><a href="https://www.admin.ch/gov/en/start/documentation/votes/20180610/sovereign-money-initiative.html" target="_blank" rel="noopener">Swiss Federal Council, Official Referendum Record: Sovereign Money Initiative (Vollgeld), 10 June 2018</a></li>
+          <li><a href="https://www.imf.org/en/Publications/CR/Issues/2023/06/29/Libya-2023-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-535432" target="_blank" rel="noopener">International Monetary Fund (IMF), Libya Article IV Consultation Report: Impact of Law No. 1 (2013) on Credit &amp; Banking</a></li>
+        </ol>
+      </details>
+
+      <footer class="author-footer">
+        <div class="author-row">
+          <div class="avatar-circle">AT</div>
+          <div class="author-bio-text">
+            <strong>Azman Taufik</strong> writes Field Notes on numbers behind money decisions. Views are personal.
+          </div>
+        </div>
+        <p class="disclaimer-text">
+          The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from publicly available sources listed above, and any errors are mine. Nothing here is financial, investment or legal advice.
+        </p>
+        <p class="disclaimer-text">
+          Research and drafting were assisted by AI tools. All facts were checked against the sources listed.
+        </p>
+        <p class="copyright-line">&copy; 2026 Azman Taufik &middot; Field Notes</p>
+      </footer>
+    </article>
+
+    <!-- ==================== BAHASA MELAYU VERSION ==================== -->
+    <article data-lang="bm">
+      <div class="masthead">
+        <div class="kicker">Field Notes &bull; Seni Bina Monetari</div>
+        <h1 class="headline">Usia Seribu Tahun Tidak Menghalalkan Parasit: Mengapa Riba dan Perbankan Pecahan Mesti Diganti</h1>
+        <p class="subheadline">Daripada kejatuhan Empayar Rom hingga perbankan moden, menukar label faedah kepada "keuntungan" tidak mengubah apa-apa selagi bank swasta mencipta wang daripada angin.</p>
+        <div class="byline-bar">Azman Taufik &bull; 26 Nov 2026 &bull; Bacaan 5 minit</div>
+      </div>
+
+      <p>Biar kita berterus-terang. Sistem yang rosak walaupun sudah berjalan seribu tahun tetap sebuah sistem yang rosak. Hanya kerana sesuatu itu sudah lama wujud tidak bermakna ia betul. Usia yang panjang tidak sekali-kali menjadikan sesuatu parasit itu sah.</p>
+
+      <p>Lihat mengapa Empayar Rom runtuh. Ia bukan sekadar angkara serangan kaum gasar di pintu kota—tetapi kerana ia mereput dari dalam akibat penyusutan nilai mata wang, riba yang kejam, dan penyedutan hutang melampau yang melumpuhkan kelas pertengahan yang produktif sementara segelintir elit bangsawan membolot tanah dan kekayaan. Lihatlah ekonomi kita hari ini, baik di peringkat global mahupun di tanah air sendiri. Persamaannya terpampang tepat di hadapan mata kita.</p>
+
+      <p>Langkah separuh jalan dalam kewangan moden memang direka untuk gagal. Apabila sesebuah negara sekadar menukar label faedah kepada "keuntungan" sambil membiarkan penciptaan wang rizab pecahan (<em>fractional-reserve</em>) terus berjalan tanpa usik, tiada apa yang benar-benar berubah di peringkat akar umbi. Akhirnya, tuan rumah tetap sentiasa menang.</p>
+
+      <p>Penyakit sebenar dalam sistem kewangan moden bukan sekadar mengenakan faedah—tetapi membenarkan bank-bank swasta mencipta wang daripada angin melalui perbankan rizab pecahan, yang digandingkan pula dengan riba bebas risiko. Apabila bank swasta mencipta mata wang sebagai hutang berfaedah, pemusatan kekayaan, kitaran krisis ekonomi, dan perhambaan hutang seumur hidup bukanlah kesilapan sistem. Itulah sebenarnya matlamat asal reka bentuk tersebut.</p>
+
+      <blockquote class="pull-quote">
+        "Sistem bebas riba dan rizab 100% yang tulen bukanlah angan-angan idealistik. Ia adalah enjin yang jauh lebih unggul untuk produktiviti sebenar, pertumbuhan terkawal, dan maruah insan."
+      </blockquote>
+
+      <p>Malah institusi arus perdana seperti IMF dan Bank of England secara tidak sengaja telah mendedahkan mekanisme mengapa sistem ini berkesan—dan mengapa golongan penjaga pintu sistem sedia ada tidak akan sekali-kali melepaskannya secara sukarela:</p>
+
+      <h2 class="section-head">1. Mengapa Kewangan Bebas Riba Melonjakkan Produktiviti Sebenar</h2>
+      <p>Di bawah sistem pecahan berasaskan faedah, bank beroperasi seperti golongan <em>rentier</em> yang kebal. Terus-terang, mereka tidak peduli sama ada pinjaman itu membina sebuah kilang atau menggelembungkan harga hartanah; mereka hanya peduli sama ada peminjam mempunyai tanah atau cagaran kukuh untuk menjamin potongan tetap mereka. Akibatnya, trilion wang bank yang baru dicipta membanjiri sektor hartanah dan spekulasi kewangan—melonjakkan kos sara hidup dan harga rumah untuk rakyat jelata sambil membiarkan PKS yang produktif kehausan modal sebenar.</p>
+
+      <p>Buang unsur riba dan paksa modal masuk ke dalam ekuiti serta perkongsian risiko sebenar (<em>Mudarabah</em>, <em>Musharakah</em>, atau perdagangan bersandarkan aset), dan insentif ekonomi akan berubah serta-merta:</p>
+
+      <ul class="editorial-list">
+        <li><strong>Wang tidak lagi boleh duduk diam dan menuntut ufti tanpa risiko.</strong> Untuk meraih pulangan, pembiaya <em>mesti</em> menyingsing lengan dan bekerjasama dengan usahawan produktif yang membina barangan sebenar, mencipta pekerjaan sebenar, dan memacu inovasi tulen.</li>
+        <li><strong>Mata wang kekal berpaut pada ekonomi sebenar.</strong> Setiap ringgit atau dolar dalam edaran mewakili hasil pengeluaran sebenar, bukannya hutang bayangan. Produktiviti melonjak kerana modal mengalir kepada <strong>daya maju projek dan kepintaran manusia</strong>, bukannya sekadar memberi ganjaran kepada sesiapa yang sudah memegang geran tanah.</li>
+      </ul>
+
+      <h2 class="section-head">2. Pertumbuhan Terkawal Tanpa Krisis (Dibuktikan oleh Matematik IMF Sendiri)</h2>
+      <p>Ahli ekonomi ortodoks gemar mendakwa bahawa ekonomi bebas faedah dan tanpa rizab pecahan akan menjadi kaku. Namun pada tahun 2012, dua ahli ekonomi kanan IMF (Benes dan Kumhof) telah menjalankan ujian matematik yang ketat ke atas <strong>Pelan Chicago</strong> oleh Irving Fisher—sebuah model perbankan rizab 100% yang melucutkan hak istimewa bank swasta untuk mencipta wang daripada tiada apa-apa.</p>
+
+      <p>Penemuan mereka meranapkan dogma perbankan konvensional:</p>
+
+      <ul class="editorial-list">
+        <li><strong>Kitaran ledakan dan kejatuhan (<em>boom-bust</em>) lenyap:</strong> Krisis kewangan bukan ketentuan takdir. Ia berlaku kerana bank swasta mengepam wang hutang secara melulu ketika ekonomi rancak dan menyekat kredit secara ganas sebaik sahaja keadaan merudum—lalu memborong aset tertekan pada harga murah ketika rakyat biasa kehilangan segala-galanya. Memisahkan penciptaan wang daripada aktiviti pinjaman mewujudkan kitaran pertumbuhan yang stabil dan terkawal, di mana bekalan wang berkembang selaras dengan pengeluaran ekonomi sebenar.</li>
+        <li><strong>Pertumbuhan mampan tanpa menghukum pekerja:</strong> Tanpa wang hutang bayangan membanjiri sistem, ekonomi berkembang secara stabil tanpa bank pusat perlu menaikkan OPR atau kadar faedah secara berkala untuk menekan gaji dan menjerut isi rumah biasa.</li>
+      </ul>
+
+      <h2 class="section-head">3. Pengagihan Semula Kekayaan yang Pantas &amp; Mengembalikan Maruah Insan</h2>
+      <p>Faedah kompaun bertindak seperti pembersih hampagas eksponen yang menyedut kekayaan ke atas. Hampir setiap barangan yang dibeli oleh sesebuah keluarga—daripada barang dapur hinggalah perumahan—mempunyai pelbagai lapisan faedah rantaian bekalan yang tersembunyi di dalam harganya, secara senyap memerah golongan 90% terbawah yang membanting tulang semata-mata demi menyuap kelompok kecil di puncak yang memegang hutang.</p>
+
+      <p>Sistem bebas riba dan tanpa pecahan menterbalikkan penyedutan ini dengan pantas:</p>
+
+      <ul class="editorial-list">
+        <li><strong>Kelegaan segera daripada perhambaan hutang:</strong> Sebagaimana yang dibuktikan oleh model Pelan Chicago IMF, menuntut semula penciptaan wang berdaulat yang bebas hutang membolehkan sesebuah negara menghapuskan lapisan besar hutang awam dan swasta tanpa mencetuskan inflasi. Apabila perniagaan dan keluarga dibebaskan daripada membayar faedah kompaun, kuasa beli dan simpanan kekal di tangan mereka yang benar-benar mencipta nilai.</li>
+        <li><strong>Mengembalikan nilai kemanusiaan melalui perkongsian risiko:</strong> Riba adalah <strong>pemindahan risiko</strong> yang dihalalkan. Jika krisis atau pandemik melanda, bank tetap menuntut bahagian tetapnya, membankrapkan usahawan dan merampas punca rezeki mereka. Ia melayan manusia seperti mesin pembayar hutang pakai buang. Kewangan bebas riba adalah <strong>perkongsian risiko</strong>. Pembiaya dan usahawan berkongsi kedua-dua keuntungan dan kerugian. Ia meletakkan tenaga kerja dan maruah manusia sebagai rakan kongsi setaraf dengan modal, menggantikan perampasan harta yang kejam dengan solidariti sosial yang tulen.</li>
+      </ul>
+
+      <h2 class="section-head">4. Mengapa Sejarah Kelihatan Seperti Tanah Perkuburan "Kegagalan"</h2>
+      <p>Lihat sejarah melalui lensa ini, dan kes-kes "kegagalan" yang sering dijaja tiba-tiba kelihatan sangat berbeza:</p>
+
+      <ul class="editorial-list">
+        <li><strong>Wörgl, Austria (1932) &amp; Vollgeld Switzerland (2018):</strong> Mata wang tempatan Wörgl yang tidak boleh ditimbun membuktikan betapa pantas sebuah bandar biasa mampu menghidupkan semula pekerjaan dan membina infrastruktur apabila wang beredar secara bebas—sebab itulah Bank Pusat Austria menghancurkannya di mahkamah pada tahun 1933 demi melindungi monopolinya. Skrip yang sama berulang di Switzerland pada tahun 2018: golongan elit perbankan membelanjakan jutaan dolar untuk menakut-nakutkan pengundi agar menolak <em>Vollgeld</em> (wang berdaulat rizab 100%) kerana ia bakal menamatkan lesen bank swasta untuk mencetak wang daripada angin.</li>
+        <li><strong>Jerman Nazi (1933–1939) &amp; Libya (2011):</strong> Pemulihan awal Jerman di bawah Schacht membuktikan bahawa kredit berdaulat bersandarkan tenaga kerja yang terikat kepada pengeluaran sebenar (bil MEFO) mampu mencapai guna tenaga penuh tanpa emas asing atau pinjaman swasta—sehinggalah Hitler merampasnya untuk perbelanjaan perang. Di Libya, usaha Gaddafi mewujudkan mata wang pan-Afrika bersandarkan emas mengancam secara langsung dominasi dolar dan franc, manakala larangan faedah pasca-2013 di Libya gagal semata-mata kerana mereka meninggalkan kerangka bank yang rosak dan bergantung kepada minyak tanpa membina institusi perkongsian risiko yang sebenar.</li>
+        <li><strong>BRICS, Dinar Emas Malaysia &amp; Perbankan Islam Moden:</strong> Kedua-dua cadangan dinar emas Tun Mahathir pada 2002 dan penyelesaian mata wang tempatan BRICS adalah langkah pertahanan terhadap hegemoni hutang dolar. Sementara itu, Iran (1983) dan perbankan Islam moden—termasuk di tanah air kita sendiri di Malaysia dengan pegangan pasaran 48%—membuktikan mengapa kita tidak boleh berkompromi dengan tuan rumah. Mari kita jujur dengan diri sendiri: selagi bank Islam duduk di dalam sistem rizab pecahan, menambat kadar keuntungan kepada penanda aras faedah konvensional, dan meminggirkan perkongsian untung rugi kepada hanya 5% daripada aset, kita belum membina sistem bebas riba. Kita sekadar mengecat bank konvensional dengan warna hijau.</li>
+      </ul>
+
+      <div class="closing-box">
+        <div class="closing-label">Rumusan Editorial</div>
+        <p>Persoalannya tidak pernah berkisar sama ada sistem bebas riba dan tanpa pecahan boleh berfungsi atau tidak. Isu sebenarnya ialah ia berfungsi <em>terlalu baik</em> untuk umat manusia biasa—dan mengancam secara langsung golongan elit kewangan yang bertakhta di puncak piramid rizab pecahan global, mengutip sewa bebas risiko ke atas wang yang mereka cipta daripada tiada apa-apa.</p>
+        <p>Sebuah sistem yang bertahan selama seribu tahun dengan memperhambakan majoriti yang produktif kepada buku kira-kira segelintir golongan tidak layak dihormati—ia wajib digantikan. Mereka yang memegang kunci penciptaan wang swasta tidak akan sekali-kali menyerahkan secara sukarela satu monopoli yang membolehkan mereka mencukai seluruh umat manusia tanpa menghasilkan walau satu barang bernilai pun. Selagi kita tidak memutuskan hubungan antara hutang dengan penciptaan wang serta menggantikan pemindahan risiko dengan perkongsian risiko yang tulen, kita akan terus mengulangi kejatuhan Empayar Rom—bekerja lebih keras setiap tahun semata-mata untuk melunaskan buku kira-kira bayangan milik segelintir pihak.</p>
+      </div>
+
+      <details class="sources-drawer">
+        <summary>Sumber Rujukan</summary>
+        <ol class="sources-list">
+          <li><a href="https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy" target="_blank" rel="noopener">Bank of England, Quarterly Bulletin (2014 Q1): Money creation in the modern economy</a></li>
+          <li><a href="https://www.imf.org/external/pubs/ft/wp/2012/wp12202.pdf" target="_blank" rel="noopener">Tabung Kewangan Antarabangsa (IMF), Kertas Kerja WP/12/202: The Chicago Plan Revisited (Benes &amp; Kumhof, 2012)</a></li>
+          <li><a href="https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2016/12/31/Rethinking-Financial-Deepening-Stability-and-Growth-in-Emerging-Markets-42868" target="_blank" rel="noopener">Tabung Kewangan Antarabangsa (IMF), Nota Perbincangan SDN/15/08: Rethinking Financial Deepening, Stability and Growth</a></li>
+          <li><a href="https://www.bnm.gov.my/banking-islamic-banking" target="_blank" rel="noopener">Bank Negara Malaysia (BNM), Buletin Perangkaan Bulanan: Pegangan Pembiayaan Perbankan Islam &amp; Nisbah Perkongsian Untung</a></li>
+          <li><a href="https://www.admin.ch/gov/en/start/documentation/votes/20180610/sovereign-money-initiative.html" target="_blank" rel="noopener">Majlis Persekutuan Switzerland, Rekod Rasmi Referendum: Inisiatif Wang Berdaulat (Vollgeld), 10 Jun 2018</a></li>
+          <li><a href="https://www.imf.org/en/Publications/CR/Issues/2023/06/29/Libya-2023-Article-IV-Consultation-Press-Release-Staff-Report-and-Statement-by-the-535432" target="_blank" rel="noopener">Tabung Kewangan Antarabangsa (IMF), Laporan Konsultasi Artikel IV Libya: Kesan Undang-Undang No. 1 (2013) terhadap Kredit &amp; Perbankan</a></li>
+        </ol>
+      </details>
+
+      <footer class="author-footer">
+        <div class="author-row">
+          <div class="avatar-circle">AT</div>
+          <div class="author-bio-text">
+            <strong>Azman Taufik</strong> menulis Field Notes mengenai angka di sebalik keputusan kewangan. Pandangan adalah peribadi.
+          </div>
+        </div>
+        <p class="disclaimer-text">
+          Pandangan dalam artikel ini adalah pandangan saya sendiri. Ia tidak mewakili pandangan majikan saya atau mana-mana organisasi yang saya sedang, atau pernah, bersekutu dengannya. Artikel ini tidak mempunyai kaitan dengan, disokong oleh, atau ditulis bagi pihak mana-mana institusi yang disebut. Semua angka diperoleh daripada sumber awam yang disenaraikan di atas, dan sebarang kesilapan adalah tanggungjawab saya sendiri. Tiada kandungan di sini merupakan nasihat kewangan, pelaburan atau perundangan.
+        </p>
+        <p class="disclaimer-text">
+          Penyelidikan dan penyediaan draf dibantu oleh alat AI. Semua fakta telah disemak silang dengan sumber yang disenaraikan.
+        </p>
+        <p class="copyright-line">&copy; 2026 Azman Taufik &middot; Field Notes</p>
+      </footer>
+    </article>
+
+  </main>
+
+  <script>
+    function setLang(lang) {
+      const btnEn = document.getElementById('btn-en');
+      const btnBm = document.getElementById('btn-bm');
+
+      if (lang === 'bm') {
+        document.body.classList.add('lang-bm');
+        document.documentElement.lang = 'ms';
+        btnBm.classList.add('active');
+        btnEn.classList.remove('active');
+      } else {
+        document.body.classList.remove('lang-bm');
+        document.documentElement.lang = 'en';
+        btnEn.classList.add('active');
+        btnBm.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>
