@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demam Emas Pusat Data Malaysia: Apa Berlaku Apabila Amerika Mengawal Cip? | Field Notes</title>
+<meta name="description" content="Malaysia memiliki tanah, bangunan dan bekalan elektrik. Peraturan yang ditulis di Washington menentukan siapa boleh menggunakan komputer di dalamnya.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Demam Emas Pusat Data Malaysia: Apa Berlaku Apabila Amerika Mengawal Cip?">
+<meta property="og:description" content="Tiga minggu pada November 2026: peraturan cip AS, senarai hitam Megaspeed dan penangguhan NVIDIA. Siapa terdedah, dan apa yang boleh Malaysia lakukan.">
+<meta property="og:url" content="https://dewatagiri.github.io/field-notes/malaysia-data-centre-chips/">
+<meta property="og:image" content="https://dewatagiri.github.io/field-notes/malaysia-data-centre-chips/cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#13263a;--blue:#0b5cad;--red:#b42318;--green:#16794a;--amber:#b54708;--grey:#9aa7b4;--line:#e3e8ee;--soft:#f5f8fb;--paleblue:#eef4fb}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff;color:var(--ink)}
+body{font-family:"Source Serif 4",Georgia,serif;font-size:18px;line-height:1.65;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.topbar{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:52px}
+.wordmark{font-family:Inter,sans-serif;font-weight:800;letter-spacing:.14em;font-size:13px;color:var(--ink)}
+.toggle{font-family:Inter,sans-serif;font-size:13px;font-weight:700;display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.toggle button{border:0;background:#fff;color:var(--ink);padding:6px 12px;cursor:pointer;font:inherit}
+.toggle button.on{background:var(--ink);color:#fff}
+h1,h2,h3,.sans{font-family:Inter,sans-serif}
+.kicker{font-family:Inter,sans-serif;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--blue);text-transform:uppercase;margin:36px 0 10px}
+h1{font-size:46px;line-height:1.1;font-weight:800;margin:0 0 14px;letter-spacing:-.01em}
+.standfirst{font-family:Inter,sans-serif;font-size:19px;line-height:1.5;color:#5b6b7b;margin:0 0 18px}
+.byline{font-family:Inter,sans-serif;font-size:14px;color:#5b6b7b;padding-bottom:14px;border-bottom:4px solid var(--ink);margin-bottom:22px}
+.cta-li{display:none;font-family:Inter,sans-serif;font-size:14px;font-weight:700;color:var(--blue);border:2px solid var(--blue);border-radius:6px;padding:8px 14px;text-decoration:none;margin:4px 0 18px}
+.cta-li.show{display:inline-block}
+h2{font-size:26px;line-height:1.25;font-weight:800;margin:44px 0 12px;display:flex;gap:12px;align-items:flex-start}
+h2 .num{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;font-size:14px;font-weight:800;margin-top:2px}
+h3{font-size:19px;font-weight:700;margin:26px 0 8px}
+p{margin:0 0 16px}
+a{color:var(--blue)}
+ul,ol{padding-left:22px;margin:0 0 16px}
+li{margin-bottom:6px}
+.box{border-left:6px solid var(--ink);background:var(--soft);padding:16px 18px;margin:22px 0;border-radius:0 6px 6px 0}
+.box .lab{font-family:Inter,sans-serif;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.box p:last-child,.box ul:last-child,.box ol:last-child{margin-bottom:0}
+.key{border-color:var(--ink)} .key .lab{color:var(--ink)}
+.data{border-color:var(--blue);background:var(--paleblue)} .data .lab{color:var(--blue)}
+.trap{border-color:var(--red);background:#fdf3f2} .trap .lab{color:var(--red)}
+.lesson{border-color:var(--green);background:#eff8f3} .lesson .lab{color:var(--green)}
+.watch{border-color:var(--amber);background:#fdf6ee} .watch .lab{color:var(--amber)}
+.call{border:3px solid var(--blue);background:#fff;border-radius:8px;padding:18px}
+.call .lab{color:var(--blue)}
+.mytake{background:var(--ink);color:#fff;border-left:0;border-radius:8px}
+.mytake .lab{color:#9fc3ea}
+.over{border:2px dashed var(--blue);background:#fff;border-radius:8px}
+.over .lab{color:var(--blue)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}
+.tile{border:1px solid var(--line);border-top:4px solid var(--blue);border-radius:6px;padding:12px}
+.tile .v{font-family:Inter,sans-serif;font-weight:800;font-size:24px;line-height:1.1}
+.tile .t{font-family:Inter,sans-serif;font-size:12.5px;line-height:1.35;color:#5b6b7b;margin-top:6px}
+.fig{margin:24px 0;border:1px solid var(--line);border-radius:8px;padding:16px}
+.fig .ft{font-family:Inter,sans-serif;font-weight:800;font-size:16px;margin-bottom:4px}
+.fig .fs{font-family:Inter,sans-serif;font-size:13px;color:#5b6b7b;margin-bottom:10px}
+.fig .src{font-family:Inter,sans-serif;font-size:12px;color:#6b7a89;margin-top:8px}
+.fig svg{width:100%;height:auto;display:block}
+.lanes{display:grid;gap:10px}
+.lane{display:grid;grid-template-columns:1.1fr 1.3fr .9fr;gap:8px;align-items:stretch}
+.lane div{font-family:Inter,sans-serif;font-size:13.5px;line-height:1.4;border-radius:6px;padding:10px}
+.lane .who{background:var(--soft);font-weight:700}
+.lane .rule{background:#fff;border:1px solid var(--line)}
+.lane .out{color:#fff;font-weight:700}
+.lane.a .out{background:var(--green)} .lane.b .out{background:var(--amber)} .lane.c .out{background:var(--red)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.card{border:1px solid var(--line);border-top:4px solid var(--grey);border-radius:6px;padding:14px;font-family:Inter,sans-serif;font-size:14.5px;line-height:1.5}
+.card .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border-radius:4px;padding:2px 7px;color:#fff;margin-bottom:6px}
+.card h4{margin:2px 0 6px;font-size:16px}
+.card.g{border-top-color:var(--green)} .card.g .tag{background:var(--green)}
+.card.m{border-top-color:var(--amber)} .card.m .tag{background:var(--amber)}
+.card.r{border-top-color:var(--red)} .card.r .tag{background:var(--red)}
+.q{background:var(--paleblue);border-left:4px solid var(--blue);border-radius:0 6px 6px 0;padding:12px 14px;margin:10px 0}
+.q .for{font-family:Inter,sans-serif;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.q p{margin:0;font-size:17px}
+.prop{display:grid;grid-template-columns:40px 1fr;gap:12px;margin:14px 0;align-items:start}
+.prop .n{width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;font-family:Inter,sans-serif;font-weight:800;display:flex;align-items:center;justify-content:center}
+.prop h4{font-family:Inter,sans-serif;margin:4px 0 4px;font-size:17px}
+.prop p{margin:0 0 4px}
+.prop .measure{font-family:Inter,sans-serif;font-size:14px;color:var(--green);font-weight:600}
+table{width:100%;border-collapse:collapse;font-family:Inter,sans-serif;font-size:14px;margin:14px 0 20px}
+th,td{text-align:left;vertical-align:top;padding:8px 8px;border-bottom:1px solid var(--line)}
+th{background:var(--soft);font-weight:700}
+.tbl{overflow-x:auto}
+details{border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:24px 0;font-family:Inter,sans-serif;font-size:14px}
+details summary{cursor:pointer;font-weight:800}
+details li{margin-bottom:4px;word-break:break-word}
+.bio{display:flex;gap:14px;align-items:center;border-top:1px solid var(--line);padding-top:20px;margin-top:30px;font-family:Inter,sans-serif;font-size:14.5px}
+.avatar{flex:0 0 52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+footer{font-family:Inter,sans-serif;font-size:12.5px;color:#5b6b7b;border-top:1px solid var(--line);margin-top:24px;padding:18px 0 40px;line-height:1.55}
+.lbl{font-family:Inter,sans-serif;font-size:11px;font-weight:700;letter-spacing:.05em;color:#6b7a89;text-transform:uppercase;border:1px solid var(--line);border-radius:4px;padding:0 5px;white-space:nowrap}
+[data-lang]{display:none}
+body.bm [data-lang="bm"],body.en [data-lang="en"]{display:block}
+@media (max-width:640px){
+ h1{font-size:34px}
+ .tiles{grid-template-columns:1fr 1fr}
+ .cards{grid-template-columns:1fr}
+ .lane{grid-template-columns:1fr}
+ h2{font-size:22px}
+}
+</style>
+</head>
+<body class="bm">
+<div class="topbar"><div class="wrap">
+ <div class="wordmark">FIELD NOTES</div>
+ <div class="toggle" role="group" aria-label="Language"><button id="b-en" type="button">EN</button><button id="b-bm" type="button" class="on">BM</button></div>
+</div></div>
+
+<!-- ===================== BAHASA MALAYSIA ===================== -->
+<main class="wrap" data-lang="bm" lang="ms">
+<div class="kicker">Field Notes · Teknologi &amp; Geopolitik</div>
+<h1>Demam Emas Pusat Data Malaysia: Apa Berlaku Apabila Amerika Mengawal Cip?</h1>
+<p class="standfirst">Malaysia memiliki tanah, bangunan dan bekalan elektrik. Namun peraturan yang ditulis di Washington menentukan siapa boleh menggunakan komputer di dalamnya. Inilah pengajaran tiga minggu pada bulan November.</p>
+<div class="byline">Azman Taufik · 27 November 2026 · 12 minit bacaan</div>
+<a class="cta-li" href="#" target="_blank" rel="noopener">Komen di LinkedIn</a>
+
+<div class="box key"><div class="lab">Ringkasan pantas</div><ul>
+<li>Sejak <b>19 November</b>, lesen Amerika Syarikat diperlukan untuk menghantar cip AI termaju ke Malaysia, Singapura, Thailand, Indonesia dan Brazil, termasuk untuk memindahkannya di dalam negara-negara itu. Pembeli yang beribu pejabat di AS dikecualikan jika pembekal melapor kepada Washington setiap bulan.</li>
+<li>Pusat data yang membekalkan kuasa pengkomputeran AI melebihi <b>12 juta TPP</b> (kira-kira 760 cip kelas H100, anggaran saya) kepada syarikat beribu pejabat di China juga memerlukan lesen, dengan anggapan awal bahawa permohonan akan ditolak. Susunan sedia ada perlu dilesenkan sebelum kira-kira <b>17 Februari 2027</b>.</li>
+<li>Pada 26 November, FT dan WSJ melaporkan NVIDIA mengarahkan Dell dan Supermicro menangguhkan penghantaran pelayan AI ke empat negara ini. NVIDIA belum mengesahkannya.</li>
+<li>Malaysia meluluskan pelaburan berkaitan pusat data bernilai <b>RM385.7 bilion</b> dari 2021 hingga separuh pertama 2026. Sebanyak 143 projek yang diluluskan sehingga Jun 2025 dijangka mewujudkan <b>1,429</b> pekerjaan.</li>
+<li>Bank bergerak lebih awal: kira-kira <b>US$7.75 bilion</b> pinjaman pusat data berkaitan pelanggan China di Asia ditangguhkan atau dikaji semula dalam masa seminggu. Saham YTL Power pula jatuh kira-kira <b>37%</b> sejak 9 Oktober.</li>
+</ul></div>
+
+<p>Siapakah sebenarnya yang mengawal sebuah pusat data di Malaysia? Di atas kertas, jawapannya mudah. Tanahnya di Johor atau Negeri Sembilan. Bangunannya didirikan kontraktor tempatan. Elektrik dibekalkan TNB dan air oleh Ranhill. Sebahagian besar pembiayaannya datang daripada bank di Malaysia dan Singapura.</p>
+<p>November memberi kita jawapan yang lain. Aset paling bernilai di dalam bangunan itu, iaitu cip AI, boleh disekat di sempadan atau dihadkan penggunaannya bagi pelanggan tertentu melalui peraturan yang ditulis di Washington. Dalam beberapa hari sahaja, Malaysia beralih daripada juara serantau kepada negara yang disifatkan mempunyai "risiko lencongan lebih tinggi daripada biasa".</p>
+<p>Artikel ini meneliti apa yang berlaku, siapa yang terdedah dan apa yang boleh dilakukan. Saya cuba memisahkan fakta, laporan media dan pandangan saya sendiri. Apabila sesuatu itu hanya dilaporkan, saya nyatakan begitu.</p>
+
+<div class="box lesson"><div class="lab">Prinsipnya: tuan tanah belum tentu tuan rumah</div>
+<p>Dalam perniagaan, pihak yang memegang input paling terhad biasanya menentukan syarat. Selama dua dekad, kelebihan Malaysia ialah tanah, tenaga dan kelulusan yang pantas. Dalam era AI, input paling terhad ialah cip, dan cip datang bersama peraturan negara pemiliknya. Kita boleh memiliki setiap bata bangunan, tetapi masih tidak menentukan siapa yang dibenarkan duduk di meja.</p></div>
+
+<h2><span class="num">01</span>Apa yang berlaku dalam tiga minggu</h2>
+<p>Rentetan peristiwa bergerak daripada skandal kepada peraturan, kemudian senarai hitam dan akhirnya penangguhan penghantaran.</p>
+<ul>
+<li><b>12 Nov:</b> Ketua Pegawai Eksekutif NVIDIA, Jensen Huang, meletak jawatan atas isu peribadi. Beliau dilantik semula pada 23 November selepas lembaga pengarah memaklumkan telah menerima input daripada pegawai kanan kerajaan AS.</li>
+<li><b>13 Nov:</b> MITI menegaskan ia "tidak pernah memberi pelepasan" kepada Megaspeed dari Singapura atau anak syarikatnya di Malaysia, Speedmatrix. Speedmatrix ialah penyewa yang membawa pelayan dan cipnya sendiri ke pusat data tempatan. Kastam sedang menyemak sama ada cip itu dieksport semula.</li>
+<li><b>19 Nov:</b> Peraturan AS berkuat kuasa.</li>
+<li><b>20 Nov:</b> YTL Power menafikan laporan New York Times bahawa Speedmatrix mengendalikan cip NVIDIA bagi pihak Alibaba di kemudahannya di Johor. Ia masih <span class="lbl">dakwaan</span>, bukan dapatan.</li>
+<li><b>23 Nov:</b> AS memasukkan tujuh syarikat berkaitan Megaspeed ke dalam Entity List, tiga daripadanya disenaraikan di bawah Malaysia. Keesokan harinya, MITI menasihati pusat data supaya tidak menempatkan atau melayani syarikat itu.</li>
+<li><b>26 Nov:</b> Penangguhan penghantaran oleh NVIDIA <span class="lbl">dilaporkan</span> oleh FT dan WSJ.</li>
+</ul>
+<div class="tiles">
+<div class="tile"><div class="v">RM385.7b</div><div class="t">Pelaburan berkaitan pusat data diluluskan, 2021 hingga 1H2026 (MIDA)</div></div>
+<div class="tile"><div class="v">1,256 MW</div><div class="t">Beban sebenar pusat data, Jun 2026, berbanding 603 MW setahun sebelumnya (TNB)</div></div>
+<div class="tile"><div class="v">1,429</div><div class="t">Pekerjaan dijangka daripada 143 projek yang diluluskan hingga Jun 2025</div></div>
+<div class="tile"><div class="v">~US$7.75b</div><div class="t">Pinjaman pusat data berkaitan pelanggan China di Asia terjejas dalam seminggu (Bloomberg)</div></div>
+</div>
+<p>Adakah Megaspeed puncanya? Ia mempercepatkan keadaan. Draf peraturan yang menamakan Malaysia dan Thailand telah dilaporkan sejak Julai 2025, dan firma guaman menyifatkan versi akhirnya sebagai "lama dinanti". Institute for Progress menganggarkan pusat data jarak jauh di rantau ini membekalkan kira-kira suku daripada kuasa pengkomputeran AI China. Menyewakan kuasa pengkomputeran kepada syarikat China ialah amalan biasa di seluruh rantau ini.</p>
+
+<h2><span class="num">02</span>Apa yang sebenarnya disaring: pelanggan</h2>
+<p>Peraturan ini lebih mementingkan siapa yang menggunakan cip berbanding di mana bangunan itu terletak.</p>
+<div class="fig">
+<div class="ft">Peraturan menyusun mengikut ibu pejabat pelanggan</div>
+<div class="fs">Rangka kerja ringkas berdasarkan ringkasan firma guaman tentang peraturan BIS, 19 Nov 2026</div>
+<div class="lanes">
+<div class="lane a"><div class="who">Pelanggan beribu pejabat di AS (Google, Microsoft, AWS)</div><div class="rule">Tiada lesen. Pengeksport menghantar laporan bulanan kepada BIS.</div><div class="out">Kelewatan pendek</div></div>
+<div class="lane b"><div class="who">Pelanggan lain (syarikat tempatan, Jepun, Eropah dan lain-lain)</div><div class="rule">Lesen diperlukan. Disemak kes demi kes, termasuk keberkesanan kawalan eksport Malaysia sendiri.</div><div class="out">Lebih lambat, lebih banyak kertas kerja</div></div>
+<div class="lane c"><div class="who">Pelanggan beribu pejabat di China, Macau atau negara D:5, melebihi 12 juta TPP</div><div class="rule">Lesen diperlukan, dengan anggapan awal bahawa permohonan akan ditolak. Susunan sedia ada: kira-kira 90 hari.</div><div class="out">Masalah struktur</div></div>
+</div>
+<div class="src">Sumber: Akin, Pillsbury, Greenberg Traurig, Morgan Lewis (analisis dokumen Federal Register 2026-23529). Label hasil ialah pandangan penulis.</div>
+</div>
