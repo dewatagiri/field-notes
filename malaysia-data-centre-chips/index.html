@@ -302,3 +302,150 @@ body.bm [data-lang="bm"],body.en [data-lang="en"]{display:block}
 <li>Data centres that give more than <b>12 million TPP</b> of AI compute (roughly 760 H100-class chips, my estimate) to firms headquartered in China also need a licence, and face a presumption of denial. Existing setups must be licensed by about <b>17 February 2027</b>.</li>
 <li>On 26 November the FT and WSJ reported that NVIDIA told Dell and Supermicro to pause AI server shipments to four of these countries. NVIDIA has not confirmed it.</li>
 <li>Malaysia approved <b>RM385.7 billion</b> of data-centre-related investment from 2021 to mid-2026. The 143 projects approved up to June 2025 were expected to create <b>1,429</b> jobs.</li>
+<li>Lenders moved first. About <b>US$7.75 billion</b> of China-linked data centre loans in Asia were delayed or put under review in one week. YTL Power is down about <b>37%</b> since 9 October.</li>
+</ul></div>
+
+<p>Who actually controls a Malaysian data centre? On paper the answer is easy. The land is in Johor or Negeri Sembilan. A Malaysian contractor put up the building. TNB supplies the power and Ranhill the water. Banks in Malaysia and Singapore financed much of it.</p>
+<p>November gave us a different answer. The most valuable thing inside the building, the AI chips, can be stopped at the border or restricted for some customers by a rule written in Washington. Within days, Malaysia went from regional winner to a country with a "higher-than-normal risk of diversion".</p>
+<p>This piece covers what happened, who is exposed and what can be done. I have tried to keep facts, media reports and my own views apart. Where something is only reported, I say so.</p>
+
+<div class="box lesson"><div class="lab">The principle: owning the building does not mean owning the power</div>
+<p>In business, whoever holds the scarcest input usually sets the terms. For twenty years Malaysia's edge was land, power and fast approvals. In AI the scarcest input is the chip, and the chip comes with its home country's rules attached. We can own every brick and still not decide who gets a seat at the table.</p></div>
+
+<h2><span class="num">01</span>What happened in three weeks</h2>
+<p>The sequence ran from scandal to rule to blacklist to a shipment pause.</p>
+<ul>
+<li><b>12 Nov:</b> NVIDIA CEO Jensen Huang resigned over personal conduct. He was reinstated on 23 November after the board said it had input from senior US officials.</li>
+<li><b>13 Nov:</b> MITI said it had "never cleared" Singapore's Megaspeed or its Malaysian unit Speedmatrix, a tenant that brings its own servers and chips into local data centres. Customs is checking whether any chips were re-exported.</li>
+<li><b>19 Nov:</b> the US rule took effect.</li>
+<li><b>20 Nov:</b> YTL Power denied a New York Times report that Speedmatrix ran NVIDIA chips for Alibaba at its Johor site. That claim is an <span class="lbl">allegation</span>, not a finding.</li>
+<li><b>23 Nov:</b> the US put seven Megaspeed-linked firms on its Entity List, three listed under Malaysia. The next day, MITI told data centres not to host or serve them.</li>
+<li><b>26 Nov:</b> the NVIDIA pause was <span class="lbl">reported</span>.</li>
+</ul>
+<div class="tiles">
+<div class="tile"><div class="v">RM385.7b</div><div class="t">Data-centre-related investment approved, 2021 to 1H2026 (MIDA)</div></div>
+<div class="tile"><div class="v">1,256 MW</div><div class="t">Actual data centre load, June 2026, against 603 MW a year earlier (TNB)</div></div>
+<div class="tile"><div class="v">1,429</div><div class="t">Jobs expected from 143 projects approved to June 2025</div></div>
+<div class="tile"><div class="v">~US$7.75b</div><div class="t">China-linked data centre loans in Asia hit in one week (Bloomberg)</div></div>
+</div>
+<p>Was Megaspeed the cause? It sped things up. A draft rule naming Malaysia and Thailand was reported in July 2025, and law firms call the final version "long-awaited". The Institute for Progress estimates that remote data centres in this region supply about a quarter of China's AI compute. Renting compute to Chinese firms was common practice across the region.</p>
+
+<h2><span class="num">02</span>What the rule really sorts: the customer</h2>
+<p>The rule cares more about who uses the chips than about where the building is.</p>
+<div class="fig">
+<div class="ft">The rule sorts by the customer's headquarters</div>
+<div class="fs">A simple framework based on law-firm summaries of the BIS rule, 19 Nov 2026</div>
+<div class="lanes">
+<div class="lane a"><div class="who">US-headquartered customer (Google, Microsoft, AWS)</div><div class="rule">No licence. The exporter files monthly reports with BIS.</div><div class="out">Short delay</div></div>
+<div class="lane b"><div class="who">Other customers (local, Japanese, European and others)</div><div class="rule">Licence needed. Reviewed case by case, partly on how good Malaysia's own export controls are.</div><div class="out">Slower, more paperwork</div></div>
+<div class="lane c"><div class="who">Customer headquartered in China, Macau or a D:5 country, above 12 million TPP</div><div class="rule">Licence with a presumption of denial. Existing setups: about 90 days.</div><div class="out">Structural problem</div></div>
+</div>
+<div class="src">Sources: Akin, Pillsbury, Greenberg Traurig, Morgan Lewis (analyses of Federal Register doc 2026-23529). Outcome labels are the author's view.</div>
+</div>
+<p>Two points get little attention. First, a change of use counts as an in-country transfer, so the rule reaches chips <b>already installed</b>. Second, the rule tightens foundry and packaging rules for advanced chips designed by firms in the five countries. That also touches Malaysia's chip-design plans.</p>
+
+<h2><span class="num">03</span>The numbers depend on who counts</h2>
+<div class="fig">
+<div class="ft">Pipeline size varies almost six-fold by definition</div>
+<div class="fs">Megawatts, Malaysia. Each source measures something different.</div>
+<div id="c1-en"></div>
+<div class="src">Sources: Mordor Intelligence DCI (data 4 Nov 2026); Cushman &amp; Wakefield (1H2026); TNB via DC Market Insights (Jun and Aug 2026).</div>
+</div>
+<p>"Under construction" can mean about 1.0 GW or 6.0 GW, depending on whether you count the phase being built or the whole campus. Data centres have contracted 5.65 GW from TNB but draw about 1.26 GW. In my view the electricity forecast is the one most at risk.</p>
+
+<h2><span class="num">04</span>Who owns the boom, and who carries the risk</h2>
+<p>Most of the big platforms are foreign-owned. A Blackstone and CPP Investments consortium owns AirTrunk. Bain Capital owns Bridge Data Centres. Warburg Pincus, Mubadala and Ontario Teachers' back Princeton Digital Group. GDS holds 19.4% of DayOne. The main Bursa-listed owner-operators are YTL Power and Telekom Malaysia.</p>
+<p>China-linked exposure is not officially disclosed, but the signs are clear. DayOne earned 87% of its first-half 2026 revenue in Malaysia, and 69% of its revenue came from one customer it does not name. ByteDance is widely reported to be that tenant. Bridge serves ByteDance and Digital Halo serves Alibaba <span class="lbl">reported</span>.</p>
+<div class="box data"><div class="lab">What the data says</div>
+<p>The 143 data centre projects worth RM144.4 billion approved between 2021 and June 2025 were expected to create 1,429 jobs. That is about <b>RM101 million of investment per job</b> (my calculation). Data Centre Task Force projects must meet a minimum of 30% local content.</p></div>
+<p>So today Malaysia earns mostly as landlord, builder and power seller. The compute, the data and the intellectual property mostly belong to others.</p>
+
+<h2><span class="num">05</span>Bursa: what the market has priced</h2>
+<div class="fig">
+<div class="ft">YTL Power is back near where it started the year</div>
+<div class="fs">Closing share price (RM), 2026. Points at reported dates; spacing is not to time scale.</div>
+<div id="c2-en"></div>
+<div class="src">Sources: NST, Kenanga, Business Today, The Edge, Bernama. The roughly 37% fall from RM5.70 is my calculation.</div>
+</div>
+<div class="tbl"><table>
+<tr><th>Company</th><th>Confirmed exposure</th><th>Reaction</th></tr>
+<tr><td>YTL Power (6742)</td><td>Owns data centres and GPUs. 298 MW of a 1,200 MW target contracted.</td><td>RM3.61 on 26 Nov, about -37% since 9 Oct</td></tr>
+<tr><td>Sunway Construction (5263)</td><td>Data centres are 76% of a RM12.45bn order book (end-Sep)</td><td>-3.4% on 12 Nov</td></tr>
+<tr><td>Gamuda (5398)</td><td>About 16% of order book, including the Port Dickson hyperscale packages</td><td>-4.5% on 12 Nov</td></tr>
+<tr><td>MN Holdings (0245)</td><td>Partner in an 85.7 MW Johor data centre with Shanghai DC-Science</td><td>-19.9% on 26 Nov</td></tr>
+</table></div>
+<p>The exposure differs in kind. Contractors still bill existing work; their risk is new awards. Owners with US tenants face delay. Those relying on Chinese customers face a structural problem. On 26 November peripheral stocks fell as much as 24% while the FBM KLCI rose 0.56%. None of this is a recommendation to buy or sell any stock.</p>
+
+<h2><span class="num">06</span>Can Malaysia replace NVIDIA?</h2>
+<p>Not in a way that escapes this rule. IDC estimates that NVIDIA took about 81% of AI data centre chip revenue in 2026 <span class="lbl">reported</span>. But the US test is based on chip performance and US technology, not on the brand.</p>
+<ul>
+<li><b>AMD and Intel:</b> US-designed and caught by the same test.</li>
+<li><b>Google TPU, AWS Trainium:</b> offered mainly as cloud services by US firms.</li>
+<li><b>Huawei Ascend:</b> BIS guidance in May 2025 said using these chips "anywhere in the world" risks breaching US controls.</li>
+<li><b>Buying through a third country:</b> that is diversion, which is exactly what the rule targets.</li>
+</ul>
+<div class="box trap"><div class="lab">Trap</div><p>Switching chip brands does not reduce exposure to US rules. Diversifying customers matters more.</p></div>
+
+<h2><span class="num">07</span>The money moved before the chips</h2>
+<div class="fig">
+<div class="ft">Lenders acted before shipments stopped</div>
+<div class="fs">China-linked data centre and GPU loans delayed or under review, week of 16-25 Nov 2026 (US$ million)</div>
+<div id="c3-en"></div>
+<div class="src">Source: Bloomberg, as summarised by Resilience Alpha and TokenPost. The FT reports about US$500 million for Aolani.</div>
+</div>
+<p>Power contracts with TNB are take-or-pay, and the Minister has said operators must pay for all the capacity they reserve. An empty hall still gets a power bill. Most of the large-loan risk sits with international and Singapore banks. Malaysian banks' share is not disclosed.</p>
+
+<h2><span class="num">08</span>How long could this last?</h2>
+<div class="cards">
+<div class="card g"><span class="tag">Scenario A · 1-3 months</span><h4>Colocation for US hyperscalers</h4>Monthly reporting starts in December. The main risk is the NVIDIA pause outlasting the paperwork.</div>
+<div class="card m"><span class="tag">Scenario B · 3-18 months</span><h4>Other GPU clouds</h4>Case-by-case licences, heavy know-your-customer duties and more cautious banks.</div>
+<div class="card r"><span class="tag">Scenario C · 18-36 months</span><h4>Capacity for Chinese customers</h4>Presumption of denial, withdrawn loans and a deadline of about 17 February 2027.</div>
+<div class="card"><span class="tag" style="background:#5b6b7b">Dates to watch</span><h4>Leading indicators</h4>1-2 Dec: Huang before three House committees. Early Dec: first monthly reports. 19 Jan: comment deadline. ~17 Feb: 90-day licence deadline.</div>
+</div>
+<p>The middle scenario (B) is right as an average, but the average hides a split. Different parts of the industry will be in different scenarios at the same time.</p>
+
+<h2><span class="num">09</span>Where the next investment could go</h2>
+<p>Vietnam, the Philippines, India, Japan and Australia are not in the five-country licence requirement. The remote-access control still applies worldwide. For customers who want the simplest route, unlisted countries now have a small edge over Johor.</p>
+<p>At home, Sarawak appeals because of its hydropower. SoftBank, Grab and PETROS signed joint development agreements on 9 November with US$1.85 billion of seed capital and a long-term ambition of 5 GW or more. But Sarawak has only about 17 MW running today. It falls under the same licence rule as Johor, and its international connectivity is unverified. AI training workloads suit it best because they are less sensitive to distance.</p>
+
+<h3>Who gains from the way things are?</h3>
+<ul>
+<li><b>Foreign platform owners:</b> valuations built on fast growth with any tenant.</li>
+<li><b>GPU cloud providers:</b> renting compute to whoever pays.</li>
+<li><b>Landowners and contractors:</b> paid when they build, not when the building is used.</li>
+<li><b>Government:</b> approval headlines count ringgit invested, not jobs or compute owned.</li>
+</ul>
+<p>Behaviour would change if approvals were scored on jobs, local ownership and compliance, if power reservations carried a price, and if disclosure were required by law.</p>
+
+<h3>Questions that need answers</h3>
+<div class="q"><div class="for">For MITI</div><p>How many megawatts in Malaysia are leased to China-headquartered tenants today? There is no public figure yet.</p></div>
+<div class="q"><div class="for">For MIDA</div><p>Should every approval report permanent jobs and local ownership next to the ringgit value?</p></div>
+<div class="q"><div class="for">For TNB and the Energy Commission</div><p>If 5.65 GW is reserved and 1.26 GW is used, who pays for the grid built for the rest?</p></div>
+<div class="q"><div class="for">For banks</div><p>How many of your loans depend on a tenant that now needs a US licence?</p></div>
+<div class="q"><div class="for">For operators</div><p>Do you know your customers' customers, all the way up to the ultimate parent?</p></div>
+<div class="q"><div class="for">For investors</div><p>Is the price you pay based on contracted megawatts or announced megawatts?</p></div>
+<div class="q"><div class="for">For all of us</div><p>Is Malaysia building an AI nation, or becoming a landlord to other people's AI?</p></div>
+
+<h3>A practical plan</h3>
+<div class="prop"><div class="n">1</div><div><h4>Bring remote compute under Malaysian law</h4><p>Require know-your-customer checks up to the ultimate parent for buyers of AI compute. This is the gap the US rule now fills from outside.</p><div class="measure">Measure: a bill tabled by mid-2027.</div></div></div>
+<div class="prop"><div class="n">2</div><div><h4>Register and audit AI chips</h4><p>A serial-number register reconciled with Customs import records, plus independent facility audits.</p><div class="measure">Measure: share of installed accelerators registered.</div></div></div>
+<div class="prop"><div class="n">3</div><div><h4>Negotiate a named trusted-partner arrangement</h4><p>The rule itself gives the UAE a presumption of approval with a list of approved entities. That is the clearest precedent.</p><div class="measure">Measure: number of Malaysian operators on an approved list.</div></div></div>
+<div class="prop"><div class="n">4</div><div><h4>Score approvals on value captured</h4><p>Publish permanent jobs, local equity and local suppliers next to the investment figure.</p><div class="measure">Measure: permanent jobs per RM1 billion approved, published yearly.</div></div></div>
+<div class="prop"><div class="n">5</div><div><h4>Finance MSME suppliers against contracts, not campuses</h4><p>Invoice and progress-claim financing from tier-1 contractors, with end-client checks and concentration limits per campus.</p><div class="measure">Measure: MSME supplier financing with end-client look-through.</div></div></div>
+
+<div class="box call"><div class="lab">A call to government</div><ul>
+<li><b>Before end-December 2026:</b> publish the megawatts leased to China-headquartered tenants, and notify all 117 approved projects.</li>
+<li><b>Before 17 February 2027:</b> set up a joint desk with BIS to help existing operators meet the licence deadline.</li>
+<li><b>By mid-2027:</b> table a law on data centre disclosure and remote compute.</li>
+<li><b>In the 2027 tariff review:</b> price reserved capacity so that households and MSMEs do not pay for unused grid.</li>
+</ul></div>
+<div class="tbl"><table>
+<tr><th>Group</th><th>The ask</th></tr>
+<tr><td>Banks</td><td>Review every data centre loan by tenant headquarters. Avoid blacklist clauses that trigger repayment all at once.</td></tr>
+<tr><td>Operators</td><td>Turn compliance into a product: "the cleanest place in ASEAN to run AI".</td></tr>
+<tr><td>Investors</td><td>Separate contracted from announced megawatts, and recurring income from one-off construction billings.</td></tr>
+<tr><td>MSME suppliers</td><td>Limit reliance on any one campus, and keep end-client evidence for every contract.</td></tr>
+</table></div>
+
+<div class="box watch"><div class="lab">Self-check</div><ol>
+<li>Can I name which of my holdings or clients serve China-headquartered tenants?</li>
