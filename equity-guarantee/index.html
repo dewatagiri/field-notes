@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jaminan ekuiti: mustahil, atau alat yang belum dibentuk? | Azman Taufik</title>
-<meta name="description" content="Why Bank Negara's RM1 billion Business Recapitalisation Facility found almost no takers, and the two places where a guarantee on risk capital can still work. Bilingual BM/EN.">
+<meta name="description" content="Why BNM's RM1 billion Business Recapitalisation Facility found almost no takers, 50,000 simulated pools on four real cycles, Germany's model run on Malaysian cases, and a three-rung ladder for guaranteeing risk capital. Bilingual BM/EN.">
 <meta property="og:title" content="Jaminan ekuiti: mustahil sejak awal, atau alat yang belum kita bentuk?">
-<meta property="og:description" content="BRF RM1 bilion hampir tiada pengambil. Mengapa bank menjauh, dan dua ruang di mana jaminan modal berisiko masih boleh berfungsi. Artikel BM dan EN oleh Azman Taufik.">
+<meta property="og:description" content="BRF RM1 bilion hampir tiada pengambil. Saya menguji 50,000 kumpulan simulasi dan model Jerman untuk mencari di mana jaminan modal berisiko berfungsi. Artikel BM dan EN oleh Azman Taufik.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://dewatagiri.github.io/field-notes/equity-guarantee/">
 <meta property="og:image" content="https://dewatagiri.github.io/field-notes/equity-guarantee/cover.png">
@@ -155,7 +155,71 @@ body.bm .en-only{display:none}
 }
 .cols h3.sp,.box.span{column-span:all}
 </style>
-<style>.flow div small{display:block;font-weight:400;color:#5b6b7a;margin-top:3px}.cols .fig,.cols .flow{column-span:all}</style>
+<style>.flow div small{display:block;font-weight:400;color:#5b6b7a;margin-top:3px}.cols .fig,.cols .flow{column-span:all}
+.cols h3{column-span:all}
+.fig .ht{font:800 12px 'Inter',sans-serif;margin:2px 0 4px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px}
+.hc svg{max-height:230px}.hc .hs{font:600 11.5px 'Inter',sans-serif;color:#5b6b7a;margin-bottom:2px}
+.hc .hs .g0{color:#5b6b7a}.hc .hs .g5{color:#0b5cad}
+.lg{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px;font:600 11.5px 'Inter',sans-serif;color:#13263a}
+.lg i{display:inline-block;width:14px;height:10px;margin-right:6px;vertical-align:middle}
+.hb{font-family:'Inter',sans-serif;text-align:left}
+.hb .g{margin:10px 0 2px;font:800 12px 'Inter',sans-serif}
+.hb .r{display:grid;grid-template-columns:150px 1fr;gap:8px;align-items:center;margin:3px 0;font-size:12px;line-height:1.2}
+.hb .t{position:relative;height:20px;background:#f3f5f8}
+.hb .t i{position:absolute;top:0;bottom:0;background:#c3ccd6}
+.hb .t i.n5{background:#0b5cad}.hb .t i.n4{background:#8db8e6}.hb .t i.nr{background:#e8a39b}
+.hb .t b{position:absolute;top:0;line-height:20px;white-space:nowrap;font:700 12px 'Inter',sans-serif;color:#13263a}
+.hb .t b.w,.hb .t b.w em{color:#fff}.hb .t b em{font-style:normal;font-weight:600;color:#5b6b7a}
+.hb .t s.z{position:absolute;top:-2px;bottom:-2px;border-left:1px solid #13263a}
+.hb .t s.ref{position:absolute;top:-3px;bottom:-3px;border-left:2px dashed #16794a}
+.hb .reflab{margin-top:6px;font:600 11.5px 'Inter',sans-serif;color:#16794a}
+.hb .reflab s{display:inline-block;width:0;height:12px;border-left:2px dashed #16794a;margin-right:6px;vertical-align:middle}
+.tw{overflow-x:auto}
+table.dt,table.heat{width:100%;border-collapse:collapse;font:400 13px/1.35 'Inter',sans-serif;text-align:left}
+table.dt th,table.dt td{border-bottom:1px solid #d5dbe2;padding:6px 7px;vertical-align:top}
+table.dt th{background:#f4f7fa;font-weight:800;font-size:12px}
+table.dt td.n{text-align:right;white-space:nowrap}
+table.dt tr.sub td{border-bottom:1px solid #eef1f4}
+table.dt td b{color:#0b5cad}
+table.heat th,table.heat td{border:1px solid #fff;padding:7px 6px;text-align:center;font-weight:700}
+table.heat th{background:#f4f7fa;font-size:12px}
+table.heat td.b{outline:2px solid #13263a;outline-offset:-2px}
+.tbl{column-span:all;margin:10px 0 16px}
+.tbl .t{font:800 13px 'Inter',sans-serif;margin-bottom:6px}
+.tbl .src{margin-top:6px;font:400 11px 'Inter',sans-serif;color:#5b6b7a}
+.stages{column-span:all;margin:8px 0 6px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #13263a;font-family:'Inter',sans-serif;text-align:left}
+.stages>div{padding:9px 10px;border-left:1px solid #d5dbe2;font-size:12.5px;line-height:1.4}
+.stages>div:first-child{border-left:0}
+.stages .st{display:block;font:800 12px 'Inter',sans-serif;color:#fff;background:#13263a;margin:-9px -10px 7px;padding:6px 10px}
+.stages .mo{float:right;font-weight:600;opacity:.8}
+.stages .rk{display:block;color:#b42318;font-weight:600;margin-top:3px}
+.stages .ck{display:block;color:#16794a;font-weight:600;margin-top:5px}
+.stages.s3{grid-template-columns:repeat(3,1fr)}
+.case{column-span:all;margin:16px 0 4px;padding:8px 12px;background:#f4f7fa;border-left:5px solid #0b5cad;font-family:'Inter',sans-serif;text-align:left}
+.case b{font:800 15px 'Inter',sans-serif}
+.case span{display:block;font-size:13px;color:#3b4d5f;margin-top:3px}
+.lossbar{display:flex;height:34px;margin:6px 0 4px;font:700 11.5px/1.15 'Inter',sans-serif;color:#13263a;text-align:center}
+.lossbar div{display:flex;align-items:center;justify-content:center;padding:0 4px;border-right:2px solid #fff}
+.ladder{column-span:all;margin:12px 0 18px;font-family:'Inter',sans-serif;text-align:left}
+.rung{display:grid;grid-template-columns:170px 1fr;border:1px solid #d5dbe2;margin-bottom:0;background:#fff}
+.rung+.arrow{margin:0}
+.rung .h{padding:12px;color:#fff;font:800 14px/1.25 'Inter',sans-serif}
+.rung .h small{display:block;font:600 11px 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin-bottom:4px}
+.rung .b{padding:10px 12px;font-size:13.5px;line-height:1.45}
+.rung .b b{color:#13263a}
+.rung .b .k{display:block;margin-top:4px;color:#5b6b7a;font-size:12.5px}
+.arrow{text-align:center;font:700 12px 'Inter',sans-serif;color:#16794a;padding:5px 0}
+@media (max-width:760px){
+ .g2{grid-template-columns:1fr}
+ .hb .r{grid-template-columns:96px 1fr;font-size:11.5px}
+ .stages,.stages.s3{grid-template-columns:1fr}
+ .stages>div{border-left:0;border-top:1px solid #d5dbe2}
+ .rung{grid-template-columns:1fr}
+ table.dt{font-size:12px}
+ .lossbar{font-size:10px}
+}
+</style>
 </head>
 <body class="bm">
 <div class="page">
@@ -163,260 +227,46 @@ body.bm .en-only{display:none}
 <div class="top"><span>Independent research</span>
  <span class="toggle"><button id="b-en" onclick="setLang('en')">EN</button><button id="b-bm" class="on" onclick="setLang('bm')">BM</button></span></div>
 <div class="nameplate"><h2>Field Notes</h2><p>Independent research &middot; Kuala Lumpur</p></div>
-<div class="dateline"><span class="en-only">Friday, 27 November 2026</span><span class="bm-only">Jumaat, 27 November 2026</span><span class="en-only">MSME financing &middot; Guarantees</span><span class="bm-only">Pembiayaan PMKS &middot; Jaminan</span><span class="en-only">~10 min</span><span class="bm-only">~10 minit</span></div>
-
-<article class="en-only" id="art-en" lang="en">
-<div class="kicker">MSME financing &middot; Guarantees &middot; Islamic social finance</div>
-<h1>Equity guarantee: an oxymoron, or a tool we have not shaped yet?</h1>
-<p class="deck">Bank Negara's RM1 billion recapitalisation facility found almost no takers. The reasons are clear. So are the two narrow places where a guarantee on risk capital can still work.</p>
-<div class="byline"><span class="who">By <b>Azman Taufik</b> &middot; 27 November 2026 &middot; 10 min read</span><a class="cta" data-cta href="#">Comment on LinkedIn</a></div>
-
-<div class="stats">
- <div class="stat"><b>RM1bn</b><span>BNM Business Recapitalisation Facility, opened Feb 2022</span></div>
- <div class="stat"><b>RM1,000m</b><span>Still listed as available by BNM, Oct 2023</span></div>
- <div class="stat"><b>150%</b><span>Risk weight on unlisted equity, BNM Basel II rules</span></div>
- <div class="stat"><b>25&ndash;80%</b><span>Share of German SME equity stakes a guarantee bank covers</span></div>
-</div>
-
-<div class="cols">
-<div class="box key"><span class="lbl">The short version</span>
-<ul>
-<li>BNM's <b>RM1 billion BRF</b> offered SMEs equity or debt-plus-equity from February 2022. In October 2023 BNM still listed the <b>full RM1,000 million as available</b>, and its 2023 annual report slides showed no approvals.</li>
-<li>Banks stayed away for three reasons: equity sits outside their normal business and needs BNM approval, it eats capital (<b>150%</b> risk weight today, <b>1250%</b> if the firm becomes a subsidiary), and the equity holder is <b>paid last with no clear exit</b>.</li>
-<li>Guaranteeing pure equity is a losing trade for the guarantor. Guaranteeing a <b>term-limited, profit-sharing stake</b> is not: German guarantee banks cover <b>25&ndash;80%</b> of such stakes.</li>
-<li>Two doors are open in Malaysia: <b>social finance</b>, where the funder already accepts the loss (iTEKAD has reached <b>14,387</b> microentrepreneurs), and <b>the crowd</b> on SC-registered platforms, where MyCIF already invests on a first-loss basis.</li>
-<li>My proposal: a guaranteed <b>portfolio of 5 to 10 short-cycle projects</b> (korban cattle, a padi season), with the guarantor covering part of the capital and <b>sharing the upside</b>.</li>
-</ul></div>
-
-<p class="lead">Can you guarantee someone's equity and still call it equity? A finance veteran I worked with years ago said no. To him, "equity guarantee" was an oxymoron. Equity is the money that takes the loss first and gets paid last. Guarantee it, and you remove the very thing that makes it equity.</p>
-<p>He was mostly right. Malaysia tested the idea at national scale and the market answered. But "mostly" leaves a gap, and the gap sits exactly where small and rural businesses need help.</p>
-<p>This note looks at what happened to Bank Negara's Business Recapitalisation Facility, why banks stayed away, and where a guarantee on risk capital can still work.</p>
-
-<h3>01 &middot; What the BRF offered</h3>
-<p>The BRF was announced in Budget 2022 and opened on 3 February 2022 with RM1 billion under BNM's Fund for SMEs. Its aim was sensible: help SMEs grow without piling on more debt.</p>
-<p>SMEs could take equity through preference shares, ordinary shares or equity-like instruments. Or they could take blended finance: bank debt plus equity from third-party equity financiers.</p>
-<p>The terms were generous. Up to RM5 million per SME, up to 10 years, no collateral. The debt portion was capped at 3.5% a year without a guarantee and 5% with one. There was no cap on the equity return. Guarantee cover for the debt portion was available too.</p>
-
-<h3>02 &middot; What happened</h3>
-<div class="box data"><span class="lbl">What the data says</span>
-<p>BNM's table of SME facilities dated 21 October 2023, about 20 months after launch, listed the BRF with <b>RM1,000 million available</b>, the same amount it opened with.</p>
-<p>BNM's 2023 annual report slides (March 2024) showed only dashes in the BRF row for approvals and utilisation. I could not find a later public figure.</p></div>
-<p>People in the industry describe the take-up as close to zero, and BNM's own tables fit that. BNM itself said in June 2024 that it was redesigning how it builds SME funds, after only a third of another facility had been used.</p>
-<p>A fund nobody draws on is not a funding problem. It is a design problem.</p>
-
-<h3>03 &middot; Why banks walked away</h3>
-<h4>It is not their business</h4>
-<p>Under the Financial Services Act 2013, a licensed bank may not carry on business outside its authorised business unless BNM allows it. Holding a material interest in a corporation needs BNM's approval under section 85. I did not find a clause that bans a bank outright from holding SME equity. The law puts a gate in front of it, and few banks want to queue at that gate for a RM300,000 stake.</p>
-<h4>It eats capital</h4>
-<p>Under BNM's current rules, unlisted equity and venture capital carry a 150% risk weight. A stake in a non-financial subsidiary carries 1250%. The Basel III global standard is harsher still: 250% for equity, 400% for speculative unlisted equity.</p>
-
-<div class="fig"><div class="t">An equity stake costs a bank far more capital than a loan</div>
-<div class="bars">
- <div class="r"><span>SME loan, Basel III (85%)</span><div class="t"><i style="width:6.8%"></i><b style="color:var(--ink);left:calc(6.8% + 6px)">RM6.80</b></div></div>
- <div class="r"><span>SME loan, Basel II (100%)</span><div class="t"><i style="width:8%"></i><b style="color:var(--ink);left:calc(8% + 6px)">RM8.00</b></div></div>
- <div class="r"><span>Unlisted equity, BNM today (150%)</span><div class="t"><i style="width:12%"></i><b style="color:var(--ink);left:calc(12% + 6px)">RM12.00</b></div></div>
- <div class="r"><span>Equity, Basel III standard (250%)</span><div class="t"><i style="width:20%"></i><b style="color:var(--ink);left:calc(20% + 6px)">RM20.00</b></div></div>
- <div class="r"><span>Controlling stake (1250%)</span><div class="t"><i class="hi" style="width:100%"></i><b>RM100.00</b></div></div>
-</div>
-<div class="src">Minimum capital per RM100 of exposure at the 8% minimum total capital ratio, before buffers. My calculation from BNM Capital Adequacy Framework (Basel II RWA, Dec 2023), BNM FSR 2H2024 Box 2 (85% for corporate SMEs from 1 July 2026) and the Basel III standard (250%/400%).</div></div>
-
-<p>This is where the "100% capital" view comes from. If the stake is big enough to make the SME a subsidiary, a bank holds roughly a ringgit of capital for every ringgit it puts in.</p>
-<h4>Last in line, and no way out</h4>
-<p>Equity is paid after every creditor. Shares in a small private firm have no market, so an exit needs another willing buyer. A bank's credit model prices default and recovery. It has no line for "maybe in seven years, if someone buys".</p>
-<p>Investors feel the same. On SC-registered platforms in 2025, P2P financing raised about twenty times what equity crowdfunding did.</p>
-
-<div class="fig"><div class="t">The crowd prefers debt: funds raised on SC-registered platforms, 2025</div>
-<div class="bars">
- <div class="r"><span>P2P financing</span><div class="t"><i style="width:100%"></i><b>RM2.83bn</b></div></div>
- <div class="r"><span>Equity crowdfunding</span><div class="t"><i class="hi" style="width:4.9%"></i><b style="color:var(--ink);left:calc(4.9% + 6px)">RM139m</b></div></div>
-</div>
-<div class="src">Source: Securities Commission Malaysia Annual Report 2025, as reported by Fintech News Malaysia.</div></div>
-
-<h3>04 &middot; So, is it an oxymoron?</h3>
-<p>For a bank, yes. For a guarantor, it depends on what is being guaranteed.</p>
-<p>Guarantee a full equity return and the guarantor carries the downside while the investor keeps the upside. That loses money every cycle. But guarantee part of a stake that has a fixed term, a base return and a share of profit, and the arithmetic changes. Germany has done this for decades.</p>
-
-<div class="cards">
- <div class="card g"><span class="tag">Worked</span><h5>Germany</h5>17 guarantee banks and 15 SME investment companies (MBGs). MBGs take silent partnerships with no say in daily business. Guarantee banks cover 25&ndash;80% of those stakes, backed by federal and state counter-guarantees.</div>
- <div class="card r"><span class="tag">Failed</span><h5>Malaysia, BRF</h5>Open-ended equity offered through banks that are not built to hold it. No exit design and no guarantee on the equity itself. The money sat unused.</div>
- <div class="card a"><span class="tag">Working, small</span><h5>Malaysia, MyCIF</h5>Public money invests with the crowd: RM1 for every RM4 raised (RM1 for RM2 in food security). It invests on a first-loss basis in Islamic risk-sharing campaigns. RM1.5bn co-invested for 11,512 MSMEs to Q4 2025.</div>
-</div>
-<p>The lesson from Germany is the instrument. A silent partnership sits between debt and equity. It has an end date. That is what makes it possible to guarantee.</p>
-
-<h3>05 &middot; Door one: social finance</h3>
-<p>Here the oxymoron disappears, because the funder has already accepted the loss. Zakat, waqf and CSR money is given to build livelihoods, not to earn a return.</p>
-<p>BNM's iTEKAD has combined that money with seed capital, training and microfinance since May 2020. It had reached 14,387 microentrepreneurs by end-March 2026. By end-2025 it had disbursed RM94.2 million in social funds and RM77.2 million in financing and investment.</p>
-<p>A guarantee can make each ringgit of social money go further. The social fund takes the first loss, the guarantor takes the next slice, and the bank or platform funds the rest. The zakat ringgit stops being spent once and starts working as a buffer, again and again.</p>
-
-<h3>06 &middot; Door two: the crowd with an appetite for risk</h3>
-<p>Some investors do not mind a small loss if they can win more. I would not call them gamblers. They are natural risk takers, and the platforms already reach them: institutional investors were 2% of ECF and P2P investors in 2024 but put in 60% of the money.</p>
-<p>A note on terms. P2P in Malaysia is financing, not equity. A profit-sharing stake would go through equity crowdfunding, or through a Shariah-compliant structure such as mudarabah or musharakah. Shariah-compliant deals were 30% of ECF and P2P funds raised in 2024.</p>
-<h4>A kampung example</h4>
-<p>Take a villager with two or three idle acres. He needs RM10,000 to buy five young cattle and four months to fatten them before Aidiladha. He hopes to sell them for RM25,000. News reports put korban cattle at roughly RM4,800 to RM6,440 a head in 2025 and 2026, so RM5,000 each is a fair sale assumption. The buying price, feed and any deaths decide the real profit. These are my working numbers, not a costed plan.</p>
-<p>The same shape fits a padi season of about four months, or a farmer whose children have all moved to town and who needs working capital to plant. One project on its own is too risky to guarantee. A pool of 5 to 10 similar short-cycle projects, sold as one portfolio, is a different thing.</p>
-
-<div class="flow">
- <div>5&ndash;10 short-cycle projects<br><small>cattle, padi, harvest</small></div>
- <div>Islamic ECF or P2P platform pools them</div>
- <div>Crowd investors + MyCIF co-invest</div>
- <div>First loss: owner's stake + social fund</div>
- <div>Guarantor covers part of the rest</div>
- <div>Profit shared: owner, investors, guarantor</div>
-</div>
-<div class="flow-cap">How a guaranteed project portfolio would work (my proposal)</div>
-
-<div class="fig"><div class="t">The guarantee softens bad cycles and costs a little in good ones</div>
-<svg viewBox="0 0 660 270" role="img" aria-label="Investor return by number of failed projects, with and without guarantee">
- <line x1="60" y1="80" x2="650" y2="80" stroke="#13263a" stroke-width="1"/>
- <text x="52" y="24" text-anchor="end" font-family="Inter" font-size="11" fill="#5b6b7a">+15%</text>
- <text x="52" y="84" text-anchor="end" font-family="Inter" font-size="11" fill="#5b6b7a">0%</text>
- <text x="52" y="224" text-anchor="end" font-family="Inter" font-size="11" fill="#5b6b7a">&minus;35%</text>
- <g font-family="Inter" font-size="11" font-weight="700">
-  <rect x="90" y="32" width="26" height="48" fill="#9aa7b4"/><rect x="120" y="45.6" width="26" height="34.4" fill="#0b5cad"/>
-  <text x="103" y="27" text-anchor="middle" fill="#13263a">12.0</text><text x="133" y="40" text-anchor="middle" fill="#0b5cad">8.6</text>
-  <rect x="205" y="76.8" width="26" height="3.2" fill="#9aa7b4"/><rect x="235" y="69.6" width="26" height="10.4" fill="#0b5cad"/>
-  <text x="218" y="72" text-anchor="middle" fill="#13263a">0.8</text><text x="248" y="64" text-anchor="middle" fill="#0b5cad">2.6</text>
-  <rect x="320" y="80" width="26" height="41.6" fill="#9aa7b4"/><rect x="350" y="80" width="26" height="13.2" fill="#0b5cad"/>
-  <text x="333" y="135" text-anchor="middle" fill="#13263a">&minus;10.4</text><text x="363" y="107" text-anchor="middle" fill="#0b5cad">&minus;3.3</text>
-  <rect x="435" y="80" width="26" height="86.4" fill="#9aa7b4"/><rect x="465" y="80" width="26" height="37.2" fill="#0b5cad"/>
-  <text x="448" y="180" text-anchor="middle" fill="#13263a">&minus;21.6</text><text x="478" y="131" text-anchor="middle" fill="#0b5cad">&minus;9.3</text>
-  <rect x="550" y="80" width="26" height="131.2" fill="#9aa7b4"/><rect x="580" y="80" width="26" height="60.8" fill="#0b5cad"/>
-  <text x="563" y="225" text-anchor="middle" fill="#13263a">&minus;32.8</text><text x="593" y="155" text-anchor="middle" fill="#0b5cad">&minus;15.2</text>
- </g>
- <g font-family="Inter" font-size="11" fill="#5b6b7a" text-anchor="middle">
-  <text x="118" y="250">0 failed</text><text x="233" y="250">1 failed</text><text x="348" y="250">2 failed</text><text x="463" y="250">3 failed</text><text x="578" y="250">4 failed</text>
- </g>
- <rect x="440" y="8" width="10" height="10" fill="#9aa7b4"/><text x="455" y="17" font-family="Inter" font-size="11" fill="#13263a">No guarantee</text>
- <rect x="540" y="8" width="10" height="10" fill="#0b5cad"/><text x="555" y="17" font-family="Inter" font-size="11" fill="#13263a">With guarantee</text>
-</svg>
-<div class="src">Illustration, not data. My assumptions: RM100,000 pool, ten RM10,000 projects, a successful project returns 12% to investors in one cycle, a failed project returns nothing. Guarantee covers 50% of capital lost, for a 1% fee and 20% of profit.</div></div>
-
-<p>On these numbers the guarantor earns RM3,400 on a clean pool and loses RM1,840 if one project fails. It breaks even only if fewer than about 6.5% of projects fail outright. So the guarantor must never stand first. The owner's own money and a social or MyCIF first-loss layer must sit below it.</p>
-
-<div class="box trap span"><span class="lbl">The case against, in its strongest form</span>
-<ul>
-<li><b>Annualising misleads.</b> A korban cycle comes once a year. "400% a year" is one good season multiplied by three seasons that do not exist.</li>
-<li><b>Livestock is risky.</b> Disease, deaths, and cheap smuggled cattle that farmers say undercut prices, as reported in May 2026.</li>
-<li><b>Fraud and moral hazard.</b> Small tickets, far from town, hard to check. A guarantee can make investors stop asking questions.</li>
-<li><b>Due diligence is costly</b> against a RM10,000 ticket. The platform may not earn enough to check properly.</li>
-<li><b>Shariah structure.</b> A guaranteed return breaks a mudarabah. Any capital guarantee must come from an independent third party, and a fee-based guarantee needs a Shariah adviser's ruling.</li>
-<li><b>No exit before the cycle ends.</b> There is no secondary market. Investors are locked in for the season.</li>
-<li><b>Adverse selection.</b> The weakest projects will seek the guarantee first.</li>
-</ul></div>
-
-<h3 class="sp">07 &middot; Hard questions</h3>
-<div class="qs">
- <div class="qc"><small>For BNM</small>Will the lessons of the BRF be published before the next SME fund is designed, so the same mistake is not repeated?</div>
- <div class="qc"><small>For the SC</small>Can a single campaign offer a pool of 5 to 10 projects, with one guarantee over the pool?</div>
- <div class="qc"><small>For guarantee agencies</small>Is a guarantee on part of a profit-sharing stake within your mandate, and how would you price the upside share?</div>
- <div class="qc"><small>For zakat and waqf bodies</small>Would you place a first-loss layer under a guarantee, if it lets the same fund support three times as many asnaf?</div>
- <div class="qc"><small>For platforms</small>Can you check a cattle project in Pasir Mas as well as a tech start-up in Bangsar, at a cost that makes sense?</div>
- <div class="qc"><small>For Shariah advisers</small>Which structure lets a third party guarantee capital, and take a share of profit, without breaking the contract?</div>
-</div>
-
-<h3 class="sp">08 &middot; A practical plan</h3>
-<div class="props">
- <div class="prop"><div class="n">1</div><div><b>Start with social finance.</b> Pilot a guarantee under an iTEKAD-style programme, with zakat or CSR money taking the first loss.<span class="m">Measure: number of entrepreneurs funded per ringgit of social money, against the current grant-only model.</span></div></div>
- <div class="prop"><div class="n">2</div><div><b>Run one portfolio for one season.</b> Pool 5 to 10 korban cattle projects for the 2027 Aidiladha season on one Shariah-compliant platform.<span class="m">Measure: projects completed, loss rate, investor return, time from funding to sale.</span></div></div>
- <div class="prop"><div class="n">3</div><div><b>Fix the first-loss order in writing.</b> Owner's stake first, social or MyCIF layer second, guarantor third, investors last.<span class="m">Measure: guarantor losses stay inside the agreed slice in every cycle.</span></div></div>
- <div class="prop"><div class="n">4</div><div><b>Add a second cycle type.</b> A padi season or a harvest cycle, so the portfolio does not ride on one Raya.<span class="m">Measure: losses in one project type do not move the other.</span></div></div>
- <div class="prop"><div class="n">5</div><div><b>Review after two cycles, then decide.</b> Scale up, change the terms, or stop.<span class="m">Measure: a public one-page result, good or bad.</span></div></div>
-</div>
-
-<div class="box call span"><span class="lbl">What I am asking for</span>
-<p><b>To Bank Negara and the Securities Commission:</b> within 2027, publish what the BRF taught us, and agree a sandbox for one guaranteed project portfolio on an Islamic platform. Give it two cycles before judging it.</p>
-<table class="asks">
- <tr><th>Guarantee agencies</th><td>Write a term sheet for a partial guarantee on a pooled profit-sharing stake, with a share of upside.</td></tr>
- <tr><th>Zakat and waqf bodies</th><td>Set aside a small first-loss pool for one pilot.</td></tr>
- <tr><th>Platforms</th><td>Build a low-cost check for rural short-cycle projects.</td></tr>
- <tr><th>Investors</th><td>Read the loss order before the return. Price the risk, not the story.</td></tr>
-</table></div>
-
-<div class="box watch span"><span class="lbl">Check yourself</span>
-<ul>
-<li>Is what I am guaranteeing equity, or a stake with an end date?</li>
-<li>Who loses first, and is that written down?</li>
-<li>How does the investor get out, and when?</li>
-<li>Am I annualising a return that happens once a year?</li>
-<li>If three of ten projects fail, who still stands?</li>
-</ul></div>
-
-<div class="box take span"><span class="lbl">My take</span>
-<p>The finance veteran was right about banks. A licensed bank should not hold the equity of a kampung cattle project, and the BRF proved the market agrees. But an equity guarantee is not one thing. Social money that has already accepted the loss, and risk-takers who want upside on a pool with an end date, are both places where a partial guarantee can work. Small, pooled, short-cycle, with the guarantor taking a share of the upside. Not a national fund. A pilot, done properly, for two seasons.</p></div>
-
-<div class="box over span"><span class="lbl">Over to you</span>
-<p>Would you put RM1,000 into a pool of ten kampung projects if part of your capital were guaranteed, and what return would make it worth it?</p></div>
-</div>
-
-<div class="foot">
-<details><summary>Sources</summary>
-<ol>
-<li>Bank Negara Malaysia, "Establishment of New Financing Facilities by Bank Negara Malaysia" (BRF and LCTF), 21 January 2022, bnm.gov.my.</li>
-<li>Skrine, "Bank Negara launches Business Recapitalisation Facility for SMEs", January 2022 (also on Lexology).</li>
-<li>Bank Negara Malaysia, MSME assistance under Belanjawan 2024, 21 October 2023, table of BNM Fund for SMEs (BRF RM1,000 million available).</li>
-<li>Bank Negara Malaysia, Annual Report 2023 press conference slides, March 2024 (BRF row).</li>
-<li>Credit Guarantee Corporation Malaysia, BizJamin/-i Business Recapitalisation Facility Scheme, cgc.com.my.</li>
-<li>The Star, "BNM to revamp its fund for SMEs deployment", 13 June 2024.</li>
-<li>Financial Services Act 2013 (Act 758), sections 14 and 85, table of contents and text via lowpartners.com.</li>
-<li>Bank Negara Malaysia, Capital Adequacy Framework (Basel II &ndash; Risk-Weighted Assets), 18 December 2023, paragraphs 2.42 and 2.44.</li>
-<li>Bank Negara Malaysia, Financial Stability Review 2H2024, Box 2, "Key Revisions under Basel III and the Impact on Banks".</li>
-<li>OSFI, Capital Adequacy Requirements 2026, Chapter 4 (Basel III equity risk weights of 250% and 400%).</li>
-<li>Securities Commission Malaysia, Annual Report 2024, "ECF and P2P Financing: Fuelling MSME Growth".</li>
-<li>Fintech News Malaysia, "SC Malaysia Annual Report 2025" (P2P and ECF figures for 2025).</li>
-<li>Securities Commission Malaysia, MyCIF page (figures to Q4 2025) and media release of 21 July 2025.</li>
-<li>Verband Deutscher B&uuml;rgschaftsbanken, association profile; B&uuml;rgschaftsbank and MBG Baden-W&uuml;rttemberg factsheet 2025; AECM presentation by Guy Selbherr, September 2021.</li>
-<li>Grantbite, "BBT/MBG kombi Th&uuml;ringen" programme summary.</li>
-<li>Bank Negara Malaysia, iTEKAD and iTEKAD Entrepreneurship pages (figures to end-December 2025 and end-March 2026); social finance page (Belanjawan 2026).</li>
-<li>World Bank, "iTEKAD: Making Inroads into Social Finance", June 2025.</li>
-<li>Korban cattle prices: Berita Harian, May 2026; Sinar Harian and Utusan Malaysia, 2025.</li>
-</ol></details>
-
-<div class="disc"><b>Disclaimer.</b> The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from publicly available sources listed above, and any errors are mine. Nothing here is financial, investment or legal advice. Research and drafting were assisted by AI tools. All facts were checked against the sources listed.</div>
-
-<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b> writes on MSME financing, AI automation for small businesses, and long-term policy for Malaysia.</div></div>
-<div class="endcta"><a class="cta" data-cta href="#">Comment on LinkedIn</a></div>
-</div>
-</article>
-
+<div class="dateline"><span class="en-only">Friday, 27 November 2026</span><span class="bm-only">Jumaat, 27 November 2026</span><span class="en-only">MSME financing &middot; Guarantees</span><span class="bm-only">Pembiayaan PMKS &middot; Jaminan</span><span class="en-only">~25 min</span><span class="bm-only">~25 minit</span></div>
 
 <article class="bm-only" id="art-bm" lang="ms">
 <div class="kicker">Pembiayaan PMKS &middot; Jaminan &middot; Kewangan sosial Islam</div>
 <h1>Jaminan ekuiti: mustahil sejak awal, atau alat yang belum kita bentuk?</h1>
-<p class="deck">Kemudahan permodalan semula RM1 bilion oleh Bank Negara hampir tiada pengambil. Puncanya jelas. Begitu juga dua ruang sempit di mana jaminan ke atas modal berisiko masih boleh berfungsi.</p>
-<div class="byline"><span class="who">Oleh <b>Azman Taufik</b> &middot; 27 November 2026 &middot; 10 minit bacaan</span><a class="cta" data-cta href="#">Komen di LinkedIn</a></div>
+<p class="deck">Kemudahan permodalan semula RM1 bilion oleh Bank Negara hampir tiada pengambil. Saya menjalankan 50,000 kumpulan simulasi ke atas empat kitaran perniagaan sebenar, serta model Jerman, untuk mencari di mana jaminan ke atas modal berisiko berfungsi dan di mana ia gagal.</p>
+<div class="byline"><span class="who">Oleh <b>Azman Taufik</b> &middot; 27 November 2026 &middot; 25 minit bacaan</span><a class="cta" data-cta href="#">Komen di LinkedIn</a></div>
 
 <div class="stats">
- <div class="stat"><b>RM1 bil</b><span>Kemudahan BRF Bank Negara, dibuka Feb 2022</span></div>
- <div class="stat"><b>RM1,000 juta</b><span>Masih tersenarai sebagai baki tersedia, Okt 2023</span></div>
+ <div class="stat"><b>RM1,000 juta</b><span>Daripada BRF RM1 bil masih tersenarai sebagai tersedia, Okt 2023</span></div>
  <div class="stat"><b>150%</b><span>Wajaran risiko ekuiti tidak tersenarai, peraturan Basel II BNM</span></div>
- <div class="stat"><b>25&ndash;80%</b><span>Bahagian pegangan ekuiti PMKS Jerman yang dijamin bank jaminan</span></div>
+ <div class="stat"><b>50,000</b><span>Kumpulan simulasi bagi setiap kes: lembu, cili, nanas, projek AI</span></div>
+ <div class="stat"><b>~6%</b><span>Setahun untuk pelabur, gaya Jerman, bersama pengusaha berpengalaman</span></div>
 </div>
 
 <div class="cols">
-<div class="box key"><span class="lbl">Ringkasan pantas</span>
+<div class="box key span"><span class="lbl">Ringkasan pantas</span>
 <ul>
-<li><b>BRF bernilai RM1 bilion</b> menawarkan PMKS pembiayaan ekuiti atau gabungan hutang dan ekuiti mulai Februari 2022. Pada Oktober 2023, BNM masih menyenaraikan <b>keseluruhan RM1,000 juta sebagai tersedia</b>, dan slaid laporan tahunan 2023 tidak mencatatkan sebarang kelulusan.</li>
-<li>Bank menjauhkan diri atas tiga sebab: ekuiti terletak di luar perniagaan biasa mereka dan memerlukan kelulusan BNM, ia menelan modal (<b>150%</b> wajaran risiko hari ini, <b>1250%</b> jika syarikat menjadi anak syarikat), dan pemegang ekuiti <b>dibayar paling akhir tanpa jalan keluar yang jelas</b>.</li>
-<li>Menjamin ekuiti tulen ialah urus niaga yang pasti rugi bagi penjamin. Menjamin <b>pegangan perkongsian untung yang bertempoh</b> tidak begitu: bank jaminan Jerman menanggung <b>25&ndash;80%</b> pegangan sebegini.</li>
-<li>Dua pintu masih terbuka di Malaysia: <b>kewangan sosial</b>, di mana pemberi dana sudah menerima kerugian (iTEKAD telah membantu <b>14,387</b> usahawan mikro), dan <b>orang ramai</b> di platform berdaftar SC, di mana MyCIF sudah melabur atas dasar kerugian pertama.</li>
-<li>Cadangan saya: <b>portfolio 5 hingga 10 projek kitaran pendek</b> yang dijamin (lembu korban, satu musim padi), dengan penjamin menanggung sebahagian modal dan <b>berkongsi keuntungan</b>.</li>
+<li><b>BRF bernilai RM1 bilion</b> menawarkan PMKS pembiayaan ekuiti atau gabungan hutang dan ekuiti mulai Februari 2022. Pada Oktober 2023, BNM masih menyenaraikan <b>keseluruhan RM1,000 juta sebagai tersedia</b>.</li>
+<li>Bank menjauhkan diri atas tiga sebab. Ekuiti terletak di luar perniagaan biasa mereka dan memerlukan kelulusan BNM. Ia menelan modal (<b>150%</b> wajaran risiko, <b>1250%</b> jika syarikat menjadi anak syarikat). Pemegang ekuiti pula <b>dibayar paling akhir, tanpa jalan keluar yang jelas</b>.</li>
+<li>Saya menguji kumpulan projek berjamin pada empat kitaran sebenar: lembu korban, cili, nanas MD2 dan projek perisian AI. Pada andaian keras, <b>jaminan 50% memotong kira-kira separuh kerugian kumpulan yang buruk</b>, tetapi hampir tidak mengubah <b>kekerapan</b> kumpulan itu rugi. Nanas tersungkur kerana kos. Lembu sekadar setanding ASB.</li>
+<li>Model Jerman berjaya kerana ia sebenarnya <b>mezanin</b>: pegangan bertempoh, bayaran tetap, jaminan peribadi pemilik, dan kerajaan menanggung kira-kira separuh risiko. Apabila diuji pada kes tempatan, pelabur memperoleh <b>kira-kira 6% setahun bersama pengusaha berpengalaman</b>, tetapi bagi pemula ia bertukar menjadi subsidi tersembunyi.</li>
+<li>Kesimpulan saya: <b>jamin jalan keluar, bukan ekuitinya</b>. Kewangan sosial untuk pemula, mezanin gaya Jerman untuk pengusaha yang ada rekod, dan projek rintis teknologi tinggi yang kecil serta berhad.</li>
 </ul></div>
 
 <p class="lead">Bolehkah ekuiti seseorang dijamin dan masih dipanggil ekuiti? Seorang tokoh kewangan yang pernah bekerja dengan saya bertahun-tahun dahulu berkata tidak. Baginya, "jaminan ekuiti" ialah istilah yang bercanggah sendiri. Ekuiti ialah wang yang menanggung rugi dahulu dan dibayar paling akhir. Jika ia dijamin, hilanglah sifat yang menjadikannya ekuiti.</p>
-<p>Sebahagian besar katanya betul. Malaysia telah menguji idea ini pada skala nasional, dan pasaran sudah memberikan jawapannya. Namun "sebahagian besar" masih meninggalkan ruang, dan ruang itulah tempat perniagaan kecil serta luar bandar paling memerlukan bantuan.</p>
-<p>Catatan ini meneliti apa yang berlaku kepada Kemudahan Permodalan Semula Perniagaan (BRF) Bank Negara, mengapa bank menjauhkan diri, dan di mana jaminan ke atas modal berisiko masih boleh berfungsi.</p>
+<p>Saya bersetuju dengannya. Namun saya masih ingin tahu sama ada wujud versi sempit yang boleh berjalan: projek kecil, kitaran pendek, satu kumpulan projek dan bukan satu pertaruhan, serta penjamin yang turut menikmati untung, bukan sekadar menanggung rugi.</p>
+<p>Jadi saya tidak berhenti pada hujah. Saya mengira kos empat kitaran perniagaan sebenar peringkat demi peringkat, menjalankan setiap satu melalui 50,000 kumpulan simulasi, kemudian menguji kes yang sama dengan struktur Jerman. Inilah hasilnya.</p>
 
 <h3>01 &middot; Apa yang ditawarkan BRF</h3>
 <p>BRF diumumkan dalam Belanjawan 2022 dan dibuka pada 3 Februari 2022 dengan peruntukan RM1 bilion di bawah Dana BNM untuk PKS. Tujuannya munasabah: membantu PMKS berkembang tanpa menambah timbunan hutang.</p>
 <p>PMKS boleh memperoleh ekuiti melalui saham keutamaan, saham biasa atau instrumen seakan-ekuiti. Atau mereka boleh mengambil pembiayaan gabungan, iaitu hutang bank serta ekuiti daripada pembiaya ekuiti pihak ketiga.</p>
-<p>Syaratnya longgar. Sehingga RM5 juta bagi setiap PMKS, tempoh sehingga 10 tahun dan tanpa cagaran. Bahagian hutang dihadkan pada 3.5% setahun tanpa jaminan dan 5% dengan jaminan. Tiada had ke atas pulangan ekuiti. Perlindungan jaminan bagi bahagian hutang juga disediakan.</p>
+<p>Syaratnya longgar. Sehingga RM5 juta bagi setiap PMKS, tempoh sehingga 10 tahun dan tanpa cagaran. Bahagian hutang dihadkan pada 3.5% setahun tanpa jaminan dan 5% dengan jaminan. Tiada had ke atas pulangan ekuiti, dan perlindungan jaminan disediakan bagi bahagian hutang.</p>
 
 <h3>02 &middot; Apa kata angka</h3>
 <div class="box data"><span class="lbl">Apa kata data</span>
 <p>Jadual kemudahan PKS BNM bertarikh 21 Oktober 2023, kira-kira 20 bulan selepas dilancarkan, menyenaraikan BRF dengan <b>RM1,000 juta tersedia</b>, sama dengan jumlah semasa ia dibuka.</p>
 <p>Slaid laporan tahunan BNM 2023 (Mac 2024) hanya menunjukkan tanda sengkang pada baris BRF bagi kelulusan dan penggunaan. Saya tidak menemui angka awam yang lebih terkini.</p></div>
-<p>Orang dalam industri menyifatkan sambutannya hampir sifar, dan jadual BNM sendiri selari dengan gambaran itu. BNM juga menyatakan pada Jun 2024 bahawa ia sedang merombak cara dana PKS direka, selepas hanya satu pertiga daripada satu lagi kemudahan digunakan.</p>
-<p>Dana yang tidak diguna oleh sesiapa bukan masalah kekurangan dana. Ia masalah reka bentuk.</p>
+<p>Orang dalam industri menyifatkan sambutannya hampir sifar, dan jadual BNM sendiri selari dengan gambaran itu. Pada Jun 2024, BNM menyatakan bahawa ia sedang merombak cara dana PKS direka, selepas hanya satu pertiga daripada satu lagi kemudahan digunakan.</p>
+<p>Dana yang tidak diguna oleh sesiapa bukan kekurangan wang. Reka bentuknya yang tersasar.</p>
 
 <h3>03 &middot; Mengapa bank menjauhkan diri</h3>
 <h4>Bukan bidang mereka</h4>
@@ -451,146 +301,1157 @@ body.bm .en-only{display:none}
 <p>Jika pulangan ekuiti dijamin sepenuhnya, penjamin menanggung kerugian manakala pelabur menikmati keuntungan. Itu rugi setiap kitaran. Tetapi jika yang dijamin hanya sebahagian pegangan yang mempunyai tempoh tetap, pulangan asas dan bahagian keuntungan, kiraannya berubah. Jerman sudah melakukannya berdekad-dekad.</p>
 
 <div class="cards">
- <div class="card g"><span class="tag">Berjaya</span><h5>Jerman</h5>17 bank jaminan dan 15 syarikat pelaburan PKS (MBG). MBG mengambil perkongsian senyap tanpa campur tangan dalam urusan harian. Bank jaminan menanggung 25&ndash;80% pegangan itu, disokong jaminan balas kerajaan persekutuan dan negeri.</div>
+ <div class="card g"><span class="tag">Berjaya</span><h5>Jerman</h5>17 bank jaminan dan 15 syarikat pelaburan PKS (MBG). MBG mengambil pegangan senyap tanpa campur tangan dalam urusan harian. Bank jaminan menanggung 25&ndash;80% pegangan itu, disokong jaminan balas kerajaan persekutuan dan negeri.</div>
  <div class="card r"><span class="tag">Gagal</span><h5>Malaysia, BRF</h5>Ekuiti terbuka ditawarkan melalui bank yang tidak dibina untuk memegangnya. Tiada reka bentuk jalan keluar dan tiada jaminan ke atas ekuiti itu sendiri. Dana terbiar.</div>
- <div class="card a"><span class="tag">Berjalan, kecil</span><h5>Malaysia, MyCIF</h5>Dana awam melabur bersama orang ramai: RM1 bagi setiap RM4 yang dikumpul (RM1 bagi RM2 untuk keselamatan makanan). Ia melabur atas dasar kerugian pertama dalam kempen perkongsian risiko Islam. RM1.5 bilion dilabur bersama untuk 11,512 PMKS sehingga S4 2025.</div>
+ <div class="card a"><span class="tag">Berjalan, kecil</span><h5>Malaysia, MyCIF</h5>Dana awam melabur bersama orang ramai: RM1 bagi setiap RM4 yang dikumpul (RM1 bagi RM2 untuk keselamatan makanan), atas dasar kerugian pertama dalam kempen perkongsian risiko Islam. RM1.5 bilion dilabur bersama untuk 11,512 PMKS sehingga S4 2025.</div>
 </div>
-<p>Pengajaran dari Jerman terletak pada instrumennya. Perkongsian senyap berada di antara hutang dan ekuiti. Ia ada tarikh tamat. Itulah yang membolehkannya dijamin.</p>
+<p>Daripada situ, saya tinggal dengan satu reka bentuk untuk diuji, dan dua ruang di mana ia mungkin berjalan.</p>
 
-<h3>05 &middot; Pintu pertama: kewangan sosial</h3>
+<h3>05 &middot; Idea yang ingin saya uji</h3>
+<h4>Pintu pertama: kewangan sosial</h4>
 <p>Di sini percanggahan itu hilang, kerana pemberi dana sudah menerima kerugian. Wang zakat, wakaf dan CSR diberikan untuk membina mata pencarian, bukan untuk mendapat pulangan.</p>
 <p>iTEKAD oleh BNM menggabungkan dana sebegini dengan modal benih, latihan dan pembiayaan mikro sejak Mei 2020. Program ini telah membantu 14,387 usahawan mikro setakat akhir Mac 2026. Sehingga akhir 2025, RM94.2 juta dana sosial dan RM77.2 juta pembiayaan serta pelaburan telah disalurkan.</p>
-<p>Jaminan boleh memanjangkan hayat setiap ringgit dana sosial. Dana sosial menanggung kerugian pertama, penjamin menanggung lapisan berikutnya, dan bank atau platform membiayai bakinya. Ringgit zakat tidak lagi habis sekali guna, sebaliknya menjadi penampan yang bekerja berulang kali.</p>
-
-<h3>06 &middot; Pintu kedua: orang ramai yang berani berisiko</h3>
-<p>Ada pelabur yang tidak kisah rugi sedikit asalkan berpeluang untung lebih. Saya tidak memanggil mereka kaki judi. Mereka memang berjiwa pengambil risiko, dan platform sudah pun sampai kepada mereka: pelabur institusi hanya 2% daripada pelabur ECF dan P2P pada 2024, tetapi menyumbang 60% nilai pelaburan.</p>
+<p>Jaminan boleh memanjangkan hayat setiap ringgit dana sosial. Dana sosial menanggung kerugian pertama, penjamin menanggung lapisan berikutnya, dan bank atau platform membiayai bakinya.</p>
+<h4>Pintu kedua: orang ramai yang berani berisiko</h4>
+<p>Ada pelabur yang tidak kisah rugi sedikit asalkan berpeluang untung lebih. Mereka memang berjiwa pengambil risiko, dan platform sudah pun sampai kepada mereka: pelabur institusi hanya 2% daripada pelabur ECF dan P2P pada 2024, tetapi menyumbang 60% nilai pelaburan.</p>
 <p>Satu catatan istilah. P2P di Malaysia ialah pembiayaan, bukan ekuiti. Pegangan perkongsian untung perlu melalui pendanaan ramai ekuiti, atau struktur patuh Syariah seperti mudarabah atau musyarakah. Urus niaga patuh Syariah mewakili 30% dana ECF dan P2P yang dikumpul pada 2024.</p>
-<h4>Contoh dari kampung</h4>
-<p>Bayangkan seorang penduduk kampung yang mempunyai dua tiga ekar tanah terbiar. Dia memerlukan RM10,000 untuk membeli lima ekor lembu muda dan empat bulan untuk menggemukkannya sebelum Aidiladha. Dia berharap dapat menjualnya pada harga RM25,000. Laporan berita meletakkan harga lembu korban sekitar RM4,800 hingga RM6,440 seekor pada 2025 dan 2026, jadi RM5,000 seekor ialah andaian harga jualan yang wajar. Harga belian, kos makanan dan kematian ternakan menentukan untung sebenar. Ini angka kerja saya, bukan pelan yang telah dikira kosnya.</p>
-<p>Bentuk yang sama sesuai untuk satu musim padi kira-kira empat bulan, atau petani yang anak-anaknya semua sudah berhijrah ke bandar dan memerlukan modal kerja untuk menanam. Satu projek bersendirian terlalu berisiko untuk dijamin. Kumpulan 5 hingga 10 projek kitaran pendek yang serupa, ditawarkan sebagai satu portfolio, ialah perkara yang berbeza.</p>
+<h4>Reka bentuknya</h4>
+<p>Himpunkan 10 projek kitaran pendek (20 bagi teknologi) dalam satu tawaran. Pemilik serta lapisan dana sosial atau MyCIF menanggung 10% pertama sebarang kerugian. Penjamin menanggung sebahagian bakinya. Pelabur mengambil 70% keuntungan dan pemilik 30%. Fi penjamin diambil daripada bahagian untung pelabur, dan hanya dibayar apabila ada untung. Dengan itu penjamin turut berkongsi keuntungan.</p>
 
 <div class="flow">
- <div>5&ndash;10 projek kitaran pendek<br><small>lembu, padi, tuaian</small></div>
- <div>Platform ECF atau P2P Islam mengumpulkannya</div>
+ <div>10 projek kitaran pendek<br><small>lembu, cili, nanas</small></div>
+ <div>Platform ECF Islam menghimpunkannya</div>
  <div>Pelabur orang ramai + pelaburan bersama MyCIF</div>
- <div>Kerugian pertama: modal pemilik + dana sosial</div>
- <div>Penjamin menanggung sebahagian baki</div>
- <div>Untung dikongsi: pemilik, pelabur, penjamin</div>
+ <div>Kerugian pertama: modal pemilik + dana sosial<br><small>10% pertama sebarang rugi</small></div>
+ <div>Penjamin menanggung sebahagian baki<br><small>0&ndash;70% diuji</small></div>
+ <div>Untung dikongsi: pemilik 30%, pelabur 70%<br><small>fi penjamin daripada bahagian pelabur</small></div>
 </div>
-<div class="flow-cap">Cara portfolio projek berjamin berfungsi (cadangan saya)</div>
+<div class="flow-cap">Cara kumpulan projek berjamin berfungsi (cadangan saya)</div>
 
-<div class="fig"><div class="t">Jaminan meringankan kitaran buruk, dengan sedikit kos pada kitaran baik</div>
-<svg viewBox="0 0 660 270" role="img" aria-label="Pulangan pelabur mengikut bilangan projek gagal, dengan dan tanpa jaminan">
- <line x1="60" y1="80" x2="650" y2="80" stroke="#13263a" stroke-width="1"/>
- <text x="52" y="24" text-anchor="end" font-family="Inter" font-size="11" fill="#5b6b7a">+15%</text>
- <text x="52" y="84" text-anchor="end" font-family="Inter" font-size="11" fill="#5b6b7a">0%</text>
- <text x="52" y="224" text-anchor="end" font-family="Inter" font-size="11" fill="#5b6b7a">&minus;35%</text>
- <g font-family="Inter" font-size="11" font-weight="700">
-  <rect x="90" y="32" width="26" height="48" fill="#9aa7b4"/><rect x="120" y="45.6" width="26" height="34.4" fill="#0b5cad"/>
-  <text x="103" y="27" text-anchor="middle" fill="#13263a">12.0</text><text x="133" y="40" text-anchor="middle" fill="#0b5cad">8.6</text>
-  <rect x="205" y="76.8" width="26" height="3.2" fill="#9aa7b4"/><rect x="235" y="69.6" width="26" height="10.4" fill="#0b5cad"/>
-  <text x="218" y="72" text-anchor="middle" fill="#13263a">0.8</text><text x="248" y="64" text-anchor="middle" fill="#0b5cad">2.6</text>
-  <rect x="320" y="80" width="26" height="41.6" fill="#9aa7b4"/><rect x="350" y="80" width="26" height="13.2" fill="#0b5cad"/>
-  <text x="333" y="135" text-anchor="middle" fill="#13263a">&minus;10.4</text><text x="363" y="107" text-anchor="middle" fill="#0b5cad">&minus;3.3</text>
-  <rect x="435" y="80" width="26" height="86.4" fill="#9aa7b4"/><rect x="465" y="80" width="26" height="37.2" fill="#0b5cad"/>
-  <text x="448" y="180" text-anchor="middle" fill="#13263a">&minus;21.6</text><text x="478" y="131" text-anchor="middle" fill="#0b5cad">&minus;9.3</text>
-  <rect x="550" y="80" width="26" height="131.2" fill="#9aa7b4"/><rect x="580" y="80" width="26" height="60.8" fill="#0b5cad"/>
-  <text x="563" y="225" text-anchor="middle" fill="#13263a">&minus;32.8</text><text x="593" y="155" text-anchor="middle" fill="#0b5cad">&minus;15.2</text>
- </g>
- <g font-family="Inter" font-size="11" fill="#5b6b7a" text-anchor="middle">
-  <text x="118" y="250">0 gagal</text><text x="233" y="250">1 gagal</text><text x="348" y="250">2 gagal</text><text x="463" y="250">3 gagal</text><text x="578" y="250">4 gagal</text>
- </g>
- <rect x="440" y="8" width="10" height="10" fill="#9aa7b4"/><text x="455" y="17" font-family="Inter" font-size="11" fill="#13263a">Tanpa jaminan</text>
- <rect x="540" y="8" width="10" height="10" fill="#0b5cad"/><text x="555" y="17" font-family="Inter" font-size="11" fill="#13263a">Dengan jaminan</text>
-</svg>
-<div class="src">Ilustrasi, bukan data. Andaian saya: kumpulan RM100,000, sepuluh projek RM10,000, projek berjaya memberi pulangan 12% kepada pelabur dalam satu kitaran, projek gagal tidak memulangkan apa-apa. Jaminan menanggung 50% modal yang hilang, dengan fi 1% dan 20% daripada untung.</div></div>
+<div class="fig"><div class="t">Siapa menanggung rugi: projek yang kehilangan 40% modal, dengan jaminan 50%</div>
+<div class="lossbar"><div style="width:25%;background:#f6d4cf">Lapisan rugi pertama<br>10</div><div style="width:37.5%;background:#cfe0f3">Penjamin<br>15</div><div style="width:37.5%;background:#e1e6ec">Pelabur<br>15</div></div>
+<div class="src">Ringgit yang hilang bagi setiap RM100 modal. Ilustrasi susunan kerugian dalam model saya, bukan data.</div></div>
 
-<p>Berdasarkan angka ini, penjamin memperoleh RM3,400 bagi kumpulan yang semuanya berjaya, dan rugi RM1,840 jika satu projek gagal. Ia hanya pulang modal jika kurang daripada kira-kira 6.5% projek gagal sepenuhnya. Maka penjamin tidak boleh berdiri di barisan hadapan. Modal pemilik sendiri dan lapisan kerugian pertama daripada dana sosial atau MyCIF mesti berada di bawahnya.</p>
+<div class="box ok span"><span class="lbl">Ukuran yang saya tetapkan</span>
+<ul>
+<li>Jangkaan untung mestilah sekurang-kurangnya <b>dua hingga tiga kali</b> jangkaan rugi (nisbah risiko kepada ganjaran 1:2 hingga 1:3).</li>
+<li>Pelabur mesti mengatasi pilihan selamat: simpanan tetap sekitar OPR <b>2.75%</b>, agihan ASB <b>5.75 sen</b> bagi 2025, atau dividen KWSP <b>6.15%</b>. Platform P2P mengiklankan 8&ndash;12%.</li>
+<li>Penjamin tidak boleh rugi secara purata, dan mesti mampu bertahan dalam tahun buruk 1 dalam 100.</li>
+</ul></div>
+
+<h3>06 &middot; Cara saya mengujinya</h3>
+<p>Saya memilih empat kitaran yang berbeza panjangnya: lembu korban (4 bulan, sekali setahun), cili (6 bulan, dua musim setahun), nanas MD2 (18 bulan) dan projek perisian AI untuk perniagaan kecil (3 hingga 5 tahun). Setiap satu dibina daripada pemacunya, bukan daripada satu angka pulangan.</p>
+
+<div class="tbl"><div class="t">Apa yang dicabut secara rawak oleh model, 50,000 kali bagi setiap kes</div><div class="tw">
+<table class="dt">
+<tr><th>Pemacu</th><th>Lembu</th><th>Cili</th><th>Nanas</th><th>Projek AI</th></tr>
+<tr><td>Harga</td><td>Harga korban dikongsi seluruh kumpulan (&plusmn;10&ndash;15%), tambah &plusmn;5% setempat</td><td>Satu harga pasaran untuk semua ladang, turun naik besar (&plusmn;30%)</td><td>Harga ladang dikongsi &plusmn;15%</td><td>&mdash;</td></tr>
+<tr><td>Hasil</td><td>Pertambahan berat 0.5&ndash;0.6 kg sehari, &plusmn;0.15</td><td>Hasil &plusmn;20%; penyakit memotong 40% hasil ladang</td><td>Bilangan buah &plusmn;12%; reput atau banjir separuhkan hasil</td><td>Gandaan hasil daripada lengkung berekor tebal</td></tr>
+<tr><td>Tahun buruk bersama</td><td>Tahun wabak (8%; 15% keras): 20% lembu mati</td><td>Tahun cuaca buruk (10%): &minus;20%</td><td>Tahun basah (10%): &minus;20%</td><td>Musim dana kering (15%): nilai keluar &times;0.6</td></tr>
+<tr><td>Kos</td><td>Harga makanan dikongsi, +0&ndash;30%</td><td>Lebihan kos 0&ndash;15%</td><td>Lebihan kos 0&ndash;25% (0&ndash;40% keras)</td><td>Dana dilepaskan berperingkat</td></tr>
+<tr><td>Lain-lain</td><td>3&ndash;5% kematian; 5% terlepas musim Raya</td><td>&mdash;</td><td>&mdash;</td><td>35&ndash;40% projek gagal</td></tr>
+<tr><td>Penipuan</td><td>2.5% / 5%</td><td>2% / 5%</td><td>2% / 5%</td><td>2% / 4%</td></tr>
+</table></div>
+<div class="src">Andaian saya. Jika dua angka diberi, yang pertama kes dirancang dan yang kedua kes keras.</div></div>
+
+<p>Setiap kes dijalankan dua kali: pada andaian yang biasa dirancang oleh penganjur, dan pada andaian keras. Andaian keras itulah ujian sebenar. Fi jaminan juga dikira pada andaian keras, iaitu 1.25 kali jangkaan bayaran tuntutan penjamin. Penjamin yang menetapkan harga berdasarkan harapan akan mula rugi sebaik sahaja keadaan berubah.</p>
+<p>Nisbah ganjaran kepada risiko ialah jangkaan untung dibahagi jangkaan rugi bagi projek seorang pelabur. "1 dalam 20" dan "1 dalam 100" ialah pulangan kumpulan yang hanya 5% dan 1% kumpulan simulasi jatuh lebih teruk daripadanya.</p>
+<div class="box watch span"><span class="lbl">Baca ini sebelum melihat keputusan</span>
+<p>Harga dan kos diambil daripada sumber awam yang disenaraikan di hujung artikel. Kebarangkalian penyakit, penipuan, tahun buruk dan kegagalan projek teknologi ialah andaian kerja saya. Sebelum sebarang projek rintis, angka ini perlu digantikan dengan data DVS, MARDI, LPNM dan FAMA serta sejarah gagal bayar platform.</p></div>
+
+<h3>07 &middot; Empat kes, dari mula hingga akhir</h3>
+
+<div class="case"><b>Kes 1 &middot; Lembu korban, 4 bulan</b><span>5 ekor lembu muda pada kira-kira RM2,700 seekor (andaian saya), makanan RM7 sehari selama 120 hari dan RM200 seekor untuk rawatan veterinar: modal <b>RM18,700</b>. Dijual RM5,000 seekor: RM25,000. Untung kes asas RM6,300, atau 34% dalam empat bulan. Bahagian 70% pelabur bersamaan kira-kira 24% sebelum fi.</span></div>
+<div class="stages">
+ <div><span class="st">Beli <span class="mo">bulan 0</span></span>Membayar terlalu mahal, atau membeli ternakan yang sakit.<span class="rk">Penyakit kulit berbintil menyebabkan import lembu dari Thailand digantung, lalu bekalan semakin ketat.</span><span class="ck">Semak: pemeriksaan veterinar dan timbang semasa tiba, seperti nasihat DVS; tag telinga dan gambar.</span></div>
+ <div><span class="st">Gemukkan <span class="mo">bulan 1&ndash;3</span></span>Makanan, penyakit dan kematian.<span class="rk">Harga dedak naik daripada kira-kira RM45 kepada RM60 sekampit. Penyakit hawar berdarah membunuh 25 ekor kerbau di Kuala Terengganu pada 2025.</span><span class="ck">Semak: vaksinasi, takaful ternakan, log berat dan gambar setiap bulan.</span></div>
+ <div><span class="st">Jual <span class="mo">bulan 4</span></span>Terlepas musim Raya.<span class="rk">Penternak mengadu lembu seludup murah menjatuhkan harga. Harga sekitar RM4,500&ndash;6,500 seekor di Melaka dan Negeri Sembilan pada 2025.</span><span class="ck">Semak: jual awal kepada jawatankuasa korban masjid; timbang semasa jualan.</span></div>
+ <div><span class="st">Selesai <span class="mo">selepas jualan</span></span>Wang dikutip tunai; pemilik hilang atau menjual awal.<span class="rk">Penipuan ialah kerugian terbesar bagi setiap projek dalam model.</span><span class="ck">Semak: pembeli membayar terus ke akaun platform; agihan ikut kontrak.</span></div>
+</div>
+
+<div class="case"><b>Kes 2 &middot; Cili, 6 bulan, dua musim setahun</b><span>Seekar dengan hasil 9,100 kg, modal <b>RM30,500</b> (nilai tengah bajet yang diterbitkan, andaian saya) dan harga RM5 sekilo: hasil jualan RM45,500 dan untung RM15,000, atau 49% semusim. Data harga yang saya temui agak lama, jadi anggap ini angka kerja.</span></div>
+<div class="stages">
+ <div><span class="st">Tanam <span class="mo">bulan 0&ndash;1</span></span>Input, fertigasi dan upah melebihi rancangan.<span class="rk">Lebihan kos 0&ndash;15% dalam model.</span><span class="ck">Semak: pakej input berharga tetap; dana dilepaskan berperingkat.</span></div>
+ <div><span class="st">Tumbesaran <span class="mo">bulan 1&ndash;2.5</span></span>Penyakit dan cuaca.<span class="rk">Penyakit boleh memotong 40% hasil sesebuah ladang; tahun cuaca buruk melanda semua ladang serentak.</span><span class="ck">Semak: lawatan pakar agronomi; perlindungan tanaman jika ada.</span></div>
+ <div><span class="st">Tuai <span class="mo">dari ~hari ke-75</span></span>Petikan pertama kira-kira 75 hari selepas ubah, kemudian setiap minggu hingga bulan 6.<span class="rk">Hasil &plusmn;20%; pemetik sukar dicari pada musim puncak.</span><span class="ck">Semak: log tuaian mingguan.</span></div>
+ <div><span class="st">Jual <span class="mo">setiap minggu</span></span>Kesemua sepuluh ladang menjual ke pasaran yang sama.<span class="rk">Harga cukup bergolak sehingga FAMA campur tangan di Pulau Pinang pada Mei 2026.</span><span class="ck">Semak: harga offtake dipersetujui sebelum menanam.</span></div>
+</div>
+
+<div class="case"><b>Kes 3 &middot; Nanas MD2, 18 bulan</b><span>Sehektar dengan kos <b>RM40,000</b>. 27,500 biji &times; 1.5 kg &times; RM1.50 = RM61,875. Untung RM21,875, atau 55% dalam 18 bulan. Panduan DOA meletakkan kos pada RM30,000&ndash;40,000 sehektar; sesetengah bajet yang diterbitkan jauh lebih tinggi, sehingga RM80,000 bagi susunan premium.</span></div>
+<div class="stages">
+ <div><span class="st">Tanam <span class="mo">bulan 0&ndash;3</span></span>Tanah, sulur, penanaman.<span class="rk">Lebihan kos ialah risiko terbesar; bajet sangat berbeza-beza.</span><span class="ck">Semak: kontrak penanaman berharga tetap.</span></div>
+ <div><span class="st">Tumbesaran <span class="mo">bulan 3&ndash;12</span></span>Penantian panjang tanpa pendapatan.<span class="rk">Reput umbut atau banjir boleh menyeparuhkan hasil sesebuah ladang; tahun basah melanda semua.</span><span class="ck">Semak: saliran; lawatan tapak bergambar.</span></div>
+ <div><span class="st">Aruhan dan tuai <span class="mo">bulan 12&ndash;18</span></span>Masa dan saiz buah.<span class="rk">FGV melaporkan hujan berpanjangan melewatkan tuaian nanasnya.</span><span class="ck">Semak: jadual tuaian; pembeli sudah dikenal pasti.</span></div>
+ <div><span class="st">Jual <span class="mo">bulan 18</span></span>Harga di ladang.<span class="rk">&plusmn;15% dalam model; RM1.35 sekilo dalam kes keras.</span><span class="ck">Semak: offtake dengan pemproses atau pengeksport.</span></div>
+</div>
+
+<div class="case"><b>Kes 4 &middot; Projek perisian AI untuk perniagaan kecil, 3&ndash;5 tahun</b><span>RM150,000 bagi setiap projek (andaian saya), dalam kumpulan 20 projek, dengan dana dilepaskan berperingkat. Setiap projek dianggap seperti syarikat teroka peringkat awal. Kebarangkalian ini andaian saya sendiri, berpandukan pola pelaburan teroka secara kasar, dan tidak bersumber.</span></div>
+<div class="stages">
+ <div><span class="st">Bina <span class="mo">tahun 1</span></span>35&ndash;40% gagal.<span class="rk">Dengan dana berperingkat, kebanyakan projek gagal dihentikan pada 40% belanja; satu daripada lima hanya dikesan pada 70%.</span><span class="ck">Semak: pintu pencapaian (milestone).</span></div>
+ <div><span class="st">Daya tarikan <span class="mo">tahun 2</span></span>Ada pelanggan, tetapi tidak cukup.<span class="rk">30% hanya memulangkan 0.1&ndash;0.6&times; modal.</span><span class="ck">Semak: laporan hasil yang dikongsi.</span></div>
+ <div><span class="st">Berkembang <span class="mo">tahun 2&ndash;4</span></span>Yang menang menampung yang kalah.<span class="rk">Pulangan 1&times; ke atas pada lengkung berekor tebal, dihadkan pada 30&times;.</span><span class="ck">Semak: dana teroka profesional melabur bersama.</span></div>
+ <div><span class="st">Keluar <span class="mo">tahun 3&ndash;5</span></span>Mesti ada pembeli.<span class="rk">Musim dana kering (peluang 15%) memotong setiap nilai keluar sebanyak 40%; penipuan 2&ndash;4%.</span><span class="ck">Semak: laluan keluar dipersetujui dari awal.</span></div>
+</div>
+
+<h3>08 &middot; Risiko, ganjaran dan harga: apa kata 50,000 kumpulan</h3>
+<div class="tbl"><div class="t">Keputusan pada andaian keras</div><div class="tw">
+<table class="dt">
+<tr><th>Kes</th><th>Jaminan</th><th>Purata pulangan</th><th>Kumpulan rugi</th><th>Kumpulan 1 dalam 20</th><th>Kumpulan 1 dalam 100</th><th>Ganjaran : risiko</th><th>Fi penjamin</th><th>Setahun</th></tr>
+<tr><td rowspan="2"><b>Lembu</b><br>4 bulan, sekali setahun</td><td>tiada</td><td class="n">6.8%</td><td class="n">32%</td><td class="n">&minus;15.9%</td><td class="n">&minus;25.1%</td><td class="n">2.1 : 1</td><td class="n">&mdash;</td><td class="n">6.8%</td></tr>
+<tr class="sub"><td>50%</td><td class="n">6.0%</td><td class="n">27%</td><td class="n"><b>&minus;7.5%</b></td><td class="n"><b>&minus;12.3%</b></td><td class="n">2.9 : 1</td><td class="n">30% untung</td><td class="n">6.0%</td></tr>
+<tr><td rowspan="3"><b>Cili</b><br>6 bulan, dua musim</td><td>tiada</td><td class="n">9.9%</td><td class="n">40%</td><td class="n">&minus;28.5%</td><td class="n">&minus;40.8%</td><td class="n">1.9 : 1</td><td class="n">&mdash;</td><td class="n">19.8%</td></tr>
+<tr class="sub"><td>50%</td><td class="n">8.6%</td><td class="n">35%</td><td class="n"><b>&minus;14.1%</b></td><td class="n"><b>&minus;20.4%</b></td><td class="n">2.6 : 1</td><td class="n">33% untung</td><td class="n">17.1%</td></tr>
+<tr class="sub"><td>50% + offtake RM4.50</td><td class="n">5.2%</td><td class="n">20%</td><td class="n"><b>&minus;5.5%</b></td><td class="n">&minus;10.2%</td><td class="n">2.3 : 1</td><td class="n">36% untung</td><td class="n">10.5%</td></tr>
+<tr><td rowspan="2"><b>Nanas</b><br>18 bulan</td><td>tiada</td><td class="n">1.0%</td><td class="n">49%</td><td class="n">&minus;22.3%</td><td class="n">&minus;31.5%</td><td class="n">1.1 : 1</td><td class="n">&mdash;</td><td class="n">0.7%</td></tr>
+<tr class="sub"><td>50%</td><td class="n">&minus;0.4%</td><td class="n">53%</td><td class="n">&minus;11.3%</td><td class="n">&minus;15.8%</td><td class="n">0.9 : 1</td><td class="n">57% untung</td><td class="n">&minus;0.2%</td></tr>
+<tr><td rowspan="2"><b>Projek AI</b><br>20 projek, berperingkat, 3&ndash;5 tahun</td><td>tiada</td><td class="n">101%</td><td class="n">17%</td><td class="n">&minus;23.0%</td><td class="n">&minus;35.1%</td><td class="n">4.5 : 1</td><td class="n">&mdash;</td><td class="n">~19%</td></tr>
+<tr class="sub"><td>50%</td><td class="n">97%</td><td class="n"><b>9%</b></td><td class="n"><b>&minus;7.4%</b></td><td class="n"><b>&minus;16.6%</b></td><td class="n">7.7 : 1</td><td class="n">14% keuntungan</td><td class="n">~18.5%</td></tr>
+</table></div>
+<div class="src">Pulangan kepada pelabur bagi setiap kitaran (teknologi: sepanjang hayat kumpulan, bagi setiap ringgit dikomitkan). "Setahun" didarab dengan bilangan kitaran setahun; bagi teknologi, kadar kompaun empat tahun. Pada andaian dirancang, semua kes pertanian kelihatan jauh lebih baik, dengan nisbah ganjaran kepada risiko sekitar 6 : 1 tanpa jaminan. Model saya.</div></div>
+
+<div class="fig"><div class="t">Jaminan 50% memendekkan ekor kerugian, tetapi kekerapan kumpulan rugi hampir tidak berubah</div><div class="g2"><div class="hc"><div class="ht">Lembu korban (4 bulan)</div><div class="hs">Peluang kumpulan rugi: <b class="g0">32%</b> &rarr; <b class="g5">27%</b></div><svg viewBox="0 0 320 176" role="img" aria-label="Taburan pulangan kumpulan simulasi" font-family="Inter,Arial,sans-serif">
+<rect x="12" y="14" width="118.4" height="126" fill="#fdf1ef"/>
+<path d="M12.0 140V139.8h5.8V140zM18.4 140V139.6h5.8V140zM24.9 140V139.2h5.8V140zM31.3 140V138.6h5.8V140zM37.7 140V138.1h5.8V140zM44.2 140V137.3h5.8V140zM50.6 140V135.6h5.8V140zM57.0 140V133.4h5.8V140zM63.5 140V131.2h5.8V140zM69.9 140V127.2h5.8V140zM76.3 140V123.6h5.8V140zM82.8 140V119.1h5.8V140zM89.2 140V113.3h5.8V140zM95.7 140V105.1h5.8V140zM102.1 140V97.0h5.8V140zM108.5 140V91.0h5.8V140zM115.0 140V85.1h5.8V140zM121.4 140V75.1h5.8V140zM127.8 140V70.4h5.8V140zM134.3 140V68.4h5.8V140zM140.7 140V65.7h5.8V140zM147.1 140V68.7h5.8V140zM153.6 140V67.7h5.8V140zM160.0 140V73.1h5.8V140zM166.4 140V79.5h5.8V140zM172.9 140V84.6h5.8V140zM179.3 140V92.2h5.8V140zM185.7 140V97.4h5.8V140zM192.2 140V104.0h5.8V140zM198.6 140V109.5h5.8V140zM205.0 140V115.1h5.8V140zM211.5 140V119.7h5.8V140zM217.9 140V124.1h5.8V140zM224.3 140V126.8h5.8V140zM230.8 140V130.0h5.8V140zM237.2 140V131.9h5.8V140zM243.7 140V133.3h5.8V140zM250.1 140V135.0h5.8V140zM256.5 140V136.0h5.8V140zM263.0 140V137.5h5.8V140zM269.4 140V137.9h5.8V140zM275.8 140V138.4h5.8V140zM282.3 140V139.3h5.8V140zM288.7 140V138.9h5.8V140zM295.1 140V139.4h5.8V140zM301.6 140V139.5h5.8V140z" fill="#c3ccd6"/>
+<polyline points="12.0,140 12,140.0 18,140.0 18,140.0 25,140.0 25,140.0 31,140.0 31,140.0 38,140.0 38,140.0 44,140.0 44,140.0 51,140.0 51,140.0 57,140.0 57,139.9 63,139.9 63,139.8 70,139.8 70,139.5 76,139.5 76,138.4 83,138.4 83,136.6 89,136.6 89,131.8 96,131.8 96,122.5 102,122.5 102,112.0 109,112.0 109,92.2 115,92.2 115,69.7 121,69.7 121,50.1 128,50.1 128,28.1 134,28.1 134,28.8 141,28.8 141,23.3 147,23.3 147,29.6 154,29.6 154,42.4 160,42.4 160,56.5 166,56.5 166,72.0 173,72.0 173,85.1 179,85.1 179,98.2 186,98.2 186,108.7 192,108.7 192,117.8 199,117.8 199,123.9 205,123.9 205,128.3 211,128.3 211,132.1 218,132.1 218,134.2 224,134.2 224,136.8 231,136.8 231,137.7 237,137.7 237,138.9 244,138.9 244,138.8 250,138.8 250,139.4 257,139.4 257,139.8 263,139.8 263,139.8 269,139.8 269,139.8 276,139.8 276,139.9 282,139.9 282,139.9 289,139.9 289,139.9 295,139.9 295,140.0 302,140.0 302,140.0 308,140.0 308.0,140" fill="none" stroke="#0b5cad" stroke-width="2"/>
+<line x1="12" y1="140" x2="308" y2="140" stroke="#13263a" stroke-width="1"/>
+<line x1="130.4" y1="10" x2="130.4" y2="140" stroke="#13263a" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="16" y="26" font-size="11" font-weight="700" fill="#b42318">rugi</text>
+<text x="304" y="26" font-size="11" font-weight="700" fill="#16794a" text-anchor="end">untung</text>
+<text x="12.0" y="156" font-size="11" fill="#5b6b7a" text-anchor="start">&minus;40%</text>
+<text x="130.4" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">0%</text>
+<text x="248.8" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">+40%</text>
+</svg></div><div class="hc"><div class="ht">Cili (6 bulan)</div><div class="hs">Peluang kumpulan rugi: <b class="g0">40%</b> &rarr; <b class="g5">35%</b></div><svg viewBox="0 0 320 176" role="img" aria-label="Taburan pulangan kumpulan simulasi" font-family="Inter,Arial,sans-serif">
+<rect x="12" y="14" width="111.0" height="126" fill="#fdf1ef"/>
+<path d="M12.0 140V139.7h5.8V140zM18.4 140V139.2h5.8V140zM24.9 140V139.0h5.8V140zM31.3 140V137.0h5.8V140zM37.7 140V135.7h5.8V140zM44.2 140V133.6h5.8V140zM50.6 140V130.6h5.8V140zM57.0 140V125.5h5.8V140zM63.5 140V120.3h5.8V140zM69.9 140V114.0h5.8V140zM76.3 140V104.9h5.8V140zM82.8 140V99.5h5.8V140zM89.2 140V90.3h5.8V140zM95.7 140V83.0h5.8V140zM102.1 140V76.5h5.8V140zM108.5 140V73.0h5.8V140zM115.0 140V71.4h5.8V140zM121.4 140V69.7h5.8V140zM127.8 140V70.3h5.8V140zM134.3 140V73.2h5.8V140zM140.7 140V79.5h5.8V140zM147.1 140V83.1h5.8V140zM153.6 140V88.8h5.8V140zM160.0 140V92.7h5.8V140zM166.4 140V96.6h5.8V140zM172.9 140V100.5h5.8V140zM179.3 140V107.2h5.8V140zM185.7 140V110.4h5.8V140zM192.2 140V113.4h5.8V140zM198.6 140V116.3h5.8V140zM205.0 140V120.0h5.8V140zM211.5 140V123.7h5.8V140zM217.9 140V125.1h5.8V140zM224.3 140V127.0h5.8V140zM230.8 140V129.3h5.8V140zM237.2 140V130.7h5.8V140zM243.7 140V132.6h5.8V140zM250.1 140V133.8h5.8V140zM256.5 140V135.3h5.8V140zM263.0 140V135.1h5.8V140zM269.4 140V136.1h5.8V140zM275.8 140V136.6h5.8V140zM282.3 140V137.1h5.8V140zM288.7 140V137.7h5.8V140zM295.1 140V138.1h5.8V140zM301.6 140V138.1h5.8V140z" fill="#c3ccd6"/>
+<polyline points="12.0,140 12,140.0 18,140.0 18,140.0 25,140.0 25,140.0 31,140.0 31,140.0 38,140.0 38,140.0 44,140.0 44,140.0 51,140.0 51,140.0 57,140.0 57,140.0 63,140.0 63,139.7 70,139.7 70,138.4 76,138.4 76,133.9 83,133.9 83,125.6 89,125.6 89,109.4 96,109.4 96,86.8 102,86.8 102,62.4 109,62.4 109,39.2 115,39.2 115,26.2 121,26.2 121,23.3 128,23.3 128,29.0 134,29.0 134,41.2 141,41.2 141,52.4 147,52.4 147,65.7 154,65.7 154,74.6 160,74.6 160,87.9 166,87.9 166,95.9 173,95.9 173,102.6 179,102.6 179,112.3 186,112.3 186,117.3 192,117.3 192,121.5 199,121.5 199,125.7 205,125.7 205,128.9 211,128.9 211,132.1 218,132.1 218,133.1 224,133.1 224,134.9 231,134.9 231,135.7 237,135.7 237,137.1 244,137.1 244,137.2 250,137.2 250,138.3 257,138.3 257,138.5 263,138.5 263,139.1 269,139.1 269,139.3 276,139.3 276,139.4 282,139.4 282,139.7 289,139.7 289,139.6 295,139.6 295,139.8 302,139.8 302,139.8 308,139.8 308.0,140" fill="none" stroke="#0b5cad" stroke-width="2"/>
+<line x1="12" y1="140" x2="308" y2="140" stroke="#13263a" stroke-width="1"/>
+<line x1="123.0" y1="10" x2="123.0" y2="140" stroke="#13263a" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="16" y="26" font-size="11" font-weight="700" fill="#b42318">rugi</text>
+<text x="304" y="26" font-size="11" font-weight="700" fill="#16794a" text-anchor="end">untung</text>
+<text x="30.5" y="156" font-size="11" fill="#5b6b7a" text-anchor="start">&minus;50%</text>
+<text x="123.0" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">0%</text>
+<text x="215.5" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">+50%</text>
+<text x="308.0" y="156" font-size="11" fill="#5b6b7a" text-anchor="end">+100%</text>
+</svg></div><div class="hc"><div class="ht">Nanas (18 bulan)</div><div class="hs">Peluang kumpulan rugi: <b class="g0">49%</b> &rarr; <b class="g5">53%</b></div><svg viewBox="0 0 320 176" role="img" aria-label="Taburan pulangan kumpulan simulasi" font-family="Inter,Arial,sans-serif">
+<rect x="12" y="14" width="131.6" height="126" fill="#fdf1ef"/>
+<path d="M12.0 140V139.2h5.8V140zM18.4 140V138.7h5.8V140zM24.9 140V137.8h5.8V140zM31.3 140V137.3h5.8V140zM37.7 140V135.8h5.8V140zM44.2 140V134.3h5.8V140zM50.6 140V132.4h5.8V140zM57.0 140V129.8h5.8V140zM63.5 140V127.2h5.8V140zM69.9 140V122.8h5.8V140zM76.3 140V119.7h5.8V140zM82.8 140V115.3h5.8V140zM89.2 140V111.2h5.8V140zM95.7 140V106.3h5.8V140zM102.1 140V100.5h5.8V140zM108.5 140V95.4h5.8V140zM115.0 140V93.3h5.8V140zM121.4 140V89.7h5.8V140zM127.8 140V86.3h5.8V140zM134.3 140V87.6h5.8V140zM140.7 140V85.2h5.8V140zM147.1 140V87.1h5.8V140zM153.6 140V88.5h5.8V140zM160.0 140V90.9h5.8V140zM166.4 140V93.6h5.8V140zM172.9 140V99.6h5.8V140zM179.3 140V103.0h5.8V140zM185.7 140V107.8h5.8V140zM192.2 140V112.5h5.8V140zM198.6 140V114.7h5.8V140zM205.0 140V118.7h5.8V140zM211.5 140V122.0h5.8V140zM217.9 140V125.2h5.8V140zM224.3 140V127.0h5.8V140zM230.8 140V129.4h5.8V140zM237.2 140V131.3h5.8V140zM243.7 140V133.6h5.8V140zM250.1 140V135.1h5.8V140zM256.5 140V135.9h5.8V140zM263.0 140V136.8h5.8V140zM269.4 140V137.4h5.8V140zM275.8 140V138.2h5.8V140zM282.3 140V138.3h5.8V140zM288.7 140V139.0h5.8V140zM295.1 140V139.2h5.8V140zM301.6 140V139.3h5.8V140z" fill="#c3ccd6"/>
+<polyline points="12.0,140 12,140.0 18,140.0 18,140.0 25,140.0 25,140.0 31,140.0 31,140.0 38,140.0 38,140.0 44,140.0 44,140.0 51,140.0 51,140.0 57,140.0 57,139.9 63,139.9 63,139.8 70,139.8 70,139.2 76,139.2 76,138.2 83,138.2 83,135.7 89,135.7 89,131.1 96,131.1 96,123.7 102,123.7 102,111.6 109,111.6 109,95.4 115,95.4 115,76.8 121,76.8 121,53.4 128,53.4 128,36.1 134,36.1 134,26.0 141,26.0 141,23.3 147,23.3 147,32.1 154,32.1 154,49.9 160,49.9 160,72.5 166,72.5 166,89.7 173,89.7 173,105.1 179,105.1 179,116.8 186,116.8 186,127.5 192,127.5 192,132.1 199,132.1 199,135.7 205,135.7 205,137.9 211,137.9 211,138.7 218,138.7 218,139.3 224,139.3 224,139.7 231,139.7 231,139.8 237,139.8 237,140.0 244,140.0 244,139.9 250,139.9 250,140.0 257,140.0 257,140.0 263,140.0 263,140.0 269,140.0 269,140.0 276,140.0 276,140.0 282,140.0 282,140.0 289,140.0 289,140.0 295,140.0 295,140.0 302,140.0 302,140.0 308,140.0 308.0,140" fill="none" stroke="#0b5cad" stroke-width="2"/>
+<line x1="12" y1="140" x2="308" y2="140" stroke="#13263a" stroke-width="1"/>
+<line x1="143.6" y1="10" x2="143.6" y2="140" stroke="#13263a" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="16" y="26" font-size="11" font-weight="700" fill="#b42318">rugi</text>
+<text x="304" y="26" font-size="11" font-weight="700" fill="#16794a" text-anchor="end">untung</text>
+<text x="12.0" y="156" font-size="11" fill="#5b6b7a" text-anchor="start">&minus;40%</text>
+<text x="143.6" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">0%</text>
+<text x="275.1" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">+40%</text>
+</svg></div><div class="hc"><div class="ht">Projek AI, 20 projek (3&ndash;5 tahun)</div><div class="hs">Peluang kumpulan rugi: <b class="g0">17%</b> &rarr; <b class="g5">9%</b></div><svg viewBox="0 0 320 176" role="img" aria-label="Taburan pulangan kumpulan simulasi" font-family="Inter,Arial,sans-serif">
+<rect x="12" y="14" width="32.9" height="126" fill="#fdf1ef"/>
+<path d="M12.0 140V136.1h5.8V140zM18.4 140V104.6h5.8V140zM24.9 140V72.7h5.8V140zM31.3 140V52.0h5.8V140zM37.7 140V42.7h5.8V140zM44.2 140V43.9h5.8V140zM50.6 140V50.4h5.8V140zM57.0 140V56.8h5.8V140zM63.5 140V63.2h5.8V140zM69.9 140V67.6h5.8V140zM76.3 140V69.3h5.8V140zM82.8 140V71.7h5.8V140zM89.2 140V82.1h5.8V140zM95.7 140V88.0h5.8V140zM102.1 140V93.4h5.8V140zM108.5 140V98.7h5.8V140zM115.0 140V93.9h5.8V140zM121.4 140V89.8h5.8V140zM127.8 140V81.9h5.8V140zM134.3 140V80.9h5.8V140zM140.7 140V85.3h5.8V140zM147.1 140V91.9h5.8V140zM153.6 140V96.5h5.8V140zM160.0 140V102.5h5.8V140zM166.4 140V105.7h5.8V140zM172.9 140V108.7h5.8V140zM179.3 140V114.5h5.8V140zM185.7 140V117.7h5.8V140zM192.2 140V118.6h5.8V140zM198.6 140V121.2h5.8V140zM205.0 140V123.8h5.8V140zM211.5 140V123.2h5.8V140zM217.9 140V123.4h5.8V140zM224.3 140V123.7h5.8V140zM230.8 140V124.8h5.8V140zM237.2 140V127.1h5.8V140zM243.7 140V127.8h5.8V140zM250.1 140V128.5h5.8V140zM256.5 140V131.2h5.8V140zM263.0 140V132.0h5.8V140zM269.4 140V132.9h5.8V140zM275.8 140V133.5h5.8V140zM282.3 140V134.9h5.8V140zM288.7 140V135.9h5.8V140zM295.1 140V136.4h5.8V140zM301.6 140V136.4h5.8V140z" fill="#c3ccd6"/>
+<polyline points="12.0,140 12,140.0 18,140.0 18,140.0 25,140.0 25,137.2 31,137.2 31,85.2 38,85.2 38,41.4 44,41.4 44,24.3 51,24.3 51,23.3 57,23.3 57,33.9 63,33.9 63,44.8 70,44.8 70,53.3 76,53.3 76,56.6 83,56.6 83,59.0 89,59.0 89,70.0 96,70.0 96,81.0 102,81.0 102,86.1 109,86.1 109,93.3 115,93.3 115,84.0 121,84.0 121,73.5 128,73.5 128,69.6 134,69.6 134,75.3 141,75.3 141,87.7 147,87.7 147,90.4 154,90.4 154,99.1 160,99.1 160,102.8 166,102.8 166,109.4 173,109.4 173,115.3 179,115.3 179,115.5 186,115.5 186,119.8 192,119.8 192,122.0 199,122.0 199,120.1 205,120.1 205,121.2 211,121.2 211,122.3 218,122.3 218,125.2 224,125.2 224,126.0 231,126.0 231,128.7 237,128.7 237,130.3 244,130.3 244,131.8 250,131.8 250,133.0 257,133.0 257,134.7 263,134.7 263,135.3 269,135.3 269,136.3 276,136.3 276,136.2 282,136.2 282,136.5 289,136.5 289,136.5 295,136.5 295,137.0 302,137.0 302,137.7 308,137.7 308.0,140" fill="none" stroke="#0b5cad" stroke-width="2"/>
+<line x1="12" y1="140" x2="308" y2="140" stroke="#13263a" stroke-width="1"/>
+<line x1="44.9" y1="10" x2="44.9" y2="140" stroke="#13263a" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="16" y="26" font-size="11" font-weight="700" fill="#b42318">rugi</text>
+<text x="304" y="26" font-size="11" font-weight="700" fill="#16794a" text-anchor="end">untung</text>
+<text x="44.9" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">0%</text>
+<text x="110.7" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">+100%</text>
+<text x="176.4" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">+200%</text>
+<text x="242.2" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">+300%</text>
+<text x="308.0" y="156" font-size="11" fill="#5b6b7a" text-anchor="end">+400%</text>
+</svg></div></div><div class="lg"><span><i style="background:#c3ccd6"></i>Tanpa jaminan</span><span><i style="background:#0b5cad;height:3px"></i>Jaminan 50%</span><span><i style="background:#fdf1ef;border:1px solid #f3c9c3"></i>Kumpulan rugi</span></div><div class="src">Pulangan kepada pelabur bagi satu kitaran (teknologi: sepanjang hayat kumpulan, bagi setiap ringgit yang dikomitkan). 50,000 kumpulan simulasi bagi setiap kes, pada andaian keras. Model dan andaian saya; lihat bahagian 06.</div></div>
+
+<p><b>Bagaimana jaminan diberi harga.</b> Penjamin mengambil fi sebagai bahagian daripada untung pelabur, dan hanya dibayar dalam kitaran yang untung. Kadarnya ditetapkan supaya penjamin mengutip 1.25 kali jangkaan bayaran tuntutan pada andaian keras. Sebab itulah lajur fi meningkat mengikut risiko: 30% untung bagi lembu, 57% bagi nanas.</p>
+<p>Enam perkara terserlah daripada simulasi ini.</p>
+<p><b>1. Jaminan 50% menyeparuhkan ekor kerugian, bukan peluang untuk rugi.</b> Kumpulan lembu yang buruk, 1 dalam 20, bertambah baik daripada &minus;15.9% kepada &minus;7.5%. Namun peluang rugi walau sedikit hanya turun daripada 32% kepada 27%. Jaminan mengecilkan saiz rugi, bukan kekerapannya.</p>
+
+<div class="fig"><div class="t">Jaminan lebih banyak mengurangkan saiz kerugian berbanding kekerapannya</div><div class="g2"><div><div class="ht">Peluang kumpulan rugi</div><div class="hb">
+<div class="g">Lembu</div>
+<div class="r"><span>Tanpa jaminan</span><div class="t">
+<i class="n0" style="left:0.00%;width:53.99%"></i>
+<b style="left:calc(53.99% + 5px)">32%</b>
+</div></div>
+<div class="r"><span>Jaminan 50%</span><div class="t">
+<i class="n5" style="left:0.00%;width:44.27%"></i>
+<b style="left:calc(44.27% + 5px)">27%</b>
+</div></div>
+<div class="g">Cili</div>
+<div class="r"><span>Tanpa jaminan</span><div class="t">
+<i class="n0" style="left:0.00%;width:66.43%"></i>
+<b class="in" style="left:calc(66.43% - 5px);transform:translateX(-100%)">40%</b>
+</div></div>
+<div class="r"><span>Jaminan 50%</span><div class="t">
+<i class="n5" style="left:0.00%;width:58.59%"></i>
+<b class="in w" style="left:calc(58.59% - 5px);transform:translateX(-100%)">35%</b>
+</div></div>
+<div class="g">Nanas</div>
+<div class="r"><span>Tanpa jaminan</span><div class="t">
+<i class="n0" style="left:0.00%;width:81.20%"></i>
+<b class="in" style="left:calc(81.20% - 5px);transform:translateX(-100%)">49%</b>
+</div></div>
+<div class="r"><span>Jaminan 50%</span><div class="t">
+<i class="n5" style="left:0.00%;width:88.10%"></i>
+<b class="in w" style="left:calc(88.10% - 5px);transform:translateX(-100%)">53%</b>
+</div></div>
+<div class="g">Projek AI (20)</div>
+<div class="r"><span>Tanpa jaminan</span><div class="t">
+<i class="n0" style="left:0.00%;width:28.22%"></i>
+<b style="left:calc(28.22% + 5px)">17%</b>
+</div></div>
+<div class="r"><span>Jaminan 50%</span><div class="t">
+<i class="n5" style="left:0.00%;width:15.72%"></i>
+<b style="left:calc(15.72% + 5px)">9%</b>
+</div></div>
+</div></div><div><div class="ht">Kerugian kumpulan buruk, 1 dalam 20</div><div class="hb">
+<div class="g">Lembu</div>
+<div class="r"><span>Tanpa jaminan</span><div class="t">
+<i class="n0" style="left:0.00%;width:45.37%"></i>
+<b style="left:calc(45.37% + 5px)">&minus;15.9%</b>
+</div></div>
+<div class="r"><span>Jaminan 50%</span><div class="t">
+<i class="n5" style="left:0.00%;width:21.33%"></i>
+<b style="left:calc(21.33% + 5px)">&minus;7.5%</b>
+</div></div>
+<div class="g">Cili</div>
+<div class="r"><span>Tanpa jaminan</span><div class="t">
+<i class="n0" style="left:0.00%;width:81.43%"></i>
+<b class="in" style="left:calc(81.43% - 5px);transform:translateX(-100%)">&minus;28.5%</b>
+</div></div>
+<div class="r"><span>Jaminan 50%</span><div class="t">
+<i class="n5" style="left:0.00%;width:40.27%"></i>
+<b style="left:calc(40.27% + 5px)">&minus;14.1%</b>
+</div></div>
+<div class="g">Nanas</div>
+<div class="r"><span>Tanpa jaminan</span><div class="t">
+<i class="n0" style="left:0.00%;width:63.71%"></i>
+<b class="in" style="left:calc(63.71% - 5px);transform:translateX(-100%)">&minus;22.3%</b>
+</div></div>
+<div class="r"><span>Jaminan 50%</span><div class="t">
+<i class="n5" style="left:0.00%;width:32.32%"></i>
+<b style="left:calc(32.32% + 5px)">&minus;11.3%</b>
+</div></div>
+<div class="g">Projek AI (20)</div>
+<div class="r"><span>Tanpa jaminan</span><div class="t">
+<i class="n0" style="left:0.00%;width:65.60%"></i>
+<b class="in" style="left:calc(65.60% - 5px);transform:translateX(-100%)">&minus;23.0%</b>
+</div></div>
+<div class="r"><span>Jaminan 50%</span><div class="t">
+<i class="n5" style="left:0.00%;width:21.02%"></i>
+<b style="left:calc(21.02% + 5px)">&minus;7.4%</b>
+</div></div>
+</div></div></div><div class="src">Andaian keras, 50,000 kumpulan simulasi bagi setiap kes. Teknologi: dana dilepaskan berperingkat, 20 projek. Model saya.</div></div>
+
+<p><b>2. Menghimpun projek tidak menghapuskan risiko yang dikongsi.</b> Kesemua sepuluh ladang cili menjual ke pasaran yang sama. Apabila harga jatuh, semuanya jatuh bersama, lalu kumpulan itu masih rugi 35&ndash;40% daripada masa. Harga offtake lebih berkesan daripada jaminan: kerugian 1 dalam 20 mengecil kepada &minus;5.5%, walaupun peluang untung besar turut hilang.</p>
+<p><b>3. Nanas gagal pada andaian keras, dan puncanya kos.</b> Pada harga RM1.50 sekilo, purata pulangan projek ialah 33% apabila kos RM40,000 sehektar, tetapi hanya 7% pada RM50,000. Pada RM50,000 dan RM1.35 sekilo, ia menjadi negatif. Jaminan tidak mampu menyelamatkannya, kerana fi akan menelan 57% daripada untung. Kunci kos melalui kontrak dahulu, baru bercakap soal jaminan.</p>
+
+<div class="fig"><div class="t">Nasib nanas ditentukan oleh kos: purata pulangan projek mengikut kos dan harga ladang</div><div class="tw"><table class="heat"><tr><th>Kos sehektar &darr; / harga sekilo &rarr;</th><th>RM1.20</th><th>RM1.35</th><th>RM1.50</th><th>RM1.65</th><th>RM1.80</th></tr><tr><th>RM30k</th><td style="background:#c9e6d4">42%</td><td style="background:#c9e6d4">60%</td><td style="background:#c9e6d4">77%</td><td style="background:#c9e6d4">95%</td><td style="background:#c9e6d4">113%</td></tr><tr><th>RM35k</th><td style="background:#e3f1e8">22%</td><td style="background:#e3f1e8">37%</td><td style="background:#c9e6d4">52%</td><td style="background:#c9e6d4">67%</td><td style="background:#c9e6d4">83%</td></tr><tr><th>RM40k</th><td style="background:#fbe9d4">6%</td><td style="background:#e3f1e8">20%</td><td style="background:#e3f1e8" class=b>33%</td><td style="background:#c9e6d4">47%</td><td style="background:#c9e6d4">60%</td></tr><tr><th>RM45k</th><td style="background:#f6d4cf">&minus;5%</td><td style="background:#fbe9d4">7%</td><td style="background:#e3f1e8">18%</td><td style="background:#e3f1e8">30%</td><td style="background:#c9e6d4">42%</td></tr><tr><th>RM50k</th><td style="background:#f6d4cf">&minus;15%</td><td style="background:#f6d4cf">&minus;4%</td><td style="background:#fbe9d4">7%</td><td style="background:#e3f1e8">17%</td><td style="background:#e3f1e8">28%</td></tr></table></div><div class="src">Purata pulangan ke atas modal bagi satu tanaman 18 bulan, dengan andaian penyakit dan cuaca yang keras. Kes asas ditanda. Model saya; julat kos daripada panduan DOA dan bajet ladang yang diterbitkan.</div></div>
+
+<p><b>4. Lembu lulus ujian risiko, tetapi sekadar setanding ASB.</b> Dengan jaminan, ia memberi kira-kira 6% setahun kerana musim korban hanya sekali setahun. Ia memerlukan kitaran kedua, atau perlu duduk dalam kumpulan bercampur.</p>
+<p><b>5. Teknologi kelihatan paling menarik, bersyarat.</b> Dengan dana dilepaskan berperingkat dan jaminan 50%, kumpulan 20 projek hanya rugi 9% daripada masa dan memberi kira-kira 18.5% setahun dalam tempoh empat tahun. Kumpulan 10 projek rugi 23% daripada masa, kerana hanya 36% kumpulan sebegitu mempunyai satu projek yang menang 10 kali ganda, berbanding 59% bagi kumpulan 20 projek.</p>
+<p><b>6. Ekor kerugian penjamin ialah kos sebenar.</b> Dalam tahun buruk 1 dalam 100, penjamin kehilangan kira-kira 12&ndash;20% daripada kumpulan pertanian dan kira-kira 32% daripada kumpulan teknologi. Itu memerlukan modal yang sebenar, atau ada pihak lain di belakang penjamin. Jerman menjawabnya dengan kerajaan.</p>
+
+<h3>09 &middot; Menyelami model Jerman</h3>
+<p>Pada 2025, bank jaminan Jerman menyokong 5,072 projek, dengan &euro;1.96 bilion pinjaman dan ekuiti di belakangnya. Mengikut nilai, perkhidmatan mengambil &euro;485 juta, kraf dan tukang &euro;445 juta, perdagangan &euro;326 juta, industri &euro;286 juta dan profesion bebas &euro;197 juta.</p>
+<p>Ekuiti lebih tertumpu. Di syarikat pelaburan PKS Baden-W&uuml;rttemberg (MBG), industri membentuk hampir separuh daripada buku ekuiti 540 pegangan. Pada 2025, bank jaminan wilayah itu mengeluarkan 136 jaminan meliputi &euro;34.8 juta ke atas &euro;39.8 juta pegangan ekuiti.</p>
+
+<div class="fig"><div class="t">Jerman meletakkan ekuiti berjamin di sektor yang jarang gagal</div><div class="g2"><div><div class="ht">Buku ekuiti MBG Baden-W&uuml;rttemberg mengikut sektor, akhir 2025 (bahagian daripada &euro;178 juta)</div><div class="hb">
+<div class="r"><span>Industri</span><div class="t">
+<i class="n5" style="left:0.00%;width:81.50%"></i>
+<b class="in w" style="left:calc(81.50% - 5px);transform:translateX(-100%)">48.9%</b>
+</div></div>
+<div class="r"><span>Perkhidmatan</span><div class="t">
+<i class="n5" style="left:0.00%;width:39.83%"></i>
+<b style="left:calc(39.83% + 5px)">23.9%</b>
+</div></div>
+<div class="r"><span>Perdagangan</span><div class="t">
+<i class="n0" style="left:0.00%;width:26.17%"></i>
+<b style="left:calc(26.17% + 5px)">15.7%</b>
+</div></div>
+<div class="r"><span>Kraf dan tukang</span><div class="t">
+<i class="n0" style="left:0.00%;width:12.17%"></i>
+<b style="left:calc(12.17% + 5px)">7.3%</b>
+</div></div>
+<div class="r"><span>Hospitaliti</span><div class="t">
+<i class="nr" style="left:0.00%;width:5.00%"></i>
+<b style="left:calc(5.00% + 5px)">3.0%</b>
+</div></div>
+<div class="r"><span>Pengangkutan</span><div class="t">
+<i class="nr" style="left:0.00%;width:1.83%"></i>
+<b style="left:calc(1.83% + 5px)">1.1%</b>
+</div></div>
+</div></div><div><div class="ht">Kes insolvensi perniagaan bagi setiap 10,000 firma, Jerman 2025</div><div class="hb">
+<div class="r"><span>Semua sektor</span><div class="t">
+<i class="n0" style="left:0.00%;width:41.82%"></i>
+<b style="left:calc(41.82% + 5px)">69</b>
+</div></div>
+<div class="r"><span>Pengangkutan</span><div class="t">
+<i class="nr" style="left:0.00%;width:80.61%"></i>
+<b class="in" style="left:calc(80.61% - 5px);transform:translateX(-100%)">133</b>
+</div></div>
+<div class="r"><span>Hospitaliti</span><div class="t">
+<i class="nr" style="left:0.00%;width:65.45%"></i>
+<b class="in" style="left:calc(65.45% - 5px);transform:translateX(-100%)">108</b>
+</div></div>
+<div class="r"><span>Pembinaan</span><div class="t">
+<i class="nr" style="left:0.00%;width:63.03%"></i>
+<b class="in" style="left:calc(63.03% - 5px);transform:translateX(-100%)">104</b>
+</div></div>
+</div></div></div><div class="src">Sumber: Laporan tahunan MBG Baden-W&uuml;rttemberg 2025 (540 pegangan); Destatis, insolvensi mengikut sektor 2025.</div></div>
+
+<p>Dua sektor paling berisiko, hospitaliti dan pengangkutan, hanya 3% dan 1% daripada buku ekuiti. Jerman menjamin ekuiti kebanyakannya di sektor yang kadar kegagalannya rendah, dan mencatu ekuiti kepada sektor yang paling kerap gagal. Kraf dan tukang hampir sama dengan purata negara, iaitu 7.3 kes insolvensi bagi setiap 1,000 firma berbanding 7.2.</p>
+
+<div class="tbl"><div class="t">Kekerapan sesuatu tidak menjadi: angka awam yang paling hampir dengan kadar menang dan kalah</div><div class="tw">
+<table class="dt">
+<tr><th>Ukuran</th><th>Angka</th><th>Sumber</th></tr>
+<tr><td>Kerugian semua jaminan, Baden-W&uuml;rttemberg 2025</td><td>137 kes, &euro;12.8 juta, <b>0.6%</b> daripada buku</td><td>Laporan tahunan 2025</td></tr>
+<tr><td>Sama, 2024</td><td>170 kes, &euro;14.9 juta, <b>0.8%</b></td><td>Ucapan lembaga 2025</td></tr>
+<tr><td>Kerugian yang dirancang oleh bank</td><td><b>2%</b> bagi jaminan pinjaman, <b>5%</b> bagi jaminan ekuiti</td><td>Ucapan yang sama</td></tr>
+<tr><td>Hapus kira MBG ke atas buku ekuiti, 2025</td><td>&euro;6.0 juta, kira-kira 2.2% daripada buku &euro;268 juta (kiraan saya)</td><td>Laporan tahunan 2025</td></tr>
+<tr><td>Peruntukan risiko MBG</td><td>&euro;18.7 juta, kira-kira 7% daripada buku (kiraan saya)</td><td>Sama</td></tr>
+<tr><td>Kerugian MBG 2025 berbanding sasaran</td><td>Lebih tinggi daripada tahun sebelumnya dan melebihi sasaran (tiada angka diberi)</td><td>Sama</td></tr>
+<tr><td>Penanda aras lama, 2011</td><td>Kadar gagal bayar bank jaminan 1.7&ndash;3.3%, berbanding 1.77% bagi pinjaman PKS keseluruhan</td><td>Kajian bank jaminan di timur Jerman</td></tr>
+</table></div>
+<div class="src">Bank jaminan Jerman tidak menerbitkan kerugian mengikut sektor. Kadar insolvensi mengikut sektor ialah proksi awam yang terbaik.</div></div>
+
+<h4>Bagaimana instrumennya dibina</h4>
+<ul>
+<li>Pegangan senyap yang lazimnya bertempoh <b>10 tahun</b> (5 hingga 10 tahun bagi sesetengah program) dan dibayar balik pada nilai muka di hujung tempoh.</li>
+<li>Firma membayar <b>fi tetap serta bahagian keuntungan</b>. Di Sachsen-Anhalt, bahagian keuntungan biasanya 2% daripada pegangan setahun. Dana mikro-mezanin mengenakan kadar tetap 11% setahun, dikurangkan oleh subsidi 3%.</li>
+<li>Pemilik memberikan <b>jaminan peribadi</b> bagi sebahagian daripadanya, dan membayar fi pengendalian 1&ndash;2%.</li>
+<li>Bank jaminan menanggung sehingga <b>80%</b> risiko. Menurut kiraan persatuan mereka, <b>kerajaan menanggung kira-kira 52%</b> daripadanya melalui jaminan balas.</li>
+<li>Syarikat permulaan diurus berasingan: Baden-W&uuml;rttemberg menjalankan dana benihnya di luar MBG.</li>
+</ul>
+<p>Maka sasaran kerugian 5% Jerman bukan angka ekuiti tulen. Ia lahir daripada mezanin: pendapatan tetap, tarikh tamat yang tetap, jaminan peribadi dan kerajaan di belakang penjamin. Kumpulan projek kampung kita rugi jauh lebih kerap bagi setiap kitaran. Untuk menghampiri kadar kerugian Jerman, kita perlu meniru strukturnya, bukan jaminannya sahaja.</p>
+
+<h3>10 &middot; Bolehkah Malaysia meniru Jerman? Saya mengujinya</h3>
+<p>Saya menerapkan struktur Jerman pada empat kes yang sama, dengan andaian keras yang sama.</p>
+<div class="tbl"><div class="t">Urus niaga gaya Jerman, seperti yang saya susun</div><div class="tw">
+<table class="dt">
+<tr><th>Ciri</th><th>Tetapan</th></tr>
+<tr><td>Apa yang dibiayai</td><td>Pegangan dalam <b>perniagaan pengusaha selama 3 tahun</b> (3 musim korban, 6 musim cili, 2 tanaman nanas; 4 tahun bagi teknologi), bukan satu kitaran</td></tr>
+<tr><td>Pulangan pelabur</td><td><b>Tetap 5% setahun serta 3% bahagian untung</b> dalam tempoh yang untung; pegangan dibayar balik pada nilai muka di hujung tempoh</td></tr>
+<tr><td>Pemilik</td><td>Menyumbang <b>20%</b> daripada modal dan menjamin 20% pegangan secara peribadi (separuh dianggap boleh dituntut)</td></tr>
+<tr><td>Penjamin</td><td>Menanggung <b>70%</b> baki yang belum dibayar; fi 1.5% setahun serta 1% fi pengendalian, dibayar oleh pengusaha</td></tr>
+<tr><td>Kerajaan</td><td><b>Jaminan balas 65%</b> daripada kerugian penjamin, hampir dengan bahagian kerajaan Jerman iaitu kira-kira 52% daripada keseluruhan risiko</td></tr>
+<tr><td>Versi teknologi</td><td>Kupon 5% serta 10% daripada nilai melebihi modal, dilepaskan berperingkat</td></tr>
+</table></div></div>
+
+<div class="tbl"><div class="t">Keputusan pada andaian keras, 40,000 kumpulan simulasi bagi setiap kes</div><div class="tw">
+<table class="dt">
+<tr><th>Kes</th><th>Siapa dibiayai</th><th>Pulangan pelabur setahun</th><th>Kumpulan rugi</th><th>Pengusaha tidak membayar penuh</th><th>Penjamin, purata</th><th>Kos purata kerajaan</th></tr>
+<tr><td rowspan="2"><b>Lembu</b></td><td>Pemula</td><td class="n">5.1%</td><td class="n">1%</td><td class="n">33%</td><td class="n">+1.7%</td><td class="n">4.0%</td></tr>
+<tr class="sub"><td>Berpengalaman</td><td class="n"><b>6.6%</b></td><td class="n">0%</td><td class="n">8%</td><td class="n">+3.0%</td><td class="n">1.5%</td></tr>
+<tr><td rowspan="2"><b>Cili</b></td><td>Pemula</td><td class="n">2.4%</td><td class="n">20%</td><td class="n">59%</td><td class="n">&minus;1.9%</td><td class="n">10.6%</td></tr>
+<tr class="sub"><td>Berpengalaman</td><td class="n"><b>5.7%</b></td><td class="n">1%</td><td class="n">17%</td><td class="n">+2.4%</td><td class="n">2.7%</td></tr>
+<tr><td rowspan="2"><b>Nanas</b></td><td>Pemula</td><td class="n">3.3%</td><td class="n">6%</td><td class="n">53%</td><td class="n">&minus;0.4%</td><td class="n">7.7%</td></tr>
+<tr class="sub"><td>Berpengalaman</td><td class="n"><b>6.0%</b></td><td class="n">0%</td><td class="n">18%</td><td class="n">+2.5%</td><td class="n">2.5%</td></tr>
+<tr><td><b>Projek AI (20)</b></td><td>Berperingkat</td><td class="n">2.2%</td><td class="n">24%</td><td class="n">&mdash;</td><td class="n">&minus;5.2%</td><td class="n">13.3%</td></tr>
+</table></div>
+<div class="src">"Berpengalaman" bermaksud pengusaha yang mempunyai rekod (andaian dirancang, penipuan 3%) dan menyimpan separuh daripada setiap untung sebagai rizab perniagaan. Angka penjamin dan kerajaan ialah peratusan modal kumpulan. Semuanya andaian dan model saya.</div></div>
+
+<div class="fig"><div class="t">Model Jerman berkesan untuk pengusaha berpengalaman, bukan untuk pemula atau teknologi</div><div class="hb">
+<div class="g">Lembu korban</div>
+<div class="r"><span>Kumpulan perkongsian untung, jaminan 50%</span><div class="t">
+<i class="n0" style="left:3.45%;width:20.67%"></i>
+<b style="left:calc(24.12% + 5px)">6.0% <em>&middot; kumpulan rugi 27%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>Gaya Jerman, pemula</span><div class="t">
+<i class="n4" style="left:3.45%;width:17.59%"></i>
+<b style="left:calc(21.03% + 5px)">5.1% <em>&middot; kumpulan rugi 1%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>Gaya Jerman, berpengalaman</span><div class="t">
+<i class="n5" style="left:3.45%;width:22.66%"></i>
+<b style="left:calc(26.11% + 5px)">6.6% <em>&middot; kumpulan rugi 0%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="g">Cili</div>
+<div class="r"><span>Kumpulan perkongsian untung, jaminan 50%</span><div class="t">
+<i class="n0" style="left:3.45%;width:59.09%"></i>
+<b class="in" style="left:calc(62.53% - 5px);transform:translateX(-100%)">17.1% <em>&middot; kumpulan rugi 35%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>Gaya Jerman, pemula</span><div class="t">
+<i class="n4" style="left:3.45%;width:8.37%"></i>
+<b style="left:calc(11.82% + 5px)">2.4% <em>&middot; kumpulan rugi 20%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>Gaya Jerman, berpengalaman</span><div class="t">
+<i class="n5" style="left:3.45%;width:19.63%"></i>
+<b style="left:calc(23.08% + 5px)">5.7% <em>&middot; kumpulan rugi 1%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="g">Nanas</div>
+<div class="r"><span>Kumpulan perkongsian untung, jaminan 50%</span><div class="t">
+<i class="n0" style="left:2.62%;width:0.83%"></i>
+<b style="left:calc(3.45% + 5px)">&minus;0.2% <em>&middot; kumpulan rugi 53%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>Gaya Jerman, pemula</span><div class="t">
+<i class="n4" style="left:3.45%;width:11.50%"></i>
+<b style="left:calc(14.95% + 5px)">3.3% <em>&middot; kumpulan rugi 6%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>Gaya Jerman, berpengalaman</span><div class="t">
+<i class="n5" style="left:3.45%;width:20.66%"></i>
+<b style="left:calc(24.11% + 5px)">6.0% <em>&middot; kumpulan rugi 0%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="g">Projek AI (20)</div>
+<div class="r"><span>Kumpulan perkongsian untung, jaminan 50%</span><div class="t">
+<i class="n0" style="left:3.45%;width:63.79%"></i>
+<b class="in" style="left:calc(67.24% - 5px);transform:translateX(-100%)">18.5% <em>&middot; kumpulan rugi 9%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>Gaya Jerman, pemula</span><div class="t">
+<i class="n4" style="left:3.45%;width:7.72%"></i>
+<b style="left:calc(11.17% + 5px)">2.2% <em>&middot; kumpulan rugi 24%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>Gaya Jerman, berpengalaman</span><div class="t">
+<b style="left:4.4%">n/a</b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="reflab"><s></s>Agihan ASB 2025, 5.75 sen</div>
+</div><div class="src">Pulangan pelabur setahun pada andaian keras. Nota kecil: peluang kumpulan rugi. "Berpengalaman" = pengusaha yang ada rekod dan menyimpan separuh untung sebagai rizab (andaian saya). n/a: tidak dimodelkan. Simulasi Monte Carlo saya, 40,000&ndash;50,000 kumpulan bagi setiap kes.</div></div>
+
+<p><b>Bagi pengusaha berpengalaman, ia menjadi.</b> Pelabur memperoleh kira-kira 6&ndash;6.6% setahun, setanding atau melebihi ASB, dan kumpulan hampir tidak pernah rugi. Kos purata kerajaan turun kepada 1.5&ndash;2.7% daripada kumpulan. Tanpa jaminan balas kerajaan sekalipun, penjamin lebih kurang pulang modal, walaupun tahun buruk 1 dalam 100 masih membebankannya 10&ndash;21% daripada kumpulan.</p>
+<p><b>Bagi pemula, ia bertukar menjadi pinjaman dan subsidi yang tersembunyi.</b> Kadar tetap 5% tetap terhutang walau apa pun hasil tuaian. Satu pertiga hingga lebih separuh pengusaha pemula tidak mampu membayar penuh, dan mereka turut kehilangan jaminan peribadi. Kerajaan menanggung purata 4&ndash;11% daripada kumpulan. Itu kewangan sosial dengan nama lain, dan lebih baik dibuat secara terang-terangan sebagai kewangan sosial.</p>
+<p><b>Tuil sebenar Jerman ialah siapa yang dibiayai.</b> Ekuitinya kebanyakan pergi kepada firma industri dan perkhidmatan yang sudah berniaga. Pemilihan memainkan peranan lebih besar daripada jaminan. Tanpa jaminan langsung, struktur Jerman sahaja meninggalkan pelabur pada &minus;3% hingga +3% setahun, dan kumpulan rugi 17&ndash;59% daripada masa.</p>
+<p><b>Bagi teknologi, alat Jerman ialah alat yang salah.</b> Kupon tetap dengan sedikit bahagian untung menyekat potensi kenaikan yang sepatutnya menampung projek gagal. Pelabur hanya mendapat kira-kira 2% setahun dan kerajaan menanggung kira-kira 13% daripada kumpulan. Jerman sendiri mengurus dana syarikat permulaan melalui dana benih yang berasingan.</p>
+
+<h3>11 &middot; Kesimpulan: jamin jalan keluar, bukan ekuitinya</h3>
+<p>Saya memulakan tulisan ini dengan bersetuju dengan tokoh kewangan itu. Selepas 50,000 kumpulan simulasi, saya masih bersetuju dengan intipati hujahnya. Jaminan ke atas ekuiti tulen merugikan sesiapa yang memberinya, melainkan potensi untungnya sangat besar. Pada andaian keras, kumpulan pertanian rugi antara satu perempat hingga separuh daripada masa, dengan atau tanpa jaminan. Jerman juga tidak membuktikan dia salah. Apa yang dijamin Jerman lebih hampir kepada pinjaman berkongsi untung berbanding ekuiti.</p>
+<p>Tetapi persoalan sebenar tidak pernah tentang ekuiti semata-mata. Ia tentang bagaimana seorang pengusaha kecil keluar daripada kitaran berpendapatan rendah, dan siapa yang menanggung risiko sepanjang perjalanan itu. Ekuiti tidak boleh dijamin. Jalan keluar itu boleh.</p>
+
+<div class="ladder">
+ <div class="rung"><div class="h" style="background:#16794a"><small>Anak tangga 3 &middot; modal berisiko</small>Projek rintis teknologi tinggi yang berhad</div><div class="b"><b>Siapa:</b> projek AI dan perisian yang berpotensi untung besar. <b>Bagaimana:</b> kumpulan 20 projek atau lebih, dana berperingkat, jaminan 50%, penjamin berkongsi untung, dilabur bersama dana teroka dan MyCIF.<span class="k">Model: rugi 9% daripada masa, kira-kira 18.5% setahun. Penjamin perlu memegang modal untuk kerugian 1 dalam 100 sekitar satu pertiga kumpulan.</span></div></div>
+ <div class="arrow">&uarr; hanya apabila untung yang besar mampu menampung yang gagal</div>
+ <div class="rung"><div class="h" style="background:#0b5cad"><small>Anak tangga 2 &middot; kredit</small>Mezanin PMKS, gaya Jerman</div><div class="b"><b>Siapa:</b> pengusaha dengan sekurang-kurangnya dua kitaran yang baik. <b>Bagaimana:</b> pegangan 3&ndash;5 tahun, bayaran tetap serta bahagian untung, modal sendiri dan jaminan peribadi pemilik, jaminan 70% dengan jaminan balas kerajaan.<span class="k">Model: kira-kira 6% setahun, kumpulan hampir tidak pernah rugi, kos kerajaan 1.5&ndash;2.7% daripada kumpulan. Bahagian tetap memerlukan struktur Syariah yang betul.</span></div></div>
+ <div class="arrow">&uarr; naik setelah dua kitaran yang baik</div>
+ <div class="rung"><div class="h" style="background:#b54708"><small>Anak tangga 1 &middot; kewangan sosial</small>Pemula dan golongan yang terpinggir</div><div class="b"><b>Siapa:</b> pemula dengan lima ekor lembu atau seekar cili. <b>Bagaimana:</b> wang zakat, wakaf atau CSR menanggung kerugian pertama, jaminan memanjangkannya, dengan latihan dan semakan gaya iTEKAD.<span class="k">Model: subsidinya nyata, kira-kira 4&ndash;11% daripada kumpulan. Lebih baik ditunjukkan secara terbuka daripada disorok di sebalik nama "ekuiti".</span></div></div>
+</div>
+<div class="flow-cap">Tangga: apa yang patut dijamin pada setiap tahap perjalanan pengusaha (cadangan saya)</div>
+
+<p><b>Anak tangga pertama ialah kewangan sosial.</b> Pemula dengan lima ekor lembu atau seekar cili bukan kes pelaburan pada andaian keras. Alat yang jujur ialah wang zakat, wakaf atau CSR yang memang menjangka sebahagiannya hilang, dengan jaminan untuk memanjangkan setiap ringgit. Memanggilnya ekuiti hanya menyorok subsidi. Memanggilnya kewangan sosial meletakkannya di atas meja, di mana ia boleh diukur.</p>
+<p><b>Anak tangga kedua ialah mezanin, gaya Jerman.</b> Setelah pengusaha melalui dua kitaran yang baik, pegangan 3 hingga 5 tahun dengan bayaran tetap serta bahagian untung, modal sendiri, jaminan peribadi dan kerajaan di belakang penjamin memberi pelabur kira-kira 6% setahun. Dalam simulasi saya, ia hampir tidak pernah rugi. Ia bersifat seperti hutang, dan saya tidak keberatan. Bahagian tetap itu memerlukan cabang patuh Syariah tersendiri.</p>
+<p><b>Anak tangga ketiga ialah projek rintis teknologi tinggi yang kecil dan berhad.</b> Inilah satu-satunya tempat di mana jaminan ke atas modal berisiko sebenar membayar dirinya sendiri. Dengan dana berperingkat dan kumpulan 20 projek, jaminan 50% menurunkan peluang kumpulan rugi daripada 17% kepada 9%, dan masih memberi kira-kira 18.5% setahun. Ia perlu dilabur bersama dana teroka sedia ada dan MyCIF, bukan berjalan sendirian. Penjamin mesti berkongsi untung dan memegang modal untuk tahun yang buruk.</p>
+<p>Apa yang saya tidak akan ulang ialah Kemudahan Permodalan Semula Perniagaan: satu dana ekuiti besar yang ditolak melalui bank, terbuka kepada semua, tanpa tarikh tamat dan tanpa tangga untuk didaki.</p>
+<p>Derma diletakkan di tempat yang memang dijangka rugi, kredit di tempat yang ada aliran tunai, dan modal berisiko di tempat yang potensi untungnya besar.</p>
 
 <div class="box trap span"><span class="lbl">Hujah menentang, dalam bentuk paling kuat</span>
 <ul>
-<li><b>Pulangan tahunan mengelirukan.</b> Kitaran korban hanya sekali setahun. "400% setahun" ialah satu musim baik didarab dengan tiga musim yang tidak wujud.</li>
-<li><b>Ternakan berisiko.</b> Penyakit, kematian, dan lembu seludup murah yang menurut penternak menjejaskan harga, seperti dilaporkan pada Mei 2026.</li>
+<li><b>Kebarangkaliannya andaian saya.</b> Kadar penyakit, penipuan dan kegagalan ialah andaian kerja. Set andaian yang berbeza boleh mengubah setiap keputusan dalam tulisan ini.</li>
+<li><b>Pulangan tahunan mengelirukan.</b> Kitaran korban hanya sekali setahun. Satu musim baik didarab dengan tiga musim yang tidak wujud bukan pulangan tahunan.</li>
 <li><b>Penipuan dan bahaya moral.</b> Nilai kecil, jauh dari bandar, sukar disemak. Jaminan boleh membuatkan pelabur berhenti bertanya.</li>
-<li><b>Usaha wajar mahal</b> berbanding nilai RM10,000 satu projek. Platform mungkin tidak mendapat cukup hasil untuk menyemak dengan betul.</li>
-<li><b>Struktur Syariah.</b> Pulangan yang dijamin membatalkan mudarabah. Sebarang jaminan modal mesti datang daripada pihak ketiga yang bebas, dan jaminan berbayar memerlukan pandangan penasihat Syariah.</li>
-<li><b>Tiada jalan keluar sebelum kitaran tamat.</b> Tiada pasaran sekunder. Pelabur terikat sepanjang musim.</li>
-<li><b>Pemilihan songsang.</b> Projek paling lemah akan paling cepat mencari jaminan.</li>
+<li><b>Usaha wajar mahal</b> berbanding nilai RM20,000 hingga RM40,000 satu projek. Platform mungkin tidak memperoleh hasil yang cukup untuk menyemak dengan betul.</li>
+<li><b>Struktur Syariah.</b> Pulangan yang dijamin membatalkan mudarabah. Jaminan modal mesti datang daripada pihak ketiga yang bebas, dan jaminan berbayar memerlukan pandangan penasihat Syariah. Bahagian tetap pada anak tangga kedua memerlukan penelitian yang sama.</li>
+<li><b>Bil kerajaan.</b> Anak tangga kedua berjaya sebahagiannya kerana kerajaan menanggung sebahagian risiko. Itu kos sebenar dan mesti dibajet, bukan diandaikan tiada.</li>
+<li><b>Pemilihan songsang.</b> Projek paling lemah akan paling cepat mencari jaminan. Syarat untuk naik tangga mesti ketat.</li>
 </ul></div>
 
-<h3 class="sp">07 &middot; Soalan sukar</h3>
+<h3>12 &middot; Soalan sukar</h3>
 <div class="qs">
- <div class="qc"><small>Untuk BNM</small>Adakah pengajaran BRF akan diterbitkan sebelum dana PKS seterusnya direka, supaya kesilapan sama tidak berulang?</div>
- <div class="qc"><small>Untuk SC</small>Bolehkah satu kempen menawarkan kumpulan 5 hingga 10 projek, dengan satu jaminan ke atas keseluruhan kumpulan?</div>
- <div class="qc"><small>Untuk agensi jaminan</small>Adakah jaminan ke atas sebahagian pegangan perkongsian untung berada dalam mandat anda, dan bagaimana bahagian keuntungan itu akan dinilai?</div>
- <div class="qc"><small>Untuk badan zakat dan wakaf</small>Sanggupkah anda meletakkan lapisan kerugian pertama di bawah jaminan, jika dana yang sama dapat membantu tiga kali ganda bilangan asnaf?</div>
- <div class="qc"><small>Untuk platform</small>Bolehkah anda menyemak projek lembu di Pasir Mas sebaik syarikat teknologi di Bangsar, dengan kos yang munasabah?</div>
- <div class="qc"><small>Untuk penasihat Syariah</small>Struktur mana yang membolehkan pihak ketiga menjamin modal dan berkongsi untung tanpa membatalkan akad?</div>
+ <div class="qc"><small>Untuk BNM</small>Adakah pengajaran BRF akan diterbitkan sebelum dana PKS seterusnya direka, supaya kesilapan yang sama tidak berulang?</div>
+ <div class="qc"><small>Untuk SC</small>Bolehkah satu kempen menawarkan kumpulan 10 atau 20 projek, dengan satu jaminan ke atas seluruh kumpulan dan offtake yang terbina di dalamnya?</div>
+ <div class="qc"><small>Untuk agensi jaminan</small>Adakah jaminan ke atas pegangan mezanin 3 hingga 5 tahun termasuk dalam mandat anda, dan siapa yang berdiri di belakang anda dalam tahun buruk 1 dalam 100?</div>
+ <div class="qc"><small>Untuk badan zakat dan wakaf</small>Sanggupkah anda meletakkan lapisan kerugian pertama di bawah jaminan, jika dana yang sama dapat membantu lebih ramai asnaf dan mengeluarkan sebahagian mereka daripada kitaran itu?</div>
+ <div class="qc"><small>Untuk platform</small>Mampukah anda menyemak projek lembu di Pasir Mas sebaik projek perisian di Bangsar, pada kos yang munasabah?</div>
+ <div class="qc"><small>Untuk penasihat Syariah</small>Struktur manakah yang membolehkan pihak ketiga menjamin modal, mengambil fi dan berkongsi untung, serta memberi pelabur bahagian tetap, tanpa membatalkan akad?</div>
 </div>
 
-<h3 class="sp">08 &middot; Pelan praktikal</h3>
+<h3>13 &middot; Pelan yang praktikal</h3>
 <div class="props">
- <div class="prop"><div class="n">1</div><div><b>Mulakan dengan kewangan sosial.</b> Rintis jaminan di bawah program seumpama iTEKAD, dengan dana zakat atau CSR menanggung kerugian pertama.<span class="m">Ukuran: bilangan usahawan dibiayai bagi setiap ringgit dana sosial, berbanding model geran semata-mata.</span></div></div>
- <div class="prop"><div class="n">2</div><div><b>Jalankan satu portfolio untuk satu musim.</b> Kumpulkan 5 hingga 10 projek lembu korban untuk musim Aidiladha 2027 di satu platform patuh Syariah.<span class="m">Ukuran: projek yang selesai, kadar kerugian, pulangan pelabur, tempoh dari pembiayaan hingga jualan.</span></div></div>
- <div class="prop"><div class="n">3</div><div><b>Tetapkan susunan kerugian secara bertulis.</b> Modal pemilik dahulu, lapisan dana sosial atau MyCIF kedua, penjamin ketiga, pelabur terakhir.<span class="m">Ukuran: kerugian penjamin kekal dalam bahagian yang dipersetujui pada setiap kitaran.</span></div></div>
- <div class="prop"><div class="n">4</div><div><b>Tambah jenis kitaran kedua.</b> Musim padi atau kitaran tuaian, supaya portfolio tidak bergantung pada satu Hari Raya.<span class="m">Ukuran: kerugian dalam satu jenis projek tidak menjejaskan jenis yang lain.</span></div></div>
- <div class="prop"><div class="n">5</div><div><b>Kaji semula selepas dua kitaran, kemudian putuskan.</b> Besarkan, ubah syarat, atau hentikan.<span class="m">Ukuran: keputusan satu muka surat yang diumumkan, baik atau buruk.</span></div></div>
+ <div class="prop"><div class="n">1</div><div><b>Mulakan dengan anak tangga pertama.</b> Rintis jaminan di bawah program gaya iTEKAD, dengan wang zakat atau CSR menanggung kerugian pertama, serta peraturan bertulis untuk naik tangga selepas dua kitaran yang baik.<span class="m">Ukuran: bilangan usahawan dibiayai bagi setiap ringgit dana sosial, dan berapa ramai yang naik tangga.</span></div></div>
+ <div class="prop"><div class="n">2</div><div><b>Buang risiko yang dikongsi sebelum menjamin.</b> Harga offtake bagi cili, kontrak kos tetap bagi nanas, vaksinasi dan takaful bagi lembu.<span class="m">Ukuran: kerugian kumpulan 1 dalam 20, sebelum dan selepas.</span></div></div>
+ <div class="prop"><div class="n">3</div><div><b>Rintis mezanin anak tangga kedua</b> untuk pengusaha dengan dua kitaran yang baik: 3&ndash;5 tahun, bayaran tetap serta bahagian untung, modal dan jaminan peribadi pemilik, jaminan 70% dengan jaminan balas kerajaan. Struktur Syariah dimuktamadkan dahulu.<span class="m">Ukuran: pulangan pelabur berbanding ASB, kadar bayaran balik, kos kerajaan.</span></div></div>
+ <div class="prop"><div class="n">4</div><div><b>Rintis teknologi anak tangga ketiga yang berhad:</b> kumpulan 20 projek atau lebih, dana berperingkat, dilabur bersama dana teroka sedia ada dan MyCIF, penjamin berkongsi untung.<span class="m">Ukuran: kadar kumpulan rugi, dan tahun terburuk penjamin berbanding modal yang diketepikan.</span></div></div>
+ <div class="prop"><div class="n">5</div><div><b>Gantikan andaian saya dengan data sebenar,</b> kemudian semak selepas dua kitaran dan terbitkan hasilnya, baik atau buruk.<span class="m">Ukuran: keputusan satu muka surat yang diterbitkan kepada umum.</span></div></div>
 </div>
 
 <div class="box call span"><span class="lbl">Apa yang saya minta</span>
-<p><b>Kepada Bank Negara dan Suruhanjaya Sekuriti:</b> dalam tahun 2027, terbitkan pengajaran daripada BRF, dan persetujui satu kotak pasir untuk satu portfolio projek berjamin di platform Islam. Beri ia dua kitaran sebelum menilainya.</p>
-<table class="asks">
- <tr><th>Agensi jaminan</th><td>Sediakan helaian terma bagi jaminan separa ke atas pegangan perkongsian untung secara berkumpulan, dengan bahagian keuntungan.</td></tr>
- <tr><th>Badan zakat dan wakaf</th><td>Peruntukkan kumpulan kecil dana kerugian pertama untuk satu projek rintis.</td></tr>
- <tr><th>Platform</th><td>Bina kaedah semakan kos rendah bagi projek kitaran pendek luar bandar.</td></tr>
- <tr><th>Pelabur</th><td>Baca susunan kerugian sebelum pulangan. Nilai risikonya, bukan ceritanya.</td></tr>
-</table></div>
+<p><b>Kepada Bank Negara dan Suruhanjaya Sekuriti:</b> dalam tahun 2027, terbitkan pengajaran daripada BRF, dan persetujui satu kotak pasir (sandbox) untuk tangga ini: satu kumpulan kewangan sosial, satu kumpulan mezanin dan satu kumpulan teknologi di platform Islam. Beri ia dua kitaran sebelum dinilai.</p>
+<div class="tw"><table class="asks">
+ <tr><th>Agensi jaminan</th><td>Sediakan helaian terma bagi jaminan separa ke atas pegangan mezanin 3 hingga 5 tahun, dengan bahagian keuntungan dan penjamin balas yang dinamakan.</td></tr>
+ <tr><th>Badan zakat dan wakaf</th><td>Ketepikan dana kerugian pertama yang kecil untuk satu projek rintis, dengan sasaran naik tangga.</td></tr>
+ <tr><th>Platform</th><td>Bina kaedah semakan kos rendah untuk projek luar bandar, dan pastikan hasil jualan masuk ke akaun platform, bukan dikutip tunai.</td></tr>
+ <tr><th>Penasihat Syariah</th><td>Putuskan soal bahagian tetap dan fi penjamin sebelum rintis bermula, bukan selepasnya.</td></tr>
+ <tr><th>Pelabur</th><td>Baca susunan kerugian sebelum melihat pulangan. Tanya berapa kerap kumpulan itu rugi, bukan puratanya sahaja.</td></tr>
+</table></div></div>
 
-<div class="box watch span"><span class="lbl">Semak diri</span>
+<div class="box watch span"><span class="lbl">Uji diri sendiri</span>
 <ul>
-<li>Adakah yang saya jamin itu ekuiti, atau pegangan yang ada tarikh tamat?</li>
-<li>Siapa rugi dahulu, dan adakah ia ditulis?</li>
-<li>Bagaimana pelabur keluar, dan bila?</li>
-<li>Adakah saya mentahunkan pulangan yang hanya berlaku sekali setahun?</li>
-<li>Jika tiga daripada sepuluh projek gagal, siapa yang masih bertahan?</li>
+<li>Adakah yang saya jamin ini ekuiti, atau pegangan yang ada tarikh tamat?</li>
+<li>Siapa rugi dahulu, dan adakah ia bertulis?</li>
+<li>Adakah jaminan saya mengurangkan kekerapan kumpulan rugi, atau hanya saiz kerugiannya?</li>
+<li>Risiko apakah yang dikongsi semua projek, dan siapa yang sudah mengeluarkannya daripada persamaan?</li>
+<li>Adakah pengusaha ini pemula atau sudah naik tangga, dan adakah produknya berada pada anak tangga yang betul?</li>
 </ul></div>
 
 <div class="box take span"><span class="lbl">Pandangan saya</span>
-<p>Tokoh kewangan itu betul tentang bank. Bank berlesen tidak sepatutnya memegang ekuiti projek lembu di kampung, dan BRF membuktikan pasaran bersetuju. Namun jaminan ekuiti bukan satu benda sahaja. Dana sosial yang sudah menerima kerugian, dan pengambil risiko yang mahukan keuntungan daripada kumpulan projek bertempoh, kedua-duanya ruang di mana jaminan separa boleh berfungsi. Kecil, berkumpulan, kitaran pendek, dengan penjamin berkongsi keuntungan. Bukan dana nasional. Satu projek rintis, dibuat dengan betul, selama dua musim.</p></div>
+<p>Saya memulakan kajian ini dengan harapan untuk menunjukkan bahawa tokoh itu terlalu tegas. Angka-angka sebahagian besarnya berpihak kepadanya. Jaminan tidak mengubah projek berisiko menjadi pelaburan selamat; ia hanya memindahkan kerugian kepada pihak lain. Apa yang jaminan mampu lakukan ialah membawa seseorang naik dari satu anak tangga ke anak tangga seterusnya: daripada dana sosial, kepada pegangan bertempoh, dan bagi segelintir yang benar-benar berpotensi besar, kepada modal berisiko. Tugas itu lebih sempit daripada apa yang cuba dicapai BRF, tetapi lebih jujur.</p></div>
 
 <div class="box over span"><span class="lbl">Giliran anda</span>
-<p>Sanggupkah anda meletakkan RM1,000 dalam kumpulan sepuluh projek kampung jika sebahagian modal anda dijamin, dan berapa pulangan yang menjadikannya berbaloi?</p></div>
+<p>Di anak tangga manakah anda sanggup meletakkan wang sendiri, dan apa yang perlu anda lihat dahulu?</p></div>
 </div>
 
 <div class="foot">
 <details><summary>Sumber</summary>
 <ol>
-<li>Bank Negara Malaysia, "Establishment of New Financing Facilities by Bank Negara Malaysia" (BRF dan LCTF), 21 Januari 2022, bnm.gov.my.</li>
-<li>Skrine, "Bank Negara launches Business Recapitalisation Facility for SMEs", Januari 2022 (juga di Lexology).</li>
-<li>Bank Negara Malaysia, bantuan PMKS di bawah Belanjawan 2024, 21 Oktober 2023, jadual Dana BNM untuk PKS (BRF RM1,000 juta tersedia).</li>
-<li>Bank Negara Malaysia, slaid sidang media Laporan Tahunan 2023, Mac 2024 (baris BRF).</li>
-<li>Credit Guarantee Corporation Malaysia, Skim BizJamin/-i Business Recapitalisation Facility, cgc.com.my.</li>
+<li>Bank Negara Malaysia, "Establishment of New Financing Facilities by Bank Negara Malaysia" (BRF dan LCTF), 21 Januari 2022.</li>
+<li>Skrine, "Bank Negara launches Business Recapitalisation Facility for SMEs", Januari 2022.</li>
+<li>Bank Negara Malaysia, bantuan PMKS di bawah Belanjawan 2024, 21 Oktober 2023, jadual Dana BNM untuk PKS.</li>
+<li>Bank Negara Malaysia, slaid sidang media Laporan Tahunan 2023, Mac 2024.</li>
+<li>Syarikat Jaminan Pembiayaan Perniagaan (CGC), halaman Skim BizJamin/-i Business Recapitalisation Facility.</li>
 <li>The Star, "BNM to revamp its fund for SMEs deployment", 13 Jun 2024.</li>
-<li>Akta Perkhidmatan Kewangan 2013 (Akta 758), seksyen 14 dan 85, kandungan dan teks melalui lowpartners.com.</li>
-<li>Bank Negara Malaysia, Capital Adequacy Framework (Basel II &ndash; Risk-Weighted Assets), 18 Disember 2023, perenggan 2.42 dan 2.44.</li>
-<li>Bank Negara Malaysia, Kajian Kestabilan Kewangan 2H2024, Kotak 2, "Key Revisions under Basel III and the Impact on Banks".</li>
-<li>OSFI, Capital Adequacy Requirements 2026, Bab 4 (wajaran risiko ekuiti Basel III 250% dan 400%).</li>
-<li>Suruhanjaya Sekuriti Malaysia, Laporan Tahunan 2024, "ECF and P2P Financing: Fuelling MSME Growth".</li>
-<li>Fintech News Malaysia, "SC Malaysia Annual Report 2025" (angka P2P dan ECF 2025).</li>
-<li>Suruhanjaya Sekuriti Malaysia, laman MyCIF (angka sehingga S4 2025) dan kenyataan media 21 Julai 2025.</li>
-<li>Verband Deutscher B&uuml;rgschaftsbanken, profil persatuan; helaian fakta B&uuml;rgschaftsbank dan MBG Baden-W&uuml;rttemberg 2025; pembentangan AECM oleh Guy Selbherr, September 2021.</li>
-<li>Grantbite, ringkasan program "BBT/MBG kombi Th&uuml;ringen".</li>
-<li>Bank Negara Malaysia, laman iTEKAD dan iTEKAD Entrepreneurship (angka sehingga akhir Disember 2025 dan akhir Mac 2026); laman kewangan sosial (Belanjawan 2026).</li>
-<li>Bank Dunia, "iTEKAD: Making Inroads into Social Finance", Jun 2025.</li>
-<li>Harga lembu korban: Berita Harian, Mei 2026; Sinar Harian dan Utusan Malaysia, 2025.</li>
+<li>Akta Perkhidmatan Kewangan 2013 (Akta 758), seksyen 14 dan 85.</li>
+<li>Bank Negara Malaysia, Capital Adequacy Framework (Basel II &ndash; Risk-Weighted Assets), 18 Disember 2023.</li>
+<li>Bank Negara Malaysia, Financial Stability Review 2H2024, Kotak 2, semakan di bawah Basel III.</li>
+<li>OSFI, Capital Adequacy Requirements 2026, Bab 4 (wajaran risiko ekuiti Basel III).</li>
+<li>Suruhanjaya Sekuriti Malaysia, Laporan Tahunan 2024, bab ECF dan P2P; Fintech News Malaysia mengenai Laporan Tahunan SC 2025.</li>
+<li>Suruhanjaya Sekuriti Malaysia, halaman MyCIF (angka sehingga S4 2025) dan kenyataan media 21 Julai 2025.</li>
+<li>Bank Negara Malaysia, halaman iTEKAD (angka sehingga akhir 2025 dan akhir Mac 2026); Bank Dunia, "iTEKAD: Making Inroads into Social Finance", Jun 2025.</li>
+<li>Bank Negara Malaysia, kenyataan Kadar Dasar Semalaman 2025&ndash;2026; PNB, agihan ASB bagi 2025; KWSP, dividen bagi 2025.</li>
+<li>Jabatan Perkhidmatan Veterinar (DVS), nasihat membeli dan menimbang lembu korban; laporan berita mengenai penggantungan import lembu dari Thailand akibat penyakit kulit berbintil.</li>
+<li>Harga lembu korban di Melaka dan Negeri Sembilan, 2025 (Sinar Harian, Utusan Malaysia, Berita Harian); laporan harga dedak dan penyakit hawar berdarah di Kuala Terengganu, 2025; laporan lembu seludup, Mei 2026.</li>
+<li>Cili: bajet dan panduan hasil seekar yang diterbitkan; laporan campur tangan FAMA di Pulau Pinang, Mei 2026.</li>
+<li>Nanas: panduan kos MD2 Jabatan Pertanian (DOA); bahan LPNM; bajet ladang yang diterbitkan; laporan FGV mengenai hujan yang melewatkan tuaian nanasnya.</li>
+<li>Verband Deutscher B&uuml;rgschaftsbanken, keputusan 2025 dan profil persatuan.</li>
+<li>B&uuml;rgschaftsbank Baden-W&uuml;rttemberg dan MBG Baden-W&uuml;rttemberg, laporan tahunan dan helaian fakta 2025, serta ucapan lembaga 2025.</li>
+<li>Destatis, insolvensi perniagaan mengikut sektor ekonomi, 2025; ZDH, insolvensi dalam sektor kraf.</li>
+<li>Kajian bank jaminan di timur Jerman, 2011 (kadar gagal bayar); terma program MBG Sachsen-Anhalt dan Mikromezzaninfonds Deutschland; pembentangan AECM oleh Guy Selbherr, September 2021.</li>
+<li>Model Monte Carlo dan struktur Jerman: model saya sendiri, ditulis dalam Python. Andaian disenaraikan dalam bahagian 06, 07 dan 10.</li>
 </ol></details>
 
 <div class="disc"><b>Penafian.</b> Pandangan dalam artikel ini ialah pandangan peribadi saya. Ia tidak mewakili majikan saya atau mana-mana organisasi yang pernah atau sedang saya sertai. Artikel ini tidak berkaitan dengan, tidak disokong oleh dan tidak ditulis bagi pihak mana-mana institusi yang disebut. Semua angka diambil daripada sumber awam yang disenaraikan, dan sebarang kesilapan adalah tanggungjawab saya sendiri. Artikel ini bukan nasihat kewangan, pelaburan atau undang-undang. Kajian dan penulisan artikel ini dibantu oleh alat AI. Semua fakta telah disemak dengan sumber asal.</div>
 
-<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b> menulis tentang pembiayaan PMKS, automasi AI untuk perniagaan kecil dan dasar jangka panjang untuk Malaysia.</div></div>
+<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b> menulis tentang pembiayaan PMKS, automasi AI untuk perniagaan kecil, dan dasar jangka panjang untuk Malaysia.</div></div>
 <div class="endcta"><a class="cta" data-cta href="#">Komen di LinkedIn</a></div>
 </div>
 </article>
+
+
+<article class="en-only" id="art-en" lang="en">
+<div class="kicker">MSME financing &middot; Guarantees &middot; Islamic social finance</div>
+<h1>Equity guarantee: an oxymoron, or a tool we have not shaped yet?</h1>
+<p class="deck">Bank Negara's RM1 billion recapitalisation facility found almost no takers. I ran 50,000 simulated pools on four real business cycles, and Germany's model, to find where a guarantee on risk capital works and where it does not.</p>
+<div class="byline"><span class="who">By <b>Azman Taufik</b> &middot; 27 November 2026 &middot; 25 min read</span><a class="cta" data-cta href="#">Comment on LinkedIn</a></div>
+
+<div class="stats">
+ <div class="stat"><b>RM1,000m</b><span>Of the RM1bn BRF still listed as available, Oct 2023</span></div>
+ <div class="stat"><b>150%</b><span>Risk weight on unlisted equity, BNM Basel II rules</span></div>
+ <div class="stat"><b>50,000</b><span>Simulated pools per case: cattle, chilli, pineapple, AI builds</span></div>
+ <div class="stat"><b>~6%</b><span>A year for investors, German-style, with established operators</span></div>
+</div>
+
+<div class="cols">
+<div class="box key span"><span class="lbl">The short version</span>
+<ul>
+<li>BNM's <b>RM1 billion BRF</b> offered SMEs equity or debt-plus-equity from February 2022. In October 2023 BNM still listed the <b>full RM1,000 million as available</b>.</li>
+<li>Banks stayed away for three reasons. Equity sits outside their normal business and needs BNM's approval. It eats capital (<b>150%</b> risk weight, <b>1250%</b> if the firm becomes a subsidiary). And the equity holder is <b>paid last, with no clear exit</b>.</li>
+<li>I tested a guaranteed pool of projects on four real cycles: korban cattle, chilli, MD2 pineapple and AI software builds. On harsh odds, a <b>50% guarantee roughly halves the loss in a bad pool</b> but barely changes <b>how often</b> a pool loses. Pineapple fails on cost. Cattle only matches ASB.</li>
+<li>Germany's model works because it is <b>mezzanine</b>: a stake with an end date, fixed pay, an owner guarantee, and the state carrying about half the risk. Run on Malaysian cases it gives investors <b>about 6% a year with established operators</b>, and becomes a hidden subsidy for first-timers.</li>
+<li>My conclusion: <b>guarantee the way out, not the equity</b>. Social finance for first-timers, German-style mezzanine for operators with a track record, and a small, capped pilot for high-upside technology.</li>
+</ul></div>
+
+<p class="lead">Can you guarantee someone's equity and still call it equity? A finance veteran I worked with years ago said no. To him, "equity guarantee" was an oxymoron. Equity is the money that takes the loss first and gets paid last. Guarantee it, and you remove the very thing that makes it equity.</p>
+<p>I agreed with him. I still wanted to know whether there was a narrow version that works: small projects, short cycles, a pool instead of a single bet, and a guarantor who shares the upside instead of only carrying the downside.</p>
+<p>So I did not stop at the argument. I priced four real business cycles stage by stage, ran each one through 50,000 simulated pools, then ran the same cases through the German structure. This is what came out.</p>
+
+<h3>01 &middot; What the BRF offered</h3>
+<p>The BRF was announced in Budget 2022 and opened on 3 February 2022 with RM1 billion under BNM's Fund for SMEs. Its aim was sensible: help SMEs grow without piling on more debt.</p>
+<p>SMEs could take equity through preference shares, ordinary shares or equity-like instruments. Or they could take blended finance: bank debt plus equity from third-party equity financiers.</p>
+<p>The terms were generous. Up to RM5 million per SME, up to 10 years, no collateral. The debt portion was capped at 3.5% a year without a guarantee and 5% with one. There was no cap on the equity return, and guarantee cover was available for the debt portion.</p>
+
+<h3>02 &middot; What happened</h3>
+<div class="box data"><span class="lbl">What the data says</span>
+<p>BNM's table of SME facilities dated 21 October 2023, about 20 months after launch, listed the BRF with <b>RM1,000 million available</b>, the same amount it opened with.</p>
+<p>BNM's 2023 annual report slides (March 2024) showed only dashes in the BRF row for approvals and utilisation. I could not find a later public figure.</p></div>
+<p>People in the industry describe the take-up as close to zero, and BNM's own tables fit that. In June 2024 BNM said it was redesigning how it builds SME funds, after only a third of another facility had been used.</p>
+<p>A fund nobody draws on is not short of money. Its design is wrong.</p>
+
+<h3>03 &middot; Why banks walked away</h3>
+<h4>It is not their business</h4>
+<p>Under the Financial Services Act 2013, a licensed bank may not carry on business outside its authorised business unless BNM allows it. Holding a material interest in a corporation needs BNM's approval under section 85. I did not find a clause that bans a bank outright from holding SME equity. The law puts a gate in front of it, and few banks want to queue at that gate for a RM300,000 stake.</p>
+<h4>It eats capital</h4>
+<p>Under BNM's current rules, unlisted equity and venture capital carry a 150% risk weight. A stake in a non-financial subsidiary carries 1250%. The Basel III global standard is harsher: 250% for equity and 400% for speculative unlisted equity.</p>
+
+<div class="fig"><div class="t">An equity stake costs a bank far more capital than a loan</div>
+<div class="bars">
+ <div class="r"><span>SME loan, Basel III (85%)</span><div class="t"><i style="width:6.8%"></i><b style="color:var(--ink);left:calc(6.8% + 6px)">RM6.80</b></div></div>
+ <div class="r"><span>SME loan, Basel II (100%)</span><div class="t"><i style="width:8%"></i><b style="color:var(--ink);left:calc(8% + 6px)">RM8.00</b></div></div>
+ <div class="r"><span>Unlisted equity, BNM today (150%)</span><div class="t"><i style="width:12%"></i><b style="color:var(--ink);left:calc(12% + 6px)">RM12.00</b></div></div>
+ <div class="r"><span>Equity, Basel III standard (250%)</span><div class="t"><i style="width:20%"></i><b style="color:var(--ink);left:calc(20% + 6px)">RM20.00</b></div></div>
+ <div class="r"><span>Controlling stake (1250%)</span><div class="t"><i class="hi" style="width:100%"></i><b>RM100.00</b></div></div>
+</div>
+<div class="src">Minimum capital per RM100 of exposure at the 8% minimum total capital ratio, before buffers. My calculation from BNM Capital Adequacy Framework (Basel II RWA, Dec 2023), BNM FSR 2H2024 Box 2 (85% for corporate SMEs from 1 July 2026) and the Basel III standard (250%/400%).</div></div>
+
+<p>This is where the "100% capital" view comes from. If the stake is big enough to make the SME a subsidiary, a bank holds roughly a ringgit of capital for every ringgit it puts in.</p>
+<h4>Last in line, and no way out</h4>
+<p>Equity is paid after every creditor. Shares in a small private firm have no market, so an exit needs another willing buyer. A bank's credit model prices default and recovery. It has no line for "maybe in seven years, if someone buys".</p>
+<p>Investors feel the same. On SC-registered platforms in 2025, P2P financing raised about twenty times what equity crowdfunding did.</p>
+
+<div class="fig"><div class="t">The crowd prefers debt: funds raised on SC-registered platforms, 2025</div>
+<div class="bars">
+ <div class="r"><span>P2P financing</span><div class="t"><i style="width:100%"></i><b>RM2.83bn</b></div></div>
+ <div class="r"><span>Equity crowdfunding</span><div class="t"><i class="hi" style="width:4.9%"></i><b style="color:var(--ink);left:calc(4.9% + 6px)">RM139m</b></div></div>
+</div>
+<div class="src">Source: Securities Commission Malaysia Annual Report 2025, as reported by Fintech News Malaysia.</div></div>
+
+<h3>04 &middot; So, is it an oxymoron?</h3>
+<p>For a bank, yes. For a guarantor, it depends on what is being guaranteed.</p>
+<p>Guarantee a full equity return and the guarantor carries the downside while the investor keeps the upside. That loses money every cycle. Guarantee part of a stake that has a fixed term, a base return and a share of profit, and the arithmetic changes. Germany has done this for decades.</p>
+
+<div class="cards">
+ <div class="card g"><span class="tag">Worked</span><h5>Germany</h5>17 guarantee banks and 15 SME investment companies (MBGs). MBGs take silent stakes with no say in daily business. Guarantee banks cover 25&ndash;80% of those stakes, backed by federal and state counter-guarantees.</div>
+ <div class="card r"><span class="tag">Failed</span><h5>Malaysia, BRF</h5>Open-ended equity offered through banks that are not built to hold it. No exit design and no guarantee on the equity itself. The money sat unused.</div>
+ <div class="card a"><span class="tag">Working, small</span><h5>Malaysia, MyCIF</h5>Public money invests with the crowd: RM1 for every RM4 raised (RM1 for RM2 in food security), on a first-loss basis in Islamic risk-sharing campaigns. RM1.5bn co-invested for 11,512 MSMEs to Q4 2025.</div>
+</div>
+<p>That left me with one design to test, and two places where it might work.</p>
+
+<h3>05 &middot; The idea I wanted to test</h3>
+<h4>Door one: social finance</h4>
+<p>Here the oxymoron disappears, because the funder has already accepted the loss. Zakat, waqf and CSR money is given to build livelihoods, not to earn a return.</p>
+<p>BNM's iTEKAD has combined that money with seed capital, training and microfinance since May 2020. It had reached 14,387 microentrepreneurs by end-March 2026. By end-2025 it had disbursed RM94.2 million in social funds and RM77.2 million in financing and investment.</p>
+<p>A guarantee can make each ringgit of social money go further. The social fund takes the first loss, the guarantor takes the next slice, and the bank or platform funds the rest.</p>
+<h4>Door two: the crowd with an appetite for risk</h4>
+<p>Some investors do not mind a small loss if they can win more. They are natural risk takers, and the platforms already reach them: institutional investors were 2% of ECF and P2P investors in 2024 but put in 60% of the money.</p>
+<p>A note on terms. P2P in Malaysia is financing, not equity. A profit-sharing stake would go through equity crowdfunding, or a Shariah-compliant structure such as mudarabah or musharakah. Shariah-compliant deals were 30% of ECF and P2P funds raised in 2024.</p>
+<h4>The design</h4>
+<p>Pool 10 short-cycle projects (20 for tech) into one offer. The owner and a social or MyCIF layer take the first 10% of any loss. The guarantor covers part of what is left. Investors take 70% of profit and the owner 30%. The guarantor's fee is a share of investors' profit, paid only when there is profit, so the guarantor also has upside.</p>
+
+<div class="flow">
+ <div>10 short-cycle projects<br><small>cattle, chilli, pineapple</small></div>
+ <div>Islamic ECF platform pools them</div>
+ <div>Crowd investors + MyCIF co-invest</div>
+ <div>First loss: owner's stake + social fund<br><small>first 10% of any loss</small></div>
+ <div>Guarantor covers part of the rest<br><small>0&ndash;70% tested</small></div>
+ <div>Profit shared: owner 30%, investors 70%<br><small>guarantor fee from investors' share</small></div>
+</div>
+<div class="flow-cap">How a guaranteed project pool would work (my proposal)</div>
+
+<div class="fig"><div class="t">Who takes the hit: a project that loses 40% of its capital, with a 50% guarantee</div>
+<div class="lossbar"><div style="width:25%;background:#f6d4cf">First-loss layer<br>10</div><div style="width:37.5%;background:#cfe0f3">Guarantor<br>15</div><div style="width:37.5%;background:#e1e6ec">Investors<br>15</div></div>
+<div class="src">Ringgit lost per RM100 of capital. Illustration of the loss order used in my model, not data.</div></div>
+
+<div class="box ok span"><span class="lbl">The bar I set</span>
+<ul>
+<li>The expected gain should be at least <b>two to three times</b> the expected loss (reward-to-risk of 1:2 to 1:3).</li>
+<li>Investors should beat a safe alternative: fixed deposits near the <b>2.75%</b> OPR, ASB's <b>5.75 sen</b> for 2025 or EPF's <b>6.15%</b>. P2P platforms advertise 8&ndash;12%.</li>
+<li>The guarantor must not lose money on average, and must survive a 1-in-100 year.</li>
+</ul></div>
+
+<h3>06 &middot; How I tested it</h3>
+<p>I picked four cycles of different lengths: korban cattle (4 months, once a year), chilli (6 months, two seasons a year), MD2 pineapple (18 months) and AI software builds for small businesses (3 to 5 years). Then I built each one from its drivers rather than from a single return figure.</p>
+
+<div class="tbl"><div class="t">What the model draws at random, 50,000 times per case</div><div class="tw">
+<table class="dt">
+<tr><th>Driver</th><th>Cattle</th><th>Chilli</th><th>Pineapple</th><th>AI builds</th></tr>
+<tr><td>Price</td><td>Korban price shared by the pool (&plusmn;10&ndash;15%), plus local &plusmn;5%</td><td>One market price for all farms, wide swings (&plusmn;30%)</td><td>Shared farm price &plusmn;15%</td><td>&mdash;</td></tr>
+<tr><td>Output</td><td>Weight gain 0.5&ndash;0.6 kg a day, &plusmn;0.15</td><td>Yield &plusmn;20%; disease cuts a farm by 40%</td><td>Fruit count &plusmn;12%; rot or flood halves a farm</td><td>Outcome multiple from a fat-tailed curve</td></tr>
+<tr><td>Shared bad year</td><td>Disease year (8%; 15% harsh): 20% of cattle die</td><td>Bad weather year (10%): &minus;20%</td><td>Wet year (10%): &minus;20%</td><td>Funding winter (15%): exits &times;0.6</td></tr>
+<tr><td>Cost</td><td>Feed price shared, +0&ndash;30%</td><td>Overrun 0&ndash;15%</td><td>Overrun 0&ndash;25% (0&ndash;40% harsh)</td><td>Money released in stages</td></tr>
+<tr><td>Other</td><td>3&ndash;5% deaths; 5% miss the Raya window</td><td>&mdash;</td><td>&mdash;</td><td>35&ndash;40% of builds fail</td></tr>
+<tr><td>Fraud</td><td>2.5% / 5%</td><td>2% / 5%</td><td>2% / 5%</td><td>2% / 4%</td></tr>
+</table></div>
+<div class="src">My assumptions. Where two figures are given, the first is the planned case and the second the harsh case.</div></div>
+
+<p>Every case runs twice: on the odds a promoter would plan for, and on harsh odds. The harsh run is the test. The guarantee fee is priced on the harsh odds, at 1.25 times what the guarantor expects to pay out, because a guarantor priced on hopeful odds starts losing money as soon as reality turns harsh.</p>
+<p>Reward-to-risk is the expected gain divided by the expected loss for an investor's project. "1-in-20" and "1-in-100" are the pool returns that only 5% and 1% of simulated pools fall below.</p>
+<div class="box watch span"><span class="lbl">Read this before the results</span>
+<p>The prices and costs come from public sources listed at the end. The probabilities of disease, fraud, bad years and tech failure are my working assumptions. Before any pilot they should be replaced with DVS, MARDI, LPNM and FAMA data and with platform default histories.</p></div>
+
+<h3>07 &middot; Four cases, end to end</h3>
+
+<div class="case"><b>Case 1 &middot; Korban cattle, 4 months</b><span>5 young cattle at about RM2,700 each (my assumption), feed RM7 a day for 120 days and RM200 a head for the vet: <b>RM18,700</b> of capital. Sold at RM5,000 a head: RM25,000. Base-case profit RM6,300, or 34% in four months. Investors' 70% share is about 24% before any fee.</span></div>
+<div class="stages">
+ <div><span class="st">Buy <span class="mo">month 0</span></span>Paying too much, or buying sick stock.<span class="rk">Lumpy skin disease led to a suspension of Thai cattle imports, which tightens supply.</span><span class="ck">Check: vet check and weighing on arrival, as DVS advises; ear tags and photos.</span></div>
+ <div><span class="st">Fatten <span class="mo">months 1&ndash;3</span></span>Feed, disease and deaths.<span class="rk">Dedak rose from about RM45 to RM60 a bag. Haemorrhagic septicaemia killed 25 buffaloes in Kuala Terengganu in 2025.</span><span class="ck">Check: vaccination, livestock takaful, a monthly weight and photo log.</span></div>
+ <div><span class="st">Sell <span class="mo">month 4</span></span>Missing the Raya window.<span class="rk">Farmers say cheap smuggled cattle undercut prices. Prices ran RM4,500&ndash;6,500 a head across Melaka and Negeri Sembilan in 2025.</span><span class="ck">Check: pre-sell to mosque korban committees; weigh at sale.</span></div>
+ <div><span class="st">Settle <span class="mo">after sale</span></span>Cash collected by hand; owner disappears or sells early.<span class="rk">Fraud is the single biggest loss per project in the model.</span><span class="ck">Check: buyers pay into the platform account; split by contract.</span></div>
+</div>
+
+<div class="case"><b>Case 2 &middot; Chilli, 6 months, two seasons a year</b><span>One acre yielding 9,100 kg, with <b>RM30,500</b> of capital (a midpoint of published budgets, my assumption) and RM5 a kg: revenue RM45,500 and profit RM15,000, or 49% a season. The price data I could find is old, so treat this as a working figure.</span></div>
+<div class="stages">
+ <div><span class="st">Plant <span class="mo">month 0&ndash;1</span></span>Inputs, fertigation and labour cost more than planned.<span class="rk">Overrun of 0&ndash;15% in the model.</span><span class="ck">Check: fixed-price input bundle; money released in stages.</span></div>
+ <div><span class="st">Grow <span class="mo">months 1&ndash;2.5</span></span>Disease and weather.<span class="rk">Disease can cut a farm's yield by 40%; a bad-weather year hits all farms at once.</span><span class="ck">Check: agronomist visits; crop cover where available.</span></div>
+ <div><span class="st">Harvest <span class="mo">from ~day 75</span></span>First picking about 75 days after transplant, then weekly to month 6.<span class="rk">Yield &plusmn;20%; pickers hard to find at peak.</span><span class="ck">Check: weekly harvest log.</span></div>
+ <div><span class="st">Sell <span class="mo">each week</span></span>All ten farms sell into one market.<span class="rk">Prices swing hard enough that FAMA intervened in Penang in May 2026.</span><span class="ck">Check: an offtake price agreed before planting.</span></div>
+</div>
+
+<div class="case"><b>Case 3 &middot; MD2 pineapple, 18 months</b><span>One hectare at <b>RM40,000</b> of cost. 27,500 fruit &times; 1.5 kg &times; RM1.50 = RM61,875. Profit RM21,875, or 55% over 18 months. DOA guidance puts cost at RM30,000&ndash;40,000 a hectare; some published budgets run far higher, up to RM80,000 for premium set-ups.</span></div>
+<div class="stages">
+ <div><span class="st">Plant <span class="mo">months 0&ndash;3</span></span>Land, suckers, planting.<span class="rk">Cost overrun is the biggest risk; budgets vary widely.</span><span class="ck">Check: fixed-price planting contract.</span></div>
+ <div><span class="st">Grow <span class="mo">months 3&ndash;12</span></span>A long wait with no income.<span class="rk">Heart rot or flooding can halve a farm's fruit; a wet year hits all.</span><span class="ck">Check: drainage; site visits with photos.</span></div>
+ <div><span class="st">Force and harvest <span class="mo">months 12&ndash;18</span></span>Timing and fruit size.<span class="rk">FGV reported prolonged rain delaying its pineapple harvest.</span><span class="ck">Check: harvest schedule; buyer lined up.</span></div>
+ <div><span class="st">Sell <span class="mo">month 18</span></span>Farm-gate price.<span class="rk">&plusmn;15% in the model; RM1.35 a kg in the harsh case.</span><span class="ck">Check: offtake with a processor or exporter.</span></div>
+</div>
+
+<div class="case"><b>Case 4 &middot; AI software builds for small businesses, 3&ndash;5 years</b><span>RM150,000 per project (my assumption), in a pool of 20, with money released in stages. I treat each build as an early-stage venture. These odds are my own, loosely shaped on venture outcomes, and not sourced.</span></div>
+<div class="stages">
+ <div><span class="st">Build <span class="mo">year 1</span></span>35&ndash;40% fail.<span class="rk">With staged money most failures stop at 40% spent; one in five is only caught at 70%.</span><span class="ck">Check: milestone gates.</span></div>
+ <div><span class="st">Traction <span class="mo">year 2</span></span>Some customers, not enough.<span class="rk">30% return only 0.1&ndash;0.6&times; of the money.</span><span class="ck">Check: shared revenue reporting.</span></div>
+ <div><span class="st">Scale <span class="mo">years 2&ndash;4</span></span>The winners pay for the rest.<span class="rk">Returns of 1&times; or more on a fat-tailed curve, capped at 30&times;.</span><span class="ck">Check: a professional VC co-invests.</span></div>
+ <div><span class="st">Exit <span class="mo">years 3&ndash;5</span></span>Someone must buy.<span class="rk">A funding winter (15% chance) cuts every exit by 40%; fraud 2&ndash;4%.</span><span class="ck">Check: exit routes agreed up front.</span></div>
+</div>
+
+<h3>08 &middot; Risk, reward and pricing: what 50,000 pools say</h3>
+<div class="tbl"><div class="t">Results on harsh odds</div><div class="tw">
+<table class="dt">
+<tr><th>Case</th><th>Guarantee</th><th>Average return</th><th>Pool loses money</th><th>1-in-20 pool</th><th>1-in-100 pool</th><th>Reward : risk</th><th>Guarantor fee</th><th>A year</th></tr>
+<tr><td rowspan="2"><b>Cattle</b><br>4 months, once a year</td><td>none</td><td class="n">6.8%</td><td class="n">32%</td><td class="n">&minus;15.9%</td><td class="n">&minus;25.1%</td><td class="n">2.1 : 1</td><td class="n">&mdash;</td><td class="n">6.8%</td></tr>
+<tr class="sub"><td>50%</td><td class="n">6.0%</td><td class="n">27%</td><td class="n"><b>&minus;7.5%</b></td><td class="n"><b>&minus;12.3%</b></td><td class="n">2.9 : 1</td><td class="n">30% of profit</td><td class="n">6.0%</td></tr>
+<tr><td rowspan="3"><b>Chilli</b><br>6 months, two a year</td><td>none</td><td class="n">9.9%</td><td class="n">40%</td><td class="n">&minus;28.5%</td><td class="n">&minus;40.8%</td><td class="n">1.9 : 1</td><td class="n">&mdash;</td><td class="n">19.8%</td></tr>
+<tr class="sub"><td>50%</td><td class="n">8.6%</td><td class="n">35%</td><td class="n"><b>&minus;14.1%</b></td><td class="n"><b>&minus;20.4%</b></td><td class="n">2.6 : 1</td><td class="n">33% of profit</td><td class="n">17.1%</td></tr>
+<tr class="sub"><td>50% + offtake at RM4.50</td><td class="n">5.2%</td><td class="n">20%</td><td class="n"><b>&minus;5.5%</b></td><td class="n">&minus;10.2%</td><td class="n">2.3 : 1</td><td class="n">36% of profit</td><td class="n">10.5%</td></tr>
+<tr><td rowspan="2"><b>Pineapple</b><br>18 months</td><td>none</td><td class="n">1.0%</td><td class="n">49%</td><td class="n">&minus;22.3%</td><td class="n">&minus;31.5%</td><td class="n">1.1 : 1</td><td class="n">&mdash;</td><td class="n">0.7%</td></tr>
+<tr class="sub"><td>50%</td><td class="n">&minus;0.4%</td><td class="n">53%</td><td class="n">&minus;11.3%</td><td class="n">&minus;15.8%</td><td class="n">0.9 : 1</td><td class="n">57% of profit</td><td class="n">&minus;0.2%</td></tr>
+<tr><td rowspan="2"><b>AI builds</b><br>pool of 20, staged, 3&ndash;5 years</td><td>none</td><td class="n">101%</td><td class="n">17%</td><td class="n">&minus;23.0%</td><td class="n">&minus;35.1%</td><td class="n">4.5 : 1</td><td class="n">&mdash;</td><td class="n">~19%</td></tr>
+<tr class="sub"><td>50%</td><td class="n">97%</td><td class="n"><b>9%</b></td><td class="n"><b>&minus;7.4%</b></td><td class="n"><b>&minus;16.6%</b></td><td class="n">7.7 : 1</td><td class="n">14% of gains</td><td class="n">~18.5%</td></tr>
+</table></div>
+<div class="src">Return to investors per cycle (tech: over the life of the pool, per ringgit committed). "A year" multiplies by cycles per year; for tech it is the four-year compound rate. On the planned odds every farm case looks far better, with reward-to-risk near 6 : 1 and no guarantee. My model.</div></div>
+
+<div class="fig"><div class="t">A 50% guarantee squeezes the bad tail, but the pool still loses money about as often</div><div class="g2"><div class="hc"><div class="ht">Korban cattle (4 months)</div><div class="hs">Chance the pool loses money: <b class="g0">32%</b> &rarr; <b class="g5">27%</b></div><svg viewBox="0 0 320 176" role="img" aria-label="Distribution of simulated pool returns" font-family="Inter,Arial,sans-serif">
+<rect x="12" y="14" width="118.4" height="126" fill="#fdf1ef"/>
+<path d="M12.0 140V139.8h5.8V140zM18.4 140V139.6h5.8V140zM24.9 140V139.2h5.8V140zM31.3 140V138.6h5.8V140zM37.7 140V138.1h5.8V140zM44.2 140V137.3h5.8V140zM50.6 140V135.6h5.8V140zM57.0 140V133.4h5.8V140zM63.5 140V131.2h5.8V140zM69.9 140V127.2h5.8V140zM76.3 140V123.6h5.8V140zM82.8 140V119.1h5.8V140zM89.2 140V113.3h5.8V140zM95.7 140V105.1h5.8V140zM102.1 140V97.0h5.8V140zM108.5 140V91.0h5.8V140zM115.0 140V85.1h5.8V140zM121.4 140V75.1h5.8V140zM127.8 140V70.4h5.8V140zM134.3 140V68.4h5.8V140zM140.7 140V65.7h5.8V140zM147.1 140V68.7h5.8V140zM153.6 140V67.7h5.8V140zM160.0 140V73.1h5.8V140zM166.4 140V79.5h5.8V140zM172.9 140V84.6h5.8V140zM179.3 140V92.2h5.8V140zM185.7 140V97.4h5.8V140zM192.2 140V104.0h5.8V140zM198.6 140V109.5h5.8V140zM205.0 140V115.1h5.8V140zM211.5 140V119.7h5.8V140zM217.9 140V124.1h5.8V140zM224.3 140V126.8h5.8V140zM230.8 140V130.0h5.8V140zM237.2 140V131.9h5.8V140zM243.7 140V133.3h5.8V140zM250.1 140V135.0h5.8V140zM256.5 140V136.0h5.8V140zM263.0 140V137.5h5.8V140zM269.4 140V137.9h5.8V140zM275.8 140V138.4h5.8V140zM282.3 140V139.3h5.8V140zM288.7 140V138.9h5.8V140zM295.1 140V139.4h5.8V140zM301.6 140V139.5h5.8V140z" fill="#c3ccd6"/>
+<polyline points="12.0,140 12,140.0 18,140.0 18,140.0 25,140.0 25,140.0 31,140.0 31,140.0 38,140.0 38,140.0 44,140.0 44,140.0 51,140.0 51,140.0 57,140.0 57,139.9 63,139.9 63,139.8 70,139.8 70,139.5 76,139.5 76,138.4 83,138.4 83,136.6 89,136.6 89,131.8 96,131.8 96,122.5 102,122.5 102,112.0 109,112.0 109,92.2 115,92.2 115,69.7 121,69.7 121,50.1 128,50.1 128,28.1 134,28.1 134,28.8 141,28.8 141,23.3 147,23.3 147,29.6 154,29.6 154,42.4 160,42.4 160,56.5 166,56.5 166,72.0 173,72.0 173,85.1 179,85.1 179,98.2 186,98.2 186,108.7 192,108.7 192,117.8 199,117.8 199,123.9 205,123.9 205,128.3 211,128.3 211,132.1 218,132.1 218,134.2 224,134.2 224,136.8 231,136.8 231,137.7 237,137.7 237,138.9 244,138.9 244,138.8 250,138.8 250,139.4 257,139.4 257,139.8 263,139.8 263,139.8 269,139.8 269,139.8 276,139.8 276,139.9 282,139.9 282,139.9 289,139.9 289,139.9 295,139.9 295,140.0 302,140.0 302,140.0 308,140.0 308.0,140" fill="none" stroke="#0b5cad" stroke-width="2"/>
+<line x1="12" y1="140" x2="308" y2="140" stroke="#13263a" stroke-width="1"/>
+<line x1="130.4" y1="10" x2="130.4" y2="140" stroke="#13263a" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="16" y="26" font-size="11" font-weight="700" fill="#b42318">loss</text>
+<text x="304" y="26" font-size="11" font-weight="700" fill="#16794a" text-anchor="end">gain</text>
+<text x="12.0" y="156" font-size="11" fill="#5b6b7a" text-anchor="start">&minus;40%</text>
+<text x="130.4" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">0%</text>
+<text x="248.8" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">+40%</text>
+</svg></div><div class="hc"><div class="ht">Chilli (6 months)</div><div class="hs">Chance the pool loses money: <b class="g0">40%</b> &rarr; <b class="g5">35%</b></div><svg viewBox="0 0 320 176" role="img" aria-label="Distribution of simulated pool returns" font-family="Inter,Arial,sans-serif">
+<rect x="12" y="14" width="111.0" height="126" fill="#fdf1ef"/>
+<path d="M12.0 140V139.7h5.8V140zM18.4 140V139.2h5.8V140zM24.9 140V139.0h5.8V140zM31.3 140V137.0h5.8V140zM37.7 140V135.7h5.8V140zM44.2 140V133.6h5.8V140zM50.6 140V130.6h5.8V140zM57.0 140V125.5h5.8V140zM63.5 140V120.3h5.8V140zM69.9 140V114.0h5.8V140zM76.3 140V104.9h5.8V140zM82.8 140V99.5h5.8V140zM89.2 140V90.3h5.8V140zM95.7 140V83.0h5.8V140zM102.1 140V76.5h5.8V140zM108.5 140V73.0h5.8V140zM115.0 140V71.4h5.8V140zM121.4 140V69.7h5.8V140zM127.8 140V70.3h5.8V140zM134.3 140V73.2h5.8V140zM140.7 140V79.5h5.8V140zM147.1 140V83.1h5.8V140zM153.6 140V88.8h5.8V140zM160.0 140V92.7h5.8V140zM166.4 140V96.6h5.8V140zM172.9 140V100.5h5.8V140zM179.3 140V107.2h5.8V140zM185.7 140V110.4h5.8V140zM192.2 140V113.4h5.8V140zM198.6 140V116.3h5.8V140zM205.0 140V120.0h5.8V140zM211.5 140V123.7h5.8V140zM217.9 140V125.1h5.8V140zM224.3 140V127.0h5.8V140zM230.8 140V129.3h5.8V140zM237.2 140V130.7h5.8V140zM243.7 140V132.6h5.8V140zM250.1 140V133.8h5.8V140zM256.5 140V135.3h5.8V140zM263.0 140V135.1h5.8V140zM269.4 140V136.1h5.8V140zM275.8 140V136.6h5.8V140zM282.3 140V137.1h5.8V140zM288.7 140V137.7h5.8V140zM295.1 140V138.1h5.8V140zM301.6 140V138.1h5.8V140z" fill="#c3ccd6"/>
+<polyline points="12.0,140 12,140.0 18,140.0 18,140.0 25,140.0 25,140.0 31,140.0 31,140.0 38,140.0 38,140.0 44,140.0 44,140.0 51,140.0 51,140.0 57,140.0 57,140.0 63,140.0 63,139.7 70,139.7 70,138.4 76,138.4 76,133.9 83,133.9 83,125.6 89,125.6 89,109.4 96,109.4 96,86.8 102,86.8 102,62.4 109,62.4 109,39.2 115,39.2 115,26.2 121,26.2 121,23.3 128,23.3 128,29.0 134,29.0 134,41.2 141,41.2 141,52.4 147,52.4 147,65.7 154,65.7 154,74.6 160,74.6 160,87.9 166,87.9 166,95.9 173,95.9 173,102.6 179,102.6 179,112.3 186,112.3 186,117.3 192,117.3 192,121.5 199,121.5 199,125.7 205,125.7 205,128.9 211,128.9 211,132.1 218,132.1 218,133.1 224,133.1 224,134.9 231,134.9 231,135.7 237,135.7 237,137.1 244,137.1 244,137.2 250,137.2 250,138.3 257,138.3 257,138.5 263,138.5 263,139.1 269,139.1 269,139.3 276,139.3 276,139.4 282,139.4 282,139.7 289,139.7 289,139.6 295,139.6 295,139.8 302,139.8 302,139.8 308,139.8 308.0,140" fill="none" stroke="#0b5cad" stroke-width="2"/>
+<line x1="12" y1="140" x2="308" y2="140" stroke="#13263a" stroke-width="1"/>
+<line x1="123.0" y1="10" x2="123.0" y2="140" stroke="#13263a" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="16" y="26" font-size="11" font-weight="700" fill="#b42318">loss</text>
+<text x="304" y="26" font-size="11" font-weight="700" fill="#16794a" text-anchor="end">gain</text>
+<text x="30.5" y="156" font-size="11" fill="#5b6b7a" text-anchor="start">&minus;50%</text>
+<text x="123.0" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">0%</text>
+<text x="215.5" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">+50%</text>
+<text x="308.0" y="156" font-size="11" fill="#5b6b7a" text-anchor="end">+100%</text>
+</svg></div><div class="hc"><div class="ht">Pineapple (18 months)</div><div class="hs">Chance the pool loses money: <b class="g0">49%</b> &rarr; <b class="g5">53%</b></div><svg viewBox="0 0 320 176" role="img" aria-label="Distribution of simulated pool returns" font-family="Inter,Arial,sans-serif">
+<rect x="12" y="14" width="131.6" height="126" fill="#fdf1ef"/>
+<path d="M12.0 140V139.2h5.8V140zM18.4 140V138.7h5.8V140zM24.9 140V137.8h5.8V140zM31.3 140V137.3h5.8V140zM37.7 140V135.8h5.8V140zM44.2 140V134.3h5.8V140zM50.6 140V132.4h5.8V140zM57.0 140V129.8h5.8V140zM63.5 140V127.2h5.8V140zM69.9 140V122.8h5.8V140zM76.3 140V119.7h5.8V140zM82.8 140V115.3h5.8V140zM89.2 140V111.2h5.8V140zM95.7 140V106.3h5.8V140zM102.1 140V100.5h5.8V140zM108.5 140V95.4h5.8V140zM115.0 140V93.3h5.8V140zM121.4 140V89.7h5.8V140zM127.8 140V86.3h5.8V140zM134.3 140V87.6h5.8V140zM140.7 140V85.2h5.8V140zM147.1 140V87.1h5.8V140zM153.6 140V88.5h5.8V140zM160.0 140V90.9h5.8V140zM166.4 140V93.6h5.8V140zM172.9 140V99.6h5.8V140zM179.3 140V103.0h5.8V140zM185.7 140V107.8h5.8V140zM192.2 140V112.5h5.8V140zM198.6 140V114.7h5.8V140zM205.0 140V118.7h5.8V140zM211.5 140V122.0h5.8V140zM217.9 140V125.2h5.8V140zM224.3 140V127.0h5.8V140zM230.8 140V129.4h5.8V140zM237.2 140V131.3h5.8V140zM243.7 140V133.6h5.8V140zM250.1 140V135.1h5.8V140zM256.5 140V135.9h5.8V140zM263.0 140V136.8h5.8V140zM269.4 140V137.4h5.8V140zM275.8 140V138.2h5.8V140zM282.3 140V138.3h5.8V140zM288.7 140V139.0h5.8V140zM295.1 140V139.2h5.8V140zM301.6 140V139.3h5.8V140z" fill="#c3ccd6"/>
+<polyline points="12.0,140 12,140.0 18,140.0 18,140.0 25,140.0 25,140.0 31,140.0 31,140.0 38,140.0 38,140.0 44,140.0 44,140.0 51,140.0 51,140.0 57,140.0 57,139.9 63,139.9 63,139.8 70,139.8 70,139.2 76,139.2 76,138.2 83,138.2 83,135.7 89,135.7 89,131.1 96,131.1 96,123.7 102,123.7 102,111.6 109,111.6 109,95.4 115,95.4 115,76.8 121,76.8 121,53.4 128,53.4 128,36.1 134,36.1 134,26.0 141,26.0 141,23.3 147,23.3 147,32.1 154,32.1 154,49.9 160,49.9 160,72.5 166,72.5 166,89.7 173,89.7 173,105.1 179,105.1 179,116.8 186,116.8 186,127.5 192,127.5 192,132.1 199,132.1 199,135.7 205,135.7 205,137.9 211,137.9 211,138.7 218,138.7 218,139.3 224,139.3 224,139.7 231,139.7 231,139.8 237,139.8 237,140.0 244,140.0 244,139.9 250,139.9 250,140.0 257,140.0 257,140.0 263,140.0 263,140.0 269,140.0 269,140.0 276,140.0 276,140.0 282,140.0 282,140.0 289,140.0 289,140.0 295,140.0 295,140.0 302,140.0 302,140.0 308,140.0 308.0,140" fill="none" stroke="#0b5cad" stroke-width="2"/>
+<line x1="12" y1="140" x2="308" y2="140" stroke="#13263a" stroke-width="1"/>
+<line x1="143.6" y1="10" x2="143.6" y2="140" stroke="#13263a" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="16" y="26" font-size="11" font-weight="700" fill="#b42318">loss</text>
+<text x="304" y="26" font-size="11" font-weight="700" fill="#16794a" text-anchor="end">gain</text>
+<text x="12.0" y="156" font-size="11" fill="#5b6b7a" text-anchor="start">&minus;40%</text>
+<text x="143.6" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">0%</text>
+<text x="275.1" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">+40%</text>
+</svg></div><div class="hc"><div class="ht">AI builds, pool of 20 (3&ndash;5 years)</div><div class="hs">Chance the pool loses money: <b class="g0">17%</b> &rarr; <b class="g5">9%</b></div><svg viewBox="0 0 320 176" role="img" aria-label="Distribution of simulated pool returns" font-family="Inter,Arial,sans-serif">
+<rect x="12" y="14" width="32.9" height="126" fill="#fdf1ef"/>
+<path d="M12.0 140V136.1h5.8V140zM18.4 140V104.6h5.8V140zM24.9 140V72.7h5.8V140zM31.3 140V52.0h5.8V140zM37.7 140V42.7h5.8V140zM44.2 140V43.9h5.8V140zM50.6 140V50.4h5.8V140zM57.0 140V56.8h5.8V140zM63.5 140V63.2h5.8V140zM69.9 140V67.6h5.8V140zM76.3 140V69.3h5.8V140zM82.8 140V71.7h5.8V140zM89.2 140V82.1h5.8V140zM95.7 140V88.0h5.8V140zM102.1 140V93.4h5.8V140zM108.5 140V98.7h5.8V140zM115.0 140V93.9h5.8V140zM121.4 140V89.8h5.8V140zM127.8 140V81.9h5.8V140zM134.3 140V80.9h5.8V140zM140.7 140V85.3h5.8V140zM147.1 140V91.9h5.8V140zM153.6 140V96.5h5.8V140zM160.0 140V102.5h5.8V140zM166.4 140V105.7h5.8V140zM172.9 140V108.7h5.8V140zM179.3 140V114.5h5.8V140zM185.7 140V117.7h5.8V140zM192.2 140V118.6h5.8V140zM198.6 140V121.2h5.8V140zM205.0 140V123.8h5.8V140zM211.5 140V123.2h5.8V140zM217.9 140V123.4h5.8V140zM224.3 140V123.7h5.8V140zM230.8 140V124.8h5.8V140zM237.2 140V127.1h5.8V140zM243.7 140V127.8h5.8V140zM250.1 140V128.5h5.8V140zM256.5 140V131.2h5.8V140zM263.0 140V132.0h5.8V140zM269.4 140V132.9h5.8V140zM275.8 140V133.5h5.8V140zM282.3 140V134.9h5.8V140zM288.7 140V135.9h5.8V140zM295.1 140V136.4h5.8V140zM301.6 140V136.4h5.8V140z" fill="#c3ccd6"/>
+<polyline points="12.0,140 12,140.0 18,140.0 18,140.0 25,140.0 25,137.2 31,137.2 31,85.2 38,85.2 38,41.4 44,41.4 44,24.3 51,24.3 51,23.3 57,23.3 57,33.9 63,33.9 63,44.8 70,44.8 70,53.3 76,53.3 76,56.6 83,56.6 83,59.0 89,59.0 89,70.0 96,70.0 96,81.0 102,81.0 102,86.1 109,86.1 109,93.3 115,93.3 115,84.0 121,84.0 121,73.5 128,73.5 128,69.6 134,69.6 134,75.3 141,75.3 141,87.7 147,87.7 147,90.4 154,90.4 154,99.1 160,99.1 160,102.8 166,102.8 166,109.4 173,109.4 173,115.3 179,115.3 179,115.5 186,115.5 186,119.8 192,119.8 192,122.0 199,122.0 199,120.1 205,120.1 205,121.2 211,121.2 211,122.3 218,122.3 218,125.2 224,125.2 224,126.0 231,126.0 231,128.7 237,128.7 237,130.3 244,130.3 244,131.8 250,131.8 250,133.0 257,133.0 257,134.7 263,134.7 263,135.3 269,135.3 269,136.3 276,136.3 276,136.2 282,136.2 282,136.5 289,136.5 289,136.5 295,136.5 295,137.0 302,137.0 302,137.7 308,137.7 308.0,140" fill="none" stroke="#0b5cad" stroke-width="2"/>
+<line x1="12" y1="140" x2="308" y2="140" stroke="#13263a" stroke-width="1"/>
+<line x1="44.9" y1="10" x2="44.9" y2="140" stroke="#13263a" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="16" y="26" font-size="11" font-weight="700" fill="#b42318">loss</text>
+<text x="304" y="26" font-size="11" font-weight="700" fill="#16794a" text-anchor="end">gain</text>
+<text x="44.9" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">0%</text>
+<text x="110.7" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">+100%</text>
+<text x="176.4" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">+200%</text>
+<text x="242.2" y="156" font-size="11" fill="#5b6b7a" text-anchor="middle">+300%</text>
+<text x="308.0" y="156" font-size="11" fill="#5b6b7a" text-anchor="end">+400%</text>
+</svg></div></div><div class="lg"><span><i style="background:#c3ccd6"></i>No guarantee</span><span><i style="background:#0b5cad;height:3px"></i>50% guarantee</span><span><i style="background:#fdf1ef;border:1px solid #f3c9c3"></i>Pool loses money</span></div><div class="src">Return to investors over one cycle (tech: over the life of the pool, per ringgit committed). 50,000 simulated pools per case on harsh odds. My model and assumptions; see section 06.</div></div>
+
+<p><b>How the guarantee is priced.</b> The guarantor takes its fee as a share of investors' profit, paid only in a profitable cycle. The share is set so the guarantor collects 1.25 times what it expects to pay out on harsh odds. That is why the fee column rises with risk: 30% of profit for cattle, 57% for pineapple.</p>
+<p>Six things came out of the runs.</p>
+<p><b>1. A 50% guarantee halves the bad tail, not the chance of a loss.</b> Cattle's 1-in-20 bad pool improves from &minus;15.9% to &minus;7.5%. The chance of losing something only falls from 32% to 27%. The guarantee cuts how much you lose, not how often.</p>
+
+<div class="fig"><div class="t">The guarantee cuts how much you lose far more than how often you lose</div><div class="g2"><div><div class="ht">Chance the pool loses money</div><div class="hb">
+<div class="g">Cattle</div>
+<div class="r"><span>No guarantee</span><div class="t">
+<i class="n0" style="left:0.00%;width:53.99%"></i>
+<b style="left:calc(53.99% + 5px)">32%</b>
+</div></div>
+<div class="r"><span>50% guarantee</span><div class="t">
+<i class="n5" style="left:0.00%;width:44.27%"></i>
+<b style="left:calc(44.27% + 5px)">27%</b>
+</div></div>
+<div class="g">Chilli</div>
+<div class="r"><span>No guarantee</span><div class="t">
+<i class="n0" style="left:0.00%;width:66.43%"></i>
+<b class="in" style="left:calc(66.43% - 5px);transform:translateX(-100%)">40%</b>
+</div></div>
+<div class="r"><span>50% guarantee</span><div class="t">
+<i class="n5" style="left:0.00%;width:58.59%"></i>
+<b class="in w" style="left:calc(58.59% - 5px);transform:translateX(-100%)">35%</b>
+</div></div>
+<div class="g">Pineapple</div>
+<div class="r"><span>No guarantee</span><div class="t">
+<i class="n0" style="left:0.00%;width:81.20%"></i>
+<b class="in" style="left:calc(81.20% - 5px);transform:translateX(-100%)">49%</b>
+</div></div>
+<div class="r"><span>50% guarantee</span><div class="t">
+<i class="n5" style="left:0.00%;width:88.10%"></i>
+<b class="in w" style="left:calc(88.10% - 5px);transform:translateX(-100%)">53%</b>
+</div></div>
+<div class="g">AI builds (20)</div>
+<div class="r"><span>No guarantee</span><div class="t">
+<i class="n0" style="left:0.00%;width:28.22%"></i>
+<b style="left:calc(28.22% + 5px)">17%</b>
+</div></div>
+<div class="r"><span>50% guarantee</span><div class="t">
+<i class="n5" style="left:0.00%;width:15.72%"></i>
+<b style="left:calc(15.72% + 5px)">9%</b>
+</div></div>
+</div></div><div><div class="ht">Loss in a 1-in-20 bad pool</div><div class="hb">
+<div class="g">Cattle</div>
+<div class="r"><span>No guarantee</span><div class="t">
+<i class="n0" style="left:0.00%;width:45.37%"></i>
+<b style="left:calc(45.37% + 5px)">&minus;15.9%</b>
+</div></div>
+<div class="r"><span>50% guarantee</span><div class="t">
+<i class="n5" style="left:0.00%;width:21.33%"></i>
+<b style="left:calc(21.33% + 5px)">&minus;7.5%</b>
+</div></div>
+<div class="g">Chilli</div>
+<div class="r"><span>No guarantee</span><div class="t">
+<i class="n0" style="left:0.00%;width:81.43%"></i>
+<b class="in" style="left:calc(81.43% - 5px);transform:translateX(-100%)">&minus;28.5%</b>
+</div></div>
+<div class="r"><span>50% guarantee</span><div class="t">
+<i class="n5" style="left:0.00%;width:40.27%"></i>
+<b style="left:calc(40.27% + 5px)">&minus;14.1%</b>
+</div></div>
+<div class="g">Pineapple</div>
+<div class="r"><span>No guarantee</span><div class="t">
+<i class="n0" style="left:0.00%;width:63.71%"></i>
+<b class="in" style="left:calc(63.71% - 5px);transform:translateX(-100%)">&minus;22.3%</b>
+</div></div>
+<div class="r"><span>50% guarantee</span><div class="t">
+<i class="n5" style="left:0.00%;width:32.32%"></i>
+<b style="left:calc(32.32% + 5px)">&minus;11.3%</b>
+</div></div>
+<div class="g">AI builds (20)</div>
+<div class="r"><span>No guarantee</span><div class="t">
+<i class="n0" style="left:0.00%;width:65.60%"></i>
+<b class="in" style="left:calc(65.60% - 5px);transform:translateX(-100%)">&minus;23.0%</b>
+</div></div>
+<div class="r"><span>50% guarantee</span><div class="t">
+<i class="n5" style="left:0.00%;width:21.02%"></i>
+<b style="left:calc(21.02% + 5px)">&minus;7.4%</b>
+</div></div>
+</div></div></div><div class="src">Harsh odds, 50,000 simulated pools per case. Tech: money released in stages, pool of 20. My model.</div></div>
+
+<p><b>2. Pooling does not remove shared risk.</b> All ten chilli farms sell into one market. When the price falls, they fall together, so the pool still loses money 35&ndash;40% of the time. An offtake price does more than the guarantee: the 1-in-20 loss shrinks to &minus;5.5%, at the cost of the big wins.</p>
+<p><b>3. Pineapple fails on harsh odds, and the culprit is cost.</b> At RM1.50 a kg the average project returns 33% when cost is RM40,000 a hectare, and only 7% at RM50,000. At RM50,000 and RM1.35 a kg it turns negative. A guarantee cannot rescue that: its fee would eat 57% of the profit. Fix the cost by contract first, then talk about a guarantee.</p>
+
+<div class="fig"><div class="t">Pineapple lives or dies on cost: average project return by cost and farm-gate price</div><div class="tw"><table class="heat"><tr><th>Cost per ha &darr; / price per kg &rarr;</th><th>RM1.20</th><th>RM1.35</th><th>RM1.50</th><th>RM1.65</th><th>RM1.80</th></tr><tr><th>RM30k</th><td style="background:#c9e6d4">42%</td><td style="background:#c9e6d4">60%</td><td style="background:#c9e6d4">77%</td><td style="background:#c9e6d4">95%</td><td style="background:#c9e6d4">113%</td></tr><tr><th>RM35k</th><td style="background:#e3f1e8">22%</td><td style="background:#e3f1e8">37%</td><td style="background:#c9e6d4">52%</td><td style="background:#c9e6d4">67%</td><td style="background:#c9e6d4">83%</td></tr><tr><th>RM40k</th><td style="background:#fbe9d4">6%</td><td style="background:#e3f1e8">20%</td><td style="background:#e3f1e8" class=b>33%</td><td style="background:#c9e6d4">47%</td><td style="background:#c9e6d4">60%</td></tr><tr><th>RM45k</th><td style="background:#f6d4cf">&minus;5%</td><td style="background:#fbe9d4">7%</td><td style="background:#e3f1e8">18%</td><td style="background:#e3f1e8">30%</td><td style="background:#c9e6d4">42%</td></tr><tr><th>RM50k</th><td style="background:#f6d4cf">&minus;15%</td><td style="background:#f6d4cf">&minus;4%</td><td style="background:#fbe9d4">7%</td><td style="background:#e3f1e8">17%</td><td style="background:#e3f1e8">28%</td></tr></table></div><div class="src">Average return on capital over one 18-month crop, harsh disease and weather events. Base case outlined. My model; cost range from DOA guidance and published farm budgets.</div></div>
+
+<p><b>4. Cattle passes the risk test but only matches ASB.</b> With a guarantee it earns about 6% a year, because there is one korban season a year. It needs a second cycle, or a place inside a mixed pool.</p>
+<p><b>5. Tech is the best-looking case, with conditions.</b> With money released in stages and a 50% guarantee, a pool of 20 loses money only 9% of the time and earns about 18.5% a year over four years. A pool of 10 loses money 23% of the time, because only 36% of 10-project pools contain a 10&times; winner, against 59% of 20-project pools.</p>
+<p><b>6. The guarantor's tail is the real cost.</b> In a 1-in-100 year the guarantor loses about 12&ndash;20% of a farm pool and about 32% of a tech pool. That needs real capital, or someone behind the guarantor. Germany answers it with the state.</p>
+
+<h3>09 &middot; Germany up close</h3>
+<p>In 2025 Germany's guarantee banks backed 5,072 projects, with &euro;1.96 billion of loans and equity behind them. By volume, services took &euro;485m, craft trades &euro;445m, trade &euro;326m, industry &euro;286m and the liberal professions &euro;197m.</p>
+<p>Equity is more concentrated. At the Baden-W&uuml;rttemberg SME investment company (MBG), industry is almost half of the 540-stake equity book. In 2025 the region's guarantee bank wrote 136 guarantees covering &euro;34.8m on &euro;39.8m of equity stakes.</p>
+
+<div class="fig"><div class="t">Germany puts its guaranteed equity where firms fail less often</div><div class="g2"><div><div class="ht">MBG Baden-W&uuml;rttemberg equity book by sector, end-2025 (share of &euro;178m)</div><div class="hb">
+<div class="r"><span>Industry</span><div class="t">
+<i class="n5" style="left:0.00%;width:81.50%"></i>
+<b class="in w" style="left:calc(81.50% - 5px);transform:translateX(-100%)">48.9%</b>
+</div></div>
+<div class="r"><span>Services</span><div class="t">
+<i class="n5" style="left:0.00%;width:39.83%"></i>
+<b style="left:calc(39.83% + 5px)">23.9%</b>
+</div></div>
+<div class="r"><span>Trade</span><div class="t">
+<i class="n0" style="left:0.00%;width:26.17%"></i>
+<b style="left:calc(26.17% + 5px)">15.7%</b>
+</div></div>
+<div class="r"><span>Craft trades</span><div class="t">
+<i class="n0" style="left:0.00%;width:12.17%"></i>
+<b style="left:calc(12.17% + 5px)">7.3%</b>
+</div></div>
+<div class="r"><span>Hospitality</span><div class="t">
+<i class="nr" style="left:0.00%;width:5.00%"></i>
+<b style="left:calc(5.00% + 5px)">3.0%</b>
+</div></div>
+<div class="r"><span>Transport</span><div class="t">
+<i class="nr" style="left:0.00%;width:1.83%"></i>
+<b style="left:calc(1.83% + 5px)">1.1%</b>
+</div></div>
+</div></div><div><div class="ht">Business insolvencies per 10,000 firms, Germany 2025</div><div class="hb">
+<div class="r"><span>All sectors</span><div class="t">
+<i class="n0" style="left:0.00%;width:41.82%"></i>
+<b style="left:calc(41.82% + 5px)">69</b>
+</div></div>
+<div class="r"><span>Transport</span><div class="t">
+<i class="nr" style="left:0.00%;width:80.61%"></i>
+<b class="in" style="left:calc(80.61% - 5px);transform:translateX(-100%)">133</b>
+</div></div>
+<div class="r"><span>Hospitality</span><div class="t">
+<i class="nr" style="left:0.00%;width:65.45%"></i>
+<b class="in" style="left:calc(65.45% - 5px);transform:translateX(-100%)">108</b>
+</div></div>
+<div class="r"><span>Construction</span><div class="t">
+<i class="nr" style="left:0.00%;width:63.03%"></i>
+<b class="in" style="left:calc(63.03% - 5px);transform:translateX(-100%)">104</b>
+</div></div>
+</div></div></div><div class="src">Sources: MBG Baden-W&uuml;rttemberg annual report 2025 (540 stakes); Destatis, insolvencies by sector 2025.</div></div>
+
+<p>The two riskiest sectors, hospitality and transport, are only 3% and 1% of the equity book. Germany guarantees equity mostly where failure rates are lower, and rations it to the sectors that fail most. Craft trades run close to the national average, at 7.3 insolvencies per 1,000 firms against 7.2.</p>
+
+<div class="tbl"><div class="t">How often it goes wrong: the closest public figures to a win/loss rate</div><div class="tw">
+<table class="dt">
+<tr><th>Measure</th><th>Figure</th><th>Source</th></tr>
+<tr><td>Losses on all guarantees, Baden-W&uuml;rttemberg 2025</td><td>137 cases, &euro;12.8m, <b>0.6%</b> of the book</td><td>Annual report 2025</td></tr>
+<tr><td>Same, 2024</td><td>170 cases, &euro;14.9m, <b>0.8%</b></td><td>Board speech 2025</td></tr>
+<tr><td>Losses the bank plans for</td><td><b>2%</b> on loan guarantees, <b>5%</b> on equity guarantees</td><td>Same speech</td></tr>
+<tr><td>MBG write-downs on its equity book, 2025</td><td>&euro;6.0m, about 2.2% of the &euro;268m book (my calculation)</td><td>Annual report 2025</td></tr>
+<tr><td>MBG risk provisions held</td><td>&euro;18.7m, about 7% of the book (my calculation)</td><td>Same</td></tr>
+<tr><td>MBG losses in 2025 against target</td><td>Above the year before and above target (no figure given)</td><td>Same</td></tr>
+<tr><td>Older benchmark, 2011</td><td>Guarantee-bank default rates of 1.7&ndash;3.3%, against 1.77% for SME loans overall</td><td>Study of guarantee banks in eastern Germany</td></tr>
+</table></div>
+<div class="src">German guarantee banks do not publish losses by sector. Insolvency rates by sector are the best public proxy.</div></div>
+
+<h4>How the instrument is built</h4>
+<ul>
+<li>A silent stake that normally runs <b>10 years</b> (5 to 10 under some programmes) and is repaid at face value at the end.</li>
+<li>The firm pays a <b>fixed fee plus a profit share</b>. In Sachsen-Anhalt the profit share is usually 2% of the stake a year. The micro-mezzanine fund charges a fixed 11% a year, cut by a 3% subsidy.</li>
+<li>Owners give a <b>personal guarantee</b> for part of it, and pay a 1&ndash;2% handling fee.</li>
+<li>Guarantee banks cover up to <b>80%</b> of the risk. By the association's reckoning <b>the state carries about 52%</b> of it through counter-guarantees.</li>
+<li>Start-ups are handled separately: Baden-W&uuml;rttemberg runs its seed fund outside the MBG.</li>
+</ul>
+<p>So Germany's 5% loss plan is not a pure equity number. It comes from mezzanine: fixed income, a fixed end date, personal guarantees and the state behind the guarantor. Our kampung pools lose money far more often per cycle. To get near German loss rates, we would have to copy the structure, not only the guarantee.</p>
+
+<h3>10 &middot; Can Malaysia copy Germany? I ran it</h3>
+<p>I applied the German structure to the same four cases, on the same harsh odds.</p>
+<div class="tbl"><div class="t">The German-style deal, as I set it up</div><div class="tw">
+<table class="dt">
+<tr><th>Feature</th><th>Setting</th></tr>
+<tr><td>What is funded</td><td>A stake in the operator's <b>business for 3 years</b> (3 korban seasons, 6 chilli seasons, 2 pineapple crops; 4 years for tech), not a single cycle</td></tr>
+<tr><td>Investor return</td><td><b>Fixed 5% a year plus a 3% profit share</b> in profitable periods; stake repaid at face value at the end</td></tr>
+<tr><td>Owner</td><td>Puts in <b>20%</b> of the money and guarantees 20% of the stake personally (half of it assumed recoverable)</td></tr>
+<tr><td>Guarantor</td><td>Covers <b>70%</b> of what is still unpaid; fee 1.5% a year plus 1% handling, paid by the operator</td></tr>
+<tr><td>State</td><td><b>Counter-guarantees 65%</b> of the guarantor's losses, close to Germany's state share of about 52% of total risk</td></tr>
+<tr><td>Tech version</td><td>5% coupon plus 10% of value above the money invested, released in stages</td></tr>
+</table></div></div>
+
+<div class="tbl"><div class="t">Results on harsh odds, 40,000 simulated pools per case</div><div class="tw">
+<table class="dt">
+<tr><th>Case</th><th>Who is funded</th><th>Investor return a year</th><th>Pool loses money</th><th>Operators not repaying in full</th><th>Guarantor, average</th><th>State, average cost</th></tr>
+<tr><td rowspan="2"><b>Cattle</b></td><td>First-timers</td><td class="n">5.1%</td><td class="n">1%</td><td class="n">33%</td><td class="n">+1.7%</td><td class="n">4.0%</td></tr>
+<tr class="sub"><td>Established</td><td class="n"><b>6.6%</b></td><td class="n">0%</td><td class="n">8%</td><td class="n">+3.0%</td><td class="n">1.5%</td></tr>
+<tr><td rowspan="2"><b>Chilli</b></td><td>First-timers</td><td class="n">2.4%</td><td class="n">20%</td><td class="n">59%</td><td class="n">&minus;1.9%</td><td class="n">10.6%</td></tr>
+<tr class="sub"><td>Established</td><td class="n"><b>5.7%</b></td><td class="n">1%</td><td class="n">17%</td><td class="n">+2.4%</td><td class="n">2.7%</td></tr>
+<tr><td rowspan="2"><b>Pineapple</b></td><td>First-timers</td><td class="n">3.3%</td><td class="n">6%</td><td class="n">53%</td><td class="n">&minus;0.4%</td><td class="n">7.7%</td></tr>
+<tr class="sub"><td>Established</td><td class="n"><b>6.0%</b></td><td class="n">0%</td><td class="n">18%</td><td class="n">+2.5%</td><td class="n">2.5%</td></tr>
+<tr><td><b>AI builds (20)</b></td><td>Staged</td><td class="n">2.2%</td><td class="n">24%</td><td class="n">&mdash;</td><td class="n">&minus;5.2%</td><td class="n">13.3%</td></tr>
+</table></div>
+<div class="src">"Established" means operators with a track record (planned odds, 3% fraud) who keep half of each profit in the business as a reserve. Guarantor and state figures are a share of pool capital. All are my assumptions and my model.</div></div>
+
+<div class="fig"><div class="t">Copying Germany works for established operators, not for first-timers or tech</div><div class="hb">
+<div class="g">Korban cattle</div>
+<div class="r"><span>Profit-share pool, 50% guarantee</span><div class="t">
+<i class="n0" style="left:3.45%;width:20.67%"></i>
+<b style="left:calc(24.12% + 5px)">6.0% <em>&middot; pool loses 27%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>German-style, first-timers</span><div class="t">
+<i class="n4" style="left:3.45%;width:17.59%"></i>
+<b style="left:calc(21.03% + 5px)">5.1% <em>&middot; pool loses 1%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>German-style, established</span><div class="t">
+<i class="n5" style="left:3.45%;width:22.66%"></i>
+<b style="left:calc(26.11% + 5px)">6.6% <em>&middot; pool loses 0%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="g">Chilli</div>
+<div class="r"><span>Profit-share pool, 50% guarantee</span><div class="t">
+<i class="n0" style="left:3.45%;width:59.09%"></i>
+<b class="in" style="left:calc(62.53% - 5px);transform:translateX(-100%)">17.1% <em>&middot; pool loses 35%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>German-style, first-timers</span><div class="t">
+<i class="n4" style="left:3.45%;width:8.37%"></i>
+<b style="left:calc(11.82% + 5px)">2.4% <em>&middot; pool loses 20%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>German-style, established</span><div class="t">
+<i class="n5" style="left:3.45%;width:19.63%"></i>
+<b style="left:calc(23.08% + 5px)">5.7% <em>&middot; pool loses 1%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="g">Pineapple</div>
+<div class="r"><span>Profit-share pool, 50% guarantee</span><div class="t">
+<i class="n0" style="left:2.62%;width:0.83%"></i>
+<b style="left:calc(3.45% + 5px)">&minus;0.2% <em>&middot; pool loses 53%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>German-style, first-timers</span><div class="t">
+<i class="n4" style="left:3.45%;width:11.50%"></i>
+<b style="left:calc(14.95% + 5px)">3.3% <em>&middot; pool loses 6%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>German-style, established</span><div class="t">
+<i class="n5" style="left:3.45%;width:20.66%"></i>
+<b style="left:calc(24.11% + 5px)">6.0% <em>&middot; pool loses 0%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="g">AI builds (20)</div>
+<div class="r"><span>Profit-share pool, 50% guarantee</span><div class="t">
+<i class="n0" style="left:3.45%;width:63.79%"></i>
+<b class="in" style="left:calc(67.24% - 5px);transform:translateX(-100%)">18.5% <em>&middot; pool loses 9%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>German-style, first-timers</span><div class="t">
+<i class="n4" style="left:3.45%;width:7.72%"></i>
+<b style="left:calc(11.17% + 5px)">2.2% <em>&middot; pool loses 24%</em></b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="r"><span>German-style, established</span><div class="t">
+<b style="left:4.4%">n/a</b>
+<s class="z" style="left:3.45%"></s>
+<s class="ref" style="left:23.28%"></s>
+</div></div>
+<div class="reflab"><s></s>ASB 2025 payout, 5.75 sen</div>
+</div><div class="src">Investor return a year on harsh odds. Small note: chance the pool loses money. "Established" = operators with a track record who keep half of each profit as a reserve (my assumption). n/a: not modelled. My Monte Carlo, 40,000&ndash;50,000 pools per case.</div></div>
+
+<p><b>For established operators, it works.</b> Investors earn about 6&ndash;6.6% a year, around or above ASB, and a pool almost never loses money. The state's average cost falls to 1.5&ndash;2.7% of the pool. Even with no state counter-guarantee the guarantor roughly breaks even, though a 1-in-100 year still costs it 10&ndash;21% of the pool.</p>
+<p><b>For first-timers, it turns into a hidden loan and a hidden subsidy.</b> The fixed 5% is owed whatever the harvest. A third to more than half of first-time operators cannot repay in full, and they lose their personal guarantee too. The state pays 4&ndash;11% of the pool on average. That is social finance by another name, and it is better done openly as social finance.</p>
+<p><b>Germany's real lever is who it funds.</b> Its equity goes mostly to industry and services firms that already trade. Selection does more work than the guarantee. Without any guarantee, the German structure on its own leaves investors at &minus;3% to +3% a year, and the pool loses money 17&ndash;59% of the time.</p>
+<p><b>For tech, the German tool is the wrong tool.</b> A fixed coupon plus a small kicker caps the upside that pays for the failures. Investors earn about 2% a year and the state carries about 13% of the pool. Germany itself runs start-up money through separate seed funds.</p>
+
+<h3>11 &middot; Conclusion: guarantee the way out, not the equity</h3>
+<p>I started this piece agreeing with the finance veteran. After 50,000 simulated pools I still agree with him on the core point. A guarantee on pure equity loses money for whoever gives it, unless the upside is very large. On harsh odds the farm pools lost money between a quarter and half of the time, with or without a guarantee. Germany does not prove him wrong either. What Germany guarantees is closer to a loan with a profit share than to equity.</p>
+<p>But the real question was never only about equity. It is about how a small operator gets out of the low-income cycle, and who carries the risk on the way. Equity cannot be guaranteed. That path can.</p>
+
+<div class="ladder">
+ <div class="rung"><div class="h" style="background:#16794a"><small>Rung 3 &middot; risk capital</small>Capped high-tech pilot</div><div class="b"><b>Who:</b> AI and software builds with a large upside. <b>How:</b> pool of 20 or more, money in stages, 50% guarantee, guarantor shares the gains, co-invested with venture funds and MyCIF.<span class="k">Model: loses money 9% of the time, about 18.5% a year. Guarantor must hold capital for a 1-in-100 loss of about a third of the pool.</span></div></div>
+ <div class="arrow">&uarr; only where the upside pays for the failures</div>
+ <div class="rung"><div class="h" style="background:#0b5cad"><small>Rung 2 &middot; credit</small>PMKS mezzanine, the German way</div><div class="b"><b>Who:</b> operators with at least two good cycles. <b>How:</b> 3&ndash;5 year stake, fixed pay plus profit share, owner's own money and personal guarantee, 70% guarantee with a state counter-guarantee.<span class="k">Model: about 6% a year, the pool almost never loses money, state cost 1.5&ndash;2.7% of the pool. Fixed leg needs a proper Shariah structure.</span></div></div>
+ <div class="arrow">&uarr; graduate after two good cycles</div>
+ <div class="rung"><div class="h" style="background:#b54708"><small>Rung 1 &middot; social finance</small>First-timers and the underserved</div><div class="b"><b>Who:</b> a first-timer with five cattle or one acre of chilli. <b>How:</b> zakat, waqf or CSR money takes the first loss, a guarantee stretches it, iTEKAD-style training and checks.<span class="k">Model: the subsidy is real, about 4&ndash;11% of the pool. Better to show it openly than hide it inside "equity".</span></div></div>
+</div>
+<div class="flow-cap">The ladder: what to guarantee at each stage of an operator's life (my proposal)</div>
+
+<p><b>Rung one is social finance.</b> A first-timer with five cattle or one acre of chilli is not an investment case on harsh odds. The honest tool is zakat, waqf or CSR money that expects to lose some of what it gives, with a guarantee to stretch each ringgit. Calling it equity hides the subsidy. Calling it social finance puts it on the table, where it can be measured.</p>
+<p><b>Rung two is mezzanine, the German way.</b> Once an operator has two good cycles behind them, a 3- to 5-year stake with fixed pay plus a profit share, their own money in, a personal guarantee and the state behind the guarantor gives investors about 6% a year. In my runs it almost never loses money. That is debt-like, and I am comfortable with that. The fixed part needs its own Shariah-compliant leg.</p>
+<p><b>Rung three is a small, capped high-tech pilot.</b> This is the only place where a guarantee on true risk capital paid its way. With money in stages and a pool of 20, a 50% guarantee cut the chance of a pool loss from 17% to 9% and still left about 18.5% a year. It should be co-invested with existing venture funds and MyCIF, not run alone. The guarantor must share the upside and hold capital for a bad year.</p>
+<p>What I would not do is repeat the Business Recapitalisation Facility: one large equity fund pushed through banks, open to all, with no end date and no ladder to climb.</p>
+<p>Charity goes where loss is expected, credit where cash flow exists, and risk capital where the upside is large.</p>
+
+<div class="box trap span"><span class="lbl">The case against, in its strongest form</span>
+<ul>
+<li><b>The odds are mine.</b> Disease, fraud and failure rates are working assumptions. A different set could move every result in this piece.</li>
+<li><b>Annualising misleads.</b> A korban cycle comes once a year. One good season multiplied by three that do not exist is not an annual return.</li>
+<li><b>Fraud and moral hazard.</b> Small tickets, far from town, hard to check. A guarantee can make investors stop asking questions.</li>
+<li><b>Due diligence is costly</b> against a RM20,000 to RM40,000 ticket. The platform may not earn enough to check properly.</li>
+<li><b>Shariah structure.</b> A guaranteed return breaks a mudarabah. A capital guarantee must come from an independent third party, and a fee-based guarantee needs a Shariah adviser's ruling. The fixed leg of rung two needs the same care.</li>
+<li><b>The state's bill.</b> Rung two works partly because the state carries part of the risk. That is a real cost and must be budgeted, not assumed away.</li>
+<li><b>Adverse selection.</b> The weakest projects will seek the guarantee first. Graduation rules must be strict.</li>
+</ul></div>
+
+<h3>12 &middot; Hard questions</h3>
+<div class="qs">
+ <div class="qc"><small>For BNM</small>Will the lessons of the BRF be published before the next SME fund is designed, so the same mistake is not repeated?</div>
+ <div class="qc"><small>For the SC</small>Can a single campaign offer a pool of 10 or 20 projects, with one guarantee over the pool and an offtake built in?</div>
+ <div class="qc"><small>For guarantee agencies</small>Is a guarantee on a 3- to 5-year mezzanine stake within your mandate, and who stands behind you in a 1-in-100 year?</div>
+ <div class="qc"><small>For zakat and waqf bodies</small>Would you place a first-loss layer under a guarantee if it lets the same fund support more asnaf, and graduate some of them out?</div>
+ <div class="qc"><small>For platforms</small>Can you check a cattle project in Pasir Mas as well as a software build in Bangsar, at a cost that makes sense?</div>
+ <div class="qc"><small>For Shariah advisers</small>Which structure lets a third party guarantee capital, earn a fee and share in profit, and gives investors a fixed leg, without breaking the contract?</div>
+</div>
+
+<h3>13 &middot; A practical plan</h3>
+<div class="props">
+ <div class="prop"><div class="n">1</div><div><b>Rung one first.</b> Pilot a guarantee under an iTEKAD-style programme, with zakat or CSR money taking the first loss, and a written rule for graduation after two good cycles.<span class="m">Measure: entrepreneurs funded per ringgit of social money, and how many graduate.</span></div></div>
+ <div class="prop"><div class="n">2</div><div><b>Remove shared risk before guaranteeing.</b> Offtake prices for chilli, fixed-cost contracts for pineapple, vaccination and takaful for cattle.<span class="m">Measure: the 1-in-20 pool loss, before and after.</span></div></div>
+ <div class="prop"><div class="n">3</div><div><b>A rung-two mezzanine pilot</b> for operators with two good cycles: 3&ndash;5 years, fixed plus profit share, owner's money and personal guarantee, 70% guarantee with a state counter-guarantee. Shariah structure settled first.<span class="m">Measure: investor return against ASB, repayment rate, state cost.</span></div></div>
+ <div class="prop"><div class="n">4</div><div><b>A capped rung-three tech pilot:</b> pool of 20 or more, money in stages, co-invested with existing venture funds and MyCIF, guarantor sharing the gains.<span class="m">Measure: pool loss rate, and the guarantor's worst year against the capital set aside.</span></div></div>
+ <div class="prop"><div class="n">5</div><div><b>Replace my odds with real data,</b> then review after two cycles and publish the result, good or bad.<span class="m">Measure: a public one-page result.</span></div></div>
+</div>
+
+<div class="box call span"><span class="lbl">What I am asking for</span>
+<p><b>To Bank Negara and the Securities Commission:</b> within 2027, publish what the BRF taught us, and agree a sandbox for the ladder: one social-finance pool, one mezzanine pool and one tech pool on an Islamic platform. Give it two cycles before judging it.</p>
+<div class="tw"><table class="asks">
+ <tr><th>Guarantee agencies</th><td>Write a term sheet for a partial guarantee on a 3- to 5-year mezzanine stake, with a share of upside and a named counter-guarantor.</td></tr>
+ <tr><th>Zakat and waqf bodies</th><td>Set aside a small first-loss pool for one pilot, with graduation targets.</td></tr>
+ <tr><th>Platforms</th><td>Build a low-cost check for rural projects, and pay sale proceeds into the platform, not by hand.</td></tr>
+ <tr><th>Shariah advisers</th><td>Rule on the fixed leg and the guarantor's fee before the pilot, not after.</td></tr>
+ <tr><th>Investors</th><td>Read the loss order before the return. Ask how often the pool loses, not only the average.</td></tr>
+</table></div></div>
+
+<div class="box watch span"><span class="lbl">Check yourself</span>
+<ul>
+<li>Is what I am guaranteeing equity, or a stake with an end date?</li>
+<li>Who loses first, and is that written down?</li>
+<li>Does my guarantee cut how often the pool loses, or only how much?</li>
+<li>Which risk do all the projects share, and who has taken it off the table?</li>
+<li>Is this operator a first-timer or a graduate, and is the product the right rung?</li>
+</ul></div>
+
+<div class="box take span"><span class="lbl">My take</span>
+<p>I went into this hoping to show the veteran was too strict. The numbers mostly sided with him. A guarantee does not turn a risky project into a safe investment; it only moves the loss to someone else. What it can do is carry a person from one rung to the next: from social money, to a stake with an end date, and for the few with real upside, to risk capital. That is a narrower job than the BRF set out to do, and a more honest one.</p></div>
+
+<div class="box over span"><span class="lbl">Over to you</span>
+<p>Which rung would you put your own money into, and what would you need to see first?</p></div>
+</div>
+
+<div class="foot">
+<details><summary>Sources</summary>
+<ol>
+<li>Bank Negara Malaysia, "Establishment of New Financing Facilities by Bank Negara Malaysia" (BRF and LCTF), 21 January 2022.</li>
+<li>Skrine, "Bank Negara launches Business Recapitalisation Facility for SMEs", January 2022.</li>
+<li>Bank Negara Malaysia, MSME assistance under Belanjawan 2024, 21 October 2023, table of BNM Fund for SMEs.</li>
+<li>Bank Negara Malaysia, Annual Report 2023 press conference slides, March 2024.</li>
+<li>Credit Guarantee Corporation Malaysia, BizJamin/-i Business Recapitalisation Facility Scheme page.</li>
+<li>The Star, "BNM to revamp its fund for SMEs deployment", 13 June 2024.</li>
+<li>Financial Services Act 2013 (Act 758), sections 14 and 85.</li>
+<li>Bank Negara Malaysia, Capital Adequacy Framework (Basel II &ndash; Risk-Weighted Assets), 18 December 2023.</li>
+<li>Bank Negara Malaysia, Financial Stability Review 2H2024, Box 2, revisions under Basel III.</li>
+<li>OSFI, Capital Adequacy Requirements 2026, Chapter 4 (Basel III equity risk weights).</li>
+<li>Securities Commission Malaysia, Annual Report 2024, ECF and P2P chapter; Fintech News Malaysia on the SC Annual Report 2025.</li>
+<li>Securities Commission Malaysia, MyCIF page (figures to Q4 2025) and media release of 21 July 2025.</li>
+<li>Bank Negara Malaysia, iTEKAD pages (figures to end-2025 and end-March 2026); World Bank, "iTEKAD: Making Inroads into Social Finance", June 2025.</li>
+<li>Bank Negara Malaysia, Overnight Policy Rate statements, 2025&ndash;2026; PNB, ASB distribution for 2025; EPF, dividend for 2025.</li>
+<li>Department of Veterinary Services (DVS) advisories on buying and weighing korban cattle; news reports on the suspension of Thai cattle imports over lumpy skin disease.</li>
+<li>Korban cattle prices in Melaka and Negeri Sembilan, 2025 (Sinar Harian, Utusan Malaysia, Berita Harian); reports on dedak prices and on haemorrhagic septicaemia in Kuala Terengganu, 2025; reports on smuggled cattle, May 2026.</li>
+<li>Chilli: published per-acre budgets and yield guides; reports on FAMA intervention in Penang, May 2026.</li>
+<li>Pineapple: Department of Agriculture (DOA) MD2 cost guidance; LPNM materials; published farm budgets; FGV report on rain delaying its pineapple harvest.</li>
+<li>Verband Deutscher B&uuml;rgschaftsbanken, 2025 results and association profile.</li>
+<li>B&uuml;rgschaftsbank Baden-W&uuml;rttemberg and MBG Baden-W&uuml;rttemberg, annual report and factsheet 2025, and board speech 2025.</li>
+<li>Destatis, business insolvencies by economic sector, 2025; ZDH, insolvencies in the craft trades.</li>
+<li>Study of guarantee banks in eastern Germany, 2011 (default rates); MBG Sachsen-Anhalt and Mikromezzaninfonds Deutschland programme terms; AECM presentation by Guy Selbherr, September 2021.</li>
+<li>Monte Carlo and German-structure models: my own, written in Python. Assumptions are listed in sections 06, 07 and 10.</li>
+</ol></details>
+
+<div class="disc"><b>Disclaimer.</b> The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from publicly available sources listed above, and any errors are mine. Nothing here is financial, investment or legal advice. Research and drafting were assisted by AI tools. All facts were checked against the sources listed.</div>
+
+<div class="bio"><div class="av">AT</div><div><b>Azman Taufik</b> writes on MSME financing, AI automation for small businesses, and long-term policy for Malaysia.</div></div>
+<div class="endcta"><a class="cta" data-cta href="#">Comment on LinkedIn</a></div>
+</div>
+</article>
+
 
 
 <div class="copy">&copy; 2026 Azman Taufik</div>
