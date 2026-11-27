@@ -614,7 +614,10 @@ function setLang(l){
     if (LINKEDIN_POST_URL) a[i].href = LINKEDIN_POST_URL;
     else a[i].style.display = "none";
   }
-  if (location.hash === "#en") setLang("en"); else if (location.hash === "#bm") setLang("bm");
+  var q = (location.search.match(/[?&]lang=(en|bm)/) || [])[1];
+  var h = location.hash.slice(1);
+  var l = q || h;
+  if (l === "en" || l === "bm") setLang(l);
 })();
 </script>
 </body>
