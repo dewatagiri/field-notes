@@ -1,347 +1,1298 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ms">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Amanah Hartanah Bumiputera: A Rare Door, Read the Fine Print</title>
-<style>
-:root{
-  color-scheme: light;
-  --ink:#1b2a3a; --muted:#5a6b7b; --line:#dfe6ec; --bg:#ffffff;
-  --green:#2f8f6b; --green-t:#e8f5ef; --pink:#d9667a; --pink-t:#fcebee;
-  --blue:#5b8bc7; --blue-t:#eaf1fa; --sand:#f4efe3; --sand-ink:#6b5a2b;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-.wrap{max-width:760px;margin:0 auto;padding:20px 18px 60px}
-.topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-.lang button,.cta{font:inherit;font-size:14px;border:1px solid var(--line);background:#fff;color:var(--ink);padding:7px 14px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-block}
-.lang button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-.cta{background:var(--blue-t);border-color:var(--blue);color:#24508a;font-weight:600}
-h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,6.2vw,44px);line-height:1.12;margin:6px 0 10px;font-weight:700;letter-spacing:-.01em}
-.sub{color:var(--muted);font-size:17px;margin:0 0 6px}
-.by{color:var(--muted);font-size:14px;margin-bottom:22px}
-h2{font-family:Georgia,"Times New Roman",serif;font-size:24px;margin:34px 0 10px;line-height:1.25}
-p{margin:0 0 12px}
-.box{border-radius:12px;padding:16px 18px;margin:16px 0;border-left:5px solid var(--green);background:var(--green-t)}
-.box.pink{border-color:var(--pink);background:var(--pink-t)}
-.box.blue{border-color:var(--blue);background:var(--blue-t)}
-.box.sand{border-color:#c9b36b;background:var(--sand)}
-.box h3{margin:0 0 6px;font-size:17px}
-.box ul{margin:6px 0 0;padding-left:20px}
-.box li{margin:4px 0}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
-.stat{border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-.stat b{display:block;font-size:26px;font-family:Georgia,serif;line-height:1.1}
-.stat span{font-size:13px;color:var(--muted)}
-.chart{border:1px solid var(--line);border-radius:12px;padding:12px;margin:14px 0}
-.chart .scroll{overflow-x:auto}
-.chart h3{margin:2px 0 8px;font-size:16px}
-.cap{font-size:13px;color:var(--muted);margin-top:6px}
-.bars{display:flex;align-items:flex-end;gap:14px;height:230px;padding:10px 6px 0}
-.bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;font-size:13px;text-align:center}
-.bar i{display:block;width:100%;border-radius:8px 8px 0 0}
-.bar b{font-size:14px;margin-bottom:4px}
-.hrow{display:grid;grid-template-columns:96px 1fr 44px;gap:8px;align-items:center;margin:7px 0;font-size:14px}
-.hrow div.t{background:#eef2f5;border-radius:6px;height:20px}
-.hrow div.t i{display:block;height:100%;border-radius:6px}
-table{border-collapse:collapse;width:100%;font-size:14px}
-td,th{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-.small{font-size:13px;color:var(--muted)}
-.foot{border-top:1px solid var(--line);margin-top:34px;padding-top:16px}
-body:not(.en) .en{display:none}
-body.en .bm{display:none}
-a{color:#24508a}
-@media (max-width:520px){.hrow{grid-template-columns:78px 1fr 40px}.bars{gap:8px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Field Notes | Pembaris Yang Mengecut: Penurunan Nilai Ringgit & Harga Rumah Malaysia</title>
+  <meta name="description" content="Audit data terbuka Bank Negara Malaysia (1976–2026), harga emas Kijang Emas, pendapatan isi rumah DOSM, mekanik pembiayaan semula SBR/OPR dan Indeks Harga Rumah Malaysia (MHPI) NAPIC sehingga Q3 2026P.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --ink: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --navy: #0f294a;
+      --blue: #0b5ed7;
+      --blue-soft: #eff6ff;
+      --amber: #92400e;
+      --amber-soft: #fef3c7;
+      --crimson: #991b1b;
+      --crimson-soft: #fee2e2;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --serif: Georgia, Cambria, "Times New Roman", Times, serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.72;
+      font-size: 16.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .topbar {
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+    }
+
+    .topbar-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-mark {
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      gap: 0.35rem;
+    }
+
+    .lang-switch button {
+      appearance: none;
+      border: 1px solid var(--blue);
+      background: #ffffff;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.32rem 0.7rem;
+      border-radius: 3px;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--blue);
+      color: #ffffff;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2.25rem 1.25rem 3.5rem;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.65rem;
+    }
+
+    h1 {
+      font-size: clamp(1.95rem, 4.4vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.14;
+      letter-spacing: -0.025em;
+      color: var(--navy);
+      margin: 0 0 1rem;
+    }
+
+    .deck {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      line-height: 1.55;
+      color: #334155;
+      margin: 0 0 1.5rem;
+    }
+
+    .byline-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.85rem;
+      padding-bottom: 1.25rem;
+      margin-bottom: 2rem;
+      border-bottom: 3px solid var(--navy);
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .byline-row strong {
+      color: var(--ink);
+    }
+
+    .linkedin-btn {
+      display: inline-block;
+      background: var(--blue);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.5rem 0.95rem;
+      border-radius: 4px;
+    }
+
+    .linkedin-btn:hover {
+      background: #094db1;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.28rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin: 0 0 0.8rem;
+      padding-top: 0.65rem;
+      border-top: 1px solid var(--border);
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 1.25rem 0 0.45rem;
+    }
+
+    p { margin: 0 0 1rem; }
+
+    blockquote.thesis {
+      margin: 1.25rem 0;
+      padding: 1rem 1.2rem;
+      background: var(--blue-soft);
+      border-left: 4px solid var(--blue);
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    ul, ol {
+      margin: 0 0 1.1rem;
+      padding-left: 1.35rem;
+    }
+
+    li { margin-bottom: 0.5rem; }
+
+    .badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      letter-spacing: 0.03em;
+    }
+
+    .b-fact { background: var(--blue-soft); color: var(--blue); }
+    .b-est { background: var(--amber-soft); color: var(--amber); }
+
+    .visual-box {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      border-radius: 6px;
+      padding: 1.1rem;
+      margin: 1.4rem 0;
+    }
+
+    .visual-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .visual-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .visual-note {
+      font-size: 0.83rem;
+      color: #334155;
+      margin-top: 0.75rem;
+      padding-top: 0.6rem;
+      border-top: 1px dashed var(--border);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.87rem;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 0.68rem 0.8rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .regime-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+
+    .regime-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem 1.1rem;
+      background: var(--surface);
+    }
+
+    .regime-card.old { border-top: 3px solid #64748b; }
+    .regime-card.now { border-top: 3px solid var(--blue); }
+
+    .regime-card h3 { margin-top: 0; }
+
+    .callout-box {
+      background: var(--amber-soft);
+      border-left: 4px solid var(--amber);
+      padding: 1rem 1.2rem;
+      border-radius: 0 6px 6px 0;
+      margin: 1.25rem 0;
+      font-size: 0.92rem;
+      color: #451a03;
+    }
+
+    details.sources-box {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.85rem 1.1rem;
+      margin: 2rem 0 1.5rem;
+      background: #ffffff;
+    }
+
+    details.sources-box summary {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    details.sources-box ul {
+      margin-top: 0.85rem;
+      margin-bottom: 0.25rem;
+      font-size: 0.86rem;
+      color: #334155;
+    }
+
+    .author-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.35rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.25rem;
+    }
+
+    .monogram {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      border-radius: 50%;
+      background: #0b2239;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.03em;
+    }
+
+    .author-info h4 {
+      margin: 0 0 0.25rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .author-info p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    .disclaimer-block {
+      font-size: 0.83rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .disclaimer-block p {
+      margin: 0 0 0.85rem;
+    }
+
+    a { color: var(--blue); }
+
+    @media print {
+      .lang-switch, .linkedin-btn { display: none; }
+      [data-lang] { display: block !important; }
+    }
+  </style>
 </head>
 <body>
-<div class="wrap">
 
 <div class="topbar">
-  <div class="lang"><button id="bEn" type="button">English</button> <button id="bBm" class="on" type="button">Bahasa Malaysia</button></div>
-  <a class="cta" href="https://lnkd.in/p/gA_w7F_U" target="_blank" rel="noopener" id="ctaTop">Comment on LinkedIn</a>
-</div>
-
-<h1><span class="en">Amanah Hartanah Bumiputera: A Rare Door, Read the Fine Print</span><span class="bm">Amanah Hartanah Bumiputera: Pintu yang Jarang Ada, Baca Dulu Sebelum Masuk</span></h1>
-<p class="sub"><span class="en">What AHB pays, what stands behind it, and what RM300 a month could become in 10 years.</span><span class="bm">Apa yang AHB bayar, apa yang menyokongnya, dan apa jadi kepada RM300 sebulan selepas 10 tahun.</span></p>
-<div class="by"><span class="en">By Azman Taufik · November 2026 · Personal research note</span><span class="bm">Oleh Azman Taufik · November 2026 · Nota kajian peribadi</span></div>
-<p class="en">I attended a Pelaburan Hartanah Berhad (PHB) event today and heard how Amanah Hartanah Bumiputera works. Credit to PHB for opening a door to property ownership for Bumiputera savers. It made me curious, so I checked the numbers and set AHB beside REITs, EPF, ASB, Tabung Haji and fixed deposits.</p>
-<p class="bm">Hari ini saya berpeluang menghadiri satu majlis Pelaburan Hartanah Berhad (PHB) dan mendengar cara Amanah Hartanah Bumiputera berfungsi. Syabas kepada PHB kerana membuka pintu pemilikan hartanah kepada penabung Bumiputera. Ia buat saya ingin tahu, jadi saya semak angka dan letakkan AHB bersebelahan REIT, KWSP, ASB, Tabung Haji dan simpanan tetap.</p>
-
-<div class="box">
-  <h3><span class="en">The answer first</span><span class="bm">Jawapan dahulu</span></h3>
-  <ul class="en">
-    <li>AHB paid <b>5.00 sen per unit for FY2026</b>, the fifth year in a row at that level. Net of tax and zakat.</li>
-    <li>RM300 a month for 10 years (RM36,000 in) grows to about <b>RM46,000</b> at 5%, or about <b>RM44,000</b> without the sponsor bonus.</li>
-    <li>It is regulated as a unit trust, not a REIT. That means a fixed RM1 price, no capital gain, and a sponsor behind the income.</li>
-    <li>It is not a free lunch. Payouts are lower than 2012–2018, and part of the 5 sen is sponsor-funded.</li>
-    <li>Against the field: about double a fixed deposit, below EPF and ASB, and a similar yield to Axis REIT but with no price swings and no growth.</li>
-  </ul>
-  <ul class="bm">
-    <li>AHB agih <b>5.00 sen seunit bagi FY2026</b>, tahun kelima berturut-turut pada kadar ini. Bersih cukai dan zakat.</li>
-    <li>RM300 sebulan selama 10 tahun (RM36,000 modal) menjadi lebih kurang <b>RM46,000</b> pada 5%, atau lebih kurang <b>RM44,000</b> tanpa bonus penaja.</li>
-    <li>Ia dikawal selia sebagai unit amanah, bukan REIT. Maksudnya harga tetap RM1, tiada keuntungan modal, dan ada penaja di belakang pendapatan.</li>
-    <li>Bukan makan percuma. Agihan lebih rendah berbanding 2012–2018, dan sebahagian daripada 5 sen itu dibiayai penaja.</li>
-    <li>Berbanding yang lain: kira-kira dua kali ganda simpanan tetap, di bawah KWSP dan ASB, dan hasil setara Axis REIT tetapi tanpa turun naik harga dan tanpa pertumbuhan.</li>
-  </ul>
-</div>
-
-<div class="stats">
-  <div class="stat"><b>5.00 sen</b><span><span class="en">FY2026 distribution per unit</span><span class="bm">Agihan FY2026 seunit</span></span></div>
-  <div class="stat"><b>RM2.5bn</b><span><span class="en">Paid out since 2010 (Apr 2026)</span><span class="bm">Telah diagih sejak 2010 (Apr 2026)</span></span></div>
-  <div class="stat"><b>~82,000</b><span><span class="en">Unitholders (Oct 2026)</span><span class="bm">Pemegang unit (Okt 2026)</span></span></div>
-  <div class="stat"><b>RM100</b><span><span class="en">Minimum, RM1m maximum</span><span class="bm">Minimum, maksimum RM1 juta</span></span></div>
-</div>
-
-<h2><span class="en">1. AHB is not a REIT: same regulator, different deal</span><span class="bm">1. AHB bukan REIT: pengawal selia sama, perjanjian berbeza</span></h2>
-<div class="box sand">
-  <p class="en">Both sit under the Capital Markets and Services Act 2007 and the Securities Commission. The difference is the rulebook. AHB is an <b>unlisted unit trust</b> under the SC’s Guidelines on Unit Trust Funds, with a registered prospectus. A listed REIT follows the SC’s Guidelines on Listed REITs plus Bursa’s listing rules. So a REIT unit trades at a market price that moves daily. An AHB unit is bought and sold at a fixed RM1 and the fund does not share in property capital gains. In return, the unitholder gets a steadier ride, with the sponsor (PHB) leasing back the properties and topping up income.</p>
-  <p class="bm">Kedua-duanya berada di bawah Akta Pasaran Modal dan Perkhidmatan 2007 dan Suruhanjaya Sekuriti. Bezanya buku peraturan. AHB ialah <b>unit amanah tidak tersenarai</b> di bawah Garis Panduan Dana Unit Amanah SC, dengan prospektus berdaftar. REIT tersenarai mengikut Garis Panduan REIT Tersenarai SC serta peraturan penyenaraian Bursa. Jadi unit REIT didagangkan pada harga pasaran yang bergerak setiap hari. Unit AHB dibeli dan dijual pada RM1 tetap dan dana tidak menikmati keuntungan modal hartanah. Sebagai ganti, pemegang unit mendapat perjalanan yang lebih stabil, dengan penaja (PHB) menyewa balik hartanah dan menokok pendapatan.</p>
-</div>
-<div class="scroll" style="overflow-x:auto">
-<table>
-  <tr><th></th><th>AHB (<span class="en">unit trust</span><span class="bm">unit amanah</span>)</th><th><span class="en">Listed REIT</span><span class="bm">REIT tersenarai</span></th></tr>
-  <tr><td><b><span class="en">Rules</span><span class="bm">Peraturan</span></b></td><td>CMSA 2007 + SC Guidelines on Unit Trust Funds</td><td>CMSA 2007 + SC Guidelines on Listed REITs + Bursa listing rules</td></tr>
-  <tr><td><b><span class="en">Price</span><span class="bm">Harga</span></b></td><td><span class="en">Fixed at RM1</span><span class="bm">Tetap RM1</span></td><td><span class="en">Market price on Bursa</span><span class="bm">Harga pasaran di Bursa</span></td></tr>
-  <tr><td><b><span class="en">Who can buy</span><span class="bm">Siapa boleh beli</span></b></td><td><span class="en">Bumiputera only, RM100 to RM1m</span><span class="bm">Bumiputera sahaja, RM100 hingga RM1 juta</span></td><td><span class="en">Anyone, through a stockbroker</span><span class="bm">Sesiapa, melalui broker saham</span></td></tr>
-  <tr><td><b><span class="en">Capital gain</span><span class="bm">Keuntungan modal</span></b></td><td><span class="en">None. Income only</span><span class="bm">Tiada. Pendapatan sahaja</span></td><td><span class="en">Possible, and losses too</span><span class="bm">Boleh ada, begitu juga kerugian</span></td></tr>
-  <tr><td><b><span class="en">Income support</span><span class="bm">Sokongan pendapatan</span></b></td><td><span class="en">Sponsor lease-back and bonus. Not a capital guarantee</span><span class="bm">Sewa balik penaja dan bonus. Bukan jaminan modal</span></td><td><span class="en">Rental from tenants. No sponsor top-up</span><span class="bm">Sewa daripada penyewa. Tiada tokokan penaja</span></td></tr>
-  <tr><td><b><span class="en">Payout rule</span><span class="bm">Peraturan agihan</span></b></td><td><span class="en">Twice a year, net of tax and zakat</span><span class="bm">Dua kali setahun, bersih cukai dan zakat</span></td><td><span class="en">Tax-exempt at fund level if at least 90% of income is paid out</span><span class="bm">Bebas cukai di peringkat dana jika sekurang-kurangnya 90% pendapatan diagihkan</span></td></tr>
-  <tr><td><b><span class="en">Borrowing</span><span class="bm">Pinjaman</span></b></td><td><span class="en">Property held through sale and lease-back, not geared by the fund</span><span class="bm">Hartanah dipegang melalui jual dan sewa balik, dana tidak berhutang</span></td><td><span class="en">Gearing capped at 50% of assets (60% was allowed temporarily to 2022)</span><span class="bm">Had hutang 50% aset (60% dibenarkan sementara hingga 2022)</span></td></tr>
-</table>
-</div>
-<div class="box">
-  <h3><span class="en">Strengths of each</span><span class="bm">Kekuatan masing-masing</span></h3>
-  <p class="en"><b>AHB:</b> stable price, steady income, low entry at RM100, access built for Bumiputera. <b>REIT:</b> open market pricing, can be sold any trading day, and rents and asset values can grow. The trade-off is simple: AHB gives calm, a REIT gives upside and swings.</p>
-  <p class="bm"><b>AHB:</b> harga stabil, pendapatan tetap, modal permulaan rendah RM100, akses dibina untuk Bumiputera. <b>REIT:</b> harga pasaran terbuka, boleh dijual pada hari dagangan, sewa dan nilai aset boleh meningkat. Pertukarannya mudah: AHB memberi ketenangan, REIT memberi potensi naik dan turun.</p>
-  <p class="small en">The “not geared” point is my reading of the lease-back structure; check the prospectus before quoting it.</p>
-  <p class="small bm">Perkara “tidak berhutang” ialah bacaan saya terhadap struktur sewa balik; semak prospektus sebelum memetiknya.</p>
-</div>
-
-<h2><span class="en">2. The wider field: REITs, EPF, ASB, Tabung Haji and fixed deposits</span><span class="bm">2. Gambaran lebih luas: REIT, KWSP, ASB, Tabung Haji dan simpanan tetap</span></h2>
-<p class="en">Same question, different answers. The bases differ (net, gross, forecast), so read each label before comparing.</p>
-<p class="bm">Soalan sama, jawapan berbeza. Asas pengiraan berbeza (bersih, kasar, ramalan), jadi baca label sebelum membandingkan.</p>
-<div class="chart">
-  <h3><span class="en">Latest annual payout or yield (%)</span><span class="bm">Agihan atau hasil tahunan terkini (%)</span></h3>
-  <div id="cmp"></div>
-  <p class="cap"><span class="en">AHB FY2026 and Tabung Haji 2025 are net of tax and zakat. REIT figures are gross yields: Axis on its RM1.92 year-end 2025 price, the others Kenanga forecasts for June 2026 as reported by StashAway. FD: top of the 1.8–2.5% board range and best promo (about 3.9%).</span><span class="bm">AHB FY2026 dan Tabung Haji 2025 bersih cukai dan zakat. Angka REIT ialah hasil kasar: Axis pada harga RM1.92 hujung 2025, yang lain ramalan Kenanga Jun 2026 seperti dilaporkan StashAway. FD: hujung julat kadar papan 1.8–2.5% dan promosi terbaik (sekitar 3.9%).</span></p>
-</div>
-<div class="box blue">
-  <h3><span class="en">Reading the field</span><span class="bm">Membaca perbandingan</span></h3>
-  <ul class="en">
-    <li><b>Fixed deposit:</b> the policy rate (OPR) is 2.75% and inflation was about 1.6% in early 2026. AHB pays about double the board FD rate, but FD has PIDM protection and AHB does not.</li>
-    <li><b>EPF and ASB:</b> both pay more (6.15% for 2025; 5.75% ASB). EPF is retirement savings you cannot freely withdraw, so it is not a like-for-like choice.</li>
-    <li><b>Tabung Haji:</b> 3.50% for 2025, after zakat.</li>
-    <li><b>Large REITs:</b> forecast gross yields of roughly 4.9–6.6%. The unit price moves every day, and the yield moves with it.</li>
-  </ul>
-  <ul class="bm">
-    <li><b>Simpanan tetap:</b> kadar dasar (OPR) 2.75% dan inflasi sekitar 1.6% awal 2026. AHB bayar kira-kira dua kali ganda kadar papan FD, tetapi FD dilindungi PIDM dan AHB tidak.</li>
-    <li><b>KWSP dan ASB:</b> kedua-duanya bayar lebih (6.15% bagi 2025; ASB 5.75%). KWSP ialah simpanan persaraan yang tidak boleh dikeluarkan sesuka hati, jadi bukan pilihan setara.</li>
-    <li><b>Tabung Haji:</b> 3.50% bagi 2025, selepas zakat.</li>
-    <li><b>REIT besar:</b> ramalan hasil kasar sekitar 4.9–6.6%. Harga unit bergerak setiap hari, dan hasil bergerak bersamanya.</li>
-  </ul>
-</div>
-
-<h3 style="font-family:Georgia,serif;font-size:19px;margin:22px 0 6px"><span class="en">Axis REIT up close</span><span class="bm">Menelusuri Axis REIT</span></h3>
-<p class="en">Axis REIT is a Shariah-compliant industrial and logistics REIT listed on Bursa. It paid 10.55 sen for FY2025, up 13.8% from 9.27 sen, and that includes a 0.43 sen one-off disposal gain. On RM1.92 that is a 5.5% yield. The price traded between RM1.71 and RM2.20 in 2025, so the high was about 29% above the low. An AHB unit stayed at RM1.00.</p>
-<p class="bm">Axis REIT ialah REIT industri dan logistik patuh Syariah yang tersenarai di Bursa. Ia membayar 10.55 sen bagi FY2025, naik 13.8% daripada 9.27 sen, termasuk keuntungan pelupusan sekali sahaja 0.43 sen. Pada harga RM1.92 itu ialah hasil 5.5%. Harga didagangkan antara RM1.71 dan RM2.20 pada 2025, jadi paras tertinggi kira-kira 29% di atas terendah. Unit AHB kekal RM1.00.</p>
-<div class="scroll" style="overflow-x:auto">
-<table>
-  <tr><th><span class="en">Year</span><span class="bm">Tahun</span></th><th>AHB (<span class="en">on RM1</span><span class="bm">atas RM1</span>)</th><th>Axis REIT (<span class="en">yield on year-end price</span><span class="bm">hasil atas harga hujung tahun</span>)</th><th>Axis DPU (sen)</th></tr>
-  <tr><td>2021</td><td>4.70%</td><td>4.89%</td><td>9.49</td></tr>
-  <tr><td>2022</td><td>5.00%</td><td>5.45%</td><td>9.75</td></tr>
-  <tr><td>2023</td><td>5.00%</td><td>4.83%</td><td>8.65</td></tr>
-  <tr><td>2024</td><td>5.00%</td><td>5.36%</td><td>9.27</td></tr>
-  <tr><td>2025</td><td>5.00%</td><td>5.49%</td><td>10.55</td></tr>
-</table>
-</div>
-<p class="small en" style="margin-top:8px">AHB financial year ends 30 Sep; Axis is calendar year. Axis 2025 includes the one-off gain. The year order of Axis figures is my reading of its annual report table.</p>
-<p class="small bm" style="margin-top:8px">Tahun kewangan AHB berakhir 30 Sep; Axis tahun kalendar. Axis 2025 termasuk keuntungan sekali sahaja. Susunan tahun bagi angka Axis ialah bacaan saya terhadap jadual laporan tahunannya.</p>
-<div class="box sand">
-  <h3><span class="en">Where AHB fits</span><span class="bm">Di mana AHB sesuai</span></h3>
-  <p class="en">Axis paid a similar yield, and its payout grew about 11% from 2021 to 2025 (9.49 to 10.55 sen). But 2026 is softer: the 1H26 DPU was 4.8 sen, and the Q2 payout of 2.3 sen was below 2.65 sen a year earlier. A REIT can rise and fall. AHB trades growth for a flat RM1 price. Pick by what you need: calm income, or income with upside and swings.</p>
-  <p class="bm">Axis membayar hasil yang serupa, dan agihannya naik kira-kira 11% dari 2021 ke 2025 (9.49 ke 10.55 sen). Tetapi 2026 lebih lembut: DPU 1H26 ialah 4.8 sen, dan agihan S2 sebanyak 2.3 sen lebih rendah daripada 2.65 sen setahun lalu. REIT boleh naik dan turun. AHB menukar pertumbuhan dengan harga RM1 yang rata. Pilih ikut keperluan: pendapatan tenang, atau pendapatan dengan potensi naik dan turun.</p>
-</div>
-
-<h2><span class="en">3. What it has paid over time</span><span class="bm">3. Rekod agihan dari tahun ke tahun</span></h2>
-<p class="en">AHB started at 5.42 sen in FY2011, peaked at 6.60 sen in FY2014–2015, slid to 4.70 sen in FY2021, then settled at 5.00 sen. The fund then ran the same direction as its better-known peer, ASB, but at a lower level in every year where I have both numbers.</p>
-<p class="bm">AHB bermula dengan 5.42 sen pada FY2011, mencapai puncak 6.60 sen pada FY2014–2015, jatuh ke 4.70 sen pada FY2021, kemudian tetap pada 5.00 sen. Arahnya sama dengan ASB yang lebih dikenali, tetapi lebih rendah bagi setiap tahun yang saya ada kedua-dua angka.</p>
-
-<div class="chart">
-  <h3><span class="en">Yearly payout: AHB, ASB and EPF (sen per unit, or %)</span><span class="bm">Agihan tahunan: AHB, ASB dan KWSP (sen seunit, atau %)</span></h3>
-  <div class="scroll"><div id="lineChart"></div></div>
-  <p class="cap"><span class="en">Green AHB, pink ASB, blue EPF conventional. AHB: financial year to 30 Sep; ASB and EPF: calendar year. Gaps mean I did not retrieve a verified figure (AHB FY2020; ASB 2018–2022 and 2026; EPF 2011–12, 2021–23 and 2026). AHB FY2013 excludes a one-off 1.00 sen bonus. ASB 2015–2017 are community-compiled; verify with ASNB.</span><span class="bm">Hijau AHB, merah jambu ASB, biru KWSP konvensional. AHB: tahun kewangan hingga 30 Sep; ASB dan KWSP: tahun kalendar. Ruang kosong bermakna angka disahkan tidak diperoleh (AHB FY2020; ASB 2018–2022 dan 2026; KWSP 2011–12, 2021–23 dan 2026). AHB FY2013 tidak termasuk bonus sekali sahaja 1.00 sen. ASB 2015–2017 dikumpul komuniti; sila semak dengan ASNB.</span></p>
-</div>
-
-<div class="box pink">
-  <h3><span class="en">Read this next to the 5 sen</span><span class="bm">Baca ini bersama 5 sen itu</span></h3>
-  <ul class="en">
-    <li>The sponsor bonus has been 0.40–0.67 sen a year (2022–2024), paid by PHB on the first 1 million units.</li>
-    <li>PHB’s <i>hibah</i> contribution to AHB rose from RM10.2m in 2021 to RM27.9m in 2024.</li>
-    <li>If support were cut, the base income alone was about 4.1 sen in FY2026 (2.06 + 2.10 sen).</li>
-  </ul>
-  <ul class="bm">
-    <li>Bonus penaja ialah 0.40–0.67 sen setahun (2022–2024), dibayar PHB bagi 1 juta unit pertama.</li>
-    <li>Sumbangan <i>hibah</i> PHB kepada AHB naik daripada RM10.2 juta pada 2021 kepada RM27.9 juta pada 2024.</li>
-    <li>Jika sokongan ditarik, pendapatan asas sahaja ialah sekitar 4.1 sen pada FY2026 (2.06 + 2.10 sen).</li>
-  </ul>
-</div>
-
-<h2><span class="en">4. What stands behind the unit</span><span class="bm">4. Apa yang menyokong unit anda</span></h2>
-<p class="en">Unitholders hold beneficial ownership of commercial properties that PHB leases back. Named assets include Menara Prisma (Putrajaya), NU Sentral and Menara 1 Sentrum (KL Sentral), Gleneagles Hospital Block B, CP Tower (Petaling Jaya), One Precinct (Penang) and The Shore (Melaka). Healthcare and offices lead the list, with newer industrial buys in Kulim and near Tanjung Pelepas.</p>
-<p class="bm">Pemegang unit memegang pemilikan benefisial hartanah komersial yang disewa balik oleh PHB. Antara aset yang dinamakan: Menara Prisma (Putrajaya), NU Sentral dan Menara 1 Sentrum (KL Sentral), Hospital Gleneagles Blok B, CP Tower (Petaling Jaya), One Precinct (Pulau Pinang) dan The Shore (Melaka). Pejabat dan kesihatan menonjol, dengan pembelian industri baharu di Kulim dan berhampiran Tanjung Pelepas.</p>
-
-<div class="stats">
-  <div class="stat"><b>RM7.85bn</b><span><span class="en">PHB: 26 buildings, Dec 2024</span><span class="bm">PHB: 26 bangunan, Dis 2024</span></span></div>
-  <div class="stat"><b>+12.6%</b><span><span class="en">Fair value, 2021 to 2024 (RM6.98bn to RM7.86bn)</span><span class="bm">Nilai saksama 2021–2024 (RM6.98bn ke RM7.86bn)</span></span></div>
-  <div class="stat"><b>21 of 26</b><span><span class="en">Buildings injected into AHB (80.8%)</span><span class="bm">Bangunan disuntik ke AHB (80.8%)</span></span></div>
-  <div class="stat"><b>5.4bn</b><span><span class="en">Units after Sept 2026 issue of 400m</span><span class="bm">Unit selepas terbitan 400j, Sep 2026</span></span></div>
-</div>
-
-<div class="chart">
-  <h3><span class="en">PHB portfolio mix (%)</span><span class="bm">Komposisi portfolio PHB (%)</span></h3>
-  <div id="mix"></div>
-  <p class="cap"><span class="en">As reported by PHB (“as of August”). “Other” is the balance to 100%, my arithmetic.</span><span class="bm">Seperti dilaporkan PHB (“setakat Ogos”). “Lain-lain” ialah baki kepada 100%, kiraan saya.</span></p>
-</div>
-
-<div class="box blue">
-  <h3><span class="en">What the Auditor-General noted</span><span class="bm">Apa yang dicatat Ketua Audit Negara</span></h3>
-  <p class="en">Report 1/26 says PHB largely met its mandate. It also flagged five buildings not injected into AHB because they did not meet collateral criteria, and value declines of 3–7% in some office assets (Menara Hextar, Tower 6 Skypark, Elevate Medini) on weaker occupancy. That limits how fast PHB can issue new units.</p>
-  <p class="bm">Laporan 1/26 menyatakan PHB sebahagian besarnya memenuhi mandat. Ia turut menandakan lima bangunan tidak disuntik ke AHB kerana tidak memenuhi kriteria cagaran, serta penurunan nilai 3–7% bagi beberapa aset pejabat (Menara Hextar, Tower 6 Skypark, Elevate Medini) akibat kadar penghunian lemah. Ini mengehadkan kelajuan PHB menerbitkan unit baharu.</p>
-</div>
-
-<h2><span class="en">5. The RM300 a month challenge</span><span class="bm">5. Cabaran RM300 sebulan</span></h2>
-<p class="en">A young Bumiputera starts work and puts RM300 into AHB every month for 10 years. Distributions are reinvested as units, which is how AHB pays holders under 10,000 units.</p>
-<p class="bm">Seorang anak muda Bumiputera mula bekerja dan melabur RM300 sebulan dalam AHB selama 10 tahun. Agihan dilaburkan semula sebagai unit, seperti cara AHB membayar pemegang di bawah 10,000 unit.</p>
-
-<div class="chart">
-  <h3><span class="en">Value after 10 years (RM)</span><span class="bm">Nilai selepas 10 tahun (RM)</span></h3>
-  <div class="bars">
-    <div class="bar"><b>36,000</b><i style="height:156px;background:#c9d3dc"></i><span class="en">Put in</span><span class="bm">Modal</span></div>
-    <div class="bar"><b>40,600</b><i style="height:177px;background:var(--blue)"></i><span class="en">At 2.5% (FD-type)</span><span class="bm">2.5% (jenis FD)</span></div>
-    <div class="bar"><b>44,100</b><i style="height:192px;background:#e2b45f"></i><span class="en">At 4.2%, no bonus</span><span class="bm">4.2%, tiada bonus</span></div>
-    <div class="bar"><b>46,000</b><i style="height:200px;background:var(--green)"></i><span class="en">At 5.0%</span><span class="bm">Pada 5.0%</span></div>
+  <div class="topbar-inner">
+    <a class="brand-mark" href="https://dewatagiri.github.io/field-notes/">FIELD NOTES</a>
+    <div class="lang-switch" role="group" aria-label="Language toggle">
+      <button id="btn-en" type="button" aria-pressed="false" onclick="setLang('en')">EN</button>
+      <button id="btn-bm" type="button" aria-pressed="true" onclick="setLang('bm')">BM</button>
+    </div>
   </div>
-  <p class="cap"><span class="en">My estimate. Semi-annual compounding, 120 monthly deposits, deposits earn nothing until the next half-year (slightly conservative). 2.5% is the top of today’s 12-month board FD range (about 1.8–2.5%); promotions reach about 3.9%. Rates are not guaranteed.</span><span class="bm">Anggaran saya. Pengkompaunan setengah tahunan, 120 deposit bulanan, deposit tidak mendapat pulangan sehingga separuh tahun berikutnya (agak konservatif). 2.5% ialah hujung julat kadar papan FD 12 bulan hari ini (sekitar 1.8–2.5%); promosi mencecah sekitar 3.9%. Kadar tidak dijamin.</span></p>
 </div>
 
-<table>
-  <tr><th><span class="en">Rate</span><span class="bm">Kadar</span></th><th><span class="en">Ends at</span><span class="bm">Jumlah akhir</span></th><th><span class="en">Gain</span><span class="bm">Untung</span></th></tr>
-  <tr><td>5.0%</td><td>RM45,981</td><td>RM9,981</td></tr>
-  <tr><td>4.2%</td><td>RM44,094</td><td>RM8,094</td></tr>
-  <tr><td>2.5% (FD-type)</td><td>RM40,608</td><td>RM4,608</td></tr>
-</table>
-<p class="small en" style="margin-top:8px">The point is not the gain. It is the habit: RM300 a month builds a base without needing market timing.</p>
-<p class="small bm" style="margin-top:8px">Intinya bukan untung. Ia tabiat: RM300 sebulan membina asas tanpa perlu meneka pasaran.</p>
+<main>
 
-<h2><span class="en">6. Before you start: five checks</span><span class="bm">6. Sebelum mula: lima semakan</span></h2>
-<div class="box pink">
-  <ul class="en">
-    <li><b>Not a government guarantee.</b> The RM1 price is supported by PHB’s structure, not a sovereign guarantee.</li>
-    <li><b>Bonus is not promised.</b> It is declared each period by the sponsor.</li>
-    <li><b>No capital growth.</b> Price stays at RM1, so you earn income only.</li>
-    <li><b>Subscription comes in tranches.</b> Units are issued when PHB injects assets, so supply is limited.</li>
-    <li><b>Compare with ASB first.</b> Where I have both, ASB paid more. AHB is a way to add Bumiputera savings beyond that limit, in property rather than equities.</li>
-  </ul>
-  <ul class="bm">
-    <li><b>Bukan jaminan kerajaan.</b> Harga RM1 disokong struktur PHB, bukan jaminan kerajaan.</li>
-    <li><b>Bonus tidak dijanjikan.</b> Ia diisytiharkan penaja setiap tempoh.</li>
-    <li><b>Tiada pertumbuhan modal.</b> Harga kekal RM1, jadi anda hanya dapat pendapatan.</li>
-    <li><b>Langganan dibuka secara berperingkat.</b> Unit diterbitkan apabila PHB menyuntik aset, jadi bekalan terhad.</li>
-    <li><b>Banding dengan ASB dahulu.</b> Di mana saya ada kedua-dua angka, ASB bayar lebih. AHB ialah cara menambah simpanan Bumiputera melebihi had itu, dalam hartanah dan bukan ekuiti.</li>
-  </ul>
-</div>
+  <!-- ==================== BAHASA MELAYU (DEFAULT) ==================== -->
+  <article data-lang="bm" lang="ms">
+    <div class="eyebrow">FIELD NOTES · EKONOMI MAKRO &amp; HARTANAH</div>
+    <h1>Pembaris Yang Mengecut: Betulkah Ringgit Susut Melonjakkan Harga Rumah?</h1>
+    <p class="deck">
+      Bank Negara Malaysia akhirnya membuka 50 tahun data monetari kepada umum. Menguji harga rumah Malaysia terhadap empat pembaris berbeza dan realiti pembiayaan semula di Malaysia mendedahkan kesimpulan sebenar: hartanah kediaman bukan mesin pencipta kekayaan monetari, tetapi pelindung inflasi berleveraj yang terikat ketat pada siling gaji tempatan.
+    </p>
+    <div class="byline-row">
+      <div><strong>Azman Taufik</strong> · 28 November 2026 · Bacaan 10 minit</div>
+      <a class="linkedin-btn" href="https://www.linkedin.com/in/azmantaufik/" target="_blank" rel="noopener">Komen di LinkedIn</a>
+    </div>
 
-<div class="box">
-  <h3><span class="en">The challenge</span><span class="bm">Cabarannya</span></h3>
-  <p class="en">Do your own research. Read the prospectus. Ask the questions in this note. If it fits, start with RM100 and build the habit.</p>
-  <p class="bm">Buat kajian sendiri. Baca prospektus. Tanya soalan dalam nota ini. Kalau sesuai, mulakan dengan RM100 dan bina tabiat.</p>
-</div>
+    <section>
+      <h2>01 / Persoalan Yang Diuji</h2>
+      <p>Selama tiga dekad, formula membina kekayaan isi rumah di Malaysia kelihatan mudah. Beli rumah dengan pinjaman bank, pegang selama dua puluh tahun, dan lihat nilainya meningkat.</p>
+      <p>Dengan portal terbuka <strong>BNM Open Data</strong> (<a href="https://data.bnm.gov.my/" target="_blank" rel="noopener">data.bnm.gov.my</a>) kini aktif, kita boleh mengaudit matematik di sebalik kepercayaan tersebut:</p>
+      <blockquote class="thesis">
+        Adakah penurunan nilai Ringgit benar-benar melonjakkan harga rumah di Malaysia, atau tanda harga Ringgit yang semakin tinggi itu sebenarnya cerminan pembaris ukuran yang semakin mengecut?
+      </blockquote>
+      <p>Jika pengembangan bekalan wang dan penyusutan mata wang memacu harga rumah, dua corak mesti kelihatan dalam rekod sejarah:</p>
+      <ol>
+        <li>Harga rumah dalam Ringgit mesti meningkat jauh lebih pantas berbanding barang runcit dan bil bulanan.</li>
+        <li>Apabila penyebut Ringgit dikeluarkan dan rumah yang sama dinilai dalam mata wang keras atau emas fizikal, lonjakan harga tersebut akan mendatar atau menyusut.</li>
+      </ol>
+    </section>
 
-<div class="foot">
-  <p><a class="cta" href="https://lnkd.in/p/gA_w7F_U" target="_blank" rel="noopener" id="ctaBot">Comment on LinkedIn</a></p>
-  <p class="small en"><b>Sources.</b> SC Guidelines on Unit Trust Funds and AHB Product Highlights Sheet and prospectus; SC REIT guidelines as summarised by Azmi &amp; Associates, Chambers and LHDN Public Ruling 9/2018; PHB / PHBAM and Bernama, The Star, The Edge, Business Today (FY2026 and 2026 interim distributions, Apr and Oct 2026); PHB press releases (FY2022, FY2024); Maybank AM releases (FY2021, FY2023); AmBank AHB distribution history table (2011–2020); AHB prospectus; Bernama on Auditor-General’s Report 1/26 (23 Feb 2026); The Exchange (PHB portfolio mix); NST (Sept 2026 unit issue); StashAway, a Lowyat forum compilation and malaysia4u (ASB). Axis-REIT 4Q2025 results presentation and 2025 annual report, with 2026 quarterly results via The Edge, The Star and Business Today; EPF dividends via The Star and Malay Mail; StashAway and iMoney (FD, Tabung Haji and large-REIT forecast yields, which are secondary and should be re-checked). Original authors and publishers retain their rights; figures are restated in my own words.</p>
-  <p class="small bm"><b>Sumber.</b> Garis Panduan Dana Unit Amanah SC dan Lembaran Maklumat Produk serta prospektus AHB; garis panduan REIT SC seperti diringkaskan Azmi &amp; Associates, Chambers dan Pandangan Umum LHDN 9/2018; PHB / PHBAM dan Bernama, The Star, The Edge, Business Today (agihan FY2026 dan interim 2026, Apr dan Okt 2026); siaran akhbar PHB (FY2022, FY2024); siaran Maybank AM (FY2021, FY2023); jadual sejarah agihan AHB AmBank (2011–2020); prospektus AHB; Bernama mengenai Laporan Ketua Audit Negara 1/26 (23 Feb 2026); The Exchange (komposisi portfolio PHB); NST (terbitan unit Sep 2026); StashAway, kompilasi forum Lowyat dan malaysia4u (ASB). Pembentangan keputusan 4Q2025 dan laporan tahunan 2025 Axis-REIT, dengan keputusan suku tahunan 2026 melalui The Edge, The Star dan Business Today; dividen KWSP melalui The Star dan Malay Mail; StashAway dan iMoney (hasil FD, Tabung Haji dan ramalan REIT besar, yang merupakan sumber sekunder dan perlu disemak semula). Hak cipta asal kekal pada penulis dan penerbit; angka dinyatakan semula dengan ayat sendiri.</p>
-  <p class="small en"><b>Disclaimer.</b> The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from publicly available sources listed above, and any errors are mine. Nothing here is financial, investment or legal advice. Past distributions do not guarantee future returns.</p>
-  <p class="small en">Research and drafting were assisted by AI tools. All facts were checked against the sources listed.</p>
-  <p class="small bm"><b>Penafian.</b> Pandangan dalam artikel ini ialah pandangan peribadi saya. Ia tidak mewakili majikan saya atau mana-mana organisasi yang pernah atau sedang saya sertai. Artikel ini tidak berkaitan dengan, tidak disokong oleh dan tidak ditulis bagi pihak mana-mana institusi yang disebut. Semua angka diambil daripada sumber awam yang disenaraikan, dan sebarang kesilapan adalah tanggungjawab saya sendiri. Artikel ini bukan nasihat kewangan, pelaburan atau undang-undang. Agihan lalu tidak menjamin pulangan akan datang.</p>
-  <p class="small bm">Kajian dan penulisan artikel ini dibantu oleh alat AI. Semua fakta telah disemak dengan sumber asal.</p>
-</div>
+    <section>
+      <h2>02 / Bagaimana Wang Baharu Masuk ke Harga Rumah</h2>
+      <p>Ramai menyangka hanya bank pusat mencetak wang. Hakikatnya, bank perdagangan mencipta sebahagian besar bekalan wang luas (M2) setiap kali meluluskan pinjaman. Apabila bank meluluskan gadai janji lebih pantas daripada bekalan tanah bandar, lebihan kecairan itu mengejar kediaman yang terhad:</p>
 
-</div>
+      <div class="visual-box">
+        <div class="visual-title">Rantaian Pemindahan Kredit Bank ke Harga Kediaman</div>
+        <div class="visual-sub">Hubungan antara penciptaan wang M2, inflasi barangan pengguna dan had gaji tempatan.</div>
+        <svg viewBox="0 0 740 220" width="100%" role="img" aria-label="Gambar rajah aliran bekalan wang M2 ke harga rumah">
+          <rect x="200" y="10" width="340" height="42" rx="4" fill="#eff6ff" stroke="#0f294a" stroke-width="1.5"/>
+          <text x="370" y="36" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#0f294a">Dasar BNM (OPR) + Penciptaan Pinjaman Bank</text>
+
+          <line x1="370" y1="52" x2="370" y2="80" stroke="#0f294a" stroke-width="1.5"/>
+          <polygon points="370,84 365,76 375,76" fill="#0f294a"/>
+          <text x="525" y="70" font-family="sans-serif" font-size="11" fill="#475569">Wang M2 tumbuh ~10.3% – 11.3% setahun</text>
+
+          <line x1="185" y1="84" x2="555" y2="84" stroke="#0f294a" stroke-width="1.5"/>
+          <line x1="185" y1="84" x2="185" y2="102" stroke="#0f294a" stroke-width="1.5"/>
+          <line x1="555" y1="84" x2="555" y2="102" stroke="#0f294a" stroke-width="1.5"/>
+
+          <rect x="25" y="102" width="320" height="48" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+          <text x="185" y="123" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Barangan Pengguna &amp; Import</text>
+          <text x="185" y="140" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">Produktiviti kilang &amp; subsidi kawal CPI (~2.5%/thn)</text>
+
+          <rect x="395" y="102" width="320" height="48" rx="4" fill="#ffffff" stroke="#0b5ed7" stroke-width="1.5"/>
+          <text x="555" y="123" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f294a">Tanah Terhad &amp; Stok Kediaman</text>
+          <text x="555" y="140" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">Tanah bandar terhad serap kredit (~5.4%/thn)</text>
+
+          <line x1="555" y1="150" x2="555" y2="172" stroke="#991b1b" stroke-width="1.5"/>
+          <polygon points="555,176 550,168 560,168" fill="#991b1b"/>
+
+          <rect x="130" y="176" width="480" height="38" rx="4" fill="#fee2e2" stroke="#991b1b" stroke-width="1.3"/>
+          <text x="370" y="199" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#991b1b">Siling Gaji Isi Rumah + Had DSR &amp; LTV BNM Menyekat Kenaikan Berterusan</text>
+        </svg>
+        <div class="visual-note"><strong>Intipati:</strong> Kediaman menyerap lebihan kecairan lebih pantas daripada barangan harian, tetapi terhenti apabila harga melangkaui kelayakan gaji bulanan peminjam tempatan.</div>
+      </div>
+
+      <ul>
+        <li><strong>Mengapa barang harian naik lebih perlahan daripada M2:</strong> Produktiviti perkilangan, perdagangan global dan subsidi harga tempatan mengekalkan inflasi (CPI) sekitar <strong>2.5% hingga 2.9%</strong> setahun.</li>
+        <li><strong>Mengapa harga rumah naik lebih pantas daripada CPI—sehingga terlanggar dinding:</strong> Tanah di Petaling Jaya atau Bangsar tidak boleh dicetak semalaman, maka lebihan kredit menolak harga rumah naik lebih laju daripada CPI. Namun ansuran bulanan tetap dibayar daripada gaji tempatan. Apabila harga jauh meninggalkan gaji, peraturan Nisbah Khidmat Hutang (DSR) dan had pinjaman BNM menghentikan lonjakan harga.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>03 / Papan Skor 50 Tahun (1976 – 2026)</h2>
+      <p>Rekod bekalan wang tahunan BNM bermula sejak <strong>1969</strong>, manakala Indeks Harga Rumah Malaysia (MHPI) oleh NAPIC bermula pada <strong>1988</strong>. Memadankan kedua-dua siri ini memperlihatkan jurang sebenar antara wang, rumah, gaji dan inflasi.</p>
+
+      <div class="visual-box">
+        <div class="visual-title">Pertumbuhan Terkumpul Sejak 1988/89 (Indeks Asas = 100)</div>
+        <div class="visual-sub">Sumber: BNM Open Data (M2), DOSM (Pendapatan Penengah Isi Rumah &amp; CPI), dan NAPIC (MHPI Q3 2026P).</div>
+        <svg viewBox="0 0 740 210" width="100%" role="img" aria-label="Carta bar perbandingan pertumbuhan M2, pendapatan isi rumah, harga rumah dan CPI">
+          <text x="10" y="32" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Bekalan Wang M2</text>
+          <rect x="210" y="17" width="435" height="20" rx="3" fill="#0f294a"/>
+          <text x="653" y="32" font-family="sans-serif" font-size="12" font-weight="700" fill="#0f294a">4,102 (41.0x)</text>
+
+          <text x="10" y="70" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Gaji Penengah (1989–2024)</text>
+          <rect x="210" y="55" width="91" height="20" rx="3" fill="#059669"/>
+          <text x="309" y="70" font-family="sans-serif" font-size="12" font-weight="700" fill="#059669">860 (8.6x)</text>
+
+          <text x="10" y="108" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Harga Rumah Nominal</text>
+          <rect x="210" y="93" width="79" height="20" rx="3" fill="#0b5ed7"/>
+          <text x="297" y="108" font-family="sans-serif" font-size="12" font-weight="700" fill="#0b5ed7">749 (7.5x)</text>
+
+          <text x="10" y="146" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Harga Rumah Sebenar</text>
+          <rect x="210" y="131" width="30" height="20" rx="3" fill="#0284c7"/>
+          <text x="248" y="146" font-family="sans-serif" font-size="12" font-weight="700" fill="#0284c7">288 (2.9x)</text>
+
+          <text x="10" y="184" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Inflasi Pengguna (CPI)</text>
+          <rect x="210" y="169" width="28" height="20" rx="3" fill="#64748b"/>
+          <text x="246" y="184" font-family="sans-serif" font-size="12" font-weight="700" fill="#475569">260 (2.6x)</text>
+        </svg>
+        <div class="visual-note"><strong>Intipati:</strong> Diukur terhadap gaji penengah isi rumah Malaysia (naik 8.6x dari RM 816/bln pada 1989 ke RM 7,017/bln pada 2024), nisbah harga rumah kepada pendapatan tahunan sebenarnya bertambah baik daripada <strong>7.15x</strong> kepada <strong>5.78x</strong>.</div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Petunjuk (Sumber)</th>
+              <th>1976</th>
+              <th>1988 / 89</th>
+              <th>2010</th>
+              <th>2019</th>
+              <th>Terkini 2024–26</th>
+              <th>Gandaan &amp; Kadar Tahunan</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Bekalan Wang M2</strong><br><small>BNM Open Data</small></td>
+              <td>~RM 12.8B</td>
+              <td>~RM 65.0B</td>
+              <td>~RM 1,080.0B</td>
+              <td>~RM 1,960.0B</td>
+              <td><strong>RM 2,666.5B</strong><br><small>Jun 2026</small></td>
+              <td><strong>~208x</strong> (50 thn, 11.3%/thn)<br><strong>41.0x</strong> sejak 1988 (10.3%/thn)</td>
+              <td><span class="badge b-fact">VERIFIED</span><br><span class="badge b-est">EST 1976</span></td>
+            </tr>
+            <tr>
+              <td><strong>Indeks Harga Rumah</strong><br><small>NAPIC (2010=100)</small></td>
+              <td>Tiada indeks</td>
+              <td><strong>31.45</strong></td>
+              <td><strong>100.00</strong></td>
+              <td><strong>196.88</strong></td>
+              <td><strong>235.40</strong><br><small>Q3 2026P</small></td>
+              <td><strong>7.49x</strong> sejak 1988<br>(<strong>5.4%/thn</strong>)</td>
+              <td><span class="badge b-fact">VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td><strong>Purata Harga Rumah</strong><br><small>NAPIC / JPPH</small></td>
+              <td>~RM 28,000<br><small>Teres KL/PJ</small></td>
+              <td>~RM 68,000</td>
+              <td>RM 215,000</td>
+              <td>RM 427,165</td>
+              <td><strong>RM 507,809</strong><br><small>Q3 2026P</small></td>
+              <td><strong>7.47x</strong> sejak 1988</td>
+              <td><span class="badge b-fact">VERIFIED</span><br><span class="badge b-est">EST 1976-88</span></td>
+            </tr>
+            <tr>
+              <td><strong>Gaji Penengah Isi Rumah</strong><br><small>DOSM HIES (Bulanan)</small></td>
+              <td>RM 513<br><small>1976</small></td>
+              <td>RM 816<br><small>1989</small></td>
+              <td>RM 2,841<br><small>2009</small></td>
+              <td>RM 5,873<br><small>2019</small></td>
+              <td><strong>RM 7,017</strong><br><small>HIS 2024</small></td>
+              <td><strong>8.60x</strong> (1989–2024)<br>Nisbah rumah/gaji: <strong>7.15x → 5.78x</strong></td>
+              <td><span class="badge b-fact">VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td><strong>Inflasi Pengguna (CPI)</strong><br><small>DOSM (2010=100)</small></td>
+              <td>32.1</td>
+              <td>52.9</td>
+              <td>100.0</td>
+              <td>121.5</td>
+              <td><strong>137.5</strong><br><small>Okt 2026</small></td>
+              <td><strong>4.28x</strong> (50 thn, 2.9%/thn)<br><strong>2.60x</strong> sejak 1988 (2.5%/thn)</td>
+              <td><span class="badge b-fact">VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td><strong>Harga Rumah Sebenar</strong><br><small>Selepas CPI (1988=100)</small></td>
+              <td>-</td>
+              <td><strong>100.0</strong></td>
+              <td><strong>168.2</strong></td>
+              <td><strong>272.6</strong></td>
+              <td><strong>288.0</strong></td>
+              <td><strong>2.88x</strong> kuasa beli sebenar<br>(<strong>2.8%/thn</strong>)</td>
+              <td><span class="badge b-fact">VERIFIED</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Empat Fasa Utama:</h3>
+      <ol>
+        <li><strong>1988 – 1997 (Ledakan Pra-Krisis):</strong> Kredit mudah melonjakkan harga rumah <strong>+144%</strong> dalam sembilan tahun (<code>31.45</code> ke <code>76.80</code>). Apabila Krisis Kewangan Asia 1997 melanda, harga jatuh <strong>-14.8%</strong> (<code>77.49</code> turun ke <code>66.00</code> pada awal 1999). Apabila pinjaman menguncup, harga jatuh.</li>
+        <li><strong>2000 – 2009 (Pemulihan Stabil):</strong> Dengan Ringgit ditambat pada RM 3.80 dan bank memulihkan kunci kira-kira, harga rumah naik secara tenang sekitar <strong>3.7% setahun</strong>.</li>
+        <li><strong>2010 – 2015 (Lonjakan Pinjaman Mudah):</strong> Kadar faedah global rendah dan skim pemaju menaikkan harga rumah <strong>64.5% dalam lima tahun</strong> (<code>100.0</code> ke <code>164.5</code>), memaksa BNM memperkenalkan had pinjaman 70% untuk rumah ketiga serta semakan pendapatan lebih ketat.</li>
+        <li><strong>2016 – 2026 (Terlanggar Siling Gaji):</strong> Walaupun bekalan wang M2 melonjak daripada <code>RM 1,960B</code> (2019) kepada <code>RM 2,666.5B</code> (2026), pertumbuhan harga rumah perlahan di bawah <strong>2% setahun</strong> selepas 2019—mendatar pada <strong>+0.5% YoY pada Q3 2026P</strong> (purata <code>RM 507,809</code>) dengan <strong>33,598 unit kediaman siap tidak terjual</strong> (<code>RM 19.55B</code>).</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>04 / Menguji Empat Pembaris Berbeza: Mengapa Emas Sahaja Tidak Mencukupi</h2>
+      <p>Apabila kita menguji hipotesis ini terhadap <strong>syiling emas Kijang Emas 1 oz</strong> (dilancarkan Julai 2001) dan kadar pertukaran USD/MYR, kelihatan dua fasa yang sangat berbeza:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tahun</th>
+              <th>Purata Rumah (MYR)</th>
+              <th>Kadar USD/MYR</th>
+              <th>Purata Rumah (USD)</th>
+              <th>Kijang Emas 1 oz (MYR)</th>
+              <th>Purata Rumah (oz Emas)</th>
+              <th>Apa Yang Berlaku</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>2001</strong></td>
+              <td>~RM 152,000</td>
+              <td>3.80 <small>(Tambatan)</small></td>
+              <td><strong>$40,000</strong></td>
+              <td>~RM 1,080</td>
+              <td><strong>140.7 oz</strong></td>
+              <td>Ringgit ditambat pada 3.80; emas di paras terendah sejarah</td>
+            </tr>
+            <tr>
+              <td><strong>2010</strong></td>
+              <td>RM 215,000</td>
+              <td>3.22</td>
+              <td><strong>$66,770</strong></td>
+              <td>~RM 3,950</td>
+              <td><strong>54.4 oz</strong></td>
+              <td>Permulaan jalur mendatar emas (54–76 oz) selama 12 tahun</td>
+            </tr>
+            <tr>
+              <td><strong>2015</strong></td>
+              <td>RM 354,741</td>
+              <td>3.91</td>
+              <td><strong>$90,727</strong></td>
+              <td>~RM 4,680</td>
+              <td><strong>75.8 oz</strong></td>
+              <td>Kejatuhan minyak &amp; Ringgit lemah menghakis untung USD</td>
+            </tr>
+            <tr>
+              <td><strong>2019</strong></td>
+              <td>RM 427,165</td>
+              <td>4.14</td>
+              <td><strong>$103,180</strong></td>
+              <td>~RM 5,950</td>
+              <td><strong>71.8 oz</strong></td>
+              <td>Puncak USD pra-COVID sebelum lima tahun penyusutan Ringgit</td>
+            </tr>
+            <tr>
+              <td><strong>2022</strong></td>
+              <td>RM 452,617</td>
+              <td>4.40</td>
+              <td><strong>$102,867</strong></td>
+              <td>~RM 8,150</td>
+              <td><strong>55.5 oz</strong></td>
+              <td>Harga MYR naik +6%, tetapi nilai dalam USD menyusut</td>
+            </tr>
+            <tr>
+              <td><strong>Nov 2026</strong></td>
+              <td><strong>RM 507,809</strong><br><small>Q3 2026P</small></td>
+              <td>~4.15</td>
+              <td><strong>~$122,360</strong></td>
+              <td><strong>RM 15,605</strong><br><small>27 Nov 2026</small></td>
+              <td><strong>32.5 oz</strong></td>
+              <td>Kijang Emas cecah RM 15.6k/oz; rumah turun 77% berbanding 2001</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Mengapa emas bukan pembaris harian yang sempurna:</strong> Antara 2010 hingga 2022, harga rumah kekal dalam jalur mendatar <strong>54 oz hingga 76 oz</strong>—bermakna rumah dan emas naik pada kadar yang hampir sama. Namun merentas 25 tahun (2001–2026), rumah menyusut <strong>77%</strong> dalam emas kerana tiga sebab: (1) emas berada di paras terendah pada 2001, (2) emas tidak menghasilkan aliran tunai atau manfaat tempat tinggal percuma (~3.5%–4.5% sewa tahunan) serta tidak boleh dibeli menggunakan pinjaman bank 90%, dan (3) harga emas mengikut kecairan bank pusat global manakala rumah Malaysia terikat pada siling gaji tempatan.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Pembaris / Penyebut</th>
+              <th>Apa Yang Ia Sebenarnya Ukur</th>
+              <th>Keputusan Untuk Hartanah Malaysia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Inflasi Pengguna (DOSM CPI)</strong></td>
+              <td>Kuasa beli tempatan berbanding kos sara hidup &amp; barangan harian.</td>
+              <td><strong>Menang (+5.4% vs +2.5%/thn):</strong> Berjaya melindungi pemilik daripada kenaikan kos sara hidup harian.</td>
+            </tr>
+            <tr>
+              <td><strong>2. Gaji Penengah Isi Rumah (DOSM)</strong></td>
+              <td>Kemampuan sebenar pembeli tempatan melayakkan diri untuk pinjaman.</td>
+              <td><strong>Siling Harga (5.78x pendapatan tahunan):</strong> Menjelaskan mengapa pertumbuhan harga mendatar pada +0.5% YoY apabila gaji terhenti.</td>
+            </tr>
+            <tr>
+              <td><strong>3. Mata Wang Asing (USD / SGD)</strong></td>
+              <td>Pemeliharaan kekayaan merentas sempadan &amp; kuasa beli global.</td>
+              <td><strong>Terdedah pada FX:</strong> Kelemahan Ringgit memadamkan keuntungan USD 2019–2024, manakala aliran SGD melonjakkan Johor (+212.7%).</td>
+            </tr>
+            <tr>
+              <td><strong>4. Emas &amp; Wang Luas (Kijang Emas / M2)</strong></td>
+              <td>Penyusutan tulen mata wang fiat berbanding aset yang tidak boleh dicetak.</td>
+              <td><strong>Ujian Tekanan Monetari (-77% dalam emas):</strong> Membuktikan kenaikan harga Ringgit lebih mencerminkan mata wang mengecut, bukan penciptaan kekayaan 7.5x.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>05 / Bank Pusat Yang Sama, Pemenang Berbeza: KL vs. Selangor vs. Johor</h2>
+      <p>Semua negeri di Malaysia tertakluk kepada kadar faedah BNM (OPR) dan bekalan wang yang sama. Namun antara 2010 hingga Q3 2026P (<code>2010 = 100</code>), prestasi harga hartanah terpisah jauh:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Negeri / Jenis Rumah</th>
+              <th>Asas 2010</th>
+              <th>Indeks Q3 2026P</th>
+              <th>Lonjakan Terkumpul</th>
+              <th>Perubahan Tahunan</th>
+              <th>Mengapa Ia Bergerak Berbeza</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Johor</strong></td>
+              <td>100.0</td>
+              <td><strong>312.7</strong></td>
+              <td><strong>+212.7%</strong></td>
+              <td><strong>+3.3%</strong></td>
+              <td><strong>Mengatasi Bekalan Wang:</strong> Pembeli dolar Singapura, projek RTS Link, JS-SEZ dan permintaan tanah pusat data melepasi had gaji tempatan.</td>
+            </tr>
+            <tr>
+              <td><strong>Selangor</strong></td>
+              <td>100.0</td>
+              <td><strong>230.4</strong></td>
+              <td><strong>+130.4%</strong></td>
+              <td><strong>-2.0%</strong></td>
+              <td><strong>Mengikut Purata:</strong> Dipacu pinjaman keluarga tempatan, dikawal terus oleh had pinjaman BNM dan lambakan kondo pinggir bandar.</td>
+            </tr>
+            <tr>
+              <td><strong>Kuala Lumpur</strong></td>
+              <td>100.0</td>
+              <td><strong>209.0</strong></td>
+              <td><strong>+109.0%</strong></td>
+              <td><strong>+1.1%</strong></td>
+              <td><strong>Pertumbuhan Peratusan Paling Perlahan:</strong> Harga permulaan 2010 sudah tinggi ditambah lambakan kondo baharu menekan peratusan kenaikan.</td>
+            </tr>
+            <tr>
+              <td><strong>Rumah Teres (Seluruh Malaysia)</strong></td>
+              <td>100.0</td>
+              <td><strong>265.1</strong><br><small>Q2 2026P</small></td>
+              <td><strong>+165.1%</strong></td>
+              <td><strong>+1.1%</strong></td>
+              <td><strong>Tanah Menang:</strong> Tanah bandar yang terhad menyerap sebahagian besar pertumbuhan wang domestik.</td>
+            </tr>
+            <tr>
+              <td><strong>Kondo Bertingkat (Seluruh Malaysia)</strong></td>
+              <td>100.0</td>
+              <td><strong>223.3</strong></td>
+              <td><strong>+123.3%</strong></td>
+              <td><strong>-0.7%</strong></td>
+              <td><strong>Terlebih Bekalan:</strong> Pemaju membina unit menegak lebih pantas daripada kenaikan gaji, meninggalkan puluhan ribu unit tidak terjual.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>06 / Kesimpulan Utama Yang Boleh Dipegang</h2>
+      <p>Hartanah kediaman di Malaysia ialah <strong>pelindung inflasi berleveraj yang terikat pada gaji tempatan, bukan mesin kekayaan monetari</strong>. Empat pegangan utama daripada data 50 tahun ini:</p>
+      <ol>
+        <li><strong>Penurunan nilai mata wang menaikkan tanda harga Ringgit, tetapi gaji tempatan meletakkan siling keras.</strong> Pencetakan wang (M2 naik 41x sejak 1988) membolehkan hartanah menewaskan kos sara hidup harian (<code>5.4%</code> vs <code>2.5%</code> setahun). Namun harga rumah tidak boleh melangkaui gaji tempatan selama-lamanya—sebab itulah nisbah harga rumah kepada pendapatan tahunan menyusut daripada <strong>7.15x</strong> (1989) kepada <strong>5.78x</strong> (2024), dan pertumbuhan mendatar pada <strong>+0.5% YoY</strong> pada Q3 2026.</li>
+        <li><strong>Sebahagian besar keuntungan atas kertas ialah penyusutan mata wang.</strong> Kenaikan purata rumah dari RM 152,000 ke RM 507,809 kelihatan seperti lonjakan 3.3x sehingga diukur dalam syiling Kijang Emas, di mana ia jatuh daripada <strong>140.7 oz</strong> (2001) ke <strong>32.5 oz</strong> (Nov 2026). Ringgit yang mengecut; batu-bata tidak menjadi tiga kali ganda lebih bernilai.</li>
+        <li><strong>Kelebihan sebenar pemilik rumah ialah hutang bank + tinggal tanpa sewa, bukan kenaikan harga semata-mata.</strong> Anda tidak membeli emas dengan pinjaman 90% selama 30 tahun sambil tinggal di dalamnya. Meminjam Ringgit hari ini, menjimatkan ~3.5%–4.5% kos sewa setahun, dan melangsaikan pinjaman menggunakan Ringgit yang susut nilai beberapa dekad kemudian ialah sumber sebenar kekayaan isi rumah.</li>
+        <li><strong>Dalam rejim 2026 ke hadapan, lokasi dan aliran tunai menewaskan pasaran umum.</strong> Era membeli sebarang kondo menggunakan leveraj dan menunggu inflasi menyelamatkan pelaburan sudah tamat (33,598 unit siap tidak terjual membuktikannya).</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>07 / Rejim Semasa (Akhir 2026): Strategi Baharu &amp; Perangkap Pembiayaan Semula</h2>
+      <p><strong>Strategi lama "beli apa sahaja menggunakan pinjaman dan tunggu inflasi menyelamatkan pelaburan" sudah tidak lagi berfungsi dalam rejim semasa.</strong> Pada penghujung 2026—dengan BNM mengekalkan OPR pada <strong>2.75%</strong>, inflasi terkawal pada <strong>1.9%</strong>, dan Ringgit stabil sekitar <strong>~4.15/USD</strong>—pertumbuhan MHPI negara perlahan kepada hanya <strong>+0.5% YoY</strong> pada Q3 2026P dengan <strong>33,598 unit kediaman siap tidak terjual</strong> (<code>RM 19.55B</code>).</p>
+
+      <div class="regime-grid">
+        <div class="regime-card old">
+          <h3>Rejim Lama (2000 – 2019)</h3>
+          <ul>
+            <li><strong>Beli kondo dalam pembinaan:</strong> Menunggang pengembangan kredit luas dan kadar faedah rendah untuk keuntungan modal pantas.</li>
+            <li><strong>Bergantung pada gaji domestik:</strong> Mengandaikan pembeli tempatan sentiasa mampu membida harga lebih tinggi setiap 5–10 tahun.</li>
+            <li><strong>Jadikan hartanah satu-satunya pelindung inflasi:</strong> Bergantung sepenuhnya pada batu-bata berleveraj untuk menewaskan penyusutan mata wang.</li>
+          </ul>
+        </div>
+        <div class="regime-card now">
+          <h3>Rejim Semasa (2026 &amp; Seterusnya)</h3>
+          <ul>
+            <li><strong>Elak strata bertingkat generik:</strong> Lambakan 33,598+ unit siap tidak terjual dan caj penyelenggaraan yang meningkat menekan hasil sewa bersih.</li>
+            <li><strong>Sasar koridor mata wang luar &amp; tanah terhad:</strong> Fokus pada zon yang disokong kuasa beli asing atau pelaburan industri seperti <strong>Johor</strong> (+3.3% YoY, disokong RTS Link &amp; JS-SEZ) atau rumah bertanah matang di Lembah Klang.</li>
+            <li><strong>Seimbangkan kunci kira-kira:</strong> Gunakan pinjaman perumahan hanya untuk kediaman sendiri atau aset bertanah berhasil tunai positif, sambil memegang aset keras cair (emas/Kijang Emas) atau ekuiti berpendapatan USD untuk perlindungan sebenar daripada penyusutan fiat.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Perangkap Pembiayaan Semula Kadar Tetap (Refinancing) di Malaysia</h3>
+      <p>Ramai peminjam menyangka apabila kadar dasar OPR berada di paras rendah (2.75%), pinjaman lama berkadar tinggi boleh dibiayai semula kepada <strong>pinjaman kadar tetap (fixed-rate)</strong> jangka panjang. Di Malaysia, terdapat perangkap struktur yang perlu difahami:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Struktur Pinjaman di Malaysia</th>
+              <th>Kadar Lazim 2026</th>
+              <th>Apa Berlaku Apabila OPR Naik Kelak</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Kadar Terapung (SBR + Spread)</strong><br><small>Maybank, CIMB, Public Bank, RHB dll.</small></td>
+              <td><strong>3.75% – 4.25%</strong> setahun<br><small>(SBR 2.75% + 1.00% hingga 1.50%)</small></td>
+              <td>Ansuran bulanan naik apabila BNM menaikkan OPR.</td>
+            </tr>
+            <tr>
+              <td><strong>Gadai Janji Kadar Tetap</strong><br><small>cth. AIA Fixed Rate Mortgage</small></td>
+              <td><strong>5.00% – 5.39%</strong> setahun<br><small>(Tetap sepanjang tempoh pinjaman)</small></td>
+              <td>Kadar dikunci kekal—tetapi anda membayar premium <strong>+1.10% hingga +1.50% tambahan setiap tahun</strong> sejak hari pertama.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout-box">
+        <strong>Langkah Bijak Pada OPR 2.75%:</strong> Untuk pulang modal pada pinjaman tetap 5.00%–5.39% berbanding pinjaman terapung 3.90%, BNM perlu menaikkan OPR ke paras 4.00%–4.25% dan mengekalkannya bertahun-tahun. Sebaliknya, pembiayaan semula di Malaysia hanya berbaloi jika: (1) anda memotong sekurang-kurangnya <strong>0.50%–0.75%</strong> daripada spread terapung lama (cth. dari 4.75% turun ke 3.85%), (2) tempoh kunci (lock-in) 3–5 tahun sudah tamat supaya tidak terkena penalti keluar 2%–5%, dan (3) penjimatan bulanan menampung kos kemasukan 2%–3% (duti setem 0.5%, guaman &amp; penilaian). Minta bank sedia ada membuat <strong>semakan semula spread (repricing)</strong> terlebih dahulu sebelum menukar bank.
+      </div>
+    </section>
+
+    <details class="sources-box">
+      <summary>Sumber / Sources</summary>
+      <ul>
+        <li><strong>Bank Negara Malaysia Open Data</strong> (<a href="https://data.bnm.gov.my/" target="_blank" rel="noopener">data.bnm.gov.my</a>) — <em>Annual Monetary Aggregates (1969–2025)</em>, <em>Monthly Highlights &amp; Statistics (Jun 2026)</em>, <em>Daily Kijang Emas Prices (2001–27 Nov 2026)</em>, <em>Ringgit Exchange Rates</em>, <em>Standardised Base Rate (SBR 2.75%)</em>, dan <em>Monetary Policy Statement (5 Nov 2026)</em>.</li>
+        <li><strong>Pusat Maklumat Harta Tanah Negara (NAPIC / JPPH)</strong> (<a href="https://napic.jpph.gov.my/" target="_blank" rel="noopener">napic.jpph.gov.my</a>) — <em>Siri Sejarah Indeks Harga Rumah Malaysia (MHPI, 1988–Q3 2026P)</em> dan <em>Laporan Status Pasaran Harta (H1 &amp; Q3 2026)</em>.</li>
+        <li><strong>Jabatan Perangkaan Malaysia (DOSM / OpenDOSM)</strong> (<a href="https://open.dosm.gov.my/" target="_blank" rel="noopener">open.dosm.gov.my</a>) — <em>Indeks Harga Pengguna (CPI) Malaysia, Oktober 2026</em> (diterbitkan 19 Nov 2026) dan <em>Laporan Survei Pendapatan Isi Rumah (HIS) 2024</em> (data siri 1970–2024).</li>
+      </ul>
+    </details>
+
+    <div class="author-card">
+      <div class="monogram" aria-hidden="true">AT</div>
+      <div class="author-info">
+        <h4>Azman Taufik</h4>
+        <p>Menulis mengenai pembiayaan PMKS, automasi AI untuk PKS, serta dasar dan strategi jangka panjang untuk Malaysia.</p>
+      </div>
+    </div>
+
+    <div class="disclaimer-block">
+      <p>Pandangan dalam artikel ini adalah pandangan peribadi saya. Ia tidak mewakili pandangan majikan saya atau mana-mana organisasi yang saya pernah atau sedang bersekutu dengannya. Artikel ini tidak bergabung dengan, disokong oleh, atau ditulis bagi pihak mana-mana institusi yang disebut. Semua angka diperoleh daripada sumber awam yang disenaraikan di atas, dan sebarang kesilapan adalah tanggungjawab saya sendiri. Tiada kandungan di sini merupakan nasihat kewangan, pelaburan atau perundangan.</p>
+      <p>Penyelidikan dan draf dibantu oleh alat AI. Semua fakta telah disemak berdasarkan sumber yang disenaraikan. Fakta setakat 28 November 2026.</p>
+    </div>
+  </article>
+
+  <!-- ==================== ENGLISH VERSION ==================== -->
+  <article data-lang="en" lang="en" hidden>
+    <div class="eyebrow">FIELD NOTES · MACROECONOMICS &amp; HOUSING</div>
+    <h1>The Shrinking Measuring Stick: Does Ringgit Debasement Push Up Malaysian House Prices?</h1>
+    <p class="deck">
+      Bank Negara Malaysia finally opened 50 years of monetary records to the public. Testing Malaysian housing against four distinct rulers and Malaysia's real-world mortgage refinancing mechanics reveals the core truth: residential property is a leveraged inflation shield tied to local salaries, not a monetary wealth machine.
+    </p>
+    <div class="byline-row">
+      <div><strong>Azman Taufik</strong> · 28 November 2026 · 10 min read</div>
+      <a class="linkedin-btn" href="https://www.linkedin.com/in/azmantaufik/" target="_blank" rel="noopener">Comment on LinkedIn</a>
+    </div>
+
+    <section>
+      <h2>01 / The Question</h2>
+      <p>For three decades, the standard Malaysian playbook has been straightforward. Buy a house with a bank loan, hold it for twenty years, and watch the price climb.</p>
+      <p>With BNM's <strong>Open Data</strong> portal (<a href="https://data.bnm.gov.my/" target="_blank" rel="noopener">data.bnm.gov.my</a>) now live, we can audit the math behind that belief:</p>
+      <blockquote class="thesis">
+        Does Ringgit debasement push up Malaysian house prices, or are higher Ringgit price tags mostly a symptom of a shrinking measuring stick?
+      </blockquote>
+      <p>If expanding money supply and weakening currency drive house prices up, two patterns must show up in the historical record:</p>
+      <ol>
+        <li>House prices in Ringgit must climb much faster than everyday groceries and bills.</li>
+        <li>Once you remove the Ringgit and price that exact same house in hard currencies or physical gold, the "price boom" should flatten or disappear.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>02 / How New Money Enters House Prices</h2>
+      <p>Most people assume only the central bank prints money. In practice, commercial banks create most of our broad money (M2) every time they approve a loan. When banks issue mortgages faster than builders can create land, that extra liquidity chases scarce homes:</p>
+
+      <div class="visual-box">
+        <div class="visual-title">Bank Credit Transmission into Residential Property Prices</div>
+        <div class="visual-sub">Balance-sheet mechanics linking M2 money creation, consumer inflation, and local salary limits.</div>
+        <svg viewBox="0 0 740 220" width="100%" role="img" aria-label="Flow diagram showing M2 money creation flowing into consumer goods and residential real estate">
+          <rect x="200" y="10" width="340" height="42" rx="4" fill="#eff6ff" stroke="#0f294a" stroke-width="1.5"/>
+          <text x="370" y="36" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#0f294a">BNM Policy (OPR) + Bank Loan Creation</text>
+
+          <line x1="370" y1="52" x2="370" y2="80" stroke="#0f294a" stroke-width="1.5"/>
+          <polygon points="370,84 365,76 375,76" fill="#0f294a"/>
+          <text x="525" y="70" font-family="sans-serif" font-size="11" fill="#475569">Broad Money M2 grows ~10.3% – 11.3%/yr</text>
+
+          <line x1="185" y1="84" x2="555" y2="84" stroke="#0f294a" stroke-width="1.5"/>
+          <line x1="185" y1="84" x2="185" y2="102" stroke="#0f294a" stroke-width="1.5"/>
+          <line x1="555" y1="84" x2="555" y2="102" stroke="#0f294a" stroke-width="1.5"/>
+
+          <rect x="25" y="102" width="320" height="48" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+          <text x="185" y="123" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Everyday Goods &amp; Imports</text>
+          <text x="185" y="140" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">Factory productivity &amp; subsidies keep CPI ~2.5%/yr</text>
+
+          <rect x="395" y="102" width="320" height="48" rx="4" fill="#ffffff" stroke="#0b5ed7" stroke-width="1.5"/>
+          <text x="555" y="123" text-anchor="middle" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f294a">Scarce Land &amp; Housing Stock</text>
+          <text x="555" y="140" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#475569">Inelastic urban land absorbs credit at ~5.4%/yr</text>
+
+          <line x1="555" y1="150" x2="555" y2="172" stroke="#991b1b" stroke-width="1.5"/>
+          <polygon points="555,176 550,168 560,168" fill="#991b1b"/>
+
+          <rect x="130" y="176" width="480" height="38" rx="4" fill="#fee2e2" stroke="#991b1b" stroke-width="1.3"/>
+          <text x="370" y="199" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#991b1b">Local Salary Ceilings + BNM DSR &amp; LTV Rules Cap Further Price Gains</text>
+        </svg>
+        <div class="visual-note"><strong>Takeaway:</strong> Housing absorbs excess liquidity faster than consumer goods, but eventually stalls once prices outrun what local salaries can service.</div>
+      </div>
+
+      <ul>
+        <li><strong>Why groceries rose slower than money supply:</strong> Manufacturing productivity, global trade, and Malaysian price subsidies kept everyday inflation (CPI) around <strong>2.5% to 2.9%</strong> a year.</li>
+        <li><strong>Why houses rose faster than groceries—until hitting a wall:</strong> You cannot manufacture new land in Petaling Jaya or Bangsar overnight, so extra credit pushed house prices up faster than CPI. Still, buyers pay their monthly bank instalments out of local Ringgit salaries. Once house prices outrun wages, BNM's Debt Service Ratio (DSR) rules and deposit limits stop prices from running away.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>03 / The 50-Year Scoreboard (1976 – 2026)</h2>
+      <p>BNM's annual money supply records run back to <strong>1969</strong>, while NAPIC's Malaysian House Price Index (MHPI) starts in <strong>1988</strong>. Putting these alongside DOSM household income and inflation shows how money supply, wages, house prices, and living costs moved over time.</p>
+
+      <div class="visual-box">
+        <div class="visual-title">Cumulative Expansion Since 1988/89 (Rebased: Start = 100)</div>
+        <div class="visual-sub">Sources: BNM Open Data (M2), DOSM (Median Household Income &amp; CPI), and NAPIC (MHPI Q3 2026P).</div>
+        <svg viewBox="0 0 740 210" width="100%" role="img" aria-label="Horizontal bar chart comparing M2, Median Income, Nominal Housing, Real Housing, and CPI">
+          <text x="10" y="32" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Broad Money (M2)</text>
+          <rect x="210" y="17" width="435" height="20" rx="3" fill="#0f294a"/>
+          <text x="653" y="32" font-family="sans-serif" font-size="12" font-weight="700" fill="#0f294a">4,102 (41.0x)</text>
+
+          <text x="10" y="70" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Median Income (1989–2024)</text>
+          <rect x="210" y="55" width="91" height="20" rx="3" fill="#059669"/>
+          <text x="309" y="70" font-family="sans-serif" font-size="12" font-weight="700" fill="#059669">860 (8.6x)</text>
+
+          <text x="10" y="108" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Nominal House Prices</text>
+          <rect x="210" y="93" width="79" height="20" rx="3" fill="#0b5ed7"/>
+          <text x="297" y="108" font-family="sans-serif" font-size="12" font-weight="700" fill="#0b5ed7">749 (7.5x)</text>
+
+          <text x="10" y="146" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Real House Prices</text>
+          <rect x="210" y="131" width="30" height="20" rx="3" fill="#0284c7"/>
+          <text x="248" y="146" font-family="sans-serif" font-size="12" font-weight="700" fill="#0284c7">288 (2.9x)</text>
+
+          <text x="10" y="184" font-family="sans-serif" font-size="12.5" font-weight="700" fill="#0f172a">Consumer Inflation (CPI)</text>
+          <rect x="210" y="169" width="28" height="20" rx="3" fill="#64748b"/>
+          <text x="246" y="184" font-family="sans-serif" font-size="12" font-weight="700" fill="#475569">260 (2.6x)</text>
+        </svg>
+        <div class="visual-note"><strong>Takeaway:</strong> Measured against Malaysian median household income (up 8.6x from RM 816/month in 1989 to RM 7,017/month in 2024), the national house-price-to-annual-income ratio actually improved from <strong>7.15x</strong> to <strong>5.78x</strong>.</div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric (Source)</th>
+              <th>1976</th>
+              <th>1988 / 89</th>
+              <th>2010</th>
+              <th>2019</th>
+              <th>Latest 2024–26</th>
+              <th>Total Jump &amp; Yearly Pace</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Broad Money M2</strong><br><small>BNM Open Data</small></td>
+              <td>~RM 12.8B</td>
+              <td>~RM 65.0B</td>
+              <td>~RM 1,080.0B</td>
+              <td>~RM 1,960.0B</td>
+              <td><strong>RM 2,666.5B</strong><br><small>Jun 2026</small></td>
+              <td><strong>~208x</strong> in 50 yrs (11.3%/yr)<br><strong>41.0x</strong> since 1988 (10.3%/yr)</td>
+              <td><span class="badge b-fact">VERIFIED</span><br><span class="badge b-est">EST 1976</span></td>
+            </tr>
+            <tr>
+              <td><strong>House Price Index</strong><br><small>NAPIC (2010=100)</small></td>
+              <td>No index</td>
+              <td><strong>31.45</strong></td>
+              <td><strong>100.00</strong></td>
+              <td><strong>196.88</strong></td>
+              <td><strong>235.40</strong><br><small>Q3 2026P</small></td>
+              <td><strong>7.49x</strong> since 1988<br>(<strong>5.4%/yr</strong>)</td>
+              <td><span class="badge b-fact">VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td><strong>Average Malaysian Home</strong><br><small>NAPIC / JPPH</small></td>
+              <td>~RM 28,000<br><small>KL/PJ terrace</small></td>
+              <td>~RM 68,000</td>
+              <td>RM 215,000</td>
+              <td>RM 427,165</td>
+              <td><strong>RM 507,809</strong><br><small>Q3 2026P</small></td>
+              <td><strong>7.47x</strong> since 1988</td>
+              <td><span class="badge b-fact">VERIFIED</span><br><span class="badge b-est">EST 1976-88</span></td>
+            </tr>
+            <tr>
+              <td><strong>Median Household Income</strong><br><small>DOSM HIS (Monthly)</small></td>
+              <td>RM 513<br><small>1976</small></td>
+              <td>RM 816<br><small>1989</small></td>
+              <td>RM 2,841<br><small>2009</small></td>
+              <td>RM 5,873<br><small>2019</small></td>
+              <td><strong>RM 7,017</strong><br><small>HIS 2024</small></td>
+              <td><strong>8.60x</strong> (1989–2024)<br>Price/Income: <strong>7.15x → 5.78x</strong></td>
+              <td><span class="badge b-fact">VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td><strong>Consumer Inflation (CPI)</strong><br><small>DOSM (2010=100)</small></td>
+              <td>32.1</td>
+              <td>52.9</td>
+              <td>100.0</td>
+              <td>121.5</td>
+              <td><strong>137.5</strong><br><small>Oct 2026</small></td>
+              <td><strong>4.28x</strong> in 50 yrs (2.9%/yr)<br><strong>2.60x</strong> since 1988 (2.5%/yr)</td>
+              <td><span class="badge b-fact">VERIFIED</span></td>
+            </tr>
+            <tr>
+              <td><strong>Real House Prices</strong><br><small>After CPI (1988=100)</small></td>
+              <td>-</td>
+              <td><strong>100.0</strong></td>
+              <td><strong>168.2</strong></td>
+              <td><strong>272.6</strong></td>
+              <td><strong>288.0</strong></td>
+              <td><strong>2.88x</strong> real gain since 1988<br>(<strong>2.8%/yr</strong>)</td>
+              <td><span class="badge b-fact">VERIFIED</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Four Distinct Chapters:</h3>
+      <ol>
+        <li><strong>1988 – 1997 (The Pre-Crisis Boom):</strong> Easy credit sent house prices jumping <strong>+144%</strong> in nine years (<code>31.45</code> to <code>76.80</code>). When the 1997 Asian Financial Crisis hit, prices dropped <strong>-14.8%</strong> (<code>77.49</code> down to <code>66.00</code> by early 1999). When loans dry up, prices fall.</li>
+        <li><strong>2000 – 2009 (Steady Recovery):</strong> With the Ringgit pegged at RM 3.80 and banks rebuilding their balance sheets, house prices grew calmly at roughly <strong>3.7% a year</strong>.</li>
+        <li><strong>2010 – 2015 (The Easy-Loan Surge):</strong> Low global interest rates and zero-entry developer schemes pushed house prices up <strong>64.5% in five years</strong> (<code>100.0</code> to <code>164.5</code>), forcing BNM to step in with 70% loan caps on third homes and tighter income checks.</li>
+        <li><strong>2016 – 2026 (Hitting the Salary Ceiling):</strong> Even though M2 money supply jumped from <code>RM 1,960B</code> (2019) to <code>RM 2,666.5B</code> (2026), house price growth slowed to under <strong>2% a year</strong> after 2019—crawling at just <strong>+0.5% YoY by Q3 2026P</strong> (<code>RM 507,809</code> average) with <strong>33,598 completed residential units sitting unsold</strong> (<code>RM 19.55B</code>).</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>04 / Testing Four Different Rulers: Why Gold Alone Isn't Enough</h2>
+      <p>Pricing the average Malaysian home in <strong>BNM's 1 oz Kijang Emas gold coins</strong> (launched July 2001) and USD/MYR reveals two distinct phases rather than a single flat line:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Avg Home in MYR</th>
+              <th>USD/MYR Rate</th>
+              <th>Avg Home in USD</th>
+              <th>Kijang Emas 1 oz Coin (MYR)</th>
+              <th>Avg Home in Gold (oz)</th>
+              <th>What Happened</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>2001</strong></td>
+              <td>~RM 152,000</td>
+              <td>3.80 <small>(Pegged)</small></td>
+              <td><strong>$40,000</strong></td>
+              <td>~RM 1,080</td>
+              <td><strong>140.7 oz</strong></td>
+              <td>Ringgit pegged at 3.80; gold near secular multi-decade low</td>
+            </tr>
+            <tr>
+              <td><strong>2010</strong></td>
+              <td>RM 215,000</td>
+              <td>3.22</td>
+              <td><strong>$66,770</strong></td>
+              <td>~RM 3,950</td>
+              <td><strong>54.4 oz</strong></td>
+              <td>Start of a 12-year flat gold band (54–76 oz)</td>
+            </tr>
+            <tr>
+              <td><strong>2015</strong></td>
+              <td>RM 354,741</td>
+              <td>3.91</td>
+              <td><strong>$90,727</strong></td>
+              <td>~RM 4,680</td>
+              <td><strong>75.8 oz</strong></td>
+              <td>Oil crash and weaker Ringgit ate into USD gains</td>
+            </tr>
+            <tr>
+              <td><strong>2019</strong></td>
+              <td>RM 427,165</td>
+              <td>4.14</td>
+              <td><strong>$103,180</strong></td>
+              <td>~RM 5,950</td>
+              <td><strong>71.8 oz</strong></td>
+              <td>Pre-COVID USD peak before five years of Ringgit slide</td>
+            </tr>
+            <tr>
+              <td><strong>2022</strong></td>
+              <td>RM 452,617</td>
+              <td>4.40</td>
+              <td><strong>$102,867</strong></td>
+              <td>~RM 8,150</td>
+              <td><strong>55.5 oz</strong></td>
+              <td>Ringgit price rose +6%, yet USD value actually fell</td>
+            </tr>
+            <tr>
+              <td><strong>Nov 2026</strong></td>
+              <td><strong>RM 507,809</strong><br><small>Q3 2026P</small></td>
+              <td>~4.15</td>
+              <td><strong>~$122,360</strong></td>
+              <td><strong>RM 15,605</strong><br><small>27 Nov 2026</small></td>
+              <td><strong>32.5 oz</strong></td>
+              <td>Kijang Emas hit RM 15.6k/oz; housing down 77% vs 2001</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Why gold is an imperfect everyday yardstick:</strong> From 2010 to 2022, Malaysian housing stayed inside a relatively steady <strong>54 oz to 76 oz</strong> gold band—meaning houses and gold rose at roughly the same pace in Ringgit. Across the full 25-year window (2001–2026), housing dropped <strong>77%</strong> in gold for three reasons: (1) gold was near a multi-decade bottom in 2001, (2) gold yields 0% and offers no shelter utility (~3.5%–4.5% annual imputed rent) or 90% bank mortgage leverage, and (3) gold reflects global central bank liquidity while Malaysian homes are capped by local Ringgit wages.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Ruler / Denominator</th>
+              <th>What It Actually Measures</th>
+              <th>Verdict for Malaysian Housing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. Consumer Inflation (DOSM CPI)</strong></td>
+              <td>Local purchasing power against everyday living costs and groceries.</td>
+              <td><strong>Winner (+5.4% vs +2.5%/yr):</strong> Protected owners against rising local living costs.</td>
+            </tr>
+            <tr>
+              <td><strong>2. Median Household Income (DOSM)</strong></td>
+              <td>True market affordability and local buyers' ability to qualify for loans.</td>
+              <td><strong>The Price Ceiling (5.78x annual income):</strong> Explains why prices stalled at +0.5% YoY once wages flattened.</td>
+            </tr>
+            <tr>
+              <td><strong>3. Foreign Currency (USD / SGD)</strong></td>
+              <td>Cross-border wealth preservation and global purchasing power.</td>
+              <td><strong>FX-Sensitive:</strong> Ringgit slide erased 2019–2024 USD paper gains, while SGD inflows drove Johor (+212.7%).</td>
+            </tr>
+            <tr>
+              <td><strong>4. Gold &amp; Broad Money (Kijang Emas / M2)</strong></td>
+              <td>Pure fiat currency debasement against unprintable hard assets.</td>
+              <td><strong>Monetary Stress Test (-77% in gold):</strong> Proves nominal Ringgit gains reflect currency shrinkage, not 7.5x real wealth creation.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>05 / Same Central Bank, Different Winners: KL vs. Selangor vs. Johor</h2>
+      <p>Every state in Malaysia deals with the exact same BNM interest rates (OPR) and money supply. Yet between 2010 and Q3 2026P (<code>2010 = 100</code>), property performance split wide open:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>State / House Type</th>
+              <th>2010 Base</th>
+              <th>Q3 2026P Index</th>
+              <th>Total Jump</th>
+              <th>Yearly Change</th>
+              <th>Why It Moved Differently</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Johor</strong></td>
+              <td>100.0</td>
+              <td><strong>312.7</strong></td>
+              <td><strong>+212.7%</strong></td>
+              <td><strong>+3.3%</strong></td>
+              <td><strong>Beat Money Supply:</strong> Singapore dollar buyers, the RTS Link, JS-SEZ, and data-centre land demand bypassed local wage limits.</td>
+            </tr>
+            <tr>
+              <td><strong>Selangor</strong></td>
+              <td>100.0</td>
+              <td><strong>230.4</strong></td>
+              <td><strong>+130.4%</strong></td>
+              <td><strong>-2.0%</strong></td>
+              <td><strong>Followed the Average:</strong> Driven by local family mortgages, directly capped by BNM loan limits and suburban condo supply.</td>
+            </tr>
+            <tr>
+              <td><strong>Kuala Lumpur</strong></td>
+              <td>100.0</td>
+              <td><strong>209.0</strong></td>
+              <td><strong>+109.0%</strong></td>
+              <td><strong>+1.1%</strong></td>
+              <td><strong>Slowest Percentage Growth:</strong> High starting prices in 2010 plus waves of new high-rise condos kept percentage gains down.</td>
+            </tr>
+            <tr>
+              <td><strong>Terraced Houses (All Malaysia)</strong></td>
+              <td>100.0</td>
+              <td><strong>265.1</strong><br><small>Q2 2026P</small></td>
+              <td><strong>+165.1%</strong></td>
+              <td><strong>+1.1%</strong></td>
+              <td><strong>Land Wins:</strong> Limited urban land captured most of the domestic money growth.</td>
+            </tr>
+            <tr>
+              <td><strong>High-Rise Condos (All Malaysia)</strong></td>
+              <td>100.0</td>
+              <td><strong>223.3</strong></td>
+              <td><strong>+123.3%</strong></td>
+              <td><strong>-0.7%</strong></td>
+              <td><strong>Too Much Supply:</strong> Developers built vertical units faster than salaries grew, leaving tens of thousands unsold.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>06 / Core Conclusions You Can Hold On To</h2>
+      <p>Malaysian housing is a <strong>leveraged inflation shield tied to local salaries, not a monetary wealth machine</strong>. Four anchors hold up across 50 years of data:</p>
+      <ol>
+        <li><strong>Debasement lifts the nominal Ringgit tag, but local wages set the hard roof.</strong> Money printing (M2 up 41x since 1988) pushes Ringgit price tags higher over time, beating everyday living-cost inflation (<code>5.4%</code> vs <code>2.5%</code> a year). However, prices cannot outrun local salaries forever—which is why the national price-to-income multiple compressed from <strong>7.15x</strong> (1989) to <strong>5.78x</strong> (2024), and why growth stalled at <strong>+0.5% YoY</strong> in Q3 2026.</li>
+        <li><strong>Most paper gain is currency shrinkage, not real wealth creation.</strong> Moving from RM 152,000 to RM 507,809 looks like a 3.3x windfall until priced in Kijang Emas gold coins, where the same home dropped from <strong>140.7 oz</strong> (2001) to <strong>32.5 oz</strong> (Nov 2026). Your Ringgit shrank; bricks did not become three times more valuable.</li>
+        <li><strong>The homeowner's real edge is bank debt + rent-free living, not appreciation alone.</strong> You never buy gold with a 90%, 30-year loan while living inside it. Borrowing Ringgit today, saving ~3.5%–4.5% a year in rent, and repaying the bank in weaker Ringgit decades later is where actual household wealth is built.</li>
+        <li><strong>In 2026 and beyond, location and cash flow beat broad market beta.</strong> Buying any generic condo on leverage and waiting for inflation to bail you out no longer works (33,598 unsold residential units prove it).</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>07 / The Current Regime (Late 2026): New Strategy &amp; Refinancing Reality</h2>
+      <p><strong>The old "buy anything on leverage and wait for inflation to bail you out" playbook no longer works in today's regime.</strong> In late 2026—with BNM holding the OPR steady at <strong>2.75%</strong>, headline inflation at <strong>1.9%</strong>, and Ringgit near <strong>~4.15/USD</strong>—national MHPI growth stalled to <strong>+0.5% YoY</strong> in Q3 2026P while <strong>33,598 completed residential units sit unsold</strong> (<code>RM 19.55B</code>).</p>
+
+      <div class="regime-grid">
+        <div class="regime-card old">
+          <h3>Old Regime (2000 – 2019)</h3>
+          <ul>
+            <li><strong>Buy off-plan high-rises:</strong> Ride broad credit expansion and low rates for quick capital appreciation.</li>
+            <li><strong>Rely on domestic MYR wage growth:</strong> Assume local buyers will always bid up prices in 5–10 years.</li>
+            <li><strong>Treat property as your sole hard-asset hedge:</strong> Rely on leveraged bricks to beat fiat debasement.</li>
+          </ul>
+        </div>
+        <div class="regime-card now">
+          <h3>Current Regime (2026 &amp; Beyond)</h3>
+          <ul>
+            <li><strong>Avoid generic high-rise strata:</strong> Oversupply (33,598+ residential overhang) and rising strata maintenance fees crush net yields and resale liquidity.</li>
+            <li><strong>Target external currency &amp; capex corridors:</strong> Focus on zones backed by foreign currency purchasing power or industrial inflows—such as <strong>Johor</strong> (+3.3% YoY, backed by RTS Link &amp; JS-SEZ) or mature Klang Valley landed subsale.</li>
+            <li><strong>Barbell your balance sheet:</strong> Use conservative mortgage leverage only for primary shelter or positive-cash-flow landed assets, while holding liquid hard assets (gold/Kijang Emas) or USD-earning equities for true monetary debasement protection.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Malaysia's Fixed-Rate Refinancing Catch</h3>
+      <p>When OPR sits near a cyclical floor (2.75%), many borrowers assume older high-rate loans can simply be refinanced into cheap 30-year <strong>fixed-rate mortgages</strong>. In Malaysia, structural pricing makes that a trap:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Loan Structure in Malaysia</th>
+              <th>Typical 2026 Rate</th>
+              <th>What Happens When OPR Rises Later</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Floating Rate (SBR + Spread)</strong><br><small>Maybank, CIMB, Public Bank, RHB, etc.</small></td>
+              <td><strong>3.75% – 4.25%</strong> p.a.<br><small>(SBR 2.75% + 1.00% to 1.50%)</small></td>
+              <td>Monthly instalment rises whenever BNM hikes the OPR.</td>
+            </tr>
+            <tr>
+              <td><strong>Fixed-Rate Mortgage</strong><br><small>e.g., AIA Fixed Rate Mortgage</small></td>
+              <td><strong>5.00% – 5.39%</strong> p.a.<br><small>(Fixed for entire tenure)</small></td>
+              <td>Rate is locked permanently—but you pay <strong>+1.10% to +1.50% extra every year</strong> upfront.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout-box">
+        <strong>Smart Move at 2.75% OPR:</strong> Breaking even on a 5.00%–5.39% fixed loan versus a 3.90% floating loan requires BNM to hike OPR to 4.00%–4.25% and hold it there for years. Instead, refinancing in Malaysia works best when: (1) you shave at least <strong>0.50%–0.75%</strong> off an older floating spread (e.g., 4.75% down to 3.85%), (2) your 3–5 year lock-in has expired to avoid 2%–5% exit penalties, and (3) monthly savings cover the 2%–3% entry friction (0.5% stamp duty, legal, and valuation fees). Always ask your existing bank for a <strong>spread repricing</strong> first.
+      </div>
+    </section>
+
+    <details class="sources-box">
+      <summary>Sources</summary>
+      <ul>
+        <li><strong>Bank Negara Malaysia Open Data</strong> (<a href="https://data.bnm.gov.my/" target="_blank" rel="noopener">data.bnm.gov.my</a>) — <em>Annual Monetary Aggregates (1969–2025)</em>, <em>Monthly Highlights &amp; Statistics (June 2026)</em>, <em>Daily Kijang Emas Prices (2001–27 Nov 2026)</em>, <em>Ringgit Exchange Rates</em>, <em>Standardised Base Rate (SBR 2.75%)</em>, and <em>Monetary Policy Statement (5 Nov 2026)</em>.</li>
+        <li><strong>National Property Information Centre (NAPIC / JPPH)</strong> (<a href="https://napic.jpph.gov.my/" target="_blank" rel="noopener">napic.jpph.gov.my</a>) — <em>Malaysian House Price Index (MHPI) Historical Series (1988–Q3 2026P)</em> and <em>Property Market Report (H1 &amp; Q3 2026)</em>.</li>
+        <li><strong>Department of Statistics Malaysia (DOSM / OpenDOSM)</strong> (<a href="https://open.dosm.gov.my/" target="_blank" rel="noopener">open.dosm.gov.my</a>) — <em>Consumer Price Index (CPI) Malaysia, October 2026</em> (released 19 Nov 2026) and <em>Household Income Survey (HIS) Report 2024</em> (1970–2024 historical series).</li>
+      </ul>
+    </details>
+
+    <div class="author-card">
+      <div class="monogram" aria-hidden="true">AT</div>
+      <div class="author-info">
+        <h4>Azman Taufik</h4>
+        <p>Writes on MSME financing, AI automation for SMEs, and policy and long-term strategy for Malaysia.</p>
+      </div>
+    </div>
+
+    <div class="disclaimer-block">
+      <p>The views in this article are my own. They do not represent the views of my employer or any organisation I am, or have been, associated with. This article is not affiliated with, endorsed by or written on behalf of any institution mentioned. All figures come from publicly available sources listed above, and any errors are mine. Nothing here is financial, investment or legal advice.</p>
+      <p>Research and drafting were assisted by AI tools. All facts were checked against the sources listed. Facts as at 28 November 2026.</p>
+    </div>
+  </article>
+
+</main>
 
 <script>
-(function(){
-  var en=document.getElementById('bEn'), bm=document.getElementById('bBm');
-  function set(isBm){
-    document.body.classList.toggle('en',!isBm);
-    document.documentElement.lang=isBm?'ms':'en';
-    en.classList.toggle('on',!isBm); bm.classList.toggle('on',isBm);
-    document.getElementById('ctaTop').textContent=isBm?'Komen di LinkedIn':'Comment on LinkedIn';
-    document.getElementById('ctaBot').textContent=isBm?'Komen di LinkedIn':'Comment on LinkedIn';
-  }
-  en.onclick=function(){set(false);try{history.replaceState(null,'','#en')}catch(e){}};
-  bm.onclick=function(){set(true);try{history.replaceState(null,'','#bm')}catch(e){}};
-  function fromHash(){set(location.hash!=='#en')}
-  window.addEventListener('hashchange',fromHash);
-  fromHash();
-
-  // Line chart
-  var years=[2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
-  var ahb=[5.42,6.50,6.50,6.60,6.60,6.50,6.20,6.20,5.60,null,4.70,5.00,5.00,5.00,5.00,5.00];
-  var asb=[8.80,8.90,8.70,8.50,7.75,7.25,8.25,null,null,null,null,null,5.25,5.75,5.75,null];
-  var epf=[null,null,6.35,6.75,6.40,5.70,6.90,6.15,5.45,5.20,null,null,null,6.30,6.15,null];
-  var W=720,H=330,L=40,R=14,T=16,B=42,ymin=4,ymax=9.5;
-  function X(i){return L+i*(W-L-R)/(years.length-1)}
-  function Y(v){return T+(ymax-v)*(H-T-B)/(ymax-ymin)}
-  function series(arr,color){
-    var d='',pen=false,dots='';
-    arr.forEach(function(v,i){
-      if(v===null){pen=false;return}
-      d+=(pen?'L':'M')+X(i).toFixed(1)+' '+Y(v).toFixed(1)+' ';pen=true;
-      dots+='<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(v).toFixed(1)+'" r="3.6" fill="'+color+'"/>';
+  function setLang(l) {
+    document.documentElement.lang = l === 'bm' ? 'ms' : 'en';
+    document.querySelectorAll('[data-lang]').forEach(function(el) {
+      el.hidden = el.dataset.lang !== l;
     });
-    return '<path d="'+d+'" fill="none" stroke="'+color+'" stroke-width="2.4" stroke-linejoin="round"/>'+dots;
+    document.getElementById('btn-bm').setAttribute('aria-pressed', String(l === 'bm'));
+    document.getElementById('btn-en').setAttribute('aria-pressed', String(l === 'en'));
   }
-  var s='<svg viewBox="0 0 '+W+' '+H+'" width="100%" style="min-width:560px" role="img" aria-label="AHB versus ASB distribution per unit, 2011 to 2026">';
-  for(var g=4;g<=9;g++){
-    s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(g)+'" y2="'+Y(g)+'" stroke="#e3e9ee"/>';
-    s+='<text x="'+(L-6)+'" y="'+(Y(g)+4)+'" font-size="11" text-anchor="end" fill="#5a6b7b">'+g+'</text>';
-  }
-  years.forEach(function(y,i){
-    s+='<text x="'+X(i)+'" y="'+(H-22)+'" font-size="11" text-anchor="middle" fill="#5a6b7b">'+String(y).slice(2)+'</text>';
-  });
-  s+=series(epf,'#5b8bc7')+series(asb,'#d9667a')+series(ahb,'#2f8f6b');
-  s+='<text x="'+X(0)+'" y="'+(Y(8.8)-10)+'" font-size="12" fill="#d9667a" font-weight="600">ASB 8.80</text>';
-  s+='<text x="'+X(3)+'" y="'+(Y(6.6)+20)+'" font-size="12" fill="#2f8f6b" font-weight="600">AHB 6.60</text>';
-  s+='<text x="'+X(13)+'" y="'+(Y(5.75)+17)+'" font-size="12" fill="#d9667a" font-weight="600">ASB 5.75</text>';
-  s+='<text x="'+(X(12)-4)+'" y="'+(Y(6.3)-10)+'" font-size="12" fill="#5b8bc7" font-weight="600">EPF 6.15</text>';
-  s+='<text x="'+X(12)+'" y="'+(Y(5.0)+22)+'" font-size="12" fill="#2f8f6b" font-weight="600">AHB 5.00</text>';
-  s+='<text x="'+(W/2)+'" y="'+(H-4)+'" font-size="11" text-anchor="middle" fill="#5a6b7b">Year (20xx)</text>';
-  s+='</svg>';
-  document.getElementById('lineChart').innerHTML=s;
-
-  // Portfolio mix
-  var mix=[['Office / Pejabat',38,'#5b8bc7'],['Retail / Runcit',20,'#2f8f6b'],['Land / Tanah',13,'#e2b45f'],['Industrial / Industri',10,'#d9667a'],['Healthcare / Kesihatan',8,'#8f7bc7'],['Other / Lain-lain',11,'#c9d3dc']];
-  var h='';
-  mix.forEach(function(m){
-    h+='<div class="hrow"><span style="font-size:13px">'+m[0]+'</span><div class="t"><i style="width:'+(m[1]/38*100)+'%;background:'+m[2]+'"></i></div><b>'+m[1]+'%</b></div>';
-  });
-  document.getElementById('mix').innerHTML=h;
-
-  // Wider comparison
-  var cmp=[['AHB (FY2026)',5.00,'#2f8f6b'],['ASB (2025)',5.75,'#7fc4a6'],['EPF (2025)',6.15,'#5b8bc7'],['Tabung Haji (2025)',3.50,'#a9c3e6'],['Axis REIT (FY2025)',5.5,'#d9667a'],['KLCC Stapled (f)',4.9,'#eb9aa8'],['IGB REIT (f)',5.6,'#eb9aa8'],['Sunway REIT (f)',5.7,'#eb9aa8'],['Pavilion REIT (f)',6.6,'#eb9aa8'],['FD best promo',3.9,'#e2b45f'],['FD board, top',2.5,'#efd39a']];
-  var c='';
-  cmp.forEach(function(m){
-    c+='<div class="hrow" style="grid-template-columns:130px 1fr 44px"><span style="font-size:13px">'+m[0]+'</span><div class="t"><i style="width:'+(m[1]/7*100)+'%;background:'+m[2]+'"></i></div><b>'+m[1].toFixed(2).replace(/0$/,'')+'</b></div>';
-  });
-  document.getElementById('cmp').innerHTML=c;
-})();
+  setLang('bm');
 </script>
+
 </body>
 </html>
